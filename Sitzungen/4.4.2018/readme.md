@@ -1,0 +1,1 @@
+Dokumente der ersten Sitzung
