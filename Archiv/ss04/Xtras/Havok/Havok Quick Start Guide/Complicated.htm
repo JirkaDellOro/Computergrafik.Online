@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p><font face="Arial, Helvetica, sans-serif" size="4">Weiterf&uuml;hrendes Beispiel</font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Zun&auml;chst erstellen Sie einen neuen Film (<b>Datei &gt; Neu &gt; Film</b> oder <b>STRG+N</b>). F&uuml;r jeden Film ist eine Besetzung erforderlich. Dieser Film soll aus einer 3D-Welt und ihrer physikalisch korrekten Darstellung bestehen.</font></p>
+    <ul>
+      <li><font face="Arial, Helvetica, sans-serif" size="2">F&uuml;gen Sie mit Hilfe des Men&uuml;s <b>Einf&uuml;gen</b> einen leeren <b>Havok Physics Scene</b>-Darsteller hinzu: <b>Einf&uuml;gen &gt; Mediaelement &gt; Havok Physics Scene</b>.</font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Einf&uuml;gen &gt; Mediaelement &gt; Shockwave 3D</b>, um einen leeren Shockwave 3D-Darsteller hinzuzuf&uuml;gen.</font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Ziehen Sie den Shockwave 3D-Darsteller auf die B&uuml;hne, um ein Sprite zu erstellen.</font></li>
+    </ul>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Momentan ist die 3D-Welt noch leer. Sie soll mit nun einigen einfachen Objekten versehen werden. Dies kann mit Hilfe eines einfachen Lingo-Skripts geschehen.</font></p>
+    <ul>
+      <li><font face="Arial, Helvetica, sans-serif" size="2">F&uuml;gen Sie ein neues Verhalten hinzu, indem Sie im Hauptmen&uuml; <b>Fenster > Inspektoren > Verhalten</b> w&auml;hlen, auf das Plussymbol klicken und <b>Neues Verhalten</b> w&auml;hlen. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Ziehen Sie das neue Verhalten auf das 3D-Sprite.</font></li>
+    </ul>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">F&uuml;gen Sie den folgenden Text zum neu erstellten Lingo-Verhalten hinzu. Mit Hilfe dieses Skripts erstellen Sie eine einfache Szene mit zwei W&uuml;rfeln und einer Kugel.</font></p>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">property w, hk</font></p>
+      <p><font face="Courier New, Courier, mono" size="2">on beginSprite me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">hk = member( 1 )<br> w = member( 2 )<br> <br> <b>hk.initialize</b>( w, 0.1, 1 )<br> <br> createVisibleObjects()<br> createPhysicalObjects()</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end </font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on createVisibleObjects me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">-- create box<br> mr = w.newModelResource("TheBoxRes", #box)<br> mr.width = 2<br> mr.height = 2<br> mr.length = 2<br> m = w.newModel("TheBox", mr)<br> m.transform.rotation = vector(0,5,0)<br> m.transform.position = vector(0,0,10)<br> <br> -- create ball<br> mr = w.newModelResource("TheBallRes", #sphere)<br> mr.radius = 1<br> m = w.newModel("TheBall", mr)<br> m.transform.position = vector(0,0,5)<br> <br> -- create ground<br> mr = w.newModelResource("TheGroundRes", #box)<br> mr.width = 15<br> mr.height = 10<br> mr.length = 1<br> m = w.newModel("TheGround", mr) <br> <br> -- point camera<br> c = w.camera[1]<br> c.transform.position = vector(0,20,20)<br> c.pointat(m.transform.position + vector(0,0,5), vector(0,0,1))<br> c.hither = 1<br> c.yon = 1000<br> <br> w.directionalPreset = #bottomLeft</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on createPhysicalObjects me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"> -- box<br> m = w.model("TheBox")<br> m.addModifier(#meshdeform)<br> <b>rb = hk.makeMovableRigidBody(m.name, 50)</b><br> <br> -- ball<br> m = w.model("TheBall")<br> m.addModifier(#meshdeform)<br> <b>rb = hk.makeMovableRigidBody(m.name, 100)<br> rb.restitution = 1<br> rb.friction = 0</b><br> <br> -- ground<br> m = w.model("TheGround") <br> m.addModifier(#meshdeform)<br> <b>rb = hk.makeFixedRigidBody(m.name)</b></font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Die Zeilen, die das Havok Xtra betreffen, sind in <b>Fettschrift</b> hervorgehoben. Eine detaillierte Beschreibung dieser Funktionen und Eigenschaften finden Sie im "Havok Xtra Lingo-Referenzhandbuch". An dieser Stelle soll nur kurz darauf eingegangen werden.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Jede physikalisch simulierte Szene muss mit einem sichtbaren 3D-Pendant verbunden sein. Um diese Verbindung herzustellen, wird die Funktion "hk.initialize()" als Referenz dem Shockwave 3D-Darsteller &uuml;bergeben, der die sichtbare Welt vertritt. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Hinweis:</b> <b>hk.initialize()</b> muss aufgerufen werden, bevor irgendeine andere Aktion im Zusammenhang mit der physikalischen Simulation durchgef&uuml;hrt wird.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nach der Initialisierung erstellt das Skript mehrere 3D-Modelle, die nun in der Szene dargestellt werden. Nach ihrer Erstellung k&ouml;nnen Sie diesen Modellen physikalische Eigenschaften zuweisen - sie also zu Starrk&ouml;rpern machen. Wie aus der Funktion <b>createPhysicalObjects </b> ersichtlich ist, werden die Objekte "TheBox" und "TheBall" zu beweglichen Starrk&ouml;rpern. Bewegliche Starrk&ouml;rper haben eine Masse und k&ouml;nnen sich frei bewegen, springen und sich drehen. "TheGround" wird als fixierter Starrk&ouml;rper erstellt, der sich nie bewegt und nie durch Objekte beeinflusst wird, die auf ihn prallen. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun haben Sie eine einfache, auf den Gesetzen der Physik beruhende 3D-Welt erstellt. Trotzdem wird beim Abspielen dieses Films durch das B&uuml;hnen-Sprite immer noch eine statische Szene dargestellt. Das liegt daran, dass bei jedem Bild f&uuml;r ein Fortschreiten der physikalischen Simulation gesorgt werden muss. Das Havok Xtra stellt f&uuml;r diesen Vorgang, der in diesem Zusammenhang als "Stepping" bezeichnet wird, eine Lingo-Funktion zur Verf&uuml;gung.</font></p>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on exitFrame me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"> <b>hk.step()</b></font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on endSprite me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"> <b>hk.shutdown()</b><br> w.resetWorld()</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">F&uuml;gen Sie diese Zeilen zu Ihrem Verhaltensskript hinzu. Die Stepping-Funktion (hk.step) wird am Ende jedes Bilds aufgerufen, bevor der Film mit dem n&auml;chsten Bild fortf&auml;hrt. Dadurch wird die Simulation veranlasst, die neuen Positionen und Ausrichtungen aller Modelle zu berechnen. Das bedeutet, dass diese beim Beginn des neuen Bilds in das B&uuml;hnen-Sprite gezogen werden k&ouml;nnen. Au&szlig;erdem muss die Physiksimulation beendet werden, wenn der Film zu Ende ist und die 3D-Welt in ihren urspr&uuml;nglichen, leeren Zustand zur&uuml;ckgesetzt wird.</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

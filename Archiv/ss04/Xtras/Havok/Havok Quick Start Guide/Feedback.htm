@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font face="Arial, Helvetica, sans-serif" size="4">R&uuml;ckmeldungen</font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Das Havok Xtra liefert &uuml;ber die Position und Ausrichtung von Starrk&ouml;rpern hinaus viele weitere Informationen. Sie k&ouml;nnen zu jedem Zeitpunkt die Geschwindigkeit eines K&ouml;rpers und die Gr&ouml;&szlig;e der Kraft, die auf ihn wirkt, abrufen. Sie k&ouml;nnen auch Informationen &uuml;ber das Zusammenprallen von Starrk&ouml;rpern abrufen. Zuletzt soll zu Ihrer Beispielszene noch ein Abschnitt eines Lingo-Skripts hinzugef&uuml;gt werden, der bei jedem Aufprall der Kugel auf den W&uuml;rfel einen Ton wiedergibt. Der dazu erforderliche Code ist in zwei Abschnitte gegliedert. Zun&auml;chst m&uuml;ssen Sie dem Havok Xtra mitteilen, dass die Kugel und der W&uuml;rfel aufeinander prallen sollen.</font></p>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on beginSprite me </font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">w = member( 3 )<br> <b>hk</b> = member( 4 )<br> <br> w.resetWorld()<br> <b>hk.initialize</b>( w, 0.1, 1 )<br> <br> createVisibleObjects()<br> createPhysicalObjects()<br> createDashpot()<br> createSpring()<br> <b>hk.registerInterest</b>( "TheBox", "TheBall", 10, 0, #<b>collision</b>, me )</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end </font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dieses Skript ist die Endversion der Funktion "beginSprite". In der <b>fett</b> dargestellten Zeile wird angegeben, dass ein Zusammenprall erfolgen soll. Wenn ein Zusammenprall der Objekte "TheBox" und "TheBall" erfolgt, wird der zweite Code-Abschnitt (die Funktion <b>collision</b>) aufgerufen. Das Skript f&uuml;r die Funktion "collision" ist im Folgenden aufgef&uuml;hrt. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2"><b>Hinweis</b>: Bei diesem Code wird vorausgesetzt, dass die wiederzugebende Tondatei als Filmdarsteller "Sound" gespeichert ist.</font></p>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on collision me, details</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">sound(1).volume = integer( 255 / power( details[5], 1.1 ) )<br> sound(1).play( member( "Sound" ) )</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Wie aus dem Skript ersichtlich ist, kann bei dieser Callback-Funktion f&uuml;r den Zusammenprall der Parameter "details" verwendet werden. Dieser Parameter enth&auml;lt alle Informationen, die &uuml;ber den Zusammenprall verf&uuml;gbar sind, beispielsweise die Namen der beteiligten Starrk&ouml;rper, den Punkt des Zusammenpralls und die relative Richtung des Zusammenpralls. Die letzte Information, die an die Callback-Funktion &uuml;bermittelt wird, ist ein Wert, der die St&auml;rke des Zusammenpralls angibt. Im oben stehenden Beispiel wird dieser Wert verwendet, um dem abzuspielenden Ton einen Lautst&auml;rkepegel zuzuordnen. Das bedeutet, dass ein h&auml;rterer Aufprall zu einem lauteren Ton f&uuml;hrt.</font></p>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+</body>
+</html>

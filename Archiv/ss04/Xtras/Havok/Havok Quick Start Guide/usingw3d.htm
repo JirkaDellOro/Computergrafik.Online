@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font face="Arial, Helvetica, sans-serif" size="4">W3D-Datei verwenden</font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">In diesem Beispiel ist keine Havok-Exportdatei (*.HKE) vorhanden, die importiert werden k&ouml;nnte. Also m&uuml;ssen die physikalischen Informationen mit Hilfe von Lingo erstellt oder unmittelbar aus der 3D-Welt gezogen werden.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2"> Zun&auml;chst ist es erforderlich, die 3D-Welt zu importieren:</font></p>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Importieren</b> im Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie im Dialogfeld die gew&uuml;nschte Shockwave 3D-Datei (*.W3D) aus. </font></li>
+    </ol>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird der 3D-Darsteller zur Besetzung hinzugef&uuml;gt. Diese kann nun auf die B&uuml;hne gezogen werden. So erstellen Sie eine leere Havok-Simulation:</font></p>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Mediaelement</b> im Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2">W&auml;hlen Sie <b>Havok Physics Scene</b> im Untermen&uuml; <b>Mediaelement</b>. </font></li>
+    </ol>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird eine leerer <b>Havok-Darsteller</b> zur Besetzung hinzugef&uuml;gt. F&uuml;gen Sie nun ein <b>Physics (No HKE)</b>-Verhalten zur Besetzung hinzu (aus der Verhaltensbibliothek <b>Havok &gt; Setup</b>). Wenn Sie den Film in diesem Stadium abspielen, wird eine statische Welt angezeigt, das hei&szlig;t, dass bisher den 3D-Modellen in der W3D-Datei noch keine Starrk&ouml;rper zugeordnet sind.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun ist es erforderlich, dass Sie die Havok-Simulationsinformationen erstellen, indem Sie das Verhalten <b>Physics (No HKE)</b> bearbeiten. Die folgende Lingo-Funktion erstellt zwei Starrk&ouml;rper, die zur Havok-Simulation hinzugef&uuml;gt und den zwei 3D-Modellen "Box01" und "Text01" aus der W3D-Datei zugeordnet werden. Das erste davon ist ein fester konvexer Starrk&ouml;rper, es darf sich also w&auml;hrend der Simulation nie bewegen. Das zweite ist ein bewegliches konkaves Objekt. Eine detaillierte Beschreibung dieser Funktionen finden Sie im "Havok Xtra-Lingo-Referenzhandbuch". </font></p>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on createScene</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"> s = member( "HelloWorld" )<br> hk = member( "BlankHavok" )<br> </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"> -- create ground<br> m = s.model("Box01")<br> m.addModifier(#meshdeform)<br> hk.makeFixedRigidBody(m.name)<br> </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"> -- create text<br> m = s.model("Text01")<br> m.addModifier(#meshdeform)<br> hk.makeMovableRigidBody(m.name, 100.0, false) </font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2"> end</font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Zu diesem Zeitpunkt k&ouml;nnen Sie nicht nur die Starrk&ouml;rper erstellen, sondern Sie k&ouml;nnen auch deren standardm&auml;&szlig;ige physikalische Parameter &auml;ndern. Wenn Sie den Film nun abspielen, sollte eine physikalische Animation erfolgen (d. h., das Objekt "Text01" sollte unter Einwirkung der Schwerkraft herunterfallen).</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font face="Arial, Helvetica, sans-serif" size="4">Lingo verwenden</font> </p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">In diesem Beispiel sind keine Havok-Exportdatei (*.HKE) und keine Shockwave 3D-Datei (*.W3D) vorhanden, die importiert werden k&ouml;nnten. Also m&uuml;ssen die Informationen zur Darstellung und zu den physikalischen Daten unmittelbar in Lingo erstellt werden.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Zun&auml;chst ist es erforderlich, die leere 3D-Welt zu erstellen:</font></p>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Mediaelement</b> im Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2">W&auml;hlen Sie <b>Shockwave 3D</b> im Untermen&uuml; <b>Mediaelement</b>. </font></li>
+    </ol>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird der 3D-Darsteller zur Besetzung hinzugef&uuml;gt. Diese kann nun auf die B&uuml;hne gezogen werden. So erstellen Sie eine leere Havok-Simulation:</font></p>
+  </blockquote>
+</blockquote>
+<ol>
+  <ol>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Mediaelement</b> im Men&uuml; <b>Einf&uuml;gen</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2">W&auml;hlen Sie <b>Havok Physics Scene</b> im Untermen&uuml; <b>Mediaelement</b>. </font></li>
+    </ol>
+  </ol>
+</ol>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird ein leerer Havok-Darsteller zur Besetzung hinzugef&uuml;gt. F&uuml;gen Sie nun ein <b>Physics (No HKE)</b>-Verhalten (aus der Verhaltensbibliothek <b>Havok &gt; Setup</b>) zur Besetzung hinzu, indem Sie es auf die B&uuml;hne ziehen. Stellen Sie sicher, dass als Parameter <b>Which Havok Cast Member</b> der Name des Darstellers der <b>Havok Physics-Szene </b> gesetzt ist.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun ist es erforderlich, die Physikszene und die 3D-Szene vollst&auml;ndig neu zu erstellen.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Die folgende Lingo-Funktion erstellt die 3D-Modelle f&uuml;r die Szene und die Starrk&ouml;rper. In diesem Fall werden das 3D-Objekt, das den Boden darstellt, und die Textstarrk&ouml;rper eigentlich als axial ausgerichtete Begrenzungsboxen konstruiert.</font></p>
+    <blockquote>
+      <p><font size="2" face="Courier New, Courier, mono">on createScene</font></p>
+      <blockquote>
+        <p><font size="2" face="Courier New, Courier, mono"> s = member( "BlankScene" )<br> hk = member( "BlankHavok" )<br> txt = member( "Text" )<br> <br> s.resetWorld()<br> <br> -- create ground<br> mr = s.newmodelresource("GroundPlaneRes", #box)<br> mr.width = 150<br> mr.length = 50<br> mr.height = 100<br> m = s.newmodel("GroundPlane", mr)<br> m.transform.rotation = vector(-90,0,0)<br> m.transform.position = vector(0,250,-200)<br> <br> m.addModifier(#meshdeform)<br> hk.makeFixedRigidBody(m.name, true, #box)<br> <br> -- point camera<br> c = s.camera[1]<br> c.transform.position = vector(50,-50,-100)<br> c.pointat(m.transform.position + vector(0,0,50), vector(0,0,1))<br> c.hither = 1<br> c.yon = 1000<br> <br> -- create text<br> txt.text = "Hello World"<br> mr = txt.extrude3D( s )<br> mr.bevelType = 1 <br> mr.bevelDepth = 0.1<br> mr.smoothness = 6 <br> m = s.newModel("Text", mr)<br> m.transform.position = vector(-75,250,0)<br> m.transform.rotation = vector(90,0,0)<br> m.addModifier(#meshdeform)<br> hk.makeMovableRigidBody(m.name, 1000.0, true, #box)</font></p>
+      </blockquote>
+      <p><font size="2" face="Courier New, Courier, mono">end</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+</body>
+</html>

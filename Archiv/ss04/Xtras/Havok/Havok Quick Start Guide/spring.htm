@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font face="Arial, Helvetica, sans-serif" size="4">Federn und Sto&szlig;d&auml;mpfer</font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun bewegt sich Ihre Szene nach den Gesetzen der Physik und Sie k&ouml;nnen sie steuern und mit ihr interagieren. Das Havok Xtra stellt dazu f&uuml;r einzelne Starrk&ouml;rper spezielle Funktionen bereit. Die Position und Drehung von Starrk&ouml;rpern kann entweder unmittelbar (mit Hilfe verschiedener Funktionen vom Typ "…MoveTo" oder indirekt (in der Simulation durch das Anwenden von Kr&auml;ften, Impulsen oder Drehmomenten) beeinflusst werden. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">&Uuml;ber diese Standardfunktionen hinaus bietet das Havok Xtra auch integrierte und einfach zu handhabende Bedingungen in Form von Sto&szlig;d&auml;mpfern und Federn. Federn haben eine Entspannungsl&auml;nge und eine Elastizit&auml;t und funktionieren wie Federn in der realen Welt. Sto&szlig;d&auml;mpfer kann man sich als eine Art Begrenzer vorstellen. Lineare Sto&szlig;d&auml;mpfer legen die Position eines Starrk&ouml;rpers fest. Die Position kann auf einen bestimmten Punkt im Raum der Welt oder auf einen bestimmten Punkt relativ zu einem anderen Starrk&ouml;rper festgelegt werden. Mit Hilfe der zweiten M&ouml;glichkeit k&ouml;nnen Sie beispielsweise eine Kette von Starrk&ouml;rpern erstellen. Drehungssto&szlig;d&auml;mper sollen die Drehung eines Starrk&ouml;rpers begrenzen. Das hei&szlig;t, dass beispielsweise die Ausrichtung eines W&uuml;rfels derart begrenzt werden kann, dass er immer auf einer Ecke balancieren soll. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun k&ouml;nnen Sie die aktuelle Szene ver&auml;ndern, um sie interessanter zu machen und nicht einfach nur einen W&uuml;rfel auf eine Kugel fallen zu lassen. Sie k&ouml;nnen einen linearen Sto&szlig;d&auml;mpfer hinzuf&uuml;gen, um die Position des W&uuml;rfels festzulegen, eine Drehung des W&uuml;rfels jedoch zuzulassen. Au&szlig;erdem k&ouml;nnen Sie eine harte Feder hinzuf&uuml;gen, um die Kugel mit dem &ouml;rtlich fixierten W&uuml;rfel zu verbinden. Diese Feder kann so konfiguriert werden, dass die Kugel andauernd mit dem W&uuml;rfel zusammenst&ouml;&szlig;t und eine interessante, ungeordnete Wechselbeziehung entsteht.</font></p>
+    <blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">on createDashpot me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">worldPoint = w.model("TheBox").transform.position<br> dashpot = hk.makeLinearDashpot( "DashpotName", "TheBox", worldPoint )<br> dashpot.strength = 1000<br> dashpot.damping = 100</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+      <p><font face="Courier New, Courier, mono" size="2">on createSpring me</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">spring = hk.makeSpring( "SpringName", "TheBox", "TheBall" )<br> spring.restLength = 3.5<br> spring.elasticity = 10000<br> spring.damping = 1</font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+    </blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Mit Hilfe dieses Lingo-Skripts erstellen Sie den linearen Sto&szlig;d&auml;mpfer und die Feder. F&uuml;gen Sie diesen Skriptabschnitt zum Verhalten hinzu. Die beiden neuen Funktionen m&uuml;ssen nach dem Erstellen der physikalischen Objekte innerhalb von <b>beginSprite</b> aufgerufen werden.</font></p>
+    <p align="center"><img src="stagecopy.jpg" width="342" height="281" align="middle"></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Wenn Sie den Film jetzt abspielen, sollte er ungef&auml;hr wie oben dargestellt aussehen.</font></p>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+</body>
+</html>

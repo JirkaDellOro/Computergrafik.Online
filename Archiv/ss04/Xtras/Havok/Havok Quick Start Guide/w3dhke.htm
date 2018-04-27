@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p><font face="Arial, Helvetica, sans-serif" size="4">W3D- und HKE-Dateien verwenden</font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Angenommen, eine Szene wurde bereits in einem externen Programm zum Erstellen von 3D-Modellen erstellt und sowohl eine W3D-Datei mit den 3D-Daten als auch eine HKE-Datei mit den physikalischen Daten exportiert. (Weitere Informationen zur Vorgehensweise beim Exportieren finden Sie in der Dokumentation zu Shockwave3D Exporter und Havok Exporter.)</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Zun&auml;chst ist es erforderlich, die 3D-Welt zu importieren:</font></p>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Importieren</b> im Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie im Dialogfeld die gew&uuml;nschte Shockwave 3D-Datei (*.W3D) aus. </font></li>
+    </ol>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird der 3D-Darsteller zur Besetzung hinzugef&uuml;gt. Diese kann nun auf die B&uuml;hne gezogen werden. Importieren Sie nun den gew&uuml;nschten Havok-Darsteller:</font></p>
+    <ol>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> Klicken Sie auf das Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie <b>Importieren</b> im Men&uuml; <b>Datei</b>. </font></li>
+      <li><font face="Arial, Helvetica, sans-serif" size="2"> W&auml;hlen Sie im Dialogfeld die gew&uuml;nschte Havok-Exportdatei (*.HKE) aus. </font></li>
+    </ol>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Dadurch wird der Havok-Darsteller zur Besetzung hinzugef&uuml;gt. Wenn Sie den Film in diesem Stadium abspielen, wird eine statische Welt angezeigt. Damit daraus eine dynamische Welt wird, muss die Simulation von Havok initialisiert und mit der 3D-Welt verbunden werden. </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Um dies zu erreichen, ziehen Sie das Verhalten <b>Physics (HKE)</b> (das Sie in der Verhaltensbibliothek unter <b>Havok &gt; Setup</b> finden) auf das Sprite, das eine Ansicht der 3D-Welt darstellt. Stellen Sie sicher, dass als Parameter <b>Which Havok Cast Member </b> der Name des Darstellers der Havok Physics-Szene gesetzt ist. Durch dieses Verhalten wird die Havok-Simulation initialisiert (3D-Objekte aus der W3D-Datei werden mit Starrk&ouml;rpern in der HKE-Datei verbunden). Au&szlig;erdem wird daf&uuml;r gesorgt, dass die Zeit in der Physiksimulation nach jedem Schritt des Films fortschreitet und die Positionen und Ausrichtungen der aktuell gesteuerten 3D-Objekte aktualisiert werden. Sie k&ouml;nnen auch andere Parameter angeben, wenn Sie das Verhalten auf die B&uuml;hne ziehen - die standardm&auml;&szlig;igen Einstellungen sind jedoch in den meisten F&auml;llen sinnvoll.</font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun k&ouml;nnen weitere Verhalten auf die B&uuml;hne gezogen werden, um zus&auml;tzliche physikalische Effekte zu erzielen. Sie k&ouml;nnen beispielsweise das Verhalten <b>Move Model</b> (das Sie in der Verhaltensbibliothek unter <b>Havok &gt; Control </b> finden) auf die B&uuml;hne ziehen und f&uuml;r den Parameter <b>Which Model</b> die Option <b>Any Model</b> ausw&auml;hlen. Ziehen Sie daraufhin einen Ausl&ouml;ser vom Typ <b>Mouse Left</b> auf die B&uuml;hne (aus der Verhaltensbibliothek <b>3D&gt; Triggers</b>) und ordnen Sie den Ausl&ouml;ser dem Verhalten <b>Move Model</b> zu (ausw&auml;hlbar im Parameter <b>Select a Group and its Action</b>). </font></p>
+    <p><font face="Arial, Helvetica, sans-serif" size="2">Nun sollte es m&ouml;glich sein, die 3D-Modelle in der Szene hochzuheben und mit Hilfe des Mauszeigers und der linken Maustaste zu verschieben. </font></p>
+  </blockquote>
+</blockquote>
+</body>
+</html>
