@@ -1,0 +1,92 @@
+%!Adobe-FontList 1.07
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Unibody8Black-Regular
+FamilyName:Unibody 8
+StyleName:Black
+FullName:Unibody 8 Black
+WritingScript:Roman
+OutlineFileName:D:\Incoming\Fonts DL\Pixelfonts\unibody\Unibody 8-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27832
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Unibody8-Bold
+FamilyName:Unibody 8
+StyleName:Bold
+FullName:Unibody 8 Bold
+WritingScript:Roman
+OutlineFileName:D:\Incoming\Fonts DL\Pixelfonts\unibody\Unibody 8-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:24996
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Unibody8-Italic
+FamilyName:Unibody 8
+StyleName:Italic
+FullName:Unibody 8 Italic
+WritingScript:Roman
+OutlineFileName:D:\Incoming\Fonts DL\Pixelfonts\unibody\Unibody 8-Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:18540
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Unibody8-Regular
+FamilyName:Unibody 8
+StyleName:Regular
+FullName:Unibody 8
+WritingScript:Roman
+OutlineFileName:D:\Incoming\Fonts DL\Pixelfonts\unibody\Unibody 8-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:18512
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Unibody8SmallCaps-Regular
+FamilyName:Unibody 8
+StyleName:SmallCaps
+FullName:Unibody 8 SmallCaps
+WritingScript:Roman
+OutlineFileName:D:\Incoming\Fonts DL\Pixelfonts\unibody\Unibody 8-SmallCaps.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:14940
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
