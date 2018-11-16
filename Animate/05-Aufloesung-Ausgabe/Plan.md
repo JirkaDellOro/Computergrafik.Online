@@ -1,17 +1,3 @@
-|Szenenaufbau   |Kapitel/Seite   |Status   |
-|---|---|---|
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-|   |   |   |   
-
 
 |Auflösung und Ausgabe   |Kapitel/Seite   |Status   |
 |---|---|---|
