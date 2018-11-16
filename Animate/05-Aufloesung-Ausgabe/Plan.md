@@ -1,7 +1,7 @@
 
-|Auflösung und Ausgabe   |Kapitel/Seite   |Status   |Ton |
+|Auflösung und Ausgabe   |Kapitel/Seite   |Status   |synchronisiert mit Ton |
 |---|---|---|---|
-|   |Einleitung   |fertig      |  ja |
+|   |Einleitung   |Würfel richtig anordnen, Größe anpassen, Hintergrundfarbe?      |  ja |
 |   |Auflösung   |      |   |
 |   |Pixels per Inch   |      |   |
 |   |I Pixels per Inch   |      |   |
