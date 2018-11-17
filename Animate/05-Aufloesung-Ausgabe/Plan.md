@@ -2,7 +2,7 @@
 |Auflösung und Ausgabe   |Kapitel/Seite   |Status   |synchronisiert mit Ton |
 |---|---|---|---|
 |   |Einleitung   |fertig    |  ja |
-|   |Auflösung   |      |   |
+|   |Auflösung   |fertig      | ja  |
 |   |Pixels per Inch   |      |   |
 |   |I Pixels per Inch   |      |   |
 |   |Auflösung eines Monitors   |      |   |
