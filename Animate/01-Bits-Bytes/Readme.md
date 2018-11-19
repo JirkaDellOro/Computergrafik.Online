@@ -4,7 +4,7 @@
 |   |Einleitung   | Animation erstellt   | nein  |
 |   |Dezimalsystem   | Animation erstellt     | nein  |
 |   |Binärsystem   |  Animation erstellt    | nein  |
-|   |Hexadezimalsystem   |  Animation 75%    | nein  |
+|   |Hexadezimalsystem   |  Animation erstellt    | nein  |
 |   |Interaktion: Dezimalsystem - Binärsystem - Hexadezimalsystem   |      |   |
 |   |Bits und Bytes   |      |   |
 |   |Bezeichnung für größere Datenmengen  |      |   |
