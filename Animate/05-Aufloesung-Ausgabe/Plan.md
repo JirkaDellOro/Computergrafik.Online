@@ -3,7 +3,7 @@
 |---|---|---|---|
 |   |Einleitung   |fertig    |  ja |
 |   |Auflösung   |fertig      | ja  |
-|   |Pixels per Inch   |      |   |
+|   |Pixels per Inch   |fertig      | ja  |
 |   |I Pixels per Inch   |      |   |
 |   |Auflösung eines Monitors   |      |   |
 |   |I Auflösung eines Monitors   |      |   |
