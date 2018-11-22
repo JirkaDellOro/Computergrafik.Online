@@ -158,14 +158,14 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.symboltest).wait(1));
 
 	// buttonMultiply
-	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Button', 'disabled':false, 'visible':true, 'class':'ui-button'});
+	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
 	this.multiply.setTransform(50,284.1,1,1,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.multiply).wait(1));
 
 	// buttonNormal
-	this.normal = new lib.an_Button({'id': 'normal', 'label':'Button', 'disabled':false, 'visible':true, 'class':'ui-button'});
+	this.normal = new lib.an_Button({'id': 'normal', 'label':'Normal', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
 	this.normal.setTransform(0,225.1);
 
