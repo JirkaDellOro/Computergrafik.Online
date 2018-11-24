@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"mixcolormode_atlas_", frames: [[0,0,1920,1080],[0,1082,672,504]]}
+		{name:"mixcolormode_atlas_", frames: [[0,0,1920,1080]]}
 ];
 
 
@@ -14,13 +14,6 @@ lib.ssMetadata = [
 (lib._1 = function() {
 	this.initialize(ss["mixcolormode_atlas_"]);
 	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.SMPTE_Color_Bars = function() {
-	this.initialize(ss["mixcolormode_atlas_"]);
-	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -41,19 +34,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
-(lib.symbolTest = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#00ACB6").s().p("Ax9R+MAAAgj7MAj7AAAMAAAAj7g");
-	this.shape.setTransform(115.025,115.025);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.symbolTest, new cjs.Rectangle(0,0,230.1,230.1), null);
-
-
 (lib.roboterImage = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -65,19 +45,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.roboterImage, new cjs.Rectangle(0,0,1299.9,731.2), null);
-
-
-(lib.foregroundimage = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer_1
-	this.instance = new lib.SMPTE_Color_Bars();
-	this.instance.parent = this;
-	this.instance.setTransform(0,0,0.3272,0.3272);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.foregroundimage, new cjs.Rectangle(0,0,219.9,164.9), null);
 
 
 (lib.an_Button = function(options) {
@@ -103,59 +70,83 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		console.log(this.backgroundImage);
-		console.log(this.testImage);
-		elem = this.testImage;
+		/*
+		* Image append to Dom overlay with jquery
+		*/
+		$('body').append('<div class="test" id="testImage"></div>');
+		$('#testImage').prepend('<img class="test" id="theImg" src="./images/testImage.png" style="position: absolute; top: 250px; left: 300px; width: 300px; height: auto;"/>');
 		
-		rect = this.symboltest;
+		image = document.getElementById("testImage");
+		
 		
 		this.addEventListener("click", handleClick);
 		console.log($("#dom_overlay_container"));
 		$("#dom_overlay_container")[0].addEventListener("click", handleClick);
 		
 		function handleClick(_event) {
-			console.group("Click");
-			console.log("target: ")
-			console.log(_event.target);
-			console.log("currentTarget: ")
-			var ct = _event.currentTarget;
-			console.log(ct);
-			console.groupEnd();
 			changeMixMode(_event.target.id);
-			//changeMixMode(elem, _event.target.id);
 		}
 		
-		function changeMixMode( targetId){
-			console.log(elem);	
-			console.log(targetId);
+		function changeMixMode(targetId){
 			var mixMode = targetId;
-			console.log(rect);
-			console.log(rect.shape.graphics._fill);
-			rect.shape.graphics._fill.style = "#ffff00";
-			parent.parent.canvas.nextElementSibling.style.mixBlendMode = mixMode;
-			//rect.shape.graphics._fill.colorMixMode = mixMode;
-			//this.rect._fill.style = "#333333";
-			//this.rect.style.backgroundColor = "rgba(255,255,255,0)";
-			//elem.x += 5;
-			//elem._fill.style = "#0000FF";
-			//elem.style.backgroundColor = "rgba(255,255,255,0)";
-			//var elem = this._testImage;
-			//elem.style.mixBlendMode = mixMode;
-			//elem.style.backgroundColor = "red";
-			
+			testImage.style.mixBlendMode = mixMode;	
+		}
+		
+		
+		
+		/*Drag Testpicture over Background picture*/
+		testImage.addEventListener("mousedown", startDrag);
+		testImage.addEventListener("mouseup", stopDrag);
+		//testImage.addEventListener("touchstart", startDrag, false);
+		//testImage.addEventListener("touchend", stopDrag, false);
+		
+		function startDrag(e) {
+			// determine event object
+			if (!e) {
+				var e = window.event;
+			}
+			if(e.preventDefault) e.preventDefault();
+		
+			// IE uses srcElement, others use target
+			targ = e.target ? e.target : e.srcElement;
+		
+			if (targ.className != 'test') {return};
+			// calculate event X, Y coordinates
+			offsetX = e.clientX;
+			offsetY = e.clientY;
+		
+			// assign default values for top and left properties
+			if(!targ.style.left) { targ.style.left='0px'};
+			if (!targ.style.top) { targ.style.top='0px'};
+		
+			// calculate integer values for top and left 
+			// properties
+			coordX = parseInt(targ.style.left);
+			coordY = parseInt(targ.style.top);
+			drag = true;
+		
+			// move div element
+			document.onmousemove=dragDiv;
+			//document.touchmove=dragDiv;
+			return false;
+		
+		}
+		function dragDiv(e) {
+			if (!drag) {return};
+			if (!e) { var e= window.event};
+			 var targ=e.target?e.target:e.srcElement;
+			// move div element
+			targ.style.left=coordX+e.clientX-offsetX+'px';
+			targ.style.top=coordY+e.clientY-offsetY+'px';
+			return false;
+		}
+		function stopDrag() {
+			drag=false;
 		}
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
-
-	// symbolTest
-	this.symboltest = new lib.symbolTest();
-	this.symboltest.name = "symboltest";
-	this.symboltest.parent = this;
-	this.symboltest.setTransform(132.85,507.15,1,1,0,0,0,115,115);
-
-	this.timeline.addTween(cjs.Tween.get(this.symboltest).wait(1));
 
 	// buttonMultiply
 	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button'});
@@ -170,23 +161,6 @@ p._updateVisibility = _updateVisibility;
 	this.normal.setTransform(0,225.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.normal).wait(1));
-
-	// foregroundimage copy
-	this.testImage = new lib.foregroundimage();
-	this.testImage.name = "testImage";
-	this.testImage.parent = this;
-	this.testImage.setTransform(110,82.5,1,1,0,0,0,110,82.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.testImage).wait(1));
-
-	// foregroundimage
-	this.testImage_1 = new lib.foregroundimage();
-	this.testImage_1.name = "testImage_1";
-	this.testImage_1.parent = this;
-	this.testImage_1.setTransform(110,82.5,1,1,0,0,0,110,82.5);
-	this.testImage_1.cache(-2,-2,224,169);
-
-	this.timeline.addTween(cjs.Tween.get(this.testImage_1).wait(1));
 
 	// backgroundImage
 	this.backgroundImage = new lib.roboterImage();
