@@ -6,6 +6,6 @@
 |   |Binärsystem   |  Animation erstellt    | nein  |
 |   |Hexadezimalsystem   |  Animation erstellt    | nein  |
 |   |Interaktion: Dezimalsystem - Binärsystem - Hexadezimalsystem   |      |   |
-|   |Bits und Bytes   |      |   |
+|   |Bits und Bytes   |  Animation erstellt    |   |
 |   |Bezeichnung für größere Datenmengen  |      |   |
 
