@@ -4,8 +4,8 @@
 |   |Einleitung   |fertig    |  ja |
 |   |Auflösung   |fertig      | ja  |
 |   |Pixels per Inch   |fertig      | ja  |
-|   |I Pixels per Inch   |      |   |
-|   |Auflösung eines Monitors   |      |   |
+|   |I Pixels per Inch   | Problem mit Lupe |   |
+|   |Auflösung eines Monitors   |      | ja   |
 |   |I Auflösung eines Monitors   |      |   |
 |   |Drucktechnik   |      |   |
 |   |Druckraster   |      |   |
