@@ -61,6 +61,23 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
+(lib.an_TextInput = function(options) {
+	this._element = new $.an.TextInput(options);
+	this._el = this._element.create();
+	var $this = this;
+	this.addEventListener('added', function() {
+		$this._lastAddedFrame = $this.parent.currentFrame;
+		$this._element.attach($('#dom_overlay_container'));
+	});
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,100,22);
+
+p._tick = _tick;
+p._handleDrawEnd = _handleDrawEnd;
+p._updateVisibility = _updateVisibility;
+
+
+
 (lib.an_RadioButton = function(options) {
 	this._element = new $.an.RadioButton(options);
 	this._el = this._element.create();
@@ -160,31 +177,46 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// Radiobuttons
-	this.bit24_radio = new lib.an_RadioButton({'id': 'bit24_radio', 'label':'24 Bit', 'value':'6', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.info = new cjs.Text("", "34px 'Times New Roman'", "#0043D4");
+	this.info.name = "info";
+	this.info.lineHeight = 40;
+	this.info.lineWidth = 447;
+	this.info.parent = this;
+	this.info.setTransform(57.05,1133.15);
 
-	this.bit24_radio.setTransform(169.7,970.05,2.951,2.951,0,0,0,49.9,11.2);
+	this.height = new lib.an_TextInput({'id': 'height', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
-	this.bit16_radio = new lib.an_RadioButton({'id': 'bit16_radio', 'label':'16 Bit', 'value':'5', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.height.setTransform(410,1094.9,1,1,0,0,0,50,11);
 
-	this.bit16_radio.setTransform(172.25,906.05,2.8396,2.8396,0,0,0,50,11.1);
+	this.width = new lib.an_TextInput({'id': 'width', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
-	this.bit8_radio = new lib.an_RadioButton({'id': 'bit8_radio', 'label':'8 Bit', 'value':'4', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.width.setTransform(72.05,1094.9,1,1,0,0,0,50,11);
 
-	this.bit8_radio.setTransform(179.15,840.3,3.14,3.14,0,0,0,49.9,11.1);
+	this.bit24_radio = new lib.an_RadioButton({'id': 'bit24_radio', 'label':'24 Bit', 'value':'5', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
 
-	this.bit4_radio = new lib.an_RadioButton({'id': 'bit4_radio', 'label':'4 Bit', 'value':'3', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.bit24_radio.setTransform(176.3,976.85,3.0055,3.0055,0,0,0,49.9,11.2);
 
-	this.bit4_radio.setTransform(181.95,772.45,3.0283,3.0283,0,0,0,50.1,11.1);
+	this.bit16_radio = new lib.an_RadioButton({'id': 'bit16_radio', 'label':'16 Bit', 'value':'4', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
 
-	this.bit2_radio = new lib.an_RadioButton({'id': 'bit2_radio', 'label':'2 Bit', 'value':'2', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.bit16_radio.setTransform(170.95,908.45,2.892,2.8921,0,0,0,50,11.1);
 
-	this.bit2_radio.setTransform(186,704.65,3.1093,3.1093,0,0,0,50.1,11);
+	this.bit8_radio = new lib.an_RadioButton({'id': 'bit8_radio', 'label':'8 Bit', 'value':'3', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
 
-	this.bit1_radio = new lib.an_RadioButton({'id': 'bit1_radio', 'label':'1 Bit', 'value':'1', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+	this.bit8_radio.setTransform(185.95,840.6,3.198,3.198,0,0,0,49.9,11.1);
 
-	this.bit1_radio.setTransform(187.05,636.55,3.142,3.142,0,0,0,49.9,11.2);
+	this.bit4_radio = new lib.an_RadioButton({'id': 'bit4_radio', 'label':'4 Bit', 'value':'2', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bit1_radio},{t:this.bit2_radio},{t:this.bit4_radio},{t:this.bit8_radio},{t:this.bit16_radio},{t:this.bit24_radio}]}).wait(1));
+	this.bit4_radio.setTransform(180.85,772.7,3.0842,3.0842,0,0,0,50.1,11.1);
+
+	this.bit2_radio = new lib.an_RadioButton({'id': 'bit2_radio', 'label':'2 Bit', 'value':'1', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+
+	this.bit2_radio.setTransform(185,704.5,3.1667,3.1667,0,0,0,50.1,11);
+
+	this.bit1_radio = new lib.an_RadioButton({'id': 'bit1_radio', 'label':'1 Bit', 'value':'0', 'name':'bit', 'disabled':false, 'visible':true, 'class':'ui-radiobutton'});
+
+	this.bit1_radio.setTransform(186.05,637.2,3.2,3.2,0,0,0,49.9,11.2);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bit1_radio},{t:this.bit2_radio},{t:this.bit4_radio},{t:this.bit8_radio},{t:this.bit16_radio},{t:this.bit24_radio},{t:this.width},{t:this.height},{t:this.info}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_Radiobuttons, null, null);
 
@@ -313,37 +345,37 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// Bilder
-	this.bit1_img = new lib._1_bit();
-	this.bit1_img.name = "bit1_img";
-	this.bit1_img.parent = this;
-	this.bit1_img.setTransform(539.15,360.45,1,1,0,0,0,508.9,240.9);
+	this.bit_img_0 = new lib._1_bit();
+	this.bit_img_0.name = "bit_img_0";
+	this.bit_img_0.parent = this;
+	this.bit_img_0.setTransform(539.15,347.1,1,1,0,0,0,508.9,240.9);
 
-	this.bit2_img = new lib._2_bit();
-	this.bit2_img.name = "bit2_img";
-	this.bit2_img.parent = this;
-	this.bit2_img.setTransform(539.15,360.45,1,1,0,0,0,508.9,240.9);
+	this.bit_img_1 = new lib._2_bit();
+	this.bit_img_1.name = "bit_img_1";
+	this.bit_img_1.parent = this;
+	this.bit_img_1.setTransform(539.15,347.45,1,1,0,0,0,508.9,240.9);
 
-	this.bit4_img = new lib._4_bit();
-	this.bit4_img.name = "bit4_img";
-	this.bit4_img.parent = this;
-	this.bit4_img.setTransform(539.15,360.45,1,1,0,0,0,508.9,240.9);
+	this.bit_img_2 = new lib._4_bit();
+	this.bit_img_2.name = "bit_img_2";
+	this.bit_img_2.parent = this;
+	this.bit_img_2.setTransform(539.15,347.45,1,1,0,0,0,508.9,240.9);
 
-	this.bit8_img = new lib._8_bit();
-	this.bit8_img.name = "bit8_img";
-	this.bit8_img.parent = this;
-	this.bit8_img.setTransform(539.15,360.5,1,1,0,0,0,508.9,240.9);
+	this.bit_img_3 = new lib._8_bit();
+	this.bit_img_3.name = "bit_img_3";
+	this.bit_img_3.parent = this;
+	this.bit_img_3.setTransform(539.15,347.5,1,1,0,0,0,508.9,240.9);
 
-	this.bit16_img = new lib._16_bit();
-	this.bit16_img.name = "bit16_img";
-	this.bit16_img.parent = this;
-	this.bit16_img.setTransform(539.15,360.5,1,1,0,0,0,508.9,240.9);
+	this.bit_img_4 = new lib._16_bit();
+	this.bit_img_4.name = "bit_img_4";
+	this.bit_img_4.parent = this;
+	this.bit_img_4.setTransform(539.15,347.5,1,1,0,0,0,508.9,240.9);
 
-	this.bit24_img = new lib._24_bit();
-	this.bit24_img.name = "bit24_img";
-	this.bit24_img.parent = this;
-	this.bit24_img.setTransform(539.15,360.5,1,1,0,0,0,508.9,240.9);
+	this.bit_img_5 = new lib._24_bit();
+	this.bit_img_5.name = "bit_img_5";
+	this.bit_img_5.parent = this;
+	this.bit_img_5.setTransform(539.15,347.5,1,1,0,0,0,508.9,240.9);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bit24_img},{t:this.bit16_img},{t:this.bit8_img},{t:this.bit4_img},{t:this.bit2_img},{t:this.bit1_img}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bit_img_5},{t:this.bit_img_4},{t:this.bit_img_3},{t:this.bit_img_2},{t:this.bit_img_1},{t:this.bit_img_0}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_Bilder, null, null);
 
@@ -389,144 +421,60 @@ p._updateVisibility = _updateVisibility;
 		this.bit8_radio = this.Radiobuttons.bit8_radio;
 		this.bit16_radio = this.Radiobuttons.bit16_radio;
 		this.bit24_radio = this.Radiobuttons.bit24_radio;
-		this.bit24_img = this.Bilder.bit24_img;
-		this.bit16_img = this.Bilder.bit16_img;
-		this.bit8_img = this.Bilder.bit8_img;
-		this.bit4_img = this.Bilder.bit4_img;
-		this.bit2_img = this.Bilder.bit2_img;
-		this.bit1_img = this.Bilder.bit1_img;
-		if(!this.bit1_radio_change_cbk) {
-			function bit1_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 1;
-				this.bit2_img.alpha = 0;
-				this.bit4_img.alpha = 0;
-				this.bit8_img.alpha = 0;
-				this.bit16_img.alpha = 0;
-				this.bit24_img.alpha = 0;
-				
-				
-				
-				// Ende des benutzerdefinierten Codes
+		this.width = this.Radiobuttons.width;
+		this.height = this.Radiobuttons.height;
+		this.info = this.Radiobuttons.info;
+		this.bit_img_5 = this.Bilder.bit_img_5;
+		this.bit_img_4 = this.Bilder.bit_img_4;
+		this.bit_img_3 = this.Bilder.bit_img_3;
+		this.bit_img_2 = this.Bilder.bit_img_2;
+		this.bit_img_1 = this.Bilder.bit_img_1;
+		this.bit_img_0 = this.Bilder.bit_img_0;
+		var elem = [this.bit_img_0, this.bit_img_1, this.bit_img_2, this.bit_img_3, this.bit_img_4, this.bit_img_5];
+			
+		console.log($("#dom_overlay_container"));
+		$("#dom_overlay_container")[0].addEventListener("click", handleClick);
+		
+		function handleClick(_event) {
+			if(_event.target.value != undefined){
+				myFunction(_event.target.value);
+			}else{
+				console.log("error");
 			}
-			$("#dom_overlay_container").on("change", "#bit1_radio", bit1_radio_change.bind(this));
-			this.bit1_radio_change_cbk = true;
 		}
 		
-		/* Ereignis für Klick auf Kontrollkästchen
-		Durch Klick auf das Kontrollkästchen wird eine Funktion ausgeführt, mit der Sie benutzerdefinierten Code hinzufügen können.
-		
-		Anweisungen:
-		1. Fügen Sie Ihren benutzerdefinierten Code in einer neuen Zeile nach der Zeile „// Beginn des benutzerdefinierten Codes“ ein.
-		*/
-		
-		if(!this.bit2_radio_change_cbk) {
-			function bit2_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 0;
-				this.bit2_img.alpha = 1;
-				this.bit4_img.alpha = 0;
-				this.bit8_img.alpha = 0;
-				this.bit16_img.alpha = 0;
-				this.bit24_img.alpha = 0;
-				// Ende des benutzerdefinierten Codes
+		function myFunction(value)
+		{
+			console.log("test " + value);
+			for (var i = 0; i <= 5; i++)
+			{
+				console.log(i);
+				if(value == i)
+				{
+					console.log("test : "+ i);
+					elem[i].alpha = 1;
+				}
+				else
+				{
+					elem[i].alpha = 0;	
+				}
 			}
-			$("#dom_overlay_container").on("change", "#bit2_radio", bit2_radio_change.bind(this));
-			this.bit2_radio_change_cbk = true;
 		}
 		
-		/* Ereignis für Klick auf Kontrollkästchen
-		Durch Klick auf das Kontrollkästchen wird eine Funktion ausgeführt, mit der Sie benutzerdefinierten Code hinzufügen können.
-		
-		Anweisungen:
-		1. Fügen Sie Ihren benutzerdefinierten Code in einer neuen Zeile nach der Zeile „// Beginn des benutzerdefinierten Codes“ ein.
-		*/
-		
-		if(!this.bit4_radio_change_cbk) {
-			function bit4_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 0;
-				this.bit2_img.alpha = 0;
-				this.bit4_img.alpha = 1;
-				this.bit8_img.alpha = 0;
-				this.bit16_img.alpha = 0;
-				this.bit24_img.alpha = 0;
-				// Ende des benutzerdefinierten Codes
+		if(!this.width_change_cbk || !this.height_change_cbk) {
+			function width_change(evt) {
+				console.log(evt.target.value);
+				var height = document.getElementById("height").value;
+				var width = document.getElementById("width").value;
+				var result = height*width;
+				console.log(result);
+			    this.info.text = result;
 			}
-			$("#dom_overlay_container").on("change", "#bit4_radio", bit4_radio_change.bind(this));
-			this.bit4_radio_change_cbk = true;
-		}
-		
-		/* Ereignis für Klick auf Kontrollkästchen
-		Durch Klick auf das Kontrollkästchen wird eine Funktion ausgeführt, mit der Sie benutzerdefinierten Code hinzufügen können.
-		
-		Anweisungen:
-		1. Fügen Sie Ihren benutzerdefinierten Code in einer neuen Zeile nach der Zeile „// Beginn des benutzerdefinierten Codes“ ein.
-		*/
-		
-		if(!this.bit8_radio_change_cbk) {
-			function bit8_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 0;
-				this.bit2_img.alpha = 0;
-				this.bit4_img.alpha = 0;
-				this.bit8_img.alpha = 1;
-				this.bit16_img.alpha = 0;
-				this.bit24_img.alpha = 0;
-				// Ende des benutzerdefinierten Codes
-			}
-			$("#dom_overlay_container").on("change", "#bit8_radio", bit8_radio_change.bind(this));
-			this.bit8_radio_change_cbk = true;
-		}
-		
-		/* Ereignis für Klick auf Kontrollkästchen
-		Durch Klick auf das Kontrollkästchen wird eine Funktion ausgeführt, mit der Sie benutzerdefinierten Code hinzufügen können.
-		
-		Anweisungen:
-		1. Fügen Sie Ihren benutzerdefinierten Code in einer neuen Zeile nach der Zeile „// Beginn des benutzerdefinierten Codes“ ein.
-		*/
-		
-		if(!this.bit16_radio_change_cbk) {
-			function bit16_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 0;
-				this.bit2_img.alpha = 0;
-				this.bit4_img.alpha = 0;
-				this.bit8_img.alpha = 0;
-				this.bit16_img.alpha = 16;
-				this.bit24_img.alpha = 0;
-				// Ende des benutzerdefinierten Codes
-			}
-			$("#dom_overlay_container").on("change", "#bit16_radio", bit16_radio_change.bind(this));
-			this.bit16_radio_change_cbk = true;
-		}
-		
-		/* Ereignis für Klick auf Kontrollkästchen
-		Durch Klick auf das Kontrollkästchen wird eine Funktion ausgeführt, mit der Sie benutzerdefinierten Code hinzufügen können.
-		
-		Anweisungen:
-		1. Fügen Sie Ihren benutzerdefinierten Code in einer neuen Zeile nach der Zeile „// Beginn des benutzerdefinierten Codes“ ein.
-		*/
-		
-		if(!this.bit24_radio_change_cbk) {
-			function bit24_radio_change(evt) {
-				// Beginn des benutzerdefinierten Codes
-				console.log(evt.target.checked);
-				this.bit1_img.alpha = 0;
-				this.bit2_img.alpha = 0;
-				this.bit4_img.alpha = 0;
-				this.bit8_img.alpha = 0;
-				this.bit16_img.alpha = 0;
-				this.bit24_img.alpha = 1;
-				// Ende des benutzerdefinierten Codes
-			}
-			$("#dom_overlay_container").on("change", "#bit24_radio", bit24_radio_change.bind(this));
-			this.bit24_radio_change_cbk = true;
+			$("#dom_overlay_container").on("change", "#width", width_change.bind(this));
+			$("#dom_overlay_container").on("change", "#height", width_change.bind(this));
+			
+			this.width_change_cbk = true;
+			this.heigth_change_cbk = true;
 		}
 	}
 
@@ -537,7 +485,7 @@ p._updateVisibility = _updateVisibility;
 	this.Radiobuttons = new lib.Szene_1_Radiobuttons();
 	this.Radiobuttons.name = "Radiobuttons";
 	this.Radiobuttons.parent = this;
-	this.Radiobuttons.setTransform(183.5,801.6,1,1,0,0,0,183.5,801.6);
+	this.Radiobuttons.setTransform(263.8,896.8,1,1,0,0,0,263.8,896.8);
 	this.Radiobuttons.depth = 0;
 	this.Radiobuttons.isAttachedToCamera = 0
 	this.Radiobuttons.isAttachedToMask = 0
@@ -551,7 +499,7 @@ p._updateVisibility = _updateVisibility;
 	this.Bilder = new lib.Szene_1_Bilder();
 	this.Bilder.name = "Bilder";
 	this.Bilder.parent = this;
-	this.Bilder.setTransform(539.2,360.4,1,1,0,0,0,539.2,360.4);
+	this.Bilder.setTransform(539.2,347.3,1,1,0,0,0,539.2,347.3);
 	this.Bilder.depth = 0;
 	this.Bilder.isAttachedToCamera = 0
 	this.Bilder.isAttachedToMask = 0
@@ -562,7 +510,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.Bilder).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(560.9,1079.6,487.30000000000007,-76.19999999999993);
+p.nominalBounds = new cjs.Rectangle(561.6,1066.2,486.6,127.70000000000005);
 // library properties:
 lib.properties = {
 	id: '9FE748469813F44E8530D44CACB7B7A4',
@@ -572,15 +520,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HFU_Main_Campus_1BIt.png", id:"HFU_Main_Campus_1BIt"},
-		{src:"images/HFU_Main_Campus_16BIt.jpg", id:"HFU_Main_Campus_16BIt"},
-		{src:"images/HFU_Main_Campus_2BIt.png", id:"HFU_Main_Campus_2BIt"},
-		{src:"images/HFU_Main_Campus_24BIt.jpg", id:"HFU_Main_Campus_24BIt"},
-		{src:"images/HFU_Main_Campus_4BIt.jpg", id:"HFU_Main_Campus_4BIt"},
-		{src:"images/HFU_Main_Campus_8BIt.jpg", id:"HFU_Main_Campus_8BIt"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/radiobutton.js", id:"an.RadioButton"}
+		{src:"images/HFU_Main_Campus_1BIt.png?1543241577479", id:"HFU_Main_Campus_1BIt"},
+		{src:"images/HFU_Main_Campus_16BIt.jpg?1543241577479", id:"HFU_Main_Campus_16BIt"},
+		{src:"images/HFU_Main_Campus_2BIt.png?1543241577479", id:"HFU_Main_Campus_2BIt"},
+		{src:"images/HFU_Main_Campus_24BIt.jpg?1543241577479", id:"HFU_Main_Campus_24BIt"},
+		{src:"images/HFU_Main_Campus_4BIt.jpg?1543241577479", id:"HFU_Main_Campus_4BIt"},
+		{src:"images/HFU_Main_Campus_8BIt.jpg?1543241577479", id:"HFU_Main_Campus_8BIt"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1543241577479", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1543241577479", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1543241577479", id:"an.TextInput"},
+		{src:"components/ui/src/radiobutton.js?1543241577479", id:"an.RadioButton"}
 	],
 	preloads: []
 };
