@@ -73,10 +73,12 @@ p._updateVisibility = _updateVisibility;
 		/*
 		* Image append to Dom overlay with jquery
 		*/
-		$('body').append('<div class="test" id="testImage"></div>');
-		$('#testImage').prepend('<img class="test" id="theImg" src="./images/testImage.png" style="position: absolute; top: 250px; left: 300px; width: 300px; height: auto;"/>');
+		$('body').append('<div class="test" id="testImage" style ="mix-blend-mode: normal;"></div>');
+		$('#testImage').prepend('<img class="test" id="theImg" src="./images/testImage.png" style="	position: absolute; top: 250px; left: 300px; width: 300px; height: auto;"/>');
 		
 		image = document.getElementById("testImage");
+		
+		$('body').css("position", "fixed");
 		
 		
 		this.addEventListener("click", handleClick);
@@ -89,7 +91,10 @@ p._updateVisibility = _updateVisibility;
 		
 		function changeMixMode(targetId){
 			var mixMode = targetId;
-			testImage.style.mixBlendMode = mixMode;	
+			if (mixMode == "softlight")
+					mixMode = "soft-light";
+			console.log(mixMode);
+			theImg.style.mixBlendMode = mixMode;	
 		}
 		
 		
@@ -97,8 +102,10 @@ p._updateVisibility = _updateVisibility;
 		/*Drag Testpicture over Background picture*/
 		testImage.addEventListener("mousedown", startDrag);
 		testImage.addEventListener("mouseup", stopDrag);
-		//testImage.addEventListener("touchstart", startDrag, false);
-		//testImage.addEventListener("touchend", stopDrag, false);
+		
+		
+		
+		
 		
 		function startDrag(e) {
 			// determine event object
@@ -114,6 +121,7 @@ p._updateVisibility = _updateVisibility;
 			// calculate event X, Y coordinates
 			offsetX = e.clientX;
 			offsetY = e.clientY;
+			
 		
 			// assign default values for top and left properties
 			if(!targ.style.left) { targ.style.left='0px'};
@@ -127,7 +135,6 @@ p._updateVisibility = _updateVisibility;
 		
 			// move div element
 			document.onmousemove=dragDiv;
-			//document.touchmove=dragDiv;
 			return false;
 		
 		}
@@ -143,22 +150,98 @@ p._updateVisibility = _updateVisibility;
 		function stopDrag() {
 			drag=false;
 		}
+		
+		/*
+		var testImageStyle = {
+			position: absolute; 
+			top: 250px; 
+			left: 300px; 
+			width: 300px; 
+			height: auto;
+		}
+		*/
+		
+		var dom = {
+		    container: document.getElementById("testImage"),
+		    drag: document.getElementById("theImg"),
+		}
+		
+		
+		var container = {
+		    x: dom.container.getBoundingClientRect().left,
+		    y: dom.container.getBoundingClientRect().top,
+		    w: dom.container.getBoundingClientRect().width,
+		    h: dom.container.getBoundingClientRect().height
+		}
+		
+		var drag = {
+		    w: dom.drag.offsetWidth,
+		    h: dom.drag.offsetHeight
+		}
+		
+		target = null;
+		
+		testImage.addEventListener('touchstart', handleTouchStart, false);
+		testImage.addEventListener('touchmove', handleTouchMove, false);
+		testImage.addEventListener('touchend', handleTouchEnd, false);
+		testImage.addEventListener('touchcancel', handleTouchCancel, false);
+		
+		function handleTouchStart(e) {
+		    if (e.touches.length == 1) {
+		        var touch = e.touches[0];
+		        target = touch.target;
+		    }
+		}
+		function handleTouchMove(e) {
+		    if (e.touches.length == 1) {
+		        if(target ===  dom.drag) {
+		            moveDrag(e);
+		        }
+		    }
+		}
+		function handleTouchEnd(e) {
+		    if (e.touches.length == 0) { // User just took last finger off screen
+		        target = null;
+		    }
+		}
+		function handleTouchCancel(e) {
+		    return;
+		}
+		
+		function moveDrag(e) {
+		    var touch = e.touches[0];
+		
+		//here is where the movement position is determained
+		    var posX = touch.pageX - container.x - drag.w / 2;
+			var posY = touch.pageY - container.x - drag.h / 2;
+		//   
+		    
+		
+		    dom.drag.style.left = posX + "px";
+			dom.drag.style.top = posY + "px";
+		
+		
+		}
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// buttonMultiply
+	this.softlight = new lib.an_Button({'id': 'softlight', 'label':'Weiches Licht', 'disabled':false, 'visible':true, 'class':'ui-button'});
+
+	this.softlight.setTransform(141.45,401.25,2.8293,2.8293,0,0,0,50,11);
+
 	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
-	this.multiply.setTransform(50,284.1,1,1,0,0,0,50,11);
+	this.multiply.setTransform(141.45,330.3,2.8293,2.8293,0,0,0,50,11);
 
-	this.timeline.addTween(cjs.Tween.get(this.multiply).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.multiply},{t:this.softlight}]}).wait(1));
 
 	// buttonNormal
 	this.normal = new lib.an_Button({'id': 'normal', 'label':'Normal', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
-	this.normal.setTransform(0,225.1);
+	this.normal.setTransform(0,225.1,2.8293,2.8293);
 
 	this.timeline.addTween(cjs.Tween.get(this.normal).wait(1));
 
