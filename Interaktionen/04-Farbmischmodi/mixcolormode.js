@@ -73,12 +73,26 @@ p._updateVisibility = _updateVisibility;
 		/*
 		* Image append to Dom overlay with jquery
 		*/
-		$('body').append('<div class="test" id="testImage" style ="mix-blend-mode: normal;"></div>');
-		$('#testImage').prepend('<img class="test" id="theImg" src="./images/testImage.png" style="	position: absolute; top: 250px; left: 300px; width: 300px; height: auto;"/>');
+		$('body').append('<div class="testImage" id="testImage"></div>');
+		$('#testImage').prepend('<img class="test" id="theImg" src="./images/testImage.png" />');
 		
-		image = document.getElementById("testImage");
+		//image = document.getElementById("testImage");
 		
-		$('body').css("position", "fixed");
+		$('body').css({
+				'position': 'fixed',
+				'overscroll-behavior-y': 'contain'
+		});
+		
+		
+		$('.test').css({
+			'position': 'absolute',
+			'top': '250px',
+			'left': '300px',
+			'width': '300px',
+			'height': 'auto',
+			'cursor': 'move'
+		});
+			
 		
 		
 		this.addEventListener("click", handleClick);
@@ -103,17 +117,14 @@ p._updateVisibility = _updateVisibility;
 		testImage.addEventListener("mousedown", startDrag);
 		testImage.addEventListener("mouseup", stopDrag);
 		
-		
-		
-		
-		
 		function startDrag(e) {
 			// determine event object
 			if (!e) {
 				var e = window.event;
+				console.log("!e = " + e);
 			}
 			if(e.preventDefault) e.preventDefault();
-		
+			console.log(e);
 			// IE uses srcElement, others use target
 			targ = e.target ? e.target : e.srcElement;
 		
@@ -134,7 +145,7 @@ p._updateVisibility = _updateVisibility;
 			drag = true;
 		
 			// move div element
-			document.onmousemove=dragDiv;
+			testImage.onmousemove=dragDiv;
 			return false;
 		
 		}
@@ -142,24 +153,25 @@ p._updateVisibility = _updateVisibility;
 			if (!drag) {return};
 			if (!e) { var e= window.event};
 			 var targ=e.target?e.target:e.srcElement;
-			// move div element
-			targ.style.left=coordX+e.clientX-offsetX+'px';
-			targ.style.top=coordY+e.clientY-offsetY+'px';
+			
+			// Calculate posX and posY
+			posX=coordX+e.clientX-offsetX;
+			posY=coordY+e.clientY-offsetY;
+			
+			// move div element not over Container
+			if( ("0" < posX && posX < "650") && ("0" < posY && posY < "500") )
+			{
+				targ.style.left=posX + 'px';
+				targ.style.top=posY + 'px';
+			}
 			return false;
 		}
 		function stopDrag() {
 			drag=false;
 		}
 		
-		/*
-		var testImageStyle = {
-			position: absolute; 
-			top: 250px; 
-			left: 300px; 
-			width: 300px; 
-			height: auto;
-		}
-		*/
+		
+		/*Drag Testpicture over Background picture - ÍMobile*/
 		
 		var dom = {
 		    container: document.getElementById("testImage"),
@@ -214,14 +226,35 @@ p._updateVisibility = _updateVisibility;
 		//here is where the movement position is determained
 		    var posX = touch.pageX - container.x - drag.w / 2;
 			var posY = touch.pageY - container.x - drag.h / 2;
-		//   
 		    
-		
-		    dom.drag.style.left = posX + "px";
-			dom.drag.style.top = posY + "px";
-		
-		
+			if( ("0" < posX && posX < "650") && ("0" < posY && posY < "500") )
+			{
+				dom.drag.style.left = posX + "px";
+				dom.drag.style.top = posY + "px";
+			}
 		}
+		
+		
+		/* Google Chrome iOs Scroll Refresh behavior */ 
+		function preventPullToRefresh(element) {
+			var prevent = false;
+		
+		    document.querySelector(element).addEventListener('touchstart', function(e){
+		      if (e.touches.length !== 1) { return; }
+		
+		      var scrollY = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+		      prevent = (scrollY === 0);
+		    });
+		
+		    document.querySelector(element).addEventListener('touchmove', function(e){
+		      if (prevent) {
+		        prevent = false;
+		        e.preventDefault();
+		      }
+		    });
+		  }
+		
+		preventPullToRefresh('#testImage') // pass #id or html tag into the method
 	}
 
 	// actions tween:
@@ -230,18 +263,18 @@ p._updateVisibility = _updateVisibility;
 	// buttonMultiply
 	this.softlight = new lib.an_Button({'id': 'softlight', 'label':'Weiches Licht', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
-	this.softlight.setTransform(141.45,401.25,2.8293,2.8293,0,0,0,50,11);
+	this.softlight.setTransform(187.95,959.25,2.8293,2.8293,0,0,0,50,11);
 
 	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
-	this.multiply.setTransform(141.45,330.3,2.8293,2.8293,0,0,0,50,11);
+	this.multiply.setTransform(187.95,888.3,2.8293,2.8293,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.multiply},{t:this.softlight}]}).wait(1));
 
 	// buttonNormal
 	this.normal = new lib.an_Button({'id': 'normal', 'label':'Normal', 'disabled':false, 'visible':true, 'class':'ui-button'});
 
-	this.normal.setTransform(0,225.1,2.8293,2.8293);
+	this.normal.setTransform(46.5,783.1,2.8293,2.8293);
 
 	this.timeline.addTween(cjs.Tween.get(this.normal).wait(1));
 
@@ -249,7 +282,7 @@ p._updateVisibility = _updateVisibility;
 	this.backgroundImage = new lib.roboterImage();
 	this.backgroundImage.name = "backgroundImage";
 	this.backgroundImage.parent = this;
-	this.backgroundImage.setTransform(505.9,364.6,1,1,0,0,0,649.9,365.6);
+	this.backgroundImage.setTransform(503.95,365.6,1,1,0,0,0,649.9,365.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.backgroundImage).wait(1));
 
@@ -261,20 +294,20 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(336,356.1,819.9000000000001,374.1);
+p.nominalBounds = new cjs.Rectangle(334.1,636.1,819.8000000000001,355.69999999999993);
 // library properties:
 lib.properties = {
 	id: '566019D5866C490E8B41A4649C244AD4',
 	width: 960,
-	height: 720,
+	height: 1280,
 	fps: 30,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/mixcolormode_atlas_.png", id:"mixcolormode_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/button.js", id:"an.Button"}
+		{src:"images/mixcolormode_atlas_.png?1543592659324", id:"mixcolormode_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1543592659328", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1543592659328", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/button.js?1543592659328", id:"an.Button"}
 	],
 	preloads: []
 };
