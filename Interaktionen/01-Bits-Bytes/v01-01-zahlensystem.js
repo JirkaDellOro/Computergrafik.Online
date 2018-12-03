@@ -1136,10 +1136,16 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 		if(!this.width_change_cbk || !this.height_change_cbk) {
 			function width_change(evt) {
 				input = document.getElementById("input_value").value;
-				console.log(input);
-				calculateDez(input);
-				binarFunction(input);
-				setHexa();
+				if(0 < input && input < 256)
+				{
+					calculateDez(input);
+					binarFunction(input);
+					setHexa();
+				}
+				else
+				{
+					alert("Bitte eine Zahl von 0 bis 255 eingeben");
+				}
 			}
 			$("#dom_overlay_container").on("change", "#input_value", width_change.bind(this));
 			
@@ -1240,6 +1246,7 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 			if(resHexa.length == 1)
 			{
 				valueHex1.gotoAndStop(stringHash[resHexa[0]]);
+				valueHex16.gotoAndStop(0);
 			}
 			if(resHexa.length == 2)
 			{
