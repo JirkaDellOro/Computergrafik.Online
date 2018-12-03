@@ -1089,14 +1089,39 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* Code to get the frame number of the current frame
-		*/
-		
-		var frameNumber = this.currentFrame;
-		console.log(frameNumber);
-		//this.valueDez100.stop();
-		//console.log(this.valueDez100);
 		var valueDez100 = this.valueDez100;
+			valueDez10 = this.valueDez10;
+			valueDez1 = this.valueDez1;
+			valueBin1 = this.valueBin1;
+			valueBin2 = this.valueBin2;
+			valueBin4 = this.valueBin4;
+			valueBin8 = this.valueBin8;
+			valueBin16 = this.valueBin16;
+			valueBin32 = this.valueBin32;
+			valueBin64 = this.valueBin64;
+			valueBin128 = this.valueBin128;
+			valueHex1 = this.valueHex1;
+			valueHex16 = this.valueHex16;
+			
+		
+		var stringHash = {
+			0: "0",
+			1: "1",
+		    2: "2",
+		    3: "3",
+		    4: "4",
+		    5: "5",
+		    6: "6",
+		    7: "7",
+		    8: "8",
+		    9: "9",
+		    a: "10",
+			b: "11",
+			c: "12",
+			d: "13",
+			e: "14",
+			f: "15",
+		};
 		
 		//this.valueDez100.paused = true;
 		//this.valueDez100.stop();
@@ -1112,7 +1137,9 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 			function width_change(evt) {
 				input = document.getElementById("input_value").value;
 				console.log(input);
-				calculate(input);
+				calculateDez(input);
+				binarFunction(input);
+				setHexa();
 			}
 			$("#dom_overlay_container").on("change", "#input_value", width_change.bind(this));
 			
@@ -1121,29 +1148,51 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 			this.heigth_change_cbk = true;
 		}
 		
-		function calculate(inputValue){
+		function calculateDez(inputValue){
+			resInput = inputValue.split("");
+			console.log(resInput);
+			if(resInput.length == 3)
+			{
+				setHundreds(resInput[0]);
+				setTens(resInput[1]);
+				setOnes(resInput[2]);
+			}
+			if(resInput.length == 2)
+			{
+				setHundreds(0);
+				setTens(resInput[0]);
+				setOnes(resInput[1]);
+			}
+			if(resInput.length == 1)
+			{
+				setHundreds(0);
+				setTens(0);
+				setOnes(resInput[0]);
+			}
+		}
 		
-			if (inputValue > 100)
+		function binarFunction(getValue){
+			
+			binarValue = getValue;
+			var resetValue = [0, 0, 0, 0, 0, 0, 0, 0];
+			var inputValue = [];
+			while (binarValue > 0)
 			{
-				hundreds = inputValue;
-				resHundreds = hundreds.split("");
-				
-				setHundreds(resHundreds[0]);
-				//setHundreds();
-				
-				//getFrameOne();
+				inputValue.push(binarValue % 2);
+				var divisionValue = Math.floor(binarValue / 2);
+				binarValue = divisionValue;
+			
 			}
-			if (inputValue > 100)
+			
+			for(var j = 0; j<resetValue.length; j++)
 			{
-				tens = inputValue % 100;
-				var intStr = tens.toString();
-				res = intStr.split("");
+					setBinar(j, resetValue[j]);
 			}
-			if (tens < 100)
+			
+			for(var i = 0; i < inputValue.length; i++)
 			{
-				ones = tens % 10
+				setBinar(i, inputValue[i])
 			}
-			console.log("hundreds = " + resHundreds[0] + " tens = " + res[0] + " ones = " + ones);
 		}
 		
 		
@@ -1153,75 +1202,121 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 			valueDez100.gotoAndStop(getHundreds);
 		}
 		
-		//function
+		function setTens(getTens)
+		{
+			valueDez10.gotoAndStop(getTens);
+		}
+		
+		function setOnes(getOnes)
+		{
+			valueDez1.gotoAndStop(getOnes);
+		}
+		
+		function setBinar(getValueBin, getValue)
+		{
+			if(getValueBin == 0 )
+				valueBin1.gotoAndStop(getValue);
+			if(getValueBin == 1)
+				valueBin2.gotoAndStop(getValue);
+			if(getValueBin == 2)
+				valueBin4.gotoAndStop(getValue);
+			if(getValueBin == 3)
+				valueBin8.gotoAndStop(getValue);
+			if(getValueBin == 4)
+				valueBin16.gotoAndStop(getValue);
+			if(getValueBin == 5)
+				valueBin32.gotoAndStop(getValue);
+			if(getValueBin == 6)
+				valueBin64.gotoAndStop(getValue);
+			if(getValueBin == 7)
+				valueBin128.gotoAndStop(getValue);
+			
+		}
+		
+		function setHexa()
+		{
+			var myNumber = Number(document.getElementById("input_value").value).toString(16);
+			resHexa = myNumber.split("");
+			if(resHexa.length == 1)
+			{
+				valueHex1.gotoAndStop(stringHash[resHexa[0]]);
+			}
+			if(resHexa.length == 2)
+			{
+				valueHex1.gotoAndStop(stringHash[resHexa[1]]);
+				valueHex16.gotoAndStop(stringHash[resHexa[0]]);
+			}
+				
+				
+		}
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// binaryOne
-	this.value_bin_1 = new lib.binary1();
-	this.value_bin_1.name = "value_bin_1";
-	this.value_bin_1.parent = this;
-	this.value_bin_1.setTransform(844.9,325.25,0.6241,0.6241,0,0,0,71,18.9);
+	this.valueBin1 = new lib.binary1();
+	this.valueBin1.name = "valueBin1";
+	this.valueBin1.parent = this;
+	this.valueBin1.setTransform(844.9,325.25,0.6241,0.6241,0,0,0,71,18.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin1).wait(1));
 
 	// binaryTwo
-	this.value_bin_2 = new lib.binary2();
-	this.value_bin_2.name = "value_bin_2";
-	this.value_bin_2.parent = this;
-	this.value_bin_2.setTransform(747.3,333.4,0.6241,0.6241,0,0,0,66.4,31.8);
+	this.valueBin2 = new lib.binary2();
+	this.valueBin2.name = "valueBin2";
+	this.valueBin2.parent = this;
+	this.valueBin2.setTransform(747.3,333.4,0.6241,0.6241,0,0,0,66.4,31.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin2).wait(1));
 
 	// binaryFour
-	this.value_bin_4 = new lib.binary4();
-	this.value_bin_4.name = "value_bin_4";
-	this.value_bin_4.parent = this;
-	this.value_bin_4.setTransform(652.75,333.4,0.6241,0.6241,0,0,0,66.3,31.8);
+	this.valueBin4 = new lib.binary4();
+	this.valueBin4.name = "valueBin4";
+	this.valueBin4.parent = this;
+	this.valueBin4.setTransform(652.75,333.4,0.6241,0.6241,0,0,0,66.3,31.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_4).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin4).wait(1));
 
 	// binaryEight
-	this.value_bin_8 = new lib.binary8();
-	this.value_bin_8.name = "value_bin_8";
-	this.value_bin_8.parent = this;
-	this.value_bin_8.setTransform(558.35,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
+	this.valueBin8 = new lib.binary8();
+	this.valueBin8.name = "valueBin8";
+	this.valueBin8.parent = this;
+	this.valueBin8.setTransform(558.35,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_8).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin8).wait(1));
 
 	// binarySixteen
-	this.value_bin_16 = new lib.binary16();
-	this.value_bin_16.name = "value_bin_16";
-	this.value_bin_16.parent = this;
-	this.value_bin_16.setTransform(463.85,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
+	this.valueBin16 = new lib.binary16();
+	this.valueBin16.name = "valueBin16";
+	this.valueBin16.parent = this;
+	this.valueBin16.setTransform(463.85,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_16).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin16).wait(1));
 
 	// binaryThirtyThree
-	this.value_bin_32 = new lib.binary32();
-	this.value_bin_32.name = "value_bin_32";
-	this.value_bin_32.parent = this;
-	this.value_bin_32.setTransform(369.35,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
+	this.valueBin32 = new lib.binary32();
+	this.valueBin32.name = "valueBin32";
+	this.valueBin32.parent = this;
+	this.valueBin32.setTransform(369.35,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_32).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin32).wait(1));
 
 	// binarySixteenfour
-	this.value_bin_64 = new lib.binary64();
-	this.value_bin_64.name = "value_bin_64";
-	this.value_bin_64.parent = this;
-	this.value_bin_64.setTransform(274.9,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
+	this.valueBin64 = new lib.binary64();
+	this.valueBin64.name = "valueBin64";
+	this.valueBin64.parent = this;
+	this.valueBin64.setTransform(274.9,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_64).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin64).wait(1));
 
 	// binaryHndretTwentyEight
-	this.value_bin_128 = new lib.binary128();
-	this.value_bin_128.name = "value_bin_128";
-	this.value_bin_128.parent = this;
-	this.value_bin_128.setTransform(180.45,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
+	this.valueBin128 = new lib.binary128();
+	this.valueBin128.name = "valueBin128";
+	this.valueBin128.parent = this;
+	this.valueBin128.setTransform(180.45,333.35,0.6241,0.6241,0,0,0,66.4,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_bin_128).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueBin128).wait(1));
 
 	// 100er
 	this.valueDez100 = new lib._100er();
@@ -1232,20 +1327,20 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 	this.timeline.addTween(cjs.Tween.get(this.valueDez100).wait(1));
 
 	// 10er
-	this.value_dez_10 = new lib._10er();
-	this.value_dez_10.name = "value_dez_10";
-	this.value_dez_10.parent = this;
-	this.value_dez_10.setTransform(497.6,106,0.6239,0.6245,0,0,0,69.7,35.2);
+	this.valueDez10 = new lib._10er();
+	this.valueDez10.name = "valueDez10";
+	this.valueDez10.parent = this;
+	this.valueDez10.setTransform(497.6,106,0.6239,0.6245,0,0,0,69.7,35.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_dez_10).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueDez10).wait(1));
 
 	// 1er
-	this.value_dez_1 = new lib._1er();
-	this.value_dez_1.name = "value_dez_1";
-	this.value_dez_1.parent = this;
-	this.value_dez_1.setTransform(595.9,97.5,0.6239,0.6245,0,0,0,74.8,21.6);
+	this.valueDez1 = new lib._1er();
+	this.valueDez1.name = "valueDez1";
+	this.valueDez1.parent = this;
+	this.valueDez1.setTransform(595.9,97.5,0.6239,0.6245,0,0,0,74.8,21.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_dez_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueDez1).wait(1));
 
 	// hex256
 	this.value_hex_256 = new lib.hex256();
@@ -1256,20 +1351,20 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 	this.timeline.addTween(cjs.Tween.get(this.value_hex_256).wait(1));
 
 	// hexa1
-	this.value_hex_1 = new lib.hexa1();
-	this.value_hex_1.name = "value_hex_1";
-	this.value_hex_1.parent = this;
-	this.value_hex_1.setTransform(590.75,569.6,0.6243,0.6245,0,0,0,66.5,31.9);
+	this.valueHex1 = new lib.hexa1();
+	this.valueHex1.name = "valueHex1";
+	this.valueHex1.parent = this;
+	this.valueHex1.setTransform(590.75,569.6,0.6243,0.6245,0,0,0,66.5,31.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_hex_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueHex1).wait(1));
 
 	// hexa16
-	this.value_hex_16 = new lib.hexa16();
-	this.value_hex_16.name = "value_hex_16";
-	this.value_hex_16.parent = this;
-	this.value_hex_16.setTransform(495.05,569.55,0.6243,0.6245,0,0,0,66.5,31.8);
+	this.valueHex16 = new lib.hexa16();
+	this.valueHex16.name = "valueHex16";
+	this.valueHex16.parent = this;
+	this.valueHex16.setTransform(495.05,569.55,0.6243,0.6245,0,0,0,66.5,31.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.value_hex_16).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.valueHex16).wait(1));
 
 	// TextInput
 	this.input_value = new lib.an_TextInput({'id': 'input_value', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
