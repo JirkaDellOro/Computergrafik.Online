@@ -4,7 +4,7 @@
 |   |Einleitung   |fertig    |  ja |
 |   |Auflösung   |fertig      | ja  |
 |   |Pixels per Inch   |fertig      | ja  |
-|   |I Pixels per Inch   | Problem mit Lupe |   |
+|   |I Pixels per Inch   | |   |
 |   |Auflösung eines Monitors   |      | ja   |
 |   |I Auflösung eines Monitors   |      |   |
 |   |Drucktechnik   |      |   |
