@@ -5,10 +5,10 @@
 |   |Auflösung   |fertig      | ja  |
 |   |Pixels per Inch   |fertig      | ja  |
 |   |I Pixels per Inch   | |   |
-|   |Auflösung eines Monitors   |      | ja   |
+|   |Auflösung eines Monitors   |   fertig   | ja   |
 |   |I Auflösung eines Monitors   |      |   |
-|   |Drucktechnik   |      |   |
-|   |Druckraster   |      |   |
+|   |Drucktechnik   | fertig     | ja  |
+|   |Druckraster   |  fertig    | ja  |
 |   |I Druck   |      |   |
-|   |Rasterwinkelung   |      |   |
+|   |Rasterwinkelung   | fertig     | ja  |
 |   |I Rasterwinkelung   |      |   |
