@@ -9,6 +9,6 @@
 |   |I Auflösung eines Monitors   |      |   |
 |   |Drucktechnik   | fertig     | ja  |
 |   |Druckraster   |  fertig    | ja  |
-|   |I Druck   |      |   |
+|   |I Druck   | in Bearbeitung     |   |
 |   |Rasterwinkelung   | fertig     | ja  |
 |   |I Rasterwinkelung   |      |   |
