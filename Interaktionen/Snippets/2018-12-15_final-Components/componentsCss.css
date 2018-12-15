@@ -1,3 +1,6 @@
+body, html{
+  font-family: "Oswald";
+}
 .button {
   background-color: #ccc;
   border: 2px solid #00CBFF;
