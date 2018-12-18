@@ -1,0 +1,66 @@
+@-moz-document domain("youtube.com")
+
+.yt-player
+    min-width:  320px
+    //width:  100%
+    height:  auto
+
+.content-container 
+    position:  relative 
+    padding-bottom:  56.25% /* ratio 16x9 */
+    height:  0 
+    width:  100%
+    height:  auto
+
+.content-container 
+    iframe 
+
+        position:  absolute 
+        top:  0 
+        left:  0 
+        width:  100% 
+        height:  100% 
+
+/* ratio 4x3 */
+.content-container.ratio4x3 
+    padding-bottom:  75%
+
+.iframe-container
+    overflow:  hidden 
+
+.ytp-swatch-background-color
+    background-color:  $blue !important
+
+.youtube-player
+    display: none 
+//.ytp-swatch-background-color
+//    background-color:  $blue
+
+.information-container
+    position: absolute
+    top: 40px
+    right: -5px
+    padding: 8px 10px 15px 5px
+    background-color: $white
+    font-size: 40px
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    cursor: pointer
+
+.information-wrapper
+    color: $blue
+
+.information-text
+    position: absolute
+    top: 00px
+    left: 100%
+    padding: 10px 0px 10px 20px
+    width: 250px
+    //border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    background-color: $white
+    font-size: 16px
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+
+.iframe-interaction
+    display: none

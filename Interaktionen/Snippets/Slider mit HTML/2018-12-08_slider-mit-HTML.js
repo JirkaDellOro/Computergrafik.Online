@@ -98,6 +98,7 @@ p._updateVisibility = _updateVisibility;
 		
 		$(document).on('input', '#slider', function() {
 		    $('#slider_value').html( $(this).val() );
+			console.log($('#slider_value').html( $(this).val() ));
 		});
 	}
 
@@ -129,9 +130,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1545068394455", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1545068394455", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1545068394455", id:"an.CSS"}
 	],
 	preloads: []
 };

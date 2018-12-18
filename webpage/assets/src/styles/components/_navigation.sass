@@ -1,0 +1,75 @@
+header
+    margin-bottom: 20px
+    position: fixed
+    width: 100%
+    z-index: 9999
+    
+.navigation-container
+    //height: 50px
+    background-color: $white
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+
+.navigation-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: 10px
+    margin-right: 10px
+    padding-top: 10px
+    padding-bottom: 10px
+
+.navigation-burgermenu
+    cursor: pointer
+
+.burgermenu
+    display: block
+    background-color: $blue
+    width: 30px
+    height: 4px
+    margin-bottom: 5px
+
+.logo
+    width: 35px
+    height: 35px
+
+.navigation-toggle
+    display: none
+
+@for $navigationCount from 0 through 12
+    
+    .navigation-infos-#{$navigationCount}
+        display: none
+        padding: 5px 0px 5px 120px
+        list-style: none
+        
+        &:hover
+            transition: 0.5s ease
+            background-color: lighten($blue-active, 50)
+            color: $black
+        
+        a 
+            text-decoration: none
+            color: $black
+    
+    .navigation-status-#{$navigationCount}
+        padding: 5px 0px 5px 90px
+
+        &:hover
+            transition: 0.5s ease
+            background-color: lighten($blue-active, 50)
+            color: $black
+
+.navigation-list
+    cursor: pointer
+
+// #navigation-0, #navigation-1
+//     display: none
+
+.active-navigation
+    background-color: $blue
+    color: $white
+
+.active-infos
+    background-color:  $blue-active
+    a
+        color: $white
