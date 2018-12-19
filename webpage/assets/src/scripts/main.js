@@ -10,19 +10,18 @@ var modulHash = {
     12: ["yS1ibDImAYU", true],
     13: ["FaB41TtgS54", true],
     14: ["./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html", false],
-    15: ["./assets/dist/animate/test/v01-01-zahlensystem.html" , false],
+    15: ["./assets/dist/animate/test/v01-01-zahlensystem.html", false],
     16: ["", true],
     17: ["", true],
 };
 
-
+var getRotation = false;
 var valueNavigation;
 var openInformation = false;
 
 $(document).ready(function () {
     console.info('DOM Ready');
     var countNav = $('ul').length;
-
 
     $('#toggleMenu').click(function () {
         $('.navigation-toggle').slideToggle()
@@ -54,23 +53,33 @@ $(document).ready(function () {
     $('.toggleSub').click(function () {
         var changeIFrame = $(this).attr('id');
         console.log(modulHash[changeIFrame][0]);
-        if(modulHash[changeIFrame][1] == true)
-        {
+        if (modulHash[changeIFrame][1] == true) {
             $('.content-container').css('padding-bottom', '56.25%');
             $('.youtube-player').css('display', 'block');
             $('.iframe-interaction').css('display', 'none');
             player.loadVideoById(modulHash[changeIFrame][0]);
-        }
-        else{
+            getRotation = false;
+            
+        } else {
             stopVideo();
             $('.content-container').css('padding-bottom', '0');
             $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
-            $('.iframe-interaction').html("<iframe src='"
-            + modulHash[changeIFrame][0] + "' width='auto' height='470px'></iframe>")
+            $('.iframe-interaction').html("<iframe src='" +
+                modulHash[changeIFrame][0] + "' width='auto' height='470px'></iframe>")
             console.log("False");
+            getRotation =  true;
         }
     });
+
+    // if (window.matchMedia("(orientation: portrait)").matches) {
+    //     // you're in PORTRAIT mode
+    //     alert("you are in Potrait modus!");
+    // }
+
+    // if (window.matchMedia("(orientation: landscape)").matches) {
+    //     alert("you are in Landscape modus!");
+    // }
 });
 
 $('.information-container').click(function () {
@@ -81,11 +90,31 @@ $('.information-container').click(function () {
         openInformation = true;
     } else {
         $('.information-container').animate({
-            right: '0px'
+            right: '-5px'
         }, 500);
         openInformation = false;
     }
 });
+
+function readDeviceOrientation() {
+    if(getRotation == true)
+    {             		
+        if (Math.abs(window.orientation) === 90) {
+            // Landscape
+            $('.modual').css('display', 'block');
+            $('.iframe-interaction').css('display', 'none');
+
+        } else {
+            // Portrait
+            //document.getElementById("orientation").innerHTML = "PORTRAIT";
+            
+            $('.modual').css('display', 'none');
+            $('.iframe-interaction').css('display', 'block');
+        }
+    }
+}
+
+window.onorientationchange = readDeviceOrientation;
 
 /* <iframe name="modul" width="560" height="315" src="https://www.youtube.com/embed/Y_plhk1FUQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
 
