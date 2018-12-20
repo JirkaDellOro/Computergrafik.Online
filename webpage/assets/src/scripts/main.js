@@ -72,19 +72,11 @@ $(document).ready(function () {
         }
     });
 
-    // if (window.matchMedia("(orientation: portrait)").matches) {
-    //     // you're in PORTRAIT mode
-    //     alert("you are in Potrait modus!");
-    // }
-
-    // if (window.matchMedia("(orientation: landscape)").matches) {
-    //     alert("you are in Landscape modus!");
-    // }
 });
 
 $('.information-container').click(function () {
     if (openInformation == false) {
-        $('.information-container').animate({
+        $('.information-container').animate ({
             right: '250px'
         }, 500);
         openInformation = true;
@@ -115,26 +107,3 @@ function readDeviceOrientation() {
 }
 
 window.onorientationchange = readDeviceOrientation;
-
-/* <iframe name="modul" width="560" height="315" src="https://www.youtube.com/embed/Y_plhk1FUQA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
-
-
-//  var stringHash = {
-// 	0: "0",
-// 	1: "1",
-//     2: "2",
-//     3: "3",
-//     4: "4",
-//     5: "5",
-//     6: "6",
-//     7: "7",
-//     8: "8",
-//     9: "9",
-//     a: "10",
-// 	b: "11",
-// 	c: "12",
-// 	d: "13",
-// 	e: "14",
-// 	f: "15",
-// };
-// valueHex1.gotoAndStop(stringHash[resHexa[0]]);
