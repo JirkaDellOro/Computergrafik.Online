@@ -94,7 +94,7 @@
                 }]
             },
             {
-                "pageName": "Dezimalsystem",
+                "pageName": "Farbsehen",
                 "id": "21",
                 "pageContent": [{
                     "content": "dGiQaabX3_o",
@@ -105,18 +105,18 @@
                 }]
             },
             {
-                "pageName": "Binärsystem",
+                "pageName": "( I ) Farbsehen",
                 "id": "22",
                 "pageContent": [{
-                    "content": "yS1ibDImAYU",
-                    "youtubeClip": "true"
+                    "content": "",
+                    "youtubeClip": "false"
                 }],
                 "pageTime": [{
 
                 }]
             },
             {
-                "pageName": "Hexadezimalsystem",
+                "pageName": "Additive Farbmischung",
                 "id": "23",
                 "pageContent": [{
                     "content": "FaB41TtgS54",
@@ -127,19 +127,8 @@
                 }]
             },
             {
-                "pageName": "( I ) Zahlensysteme",
+                "pageName": "RGB-Farbsystem",
                 "id": "24",
-                "pageContent": [{
-                    "content": "./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html",
-                    "youtubeClip": "false"
-                }],
-                "pageTime": [{
-
-                }]
-            },
-            {
-                "pageName": "Bits und Bytes",
-                "id": "25",
                 "pageContent": [{
                     "content": "",
                     "youtubeClip": "true"
@@ -149,8 +138,74 @@
                 }]
             },
             {
-                "pageName": "Maßeinheiten für Datenmengen",
+                "pageName": "( I ) RGB-Farbsystem",
+                "id": "25",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "false"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "HSB-Farbsystem",
                 "id": "26",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "( I ) HSB-Farbsystem",
+                "id": "27",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "YUV- und YCbCr-Farbsystem",
+                "id": "28",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Subtraktive Farbmischung (CMY)",
+                "id": "29",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "CMYK-Farbsystem",
+                "id": "210",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "LAB-Farbsystem",
+                "id": "211",
                 "pageContent": [{
                     "content": "",
                     "youtubeClip": "true"
