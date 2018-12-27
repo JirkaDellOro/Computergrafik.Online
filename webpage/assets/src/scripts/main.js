@@ -2,45 +2,18 @@ import jQuery from "jquery"
 window.$ = jQuery;
 window.jQuery = jQuery;
 
-// Build Navigation
-
-var requestURL = './assets/dist/data/data.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'text';
-request.send();
-
-request.onload = function () {
-    var getDataFromJson = request.response;
-    setData = JSON.parse(getDataFromJson);
-    setChapter(setData);
-}
-
-function setChapter(jsonObj) {
-    var chapter = jsonObj['section'];
-    var addChapter = document.getElementsByClassName('navigation-toggle')[0];
-
-    for (let i = 0; i < chapter.length; i++) {
-        var myChapter = document.createElement('div');
-        var ulList = document.createElement('ul');
-        ulList.className = "navigation-list";
-        ulList.id = [i];
-        myChapter.className = "navigation-status-" + [i];
-        myChapter.textContent = chapter[i].sectionPage;
-        addChapter.appendChild(ulList);
-        ulList.appendChild(myChapter);
-
-
-        for (let j = 0; j < chapter[i].page.length; j++) {
-            var liList = document.createElement('li');
-            liList.className = "navigation-infos-" + [i] + " toggleSub";
-            liList.id = chapter[i].page[j].id;
-            liList.textContent = chapter[i].page[j].pageName
-            ulList.appendChild(liList);
-        }
-    }
-}
-
+//$(valueNavigation);
+/* Youtube Code mittels IFrame code einbinden und darauf achten das er embed beinhaltet - austauschcode selber einpflegen? */
+// var modulHash = {
+//     10: ["QOCaacO8wus", true],
+//     11: ["dGiQaabX3_o", true],
+//     12: ["yS1ibDImAYU", true],
+//     13: ["FaB41TtgS54", true],
+//     14: ["./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html", false],
+//     15: ["./assets/dist/animate/test/v01-01-zahlensystem.html", false],
+//     16: ["", true],
+//     17: ["", true],
+// };
 var setData;
 var getRotation = false;
 var valueNavigation;
@@ -50,14 +23,13 @@ $(document).ready(function () {
 
     console.info('DOM Ready');
     var countNav = $('ul').length;
-    console.log(countNav);
+
     $('#toggleMenu').click(function () {
         $('.navigation-toggle').slideToggle()
     });
 
     $('.navigation-list').click(function () {
         valueNavigation = $(this).attr('id');
-        console.log(valueNavigation);
         for (var i = 0; i < countNav; i++) {
             if (valueNavigation == [i]) {
                 $('.navigation-status-' + [i]).addClass('active-navigation');
@@ -143,3 +115,42 @@ function readDeviceOrientation() {
 }
 
 window.onorientationchange = readDeviceOrientation;
+
+// Build Navigation
+
+var requestURL = './assets/dist/data/data.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'text';
+request.send();
+
+request.onload = function () {
+    var getDataFromJson = request.response;
+    setData = JSON.parse(getDataFromJson);
+    setChapter(setData);
+}
+
+function setChapter(jsonObj) {
+    var chapter = jsonObj['section'];
+    var addChapter = document.getElementsByClassName('navigation-toggle')[0];
+
+    for (let i = 0; i < chapter.length; i++) {
+        var myChapter = document.createElement('div');
+        var ulList = document.createElement('ul');
+        ulList.className = "navigation-list";
+        ulList.id = [i];
+        myChapter.className = "navigation-status-" + [i];
+        myChapter.textContent = chapter[i].sectionPage;
+        addChapter.appendChild(ulList);
+        ulList.appendChild(myChapter);
+
+
+        for (let j = 0; j < chapter[i].page.length; j++) {
+            var liList = document.createElement('li');
+            liList.className = "navigation-infos-" + [i] + " toggleSub";
+            liList.id = chapter[i].page[j].id;
+            liList.textContent = chapter[i].page[j].pageName
+            ulList.appendChild(liList);
+        }
+    }
+}
