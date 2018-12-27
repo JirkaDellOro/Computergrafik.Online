@@ -126,7 +126,7 @@ function setNaviagtion(){
                 if (chapter[i].page[j].id == index) {
                     var chapterIndex = chapter[i].page[j];
 
-                    if (chapterIndex.pageContent[0].youtubeClip == "true") {
+                    if (chapterIndex.pageContent[0].youtubeClip == true) {
                         $('.content-container').css('padding-bottom', '56.25%');
                         $('.youtube-player').css('display', 'block');
                         $('.iframe-interaction').css('display', 'none');
