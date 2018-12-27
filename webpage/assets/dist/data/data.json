@@ -1,0 +1,164 @@
+{
+    "section": [{
+        "sectionPage": "Bits und Bytes",
+        "page": [{
+                "pageName": "Einleitung",
+                "id": "10",
+                "pageContent": [{
+                    "content": "QOCaacO8wus",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Dezimalsystem",
+                "id": "11",
+                "pageContent": [{
+                    "content": "dGiQaabX3_o",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Binärsystem",
+                "id": "12",
+                "pageContent": [{
+                    "content": "yS1ibDImAYU",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Hexadezimalsystem",
+                "id": "13",
+                "pageContent": [{
+                    "content": "FaB41TtgS54",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "( I ) Zahlensysteme",
+                "id": "14",
+                "pageContent": [{
+                    "content": "./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html",
+                    "youtubeClip": "false"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Bits und Bytes",
+                "id": "15",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Maßeinheiten für Datenmengen",
+                "id": "16",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            }
+        ]
+        },
+        {
+        "sectionPage": "Farbsysteme",
+        "page": [{
+                "pageName": "Einleitung",
+                "id": "20",
+                "pageContent": [{
+                    "content": "QOCaacO8wus",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Dezimalsystem",
+                "id": "21",
+                "pageContent": [{
+                    "content": "dGiQaabX3_o",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Binärsystem",
+                "id": "22",
+                "pageContent": [{
+                    "content": "yS1ibDImAYU",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Hexadezimalsystem",
+                "id": "23",
+                "pageContent": [{
+                    "content": "FaB41TtgS54",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "( I ) Zahlensysteme",
+                "id": "24",
+                "pageContent": [{
+                    "content": "./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html",
+                    "youtubeClip": "false"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Bits und Bytes",
+                "id": "25",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            },
+            {
+                "pageName": "Maßeinheiten für Datenmengen",
+                "id": "26",
+                "pageContent": [{
+                    "content": "",
+                    "youtubeClip": "true"
+                }],
+                "pageTime": [{
+
+                }]
+            }
+        ]
+    }]
+}
