@@ -11,6 +11,9 @@
     height:  0 
     width:  100%
     height:  auto
+    
+    +break($break-m)
+        width: calc(100% - 280px)
 
 .content-container 
     iframe 
@@ -45,22 +48,47 @@
     font-size: 40px
     border-top-left-radius: 10px
     border-bottom-left-radius: 10px
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
     cursor: pointer
+    
+    +break($break-m)
+        top: 0px
+        cursor: auto
+        box-shadow: none
+        
+
 
 .information-wrapper
     color: $blue
+    
+    +break($break-m)
+        display: none
 
 .information-text
+    display: none
     position: absolute
-    top: 00px
+    top: 0px
     left: 100%
     padding: 10px 0px 10px 20px
     width: 250px
+    min-height: 250px
     //border-top-left-radius: 10px
     border-bottom-left-radius: 10px
     background-color: $white
     font-size: 16px
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+
+    +break($break-m)
+        position: fixed
+        display: block
+        left: calc(100% - 180px)
+        width: 180px
+        height: 100vh
+        padding: 150px 0px 10px 20px
+        border-radius: 0px 
+        top: 0px
+        background-color: #E6E6E6
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0)
 
 .iframe-interaction
     display: none
@@ -72,3 +100,16 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+
+.container-next-last
+    display: flex
+    justify-content: space-around
+    color: $blue
+    font-size: 20px
+
+    +break($break-m)
+        margin-bottom: 50px
+        width: calc(100% - 280px)
+
+.next, .last
+    opacity: 0

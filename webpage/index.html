@@ -17,6 +17,13 @@
 </head>
 
 <body>
+	<div class="navigation-desktop">
+		<div class="desktop-wrapper">
+			<img class="logo" src="./assets/src/images/logo/roboterlogo.png">
+			<div class="desktop-headline">Computergrafik.Online</div>
+			<img src="./assets/dist/images/logo/hfulogo.png" alt="" class="logo">
+		</div>
+	</div>
 	<header class="navigation-header">
 		<div class="navigation-container">
 			<div class="navigation-wrapper">
@@ -49,92 +56,22 @@
 				<i class="fas fa-info"></i>
 			</div>
 			<div class="information-text">
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
-				<p>Test</p>
+				<p>Hier werden dann Informationen angezeigt werden</p>
 			</div>
+		</div>
+		<div class="container-next-last">
+			<div class="last"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+			<div class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="modual">
 			<img src="./assets/dist/images/icons/screen-rotation-button.png" alt="Screen Rottation" class="rotation-screen">
 			<!-- Icon made by http://creativecommons.org/licenses/by/3.0/ from www.flaticon.com  -->
 		</div>
 	</main>
-	<script src="assets/dist/js/main.js"></script>
+	<script type="text/javascript" src="assets/dist/js/main.js"></script>
 	<!-- <div id="player"></div> -->
 
-	<script>
-		// 2. This code loads the IFrame Player API code asynchronously.
-		var tag = document.createElement('script');
-
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		// 3. This function creates an <iframe> (and YouTube player)
-		//    after the API code downloads.
-		var player;
-		var checkInt;
-
-		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('player', {
-				height: '360',
-				width: '640',
-				playerVars: {
-					'playsinline': 1
-				},
-				//videoId: src,
-				events: {
-					'onReady': onPlayerReady,
-					//'onStateChange': onPlayerStateChange,
-				},
-			});
-		}
-		// 4. The API will call this function when the video player is ready.
-		function onPlayerReady(event) {
-			event.target.playVideo();
-			startInterval();
-		}
-
-		// 5. The API calls this function when the player's state changes.
-		//    The function indicates that when playing a video (state=1),
-		//    the player should play for six seconds and then stop.
-		/* 
-	  var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {	
-          	setTimeout(stopVideo, 6000);
-          	done = true;
-        }
-	  }
-	  */
-
-		function stopVideo() {
-			player.stopVideo();
-		}
-
-		function startInterval() {
-			player.getDuration();
-			console.log(player.getDuration());
-			//checks every 100ms to see if the video has reached 6s
-			checkInt = setInterval(function () {
-				if (player.getCurrentTime() != player.getDuration()) {
-					console.log(player.getCurrentTime());
-				};
-			}, 100)
-		}
-	</script>
+	<script type="text/javascript" src="./assets/dist/js/youtube.js"></script>
 </body>
 
 </html>

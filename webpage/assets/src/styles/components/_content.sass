@@ -1,10 +1,24 @@
 main
-    padding-top: 70px
+    padding-top: 50px
+
+    +break($break-m)
+        position: fixed
+        top: 80px
+        bottom: 0px
+        left: 280px
+        width: calc(100% - 380px)
+        overflow: scroll
+        margin-left: 100px
+        z-index: -1
 
 .headline-container
     text-align: center
     height: 55px
     margin-bottom: 10px
+
+    +break($break-m)
+        display: none
+        // width: calc(100% - 380px)
     
 .headline
     font-size: 20px

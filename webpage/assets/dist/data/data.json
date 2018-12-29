@@ -9,7 +9,14 @@
                         "youtubeClip": true
                     }],
                     "pageTime": [{
-
+                        "time":[{
+                            "timeDuration": "30",
+                            "informationText": "das ist ein Test String"
+                        },
+                        {
+                            "timeDuration": "60",
+                            "informationText": "Das ist der nächste Test"
+                        }]
                     }]
                 },
                 {
@@ -20,7 +27,18 @@
                         "youtubeClip": true
                     }],
                     "pageTime": [{
-
+                        "time":[{
+                            "timeDuration": "30",
+                            "informationText": "das ist ein Test String"
+                        },
+                        {
+                            "timeDuration": "60",
+                            "informationText": "Das ist der nächste Test"
+                        },
+                        {
+                            "timeDuration": "120",
+                            "informationText": "Das ist der nächste Test"
+                        }]
                     }]
                 },
                 {
@@ -371,50 +389,6 @@
                     "pageContent": [{
                         "content": "",
                         "youtubeClip": true
-                    }],
-                    "pageTime": [{
-
-                    }]
-                },
-                {
-                    "pageName": "( I ) Farbtiefe 16/24 Bit",
-                    "id": "045",
-                    "pageContent": [{
-                        "content": "",
-                        "youtubeClip": false
-                    }],
-                    "pageTime": [{
-
-                    }]
-                },
-                {
-                    "pageName": "Indizierte Farben",
-                    "id": "046",
-                    "pageContent": [{
-                        "content": "",
-                        "youtubeClip": true
-                    }],
-                    "pageTime": [{
-
-                    }]
-                },
-                {
-                    "pageName": "Speicherbedarf",
-                    "id": "047",
-                    "pageContent": [{
-                        "content": "",
-                        "youtubeClip": true
-                    }],
-                    "pageTime": [{
-
-                    }]
-                },
-                {
-                    "pageName": "( I ) Speicherbedarf",
-                    "id": "048",
-                    "pageContent": [{
-                        "content": "",
-                        "youtubeClip": false
                     }],
                     "pageTime": [{
 

@@ -2,47 +2,61 @@ import jQuery from "jquery"
 window.$ = jQuery;
 window.jQuery = jQuery;
 
+
+
 var setData;
 var getRotation = false;
 var valueNavigation;
 var openInformation = false;
+var index;
 
 $(document).ready(function () {
 
     console.info('DOM Ready');
-    
+
 });
 
 $('.information-container').click(function () {
-    if (openInformation == false) {
-        $('.information-container').animate({
-            right: '250px'
-        }, 500);
-        openInformation = true;
-    } else {
-        $('.information-container').animate({
-            right: '-5px'
-        }, 500);
-        openInformation = false;
+    if($(window).width() < 760)
+    {
+        if (openInformation == false) {
+            $('.information-text').css('display', 'block');
+            $('.information-container').animate({
+                right: '250px'
+            }, 500);
+            openInformation = true;
+        } else {
+            $('.information-container').animate({
+                right: '-5px'
+            }, 500);
+            setTimeout(function () {
+                $('.information-text').css('display', 'none');
+            }, 500);
+            openInformation = false;
+        }
     }
 });
 
 function readDeviceOrientation() {
-    if (getRotation == true) {
-        if (Math.abs(window.orientation) === 90) {
-            // Landscape
-            $('.modual').css('display', 'block');
-            $('.iframe-interaction').css('display', 'none');
+    if($(window).width() < 760)
+    {
+        if (getRotation == true) {
+            if (Math.abs(window.orientation) === 90) {
+                // Landscape
+                $('.modual').css('display', 'block');
+                $('.iframe-interaction').css('display', 'none');
 
-        } else {
-            // Portrait
-            //document.getElementById("orientation").innerHTML = "PORTRAIT";
+            } else {
+                // Portrait
+                //document.getElementById("orientation").innerHTML = "PORTRAIT";
 
-            $('.modual').css('display', 'none');
-            $('.iframe-interaction').css('display', 'block');
+                $('.modual').css('display', 'none');
+                $('.iframe-interaction').css('display', 'block');
+            }
         }
     }
 }
+
 
 window.onorientationchange = readDeviceOrientation;
 
@@ -84,13 +98,23 @@ function setChapter(jsonObj) {
         }
     }
     setNaviagtion();
+    // setNextChapter();
 }
 
-function setNaviagtion(){
+function setNaviagtion() {
     var countNav = $('ul').length;
+    var toggleNav = true;
 
     $('#toggleMenu').click(function () {
-        $('.navigation-toggle').slideToggle()
+        if (toggleNav == true) {
+            $('.navigation-toggle').slideToggle();
+            $('.navigation-header').css('bottom', '0');
+            toggleNav = false;
+        } else {
+            $('.navigation-toggle').slideToggle();
+            $('.navigation-header').css('bottom', '');
+            toggleNav = true;
+        }
         // var countNav = $('ul').length;
     });
 
@@ -112,39 +136,125 @@ function setNaviagtion(){
     $('.toggleSub').click(function () {
         $('.toggleSub').removeClass('active-infos');
         $(this).addClass('active-infos');
-        $('.navigation-toggle').slideToggle();
+        // if()
+        console.log($(window).width());
+        if($(window).width() < 760)
+            $('.navigation-toggle').slideToggle();
         var strSubHeadline = $(this).text();
         $(".subheadline").html(strSubHeadline);
+        $('.navigation-header').css('bottom', '');
+        toggleNav = true;
     });
 
     $('.toggleSub').click(function () {
-        var index = $(this).attr('id');
+        index = $(this).attr('id');
         console.log(index);
         var chapter = setData['section'];
         for (let i = 0; i < chapter.length; i++) {
             for (let j = 0; j < chapter[i].page.length; j++) {
                 if (chapter[i].page[j].id == index) {
-                    var chapterIndex = chapter[i].page[j];
 
-                    if (chapterIndex.pageContent[0].youtubeClip == true) {
-                        $('.content-container').css('padding-bottom', '56.25%');
-                        $('.youtube-player').css('display', 'block');
-                        $('.iframe-interaction').css('display', 'none');
-                        player.loadVideoById(chapter[i].page[j].pageContent[0].content);
-                        getRotation = false;
-                    } 
-                    else {
-                        stopVideo();
-                        $('.content-container').css('padding-bottom', '0');
-                        $('.youtube-player').css('display', 'none');
-                        $('.iframe-interaction').css('display', 'block');
-                        $('.iframe-interaction').html("<iframe src='" +
-                            chapter[i].page[j].pageContent[0].content + "' width='auto' height='470px'></iframe>")
-                        // console.log("False");
-                        getRotation = true;
-                    }
+                    var chapterIndex = chapter[i].page[j];
+                    var liCount = chapter[i].page;
+                    var liLength = liCount.length - 1;
+                    getChapter(chapterIndex , liCount, liLength);
                 }
             }
         }
     });
 };
+
+
+$('.next').click(function () {
+    var chapter = setData['section'];
+    for (let i = 0; i < chapter.length; i++) {
+        for (let j = 0; j < chapter[i].page.length; j++) {
+            if (chapter[i].page[j].id == index) {
+                var chapterIndex = chapter[i].page[j + 1];
+                var liCount = chapter[i].page;
+                var liLength = liCount.length - 1;
+                getChapter(chapterIndex , liCount, liLength);
+                index = chapter[i].page[j + 1];
+                setHeadline(index.id, index.pageName);
+            }
+        }
+    }
+    index = index.id;
+});
+
+$('.last').click(function () {
+    var chapter = setData['section'];
+    for (let i = 0; i < chapter.length; i++) {
+        for (let j = 0; j < chapter[i].page.length; j++) {
+            if (chapter[i].page[j].id == index) {
+                var chapterIndex = chapter[i].page[j - 1];
+                var liCount = chapter[i].page;
+                var liLength = liCount.length - 1;
+                getChapter(chapterIndex , liCount, liLength);
+                index = chapter[i].page[j - 1];
+                setHeadline(index.id, index.pageName);
+            }
+        }
+    }
+    index = index.id;
+});
+
+
+function getChapter(chapterIndex, liCount, liLength) {
+    if (chapterIndex.pageContent[0].youtubeClip == true) {
+        $('.content-container').css('padding-bottom', '56.25%');
+        $('.youtube-player').css('display', 'block');
+        $('.iframe-interaction').css('display', 'none');
+        $('.information-string').remove();
+        player.loadVideoById(chapterIndex.pageContent[0].content);
+        setInformation(chapterIndex.pageTime);
+        getRotation = false;
+        checkArrows(chapterIndex, liCount, liLength);
+
+    } else {
+        stopVideo();
+        $('.content-container').css('padding-bottom', '0');
+        $('.youtube-player').css('display', 'none');
+        $('.iframe-interaction').css('display', 'block');
+        $('.information-string').remove();
+        $('.iframe-interaction').html("<iframe src='" +
+            chapterIndex.pageContent[0].content + "' width='auto' height='470px'></iframe>")
+        getRotation = true;
+        checkArrows(chapterIndex, liCount, liLength);
+        readDeviceOrientation();
+    }
+    return index = chapterIndex.id;
+}
+
+function setHeadline(id, pageName){
+    var indexNumeration = "#" + id;
+    $(".subheadline").html(pageName);
+    $('.toggleSub').removeClass('active-infos');
+    $(indexNumeration).addClass('active-infos');
+}
+
+function checkArrows(chapterIndex, liCount, liLength)
+{
+    if(liCount[0] == chapterIndex)
+    {
+        $('.next').css('opacity', '1');
+        $('.last').css('opacity', '0');
+    }
+    else if(liCount[liLength] == chapterIndex)
+    {
+        $('.next').css('opacity', '0');
+        $('.last').css('opacity', '1');
+    }
+    else
+    {
+        $('.next').css('opacity', '1');
+        $('.last').css('opacity', '1');
+    }
+}
+
+function setInformation(pageInformation){
+    // var currentTime = startInterval();
+    // console.log(startInterval())
+    startInterval(pageInformation);
+}
+
