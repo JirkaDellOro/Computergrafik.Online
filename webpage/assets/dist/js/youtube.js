@@ -26,6 +26,7 @@ function onYouTubeIframeAPIReady() {
 }
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
+    event.target.setVolume(0);
     event.target.playVideo();
     // startInterval();
 }
@@ -55,7 +56,10 @@ function startInterval(information) {
             var currentTime = Math.floor(player.getCurrentTime());
             if(i < timeInformation.length && currentTime == timeInformation[i].timeDuration)
             {
-                $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
+                $('.information-string').removeClass('active-information');
+                $('.information-text').append('<p class="information-string active-information">' + timeInformation[i].informationText + '</p>');
+                
+                // $('.infroamtion-string').addClass('active-infos');
                 i = i+ 1;
             }
             if(i < timeInformation.length && timeInformation[i].timeDuration < currentTime )

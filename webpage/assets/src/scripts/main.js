@@ -81,9 +81,10 @@ function setChapter(jsonObj) {
     for (let i = 0; i < chapter.length; i++) {
         var myChapter = document.createElement('div');
         var ulList = document.createElement('ul');
-        ulList.className = "navigation-list";
+        // ulList.className = "navigation-list";
         ulList.id = [i];
-        myChapter.className = "navigation-status-" + [i];
+        myChapter.className = "navigation-status-" + [i] + " navigation-list";
+        myChapter.id = [i];
         myChapter.textContent = chapter[i].sectionPage;
         addChapter.appendChild(ulList);
         ulList.appendChild(myChapter);
@@ -202,7 +203,7 @@ $('.last').click(function () {
 
 function getChapter(chapterIndex, liCount, liLength) {
     if (chapterIndex.pageContent[0].youtubeClip == true) {
-        $('.content-container').css('padding-bottom', '56.25%');
+        // $('.content-container').css('padding-bottom', '56.25%');
         $('.youtube-player').css('display', 'block');
         $('.iframe-interaction').css('display', 'none');
         $('.information-string').remove();
