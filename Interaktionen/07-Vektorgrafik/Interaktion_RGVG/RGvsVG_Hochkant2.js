@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"RGvsVG_Hochkant2_atlas_", frames: [[0,0,1469,2027]]},
-		{name:"RGvsVG_Hochkant2_atlas_2", frames: [[0,0,1480,259],[0,261,569,456],[571,261,569,456]]}
+		{name:"RGvsVG_Hochkant2_atlas_2", frames: [[0,0,1480,259],[0,261,569,456],[571,261,569,456],[1142,493,47,47],[1142,261,227,230]]}
 ];
 
 
@@ -12,32 +12,58 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_51 = function() {
+(lib.CachedTexturedBitmap_2 = function() {
 	this.initialize(ss["RGvsVG_Hochkant2_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_52 = function() {
+(lib.CachedTexturedBitmap_3 = function() {
 	this.initialize(ss["RGvsVG_Hochkant2_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_53 = function() {
+(lib.CachedTexturedBitmap_4 = function() {
 	this.initialize(ss["RGvsVG_Hochkant2_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_54 = function() {
+(lib.CachedTexturedBitmap_5 = function() {
 	this.initialize(ss["RGvsVG_Hochkant2_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
-// helper functions:
+
+
+
+(lib.CSSKopie = function() {
+	this.initialize(ss["RGvsVG_Hochkant2_atlas_2"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Logoklein = function() {
+	this.initialize(ss["RGvsVG_Hochkant2_atlas_2"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Roboter_LogopngKopie = function() {
+	this.initialize(img.Roboter_LogopngKopie);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2332,2416);
+
+
+(lib.Roboter_LogoGroß = function() {
+	this.initialize(img.Roboter_LogoGroß);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2332,2416);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -59,11 +85,25 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.Test3_Ebene_1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// Ebene_1
+	this.instance = new lib.Roboter_LogoGroß();
+	this.instance.parent = this;
+	this.instance.setTransform(-58.25,0,0.05,0.05);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
 }).prototype = getMCSymbolPrototype(lib.Test3_Ebene_1, null, null);
 
 
 (lib.Test2_Ebene_1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
+
+	// Ebene_1
+	this.instance = new lib.Logoklein();
+	this.instance.parent = this;
+	this.instance.setTransform(-57.85,0,0.51,0.51);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Test2_Ebene_1, null, null);
 
@@ -74,14 +114,14 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	// Text
 	this.text = new cjs.Text("Vektorgrafik", "29px 'Oswald'");
 	this.text.textAlign = "center";
-	this.text.lineHeight = 51;
+	this.text.lineHeight = 45;
 	this.text.lineWidth = 136;
 	this.text.parent = this;
 	this.text.setTransform(199.7,379.3,1.59,1.59);
 
 	this.text_1 = new cjs.Text("Rastergrafik", "29px 'Oswald'");
 	this.text_1.textAlign = "center";
-	this.text_1.lineHeight = 51;
+	this.text_1.lineHeight = 45;
 	this.text_1.lineWidth = 136;
 	this.text_1.parent = this;
 	this.text_1.setTransform(199.7,54.1,1.59,1.59);
@@ -95,7 +135,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// RahmenPng
-	this.instance = new lib.CachedTexturedBitmap_53();
+	this.instance = new lib.CachedTexturedBitmap_4();
 	this.instance.parent = this;
 	this.instance.setTransform(377.1,455.4,0.5,0.5);
 
@@ -108,7 +148,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Rahmenjpg
-	this.instance = new lib.CachedTexturedBitmap_54();
+	this.instance = new lib.CachedTexturedBitmap_5();
 	this.instance.parent = this;
 	this.instance.setTransform(377.1,123.85,0.5,0.5);
 
@@ -121,7 +161,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Maske_Rastergrafik
-	this.instance = new lib.CachedTexturedBitmap_52();
+	this.instance = new lib.CachedTexturedBitmap_3();
 	this.instance.parent = this;
 	this.instance.setTransform(2.1,-272.7,0.5,0.5);
 
@@ -134,7 +174,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// INteraktionsbereich
-	this.instance = new lib.CachedTexturedBitmap_51();
+	this.instance = new lib.CachedTexturedBitmap_2();
 	this.instance.parent = this;
 	this.instance.setTransform(-3.45,730.95,0.5,0.5);
 
@@ -147,7 +187,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_7
-	this.instance = new lib.CachedTexturedBitmap_53();
+	this.instance = new lib.CachedTexturedBitmap_4();
 	this.instance.parent = this;
 	this.instance.setTransform(377.1,455.4,0.5,0.5);
 
@@ -159,11 +199,25 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.pngimage_Ebene_1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// Ebene_1
+	this.instance = new lib.Roboter_LogopngKopie();
+	this.instance.parent = this;
+	this.instance.setTransform(-57.1,-59.15,0.049,0.049);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
 }).prototype = getMCSymbolPrototype(lib.pngimage_Ebene_1, null, null);
 
 
 (lib.jpgimage2_Ebene_1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
+
+	// Ebene_1
+	this.instance = new lib.Logoklein();
+	this.instance.parent = this;
+	this.instance.setTransform(-57.85,-58.65,0.51,0.51);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.jpgimage2_Ebene_1, null, null);
 
@@ -399,7 +453,7 @@ p._updateVisibility = _updateVisibility;
 		var positionY1 = jpgtest.y;
 		var positionY2 = pngtest.y;
 		
-		console.log(imageRoboter);
+		//console.log(imageRoboter);
 		
 		function changePictureSize(val)
 		{
@@ -595,11 +649,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/RGvsVG_Hochkant2_atlas_.png?1546633313037", id:"RGvsVG_Hochkant2_atlas_"},
-		{src:"images/RGvsVG_Hochkant2_atlas_2.png?1546633313037", id:"RGvsVG_Hochkant2_atlas_2"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1546633313049", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1546633313049", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1546633313049", id:"an.CSS"}
+		{src:"images/Roboter_LogopngKopie.png", id:"Roboter_LogopngKopie"},
+		{src:"images/Roboter_LogoGroß.jpg", id:"Roboter_LogoGroß"},
+		{src:"images/RGvsVG_Hochkant2_atlas_.png", id:"RGvsVG_Hochkant2_atlas_"},
+		{src:"images/RGvsVG_Hochkant2_atlas_2.png", id:"RGvsVG_Hochkant2_atlas_2"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js", id:"an.CSS"}
 	],
 	preloads: []
 };
