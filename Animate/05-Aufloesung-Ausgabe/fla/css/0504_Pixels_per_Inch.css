@@ -1,0 +1,24 @@
+#controlElements{
+    position: relative;
+    left: 20%;
+    top: 600px;
+}
+
+.label{
+    padding: 20px;
+}
+
+#p_width{
+    display: inline-block;
+    text-align: right;
+    padding: 20px;
+}
+
+#height{
+    display: inline-block;
+    text-align: left;
+}
+
+.button{
+    display:block;
+}

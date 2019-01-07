@@ -1,0 +1,17 @@
+
+  .sliderContainer
+  {
+    margin-left: 46%;
+    position: relative;
+    top: 500px;
+  }
+    
+  .imageContainer{
+      position: relative;
+      margin-left: 43%;
+      margin-top: 200px;
+  }
+  
+  .img{
+      position: absolute;
+  }
