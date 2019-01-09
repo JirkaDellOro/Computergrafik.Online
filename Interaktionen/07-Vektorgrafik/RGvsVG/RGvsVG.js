@@ -11,15 +11,15 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_284 = function() {
+(lib.CachedTexturedBitmap_3 = function() {
 	this.initialize(ss["RGvsVG_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_285 = function() {
-	this.initialize(img.CachedTexturedBitmap_285);
+(lib.CachedTexturedBitmap_4 = function() {
+	this.initialize(img.CachedTexturedBitmap_4);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,1450,2294);
 
@@ -128,7 +128,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Maske
-	this.instance = new lib.CachedTexturedBitmap_285();
+	this.instance = new lib.CachedTexturedBitmap_4();
 	this.instance.parent = this;
 	this.instance.setTransform(6.25,9.35,0.5,0.5);
 
@@ -141,9 +141,9 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Kasten
-	this.instance = new lib.CachedTexturedBitmap_284();
+	this.instance = new lib.CachedTexturedBitmap_3();
 	this.instance.parent = this;
-	this.instance.setTransform(1.65,674.95,0.5,0.5);
+	this.instance.setTransform(1.65,744.85,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -239,7 +239,7 @@ p._updateVisibility = _updateVisibility;
 	// script
 	this.myCss = new lib.an_CSS({'id': 'myCss', 'href':'assets/sliderCss.css'});
 
-	this.myCss.setTransform(220.75,724.55,1.59,1.59,0,0,0,50.1,11.1);
+	this.myCss.setTransform(283.4,813.45,1.59,1.59,0,0,0,50.1,11.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.myCss).wait(1));
 
@@ -389,9 +389,11 @@ p._updateVisibility = _updateVisibility;
 		$('.sliderContainer').append('<span id="slider_value">1</span>');
 		$('.sliderContainer').css({
 		 'position': 'absolute',
-		 'margin-top': '-550px',
+		 'margin-top': '-475px',
 		 'margin-left': '100px'
 		});
+		//$('slidercontainer').append('<div class="audiofile">')
+		//$$('.audiofile').append('<audio id="intro" src="./sounds/070202.wav" type="audio/wav" autoplay></audio>');
 		
 		$(document).on('input', '#slider', function() {
 		    $('#slider_value').html( $(this).val() );
@@ -433,6 +435,7 @@ p._updateVisibility = _updateVisibility;
 				pngtest.y = positionY2;
 			}
 		}
+		playSound("_070202wav");
 	}
 
 	// actions tween:
@@ -442,7 +445,7 @@ p._updateVisibility = _updateVisibility;
 	this.script = new lib.Szene_1_script();
 	this.script.name = "script";
 	this.script.parent = this;
-	this.script.setTransform(220.6,724.4,1,1,0,0,0,220.6,724.4);
+	this.script.setTransform(283.3,813.3,1,1,0,0,0,283.3,813.3);
 	this.script.depth = 0;
 	this.script.isAttachedToCamera = 0
 	this.script.isAttachedToMask = 0
@@ -512,7 +515,7 @@ p._updateVisibility = _updateVisibility;
 	this.Kasten = new lib.Szene_1_Kasten();
 	this.Kasten.name = "Kasten";
 	this.Kasten.parent = this;
-	this.Kasten.setTransform(340.2,745,1,1,0,0,0,340.2,745);
+	this.Kasten.setTransform(340.2,814.9,1,1,0,0,0,340.2,814.9);
 	this.Kasten.depth = 0;
 	this.Kasten.isAttachedToCamera = 0
 	this.Kasten.isAttachedToMask = 0
@@ -575,13 +578,14 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedTexturedBitmap_285.png", id:"CachedTexturedBitmap_285"},
-		{src:"images/Roboter_LogopngKopie.png", id:"Roboter_LogopngKopie"},
-		{src:"images/Roboter_LogoGroß.jpg", id:"Roboter_LogoGroß"},
-		{src:"images/RGvsVG_atlas_.png", id:"RGvsVG_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js", id:"an.CSS"}
+		{src:"images/CachedTexturedBitmap_4.png?1547069719418", id:"CachedTexturedBitmap_4"},
+		{src:"images/Roboter_LogopngKopie.png?1547069719418", id:"Roboter_LogopngKopie"},
+		{src:"images/Roboter_LogoGroß.jpg?1547069719418", id:"Roboter_LogoGroß"},
+		{src:"images/RGvsVG_atlas_.png?1547069718923", id:"RGvsVG_atlas_"},
+		{src:"sounds/_070202wav.mp3?1547069719418", id:"_070202wav"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1547069719418", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1547069719418", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1547069719418", id:"an.CSS"}
 	],
 	preloads: []
 };
