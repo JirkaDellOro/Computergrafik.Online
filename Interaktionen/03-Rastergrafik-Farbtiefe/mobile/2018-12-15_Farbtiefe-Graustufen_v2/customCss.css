@@ -1,0 +1,32 @@
+body{
+	overscroll-behavior-y: contain;
+}
+
+.buttonContainer{
+	position: absolute;
+	margin-top: -790px;
+	margin-left: 400px;
+}
+
+.text{
+	font-size: 20px;
+}
+
+.shemeContainer{
+	position: absolute;
+	margin-top: -800px;
+	margin-left: 100px;
+}
+
+
+.img_sheme_2bit{
+	padding-top: 19px;
+}
+
+.img_sheme_4bit{
+	padding-top: 19px;
+}
+
+.img_sheme_8bit{
+	padding-top: 18px;
+}

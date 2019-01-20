@@ -12,28 +12,28 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_153 = function() {
+(lib.CachedTexturedBitmap_6 = function() {
 	this.initialize(ss["2018_12_15_hexa_slider_mit_HTML_v2_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_154 = function() {
+(lib.CachedTexturedBitmap_7 = function() {
 	this.initialize(ss["2018_12_15_hexa_slider_mit_HTML_v2_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_155 = function() {
+(lib.CachedTexturedBitmap_8 = function() {
 	this.initialize(ss["2018_12_15_hexa_slider_mit_HTML_v2_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_156 = function() {
+(lib.CachedTexturedBitmap_9 = function() {
 	this.initialize(ss["2018_12_15_hexa_slider_mit_HTML_v2_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
@@ -60,7 +60,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// schwarzer_background
-	this.instance = new lib.CachedTexturedBitmap_153();
+	this.instance = new lib.CachedTexturedBitmap_6();
 	this.instance.parent = this;
 	this.instance.setTransform(1.75,1.65,0.5,0.5);
 
@@ -73,7 +73,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_156();
+	this.instance = new lib.CachedTexturedBitmap_9();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.1917,0.1917);
 
@@ -86,7 +86,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_155();
+	this.instance = new lib.CachedTexturedBitmap_8();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.1917,0.1917);
 
@@ -116,7 +116,7 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_154();
+	this.instance = new lib.CachedTexturedBitmap_7();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.1917,0.1917);
 
@@ -150,11 +150,15 @@ p.nominalBounds = new cjs.Rectangle(-361,-641,722,1282);
 	this.initialize(mode,startPosition,loop,{});
 
 	// script
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+
+	this.customCSS.setTransform(591.65,761.95,1,1,0,0,0,50,11);
+
 	this.myCss = new lib.an_CSS({'id': 'myCss', 'href':'assets/componentsCss.css'});
 
 	this.myCss.setTransform(604.1,729.25,1,1,0,0,0,50,11);
 
-	this.timeline.addTween(cjs.Tween.get(this.myCss).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.myCss},{t:this.customCSS}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_script, null, null);
 
@@ -300,11 +304,14 @@ p.nominalBounds = new cjs.Rectangle(-361,-641,722,1282);
 	// timeline functions:
 	this.frame_0 = function() {
 		this.myCss = this.script.myCss;
+		this.customCSS = this.script.customCSS;
 		this.b_circle = this.blauer_Kreis.b_circle;
 		this.g_circle = this.grüner_Kreis.g_circle;
 		this.r_circle = this.roter_Kreis.r_circle;
 		$('body').append('<div class="hexContainer">')
 		$('.hexContainer').append('</div><span id="hex_char">#</span><span id="hex_r_color">ff</span><span id="hex_g_color">ff</span><span id="hex_b_color">ff</span></div>');
+		
+		
 		
 		$('body').append('<div class="sliderContainer">')
 		$('.sliderContainer').append('<span class="text">Rot: </span><input type="range" class="slider" id="r_slider" value="255" min="0" max="255">');
@@ -316,45 +323,12 @@ p.nominalBounds = new cjs.Rectangle(-361,-641,722,1282);
 		$('.sliderContainer').append('<span class="text">Blau: </span><input type="range" class="slider" id="b_slider" value="255" min="0" max="255">');
 		$('.sliderContainer').append('<span id="b_slider_value">255</span></br></br>');
 		
-		$('.body').css({
-			'overscroll-behavior-y': 'contain',
-			'overscroll-behavior-x': 'contain',
-			'font-size':'30px'
-		});
+		$('body').append('<div class="audioFile">')
+		$('.audioFile').append('<audio id="hexAudio" src ="./sounds/hexAudioInteraktion.wav" type="audio/wav"  autoplay></audio>');
 		
-		$('.text').css({
-			'font-size':'30px'
-		});
-		
-		$('.sliderContainer').css({
-			'position': 'absolute',
-			'margin-top': '-285px',
-			'margin-left': '160px'
-		});
-		
-		$('.hexContainer').css({
-			'position': 'absolute',
-			'margin-top': '-500px',
-			'margin-left': '308px'
-		});
-		
-		$('#hex_char').css({
-			'font-size': '50px'
-		});
-		
-		$('#hex_r_color').css({
-			'color': 'red',
-			'font-size': '50px'
-		});
-		$('#hex_g_color').css({
-			'color': 'green',
-			'font-size': '50px'
-		});
-		$('#hex_b_color').css({
-			'color': 'blue',
-			'font-size': '50px'
-		});
-		
+		window.onload = function() {
+		    document.getElementById("hexAudio").play();
+		}
 		
 		var r_id = this.r_circle;
 		var g_id = this.g_circle;
@@ -413,7 +387,7 @@ p.nominalBounds = new cjs.Rectangle(-361,-641,722,1282);
 	this.script = new lib.Szene_1_script();
 	this.script.name = "script";
 	this.script.parent = this;
-	this.script.setTransform(604.1,729.3,1,1,0,0,0,604.1,729.3);
+	this.script.setTransform(597.9,745.6,1,1,0,0,0,597.9,745.6);
 	this.script.depth = 0;
 	this.script.isAttachedToCamera = 0
 	this.script.isAttachedToMask = 0

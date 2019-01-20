@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"2018_12_09_Speicherbedarf_mit_Slider_atlas_", frames: [[0,252,304,73],[0,402,280,44],[0,327,304,73],[0,494,280,44],[0,448,280,44],[0,540,280,44],[0,126,417,124],[0,0,417,124]]}
+		{name:"2018_12_09_Speicherbedarf_mit_Slider_atlas_", frames: [[0,252,304,73],[0,402,280,44],[0,327,304,73],[0,540,280,44],[0,448,280,44],[0,494,280,44],[0,126,417,124],[0,0,417,124]]}
 ];
 
 
@@ -53,14 +53,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_21 = function() {
+(lib.CachedTexturedBitmap_3 = function() {
 	this.initialize(ss["2018_12_09_Speicherbedarf_mit_Slider_atlas_"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_22 = function() {
+(lib.CachedTexturedBitmap_4 = function() {
 	this.initialize(ss["2018_12_09_Speicherbedarf_mit_Slider_atlas_"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
@@ -94,11 +94,11 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.output.parent = this;
 	this.output.setTransform(294.95,1032.5);
 
-	this.instance = new lib.CachedTexturedBitmap_22();
+	this.instance = new lib.CachedTexturedBitmap_4();
 	this.instance.parent = this;
 	this.instance.setTransform(385.9,1011.6,0.5,0.5);
 
-	this.instance_1 = new lib.CachedTexturedBitmap_21();
+	this.instance_1 = new lib.CachedTexturedBitmap_3();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(69,1011.6,0.5,0.5);
 
@@ -202,11 +202,15 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// Textinput
+	this.customCss = new lib.an_CSS({'id': 'customCss', 'href':'assets/customCss.css'});
+
+	this.customCss.setTransform(532.65,1146.25,1,1,0,0,0,50,11);
+
 	this.myCss = new lib.an_CSS({'id': 'myCss', 'href':'assets/componentsCss.css'});
 
 	this.myCss.setTransform(549.4,1030.5,1,1,0,0,0,50,11);
 
-	this.timeline.addTween(cjs.Tween.get(this.myCss).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.myCss},{t:this.customCss}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_Textinput, null, null);
 
@@ -401,13 +405,14 @@ p._updateVisibility = _updateVisibility;
 	this.frame_0 = function() {
 		this.output = this.Output.output;
 		this.myCss = this.Textinput.myCss;
+		this.customCss = this.Textinput.customCss;
 		$('body').append('<div class="buttonContainer">')
-		$('.buttonContainer').append('<label class="container"><span class="text">1 Bit</span><input type="radio" id="bit1_radio" class="radioBtn" name="radio" value="1"  checked><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">2 Bit</span><input type="radio" id="bit2_radio" class="radioBtn" name="radio" value="2"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">4 Bit</span><input type="radio" id="bit4_radio" class="radioBtn" name="radio" value="4"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">8 Bit</span><input type="radio" id="bit8_radio" class="radioBtn" name="radio" value="8"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">16 Bit</span><input type="radio" id="bit16_radio" class="radioBtn" name="radio" value="16"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">24 Bit</span><input type="radio" id="bit24_radio" class="radioBtn" name="radio" value="24"><span class="checkmark"></span></label>');
+		$('.buttonContainer').append('<label class="container"><span class="text">1 Bit</span><input type="radio" id="bit1_radio" class="radioBtn" name="radio" value="1"  checked><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">2 Bit</span><input type="radio" id="bit2_radio" class="radioBtn" name="radio" value="2"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">4 Bit</span><input type="radio" id="bit4_radio" class="radioBtn" name="radio" value="4"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">8 Bit</span><input type="radio" id="bit8_radio" class="radioBtn" name="radio" value="8"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">16 Bit</span><input type="radio" id="bit16_radio" class="radioBtn" name="radio" value="16"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">24 Bit</span><input type="radio" id="bit24_radio" class="radioBtn" name="radio" value="24"><span class="radioCheckmark"></span></label>');
 		
 		$('body').append('<div class="test" id="img_bit_0"></div>');
 		$('#img_bit_0').prepend('<img class="test" id="img" src="./images/roboter_farbiges-display_1-bit.png" style="position: absolute; top: 0px; left: 0px; width: 720px; height: 340px;"/>');
@@ -416,73 +421,9 @@ p._updateVisibility = _updateVisibility;
 		$('.sliderContainer').append('<span class="text">Höhe/Breite: </span><input type="range" class="slider" id="slider" value="100" step="10" min="0" max="100">');
 		$('.sliderContainer').append('<span id="slider_value">100</span>%');
 		
-		//CSS
-		$('body').css({
-			'overscroll-behavior-y': 'contain',
-			'overscroll-behavior-y': 'contain'
-		});
 		
-		$('.text').css({
-			'font-size': '20px'
-		});
-		
-		$('.container').css({
-			'display': 'flex',
-			'padding-bottom': '15px'
-		});
-		
-		$('.buttonContainer').css({
-			'position': 'absolute',
-			'margin-top': '-865px',
-			'margin-left': '400px'
-		});
-		
-		$('.sliderContainer').css({
-			'position': 'absolute',
-			'margin-top': '-170px',
-			'margin-left': '70px'
-		});
 		
 		var output = this.output;
-		/*
-		document.getElementById("slider").addEventListener("input", test);
-		
-		$(document).on('change', 'input:radio[name="radio"]', function () {
-			var firstImg = document.getElementById("img");
-		
-			for (var i = 1; i <= 24; i++) {
-				if ($(this).val() == i) {
-					var src = './images/roboter_farbiges-display_' + i + '-bit.png';
-					$('#img').attr('src', src);
-				}
-			}
-			test();
-		});
-		
-		
-		function test() {
-			var height = 340;
-			var width = 720;
-		
-			console.log("bene test ");
-			$('#slider_value').html(this.value);
-		
-			height = height / 100 * this.value;
-			console.log(height);
-			width = width / 100 * this.value;
-			console.log(width);
-		
-			document.getElementById("img").style.height = height + "px";
-			document.getElementById("img").style.width = width + "px";
-		
-			var valueRadioBtn = document.querySelector('input[name=radio]:checked').value;
-			console.log(valueRadioBtn);
-		
-			var finalStorage = (((height * width * valueRadioBtn) / 8) / 1024);
-			var finalStorageFixed = finalStorage.toFixed(2);
-			output.text = finalStorageFixed;
-		}
-		*/
 		
 		$('input:radio[name="radio"]').change(function () {
 			var firstImg = document.getElementById("img");
@@ -492,15 +433,20 @@ p._updateVisibility = _updateVisibility;
 					$('#img').attr('src', src);
 				}
 			}
+			Result();
 		});
 		
-		$(document).on('input', '#slider', function () {
-			$('#slider_value').html($(this).val());
+		$(document).on('input', '#slider', Result);
+		
+		function Result () {
+			var sliderValue = document.getElementById("slider").value;
+			
+			$('#slider_value').html(sliderValue);
 			var height = 340;
 			var width = 720;
 		
-			height = height / 100 * ($(this).val());
-			width = width / 100 * ($(this).val());
+			height = height / 100 * sliderValue;
+			width = width / 100 * sliderValue;
 		
 			document.getElementById("img").style.height = height + "px";
 			document.getElementById("img").style.width = width + "px";
@@ -510,7 +456,7 @@ p._updateVisibility = _updateVisibility;
 			var finalStorage = (((height * width * valueRadioBtn) / 8) / 1024);
 			var finalStorageFixed = finalStorage.toFixed(2);
 			output.text = finalStorageFixed;
-		});
+		}
 	}
 
 	// actions tween:
@@ -534,7 +480,7 @@ p._updateVisibility = _updateVisibility;
 	this.Textinput = new lib.Szene_1_Textinput();
 	this.Textinput.name = "Textinput";
 	this.Textinput.parent = this;
-	this.Textinput.setTransform(549.4,1030.5,1,1,0,0,0,549.4,1030.5);
+	this.Textinput.setTransform(541,1088.3,1,1,0,0,0,541,1088.3);
 	this.Textinput.depth = 0;
 	this.Textinput.isAttachedToCamera = 0
 	this.Textinput.isAttachedToMask = 0
@@ -559,7 +505,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.Farbtiefen).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(429,1043,170.89999999999998,49.40000000000009);
+p.nominalBounds = new cjs.Rectangle(429,1043,170.89999999999998,114.79999999999995);
 // library properties:
 lib.properties = {
 	id: 'C9C350A174742E4C96AE1B1D50D89F02',

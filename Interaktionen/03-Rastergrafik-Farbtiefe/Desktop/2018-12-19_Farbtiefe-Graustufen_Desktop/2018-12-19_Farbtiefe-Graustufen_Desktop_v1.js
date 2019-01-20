@@ -122,11 +122,15 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// script
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+
+	this.customCSS.setTransform(895.15,637.8,1,1,0,0,0,50,11);
+
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
 	this.instance.setTransform(895.15,695.9,1,1,0,0,0,50,11);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.customCSS}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_script, null, null);
 
@@ -275,17 +279,18 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
+		this.customCSS = this.script.customCSS;
 		this.img_bit_3 = this.Bilder.img_bit_3;
 		this.img_bit_2 = this.Bilder.img_bit_2;
 		this.img_bit_1 = this.Bilder.img_bit_1;
 		this.img_bit_0 = this.Bilder.img_bit_0;
 		$('body').append('<div class="buttonContainerLeft">')
-		$('.buttonContainerLeft').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainerLeft').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="checkmark"></span></label></br></br>');
+		$('.buttonContainerLeft').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainerLeft').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="radioCheckmark"></span></label></br></br>');
 		
 		$('body').append('<div class="buttonContainerRight">')
-		$('.buttonContainerRight').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainerRight').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="checkmark"></span></label>');
+		$('.buttonContainerRight').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainerRight').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="radioCheckmark"></span></label>');
 		
 		$('body').append('<div class="shemeContainerLeft">')
 		$('.shemeContainerLeft').append('<img src="./images/1bit.png" class="img_sheme_1bit" height="44px" width="280px"></br></br>');
@@ -295,53 +300,6 @@ p._updateVisibility = _updateVisibility;
 		$('.shemeContainerRight').append('<img src="./images/4bit.png" class="img_sheme_4bit" height="44px" width="280px"></br></br>');
 		$('.shemeContainerRight').append('<img src="./images/8bit.png" class="img_sheme_8bit" height="44px" width="280px">');
 		
-		
-		$('body').css({
-			'overscroll-behavior-y': 'contain'
-		});
-		
-		$('.buttonContainerLeft').css({
-			'position': 'absolute',
-			'margin-top': '-150px',
-			'margin-left': '375px'
-		});
-		$('.shemeContainerLeft').css({
-			'position': 'absolute',
-			'margin-top': '-160px',
-			'margin-left': '75px'
-		});
-		
-		$('.shemeContainerRight').css({
-			'position': 'absolute',
-			'margin-top': '-177px',
-			'margin-left': '525px'
-		});
-		
-		$('.buttonContainerRight').css({
-			'position': 'absolute',
-			'margin-top': '-150px',
-			'margin-left': '825px'
-		});
-		
-		$('.text').css({
-			'font-size': '20px'
-		});
-		
-		$('.img_sheme_1bit').css({
-		
-		});
-		
-		$('.img_sheme_2bit').css({
-			'padding-top': '19px'
-		});
-		
-		$('.img_sheme_4bit').css({
-			'padding-top': '19px'
-		});
-		
-		$('.img_sheme_8bit').css({
-			'padding-top': '18px'
-		});
 		
 		
 		var elem = [this.img_bit_0, this.img_bit_1, this.img_bit_2, this.img_bit_3];
@@ -372,7 +330,7 @@ p._updateVisibility = _updateVisibility;
 	this.script = new lib.Szene_1_script();
 	this.script.name = "script";
 	this.script.parent = this;
-	this.script.setTransform(895.1,695.9,1,1,0,0,0,895.1,695.9);
+	this.script.setTransform(895.1,666.9,1,1,0,0,0,895.1,666.9);
 	this.script.depth = 0;
 	this.script.isAttachedToCamera = 0
 	this.script.isAttachedToMask = 0

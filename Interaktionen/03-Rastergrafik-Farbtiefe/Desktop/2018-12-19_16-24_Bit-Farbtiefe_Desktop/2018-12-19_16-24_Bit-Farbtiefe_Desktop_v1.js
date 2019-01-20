@@ -25,21 +25,21 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_9 = function() {
+(lib.CachedTexturedBitmap_39 = function() {
 	this.initialize(ss["2018_12_19_16_24_Bit_Farbtiefe_Desktop_v1_atlas_"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.roboter_farbigesdisplay_16bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_16bit);
+(lib.roboter_farbigesdisplay_24bit = function() {
+	this.initialize(img.roboter_farbigesdisplay_24bit);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);
 
 
-(lib.roboter_farbigesdisplay_24bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_24bit);
+(lib.roboter_farbigesdisplay_16bit = function() {
+	this.initialize(img.roboter_farbigesdisplay_16bit);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);// helper functions:
 
@@ -72,7 +72,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(45,511,0.7057,0.7057);
 
-	this.instance_2 = new lib.CachedTexturedBitmap_9();
+	this.instance_2 = new lib.CachedTexturedBitmap_39();
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(44.35,567.35,0.5,0.5);
 
@@ -117,11 +117,24 @@ p._updateVisibility = _updateVisibility;
 	// Ebene_1
 	this.instance = new lib.roboter_farbigesdisplay_16bit();
 	this.instance.parent = this;
-	this.instance.setTransform(0,0,0.24,0.24);
+	this.instance.setTransform(0,0,0.32,0.3438);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib._16_Bit_Ebene_1, null, null);
+
+
+(lib.Szene_1_Actions = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Actions
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+
+	this.customCSS.setTransform(888.15,639.7,1,1,0,0,0,50,11);
+
+	this.timeline.addTween(cjs.Tween.get(this.customCSS).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Szene_1_Actions, null, null);
 
 
 (lib._24Bit = function(mode,startPosition,loop) {
@@ -151,7 +164,7 @@ p._updateVisibility = _updateVisibility;
 	this.Ebene_1 = new lib._16_Bit_Ebene_1();
 	this.Ebene_1.name = "Ebene_1";
 	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(360,170.4,1,1,0,0,0,360,170.4);
+	this.Ebene_1.setTransform(480,244.1,1,1,0,0,0,480,244.1);
 	this.Ebene_1.depth = 0;
 	this.Ebene_1.isAttachedToCamera = 0
 	this.Ebene_1.isAttachedToMask = 0
@@ -161,13 +174,18 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._16Bit, new cjs.Rectangle(0,0,720,340.8), null);
+}).prototype = getMCSymbolPrototype(lib._16Bit, new cjs.Rectangle(0,0,960,488.3), null);
 
 
 (lib.Szene_1_Bilder = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Bilder
+	this.img_bit_0 = new lib._16Bit();
+	this.img_bit_0.name = "img_bit_0";
+	this.img_bit_0.parent = this;
+	this.img_bit_0.setTransform(480,244.1,1,1,0,0,0,480,244.1);
+
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
 	this.instance.setTransform(888.15,686.05,1,1,0,0,0,50,11);
@@ -177,12 +195,7 @@ p._updateVisibility = _updateVisibility;
 	this.img_bit_1.parent = this;
 	this.img_bit_1.setTransform(0,0,1.3333,1.4327);
 
-	this.img_bit_0 = new lib._16Bit();
-	this.img_bit_0.name = "img_bit_0";
-	this.img_bit_0.parent = this;
-	this.img_bit_0.setTransform(0,0,1.3333,1.4327);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.img_bit_0},{t:this.img_bit_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.img_bit_1},{t:this.instance},{t:this.img_bit_0}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_Bilder, null, null);
 
@@ -222,24 +235,13 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.img_bit_0 = this.Bilder.img_bit_0;
+		this.customCSS = this.Actions.customCSS;
 		this.img_bit_1 = this.Bilder.img_bit_1;
+		this.img_bit_0 = this.Bilder.img_bit_0;
 		$('body').append('<div class="buttonContainer">')
-		$('.buttonContainer').append('<label class="container">16 Bit<input type="radio" id="bit16_radio" class="radioBtn" name="radio" value="0" checked><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container">24 Bit<input type="radio" id="bit24_radio" class="radioBtn" name="radio" value="1"><span class="checkmark"></span></label>');
+		$('.buttonContainer').append('<label class="container">16 Bit<input type="radio" id="bit16_radio" class="radioBtn" name="radio" value="0" checked><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container">24 Bit<input type="radio" id="bit24_radio" class="radioBtn" name="radio" value="1"><span class="radioCheckmark"></span></label>');
 		
-		$('body').css({
-			'overscroll-behavior-y': 'contain'
-		});
-		
-		$('.buttonContainer').css({
-			'position': 'absolute',
-			'margin-top': '-195px',
-			'margin-left': '280px',
-		});
-		$('.container').css({
-			'margin-bottom': '31px'
-		});
 		
 		var elem = [this.img_bit_0, this.img_bit_1];
 		
@@ -265,6 +267,20 @@ p._updateVisibility = _updateVisibility;
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
+	// Actions_obj_
+	this.Actions = new lib.Szene_1_Actions();
+	this.Actions.name = "Actions";
+	this.Actions.parent = this;
+	this.Actions.setTransform(888.1,639.7,1,1,0,0,0,888.1,639.7);
+	this.Actions.depth = 0;
+	this.Actions.isAttachedToCamera = 0
+	this.Actions.isAttachedToMask = 0
+	this.Actions.layerDepth = 0
+	this.Actions.layerIndex = 0
+	this.Actions.maskLayerName = 0
+
+	this.timeline.addTween(cjs.Tween.get(this.Actions).wait(1));
+
 	// Farbtiefen_obj_
 	this.Farbtiefen = new lib.Szene_1_Farbtiefen();
 	this.Farbtiefen.name = "Farbtiefen";
@@ -274,7 +290,7 @@ p._updateVisibility = _updateVisibility;
 	this.Farbtiefen.isAttachedToCamera = 0
 	this.Farbtiefen.isAttachedToMask = 0
 	this.Farbtiefen.layerDepth = 0
-	this.Farbtiefen.layerIndex = 0
+	this.Farbtiefen.layerIndex = 1
 	this.Farbtiefen.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.Farbtiefen).wait(1));
@@ -288,7 +304,7 @@ p._updateVisibility = _updateVisibility;
 	this.Bilder.isAttachedToCamera = 0
 	this.Bilder.isAttachedToMask = 0
 	this.Bilder.layerDepth = 0
-	this.Bilder.layerIndex = 1
+	this.Bilder.layerIndex = 2
 	this.Bilder.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.Bilder).wait(1));
@@ -304,8 +320,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/roboter_farbigesdisplay_16bit.jpg", id:"roboter_farbigesdisplay_16bit"},
 		{src:"images/roboter_farbigesdisplay_24bit.jpg", id:"roboter_farbigesdisplay_24bit"},
+		{src:"images/roboter_farbigesdisplay_16bit.jpg", id:"roboter_farbigesdisplay_16bit"},
 		{src:"images/2018_12_19_16_24_Bit_Farbtiefe_Desktop_v1_atlas_.png", id:"2018_12_19_16_24_Bit_Farbtiefe_Desktop_v1_atlas_"},
 		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
 		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},

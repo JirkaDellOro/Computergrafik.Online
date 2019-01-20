@@ -122,11 +122,15 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// script
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+
+	this.customCSS.setTransform(576.45,595.05,1,1,0,0,0,50,11);
+
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
 	this.instance.setTransform(563.4,664.85,1,1,0,0,0,50,11);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.customCSS}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_script, null, null);
 
@@ -275,57 +279,22 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
+		this.customCSS = this.script.customCSS;
 		this.img_bit_3 = this.Bilder.img_bit_3;
 		this.img_bit_2 = this.Bilder.img_bit_2;
 		this.img_bit_1 = this.Bilder.img_bit_1;
 		this.img_bit_0 = this.Bilder.img_bit_0;
 		$('body').append('<div class="buttonContainer">')
-		$('.buttonContainer').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="checkmark"></span></label></br></br>');
-		$('.buttonContainer').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="checkmark"></span></label>');
+		$('.buttonContainer').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="radioCheckmark"></span></label></br></br>');
+		$('.buttonContainer').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="radioCheckmark"></span></label>');
 		
 		$('body').append('<div class="shemeContainer">')
 		$('.shemeContainer').append('<img src="./images/1bit.png" class="img_sheme_1bit" height="44px" width="280px"></br></br>');
 		$('.shemeContainer').append('<img src="./images/2bit.png" class="img_sheme_2bit" height="44px" width="280px"></br></br>');
 		$('.shemeContainer').append('<img src="./images/4bit.png" class="img_sheme_4bit" height="44px" width="280px"></br></br>');
 		$('.shemeContainer').append('<img src="./images/8bit.png" class="img_sheme_8bit" height="44px" width="280px">');
-		
-		$('body').css({
-			'overscroll-behavior-y': 'contain'
-		});
-		
-		$('.buttonContainer').css({
-			'position': 'absolute',
-			'margin-top': '-790px',
-			'margin-left': '400px'
-		});
-		
-		$('.text').css({
-			'font-size': '20px'
-		});
-		
-		$('.shemeContainer').css({
-			'position': 'absolute',
-			'margin-top': '-800px',
-			'margin-left': '100px'
-		});
-		
-		$('.img_sheme_1bit').css({
-		
-		});
-		
-		$('.img_sheme_2bit').css({
-			'padding-top': '19px'
-		});
-		
-		$('.img_sheme_4bit').css({
-			'padding-top': '19px'
-		});
-		
-		$('.img_sheme_8bit').css({
-			'padding-top': '18px'
-		});
 		
 		
 		var elem = [this.img_bit_0, this.img_bit_1, this.img_bit_2, this.img_bit_3];
@@ -356,7 +325,7 @@ p._updateVisibility = _updateVisibility;
 	this.script = new lib.Szene_1_script();
 	this.script.name = "script";
 	this.script.parent = this;
-	this.script.setTransform(563.4,664.9,1,1,0,0,0,563.4,664.9);
+	this.script.setTransform(569.9,630,1,1,0,0,0,569.9,630);
 	this.script.depth = 0;
 	this.script.isAttachedToCamera = 0
 	this.script.isAttachedToMask = 0

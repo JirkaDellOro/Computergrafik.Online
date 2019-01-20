@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_", frames: [[0,0,1200,1452],[1202,586,584,584],[1202,0,584,584],[1202,1172,584,584]]}
+		{name:"2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_", frames: [[1968,0,61,93],[1788,0,90,93],[1880,0,86,93],[0,0,1200,1452],[1202,586,584,584],[1202,1172,584,584],[1202,0,584,584]]}
 ];
 
 
@@ -11,30 +11,51 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_45 = function() {
+(lib.CachedTexturedBitmap_31 = function() {
 	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_46 = function() {
+(lib.CachedTexturedBitmap_32 = function() {
 	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_47 = function() {
+(lib.CachedTexturedBitmap_33 = function() {
 	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedTexturedBitmap_48 = function() {
+(lib.CachedTexturedBitmap_34 = function() {
 	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
 	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedTexturedBitmap_35 = function() {
+	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedTexturedBitmap_36 = function() {
+	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedTexturedBitmap_37 = function() {
+	this.initialize(ss["2018_12_18_hexadezimaler_Farbcode_Desktop_v1_atlas_"]);
+	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -55,11 +76,32 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	}
 
 
+(lib.Szene_1_text = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// text
+	this.instance = new lib.CachedTexturedBitmap_33();
+	this.instance.parent = this;
+	this.instance.setTransform(863.5,138.15,0.5,0.5);
+
+	this.instance_1 = new lib.CachedTexturedBitmap_32();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(763.35,138.15,0.5,0.5);
+
+	this.instance_2 = new lib.CachedTexturedBitmap_31();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(673.05,138.15,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Szene_1_text, null, null);
+
+
 (lib.Szene_1_schwarze_Ebene = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// schwarze_Ebene
-	this.instance = new lib.CachedTexturedBitmap_45();
+	this.instance = new lib.CachedTexturedBitmap_34();
 	this.instance.parent = this;
 	this.instance.setTransform(-16,0,0.5,0.5);
 
@@ -72,7 +114,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_48();
+	this.instance = new lib.CachedTexturedBitmap_37();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.2501,0.2501);
 
@@ -85,7 +127,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_47();
+	this.instance = new lib.CachedTexturedBitmap_36();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.2501,0.2501);
 
@@ -115,7 +157,7 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_46();
+	this.instance = new lib.CachedTexturedBitmap_35();
 	this.instance.parent = this;
 	this.instance.setTransform(-0.45,-0.45,0.2501,0.2501);
 
@@ -130,7 +172,7 @@ p._updateVisibility = _updateVisibility;
 	// css
 	this.myCss = new lib.an_CSS({'id': 'myCss', 'href':'assets/componentsCss.css'});
 
-	this.myCss.setTransform(877.2,699.8,1,1,0,0,0,50,11);
+	this.myCss.setTransform(896.3,683.55,1,1,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.myCss).wait(1));
 
@@ -201,13 +243,17 @@ p._updateVisibility = _updateVisibility;
 	this.initialize(mode,startPosition,loop,{});
 
 	// roter_Kreis
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+
+	this.customCSS.setTransform(729.55,683.55,1,1,0,0,0,50,11);
+
 	this.r_circle = new lib.roter_Kreis();
 	this.r_circle.name = "r_circle";
 	this.r_circle.parent = this;
 	this.r_circle.setTransform(204.3,253.95,1.9989,1.9989,0,0,0,72.5,72.5);
 	this.r_circle.compositeOperation = "lighter";
 
-	this.timeline.addTween(cjs.Tween.get(this.r_circle).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.r_circle},{t:this.customCSS}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_roter_Kreis, null, null);
 
@@ -281,63 +327,23 @@ p._updateVisibility = _updateVisibility;
 		this.b_circle = this.blauer_Kreis.b_circle;
 		this.g_circle = this.grüner_Kreis.g_circle;
 		this.r_circle = this.roter_Kreis.r_circle;
+		this.customCSS = this.roter_Kreis.customCSS;
 		$('body').append('<div class="hexContainer">')
 		$('.hexContainer').append('</div><span id="hex_char">#</span><span id="hex_r_color">ff</span><span id="hex_g_color">ff</span><span id="hex_b_color">ff</span></div>');
 		
 		$('body').append('<div class="sliderContainer">')
-		$('.sliderContainer').append('<span class="text">Rot: </span><input type="range" class="slider" id="r_slider" value="255" min="0" max="255">');
-		$('.sliderContainer').append('<span id="r_slider_value">255</span></br></br>');
+		$('body').append('<div class="rSliderValueContainer">')
+		$('body').append('<div class="gSliderValueContainer">')
+		$('body').append('<div class="bSliderValueContainer">')
 		
-		$('.sliderContainer').append('<span class="text">Grün: </span><input type="range" class="slider" id="g_slider" value="255" min="0" max="255">');
-		$('.sliderContainer').append('<span id="g_slider_value">255</span></br></br>');
+		$('.sliderContainer').append('<input type="range" class="slider" id="r_slider" value="255" min="0" max="255">');
+		$('.rSliderValueContainer').append('<span id="r_slider_value">255</span>');
 		
-		$('.sliderContainer').append('<span class="text">Blau: </span><input type="range" class="slider" id="b_slider" value="255" min="0" max="255">');
-		$('.sliderContainer').append('<span id="b_slider_value">255</span></br></br>');
+		$('.sliderContainer').append('<input type="range" class="slider" id="g_slider" value="255" min="0" max="255">');
+		$('.gSliderValueContainer').append('<span id="g_slider_value">255</span>');
 		
-		$('.body').css({
-			'overscroll-behavior-y': 'contain',
-			'overscroll-behavior-x': 'contain',
-			'font-size': '30px'
-		});
-		
-		$('.text').css({
-			'font-size': '30px'
-		});
-		
-		$('.sliderContainer').css({
-			'position': 'absolute',
-			'margin-top': '-300px',
-			'margin-left': '690px',
-		
-		});
-		
-		$('.slider').css({
-			'transform' : 'rotate(270deg)'
-		});
-		
-		
-		$('.hexContainer').css({
-			'position': 'absolute',
-			'margin-top': '-650px',
-			'margin-left': '730px'
-		});
-		
-		$('#hex_char').css({
-			'font-size': '50px'
-		});
-		
-		$('#hex_r_color').css({
-			'color': 'red',
-			'font-size': '50px'
-		});
-		$('#hex_g_color').css({
-			'color': 'green',
-			'font-size': '50px'
-		});
-		$('#hex_b_color').css({
-			'color': 'blue',
-			'font-size': '50px'
-		});
+		$('.sliderContainer').append('<input type="range" class="slider" id="b_slider" value="255" min="0" max="255">');
+		$('.bSliderValueContainer').append('<span id="b_slider_value">255</span>');
 		
 		
 		var r_id = this.r_circle;
@@ -383,16 +389,30 @@ p._updateVisibility = _updateVisibility;
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
+	// text_obj_
+	this.text = new lib.Szene_1_text();
+	this.text.name = "text";
+	this.text.parent = this;
+	this.text.setTransform(789.8,161.4,1,1,0,0,0,789.8,161.4);
+	this.text.depth = 0;
+	this.text.isAttachedToCamera = 0
+	this.text.isAttachedToMask = 0
+	this.text.layerDepth = 0
+	this.text.layerIndex = 0
+	this.text.maskLayerName = 0
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+
 	// css_obj_
 	this.css = new lib.Szene_1_css();
 	this.css.name = "css";
 	this.css.parent = this;
-	this.css.setTransform(877.2,699.8,1,1,0,0,0,877.2,699.8);
+	this.css.setTransform(896.3,683.6,1,1,0,0,0,896.3,683.6);
 	this.css.depth = 0;
 	this.css.isAttachedToCamera = 0
 	this.css.isAttachedToMask = 0
 	this.css.layerDepth = 0
-	this.css.layerIndex = 0
+	this.css.layerIndex = 1
 	this.css.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.css).wait(1));
@@ -406,7 +426,7 @@ p._updateVisibility = _updateVisibility;
 	this.blauer_Kreis.isAttachedToCamera = 0
 	this.blauer_Kreis.isAttachedToMask = 0
 	this.blauer_Kreis.layerDepth = 0
-	this.blauer_Kreis.layerIndex = 1
+	this.blauer_Kreis.layerIndex = 2
 	this.blauer_Kreis.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.blauer_Kreis).wait(1));
@@ -420,7 +440,7 @@ p._updateVisibility = _updateVisibility;
 	this.grüner_Kreis.isAttachedToCamera = 0
 	this.grüner_Kreis.isAttachedToMask = 0
 	this.grüner_Kreis.layerDepth = 0
-	this.grüner_Kreis.layerIndex = 2
+	this.grüner_Kreis.layerIndex = 3
 	this.grüner_Kreis.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.grüner_Kreis).wait(1));
@@ -429,12 +449,12 @@ p._updateVisibility = _updateVisibility;
 	this.roter_Kreis = new lib.Szene_1_roter_Kreis();
 	this.roter_Kreis.name = "roter_Kreis";
 	this.roter_Kreis.parent = this;
-	this.roter_Kreis.setTransform(204.5,254.1,1,1,0,0,0,204.5,254.1);
+	this.roter_Kreis.setTransform(419.3,401.6,1,1,0,0,0,419.3,401.6);
 	this.roter_Kreis.depth = 0;
 	this.roter_Kreis.isAttachedToCamera = 0
 	this.roter_Kreis.isAttachedToMask = 0
 	this.roter_Kreis.layerDepth = 0
-	this.roter_Kreis.layerIndex = 3
+	this.roter_Kreis.layerIndex = 4
 	this.roter_Kreis.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.roter_Kreis).wait(1));
@@ -448,13 +468,13 @@ p._updateVisibility = _updateVisibility;
 	this.schwarze_Ebene.isAttachedToCamera = 0
 	this.schwarze_Ebene.isAttachedToMask = 0
 	this.schwarze_Ebene.layerDepth = 0
-	this.schwarze_Ebene.layerIndex = 4
+	this.schwarze_Ebene.layerIndex = 5
 	this.schwarze_Ebene.maskLayerName = 0
 
 	this.timeline.addTween(cjs.Tween.get(this.schwarze_Ebene).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(464,360,463.70000000000005,366);
+p.nominalBounds = new cjs.Rectangle(464,360,482.79999999999995,366);
 // library properties:
 lib.properties = {
 	id: '6C66711D337ACE4389B5581A823A3FB4',

@@ -1,0 +1,40 @@
+body{
+	overscroll-behavior-y: contain;
+	overscroll-behavior-x: contain;
+	font-size: 30px;
+}
+
+.text{
+	font-size: 30px;
+}
+
+.sliderContainer{
+	position: absolute;
+	margin-top: -285px;
+	margin-left: 160px;
+}
+
+.hexContainer{
+	position: absolute;
+	margin-top: -500px;
+	margin-left: 308px;
+}
+
+#hex_char{
+	font-size: 50px;
+}
+
+#hex_r_color{
+	color: red;
+	font-size: 50px;
+}
+
+#hex_g_color{
+	color: green;
+	font-size: 50px;
+}
+
+#hex_b_color{
+	color: blue;
+	font-size: 50px;
+}
