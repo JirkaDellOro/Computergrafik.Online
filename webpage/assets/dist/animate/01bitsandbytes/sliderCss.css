@@ -44,7 +44,7 @@ input[type=range]{
     /* border: 1px solid white; */
 
     /*required for proper track sizing in FF*/
-    width: 70vw;
+    width: 300px;
 }
 
 input[type=range]::-moz-range-track {

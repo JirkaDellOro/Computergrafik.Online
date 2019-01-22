@@ -13,8 +13,10 @@ main
 
 .headline-container
     text-align: center
-    height: 55px
+    margin-top: 20px
     margin-bottom: 10px
+    height: 55px
+    
 
     +break($break-m)
         display: none
@@ -25,3 +27,31 @@ main
 
 .subheadline
     font-size: 16px
+
+.projekt-text
+    //width: 350px
+    margin-left: 20px
+    margin-right: 20px
+
+.construction-text
+    display: none;
+    margin-left: 20px
+    margin-right: 20px
+
+.btn-interaktion
+    padding: 15px 
+    border-radius: 10px
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+    transition: 0.5s ease
+
+    text-decoration: none
+    color: $blue
+
+    &:hover
+        color: darken($blue, 20)
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55)
+
+.btn-container
+    display: flex
+    justify-content: center
+    margin-top: 30px

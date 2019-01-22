@@ -2,11 +2,19 @@ html{
     overflow: hidden;
 }
 
+#canvas{
+    left: 50%;
+    transform: translate(-50%);
+}
+
 .sliderContainer{
-    position: relative;
-    top: -20px;
-    left: 60%;
-    transform: translateX(-50%);
+    /* position: relative; */
+    /* width: 378px; */
+    /* top: -20px; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    display: flex;
+    justify-content: center;
 }
 
 input[type=range]{
@@ -44,7 +52,7 @@ input[type=range]{
     /* border: 1px solid white; */
 
     /*required for proper track sizing in FF*/
-    width: 70vw;
+    width: 250px;
 }
 
 input[type=range]::-moz-range-track {
