@@ -207,7 +207,7 @@ $('.prev').click(function () {
 
 
 function getChapter(chapterIndex, liCount, liLength) {
-    // $('.content-container').empty();
+    $('.iframe-interaction').empty();
     if(chapterIndex.finished == true)
     {
         $('.construction-text').css('display', 'none');
@@ -237,6 +237,7 @@ function getChapter(chapterIndex, liCount, liLength) {
     }else{
         $('.youtube-player').css('display', 'none');
         $('.iframe-interaction').css('display', 'none');
+        $('.content-container').css('display', 'block');
         $('.construction-text').css('display', 'block');
         $('.information-string').remove();
         stopVideo();
