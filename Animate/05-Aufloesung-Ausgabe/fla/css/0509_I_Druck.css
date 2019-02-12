@@ -29,15 +29,15 @@ body{
 	margin-left: 300px;
 }
 
-.sliderContainer1{
-	position: relative;
-	margin-top: -150px;
+body .sliderContainer1{
+	position: absolute;
+	margin-top: -77px !important;
 	margin-left: 300px;
 }
 
 .sliderContainer2{
 	position: relative;
-	margin-top: 30px;
+	margin-top: -17px;
 	margin-left: 300px;
 }
 
