@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"2018_12_14_HTML_components_atlas_", frames: [[0,0,196,137]]}
+		{name:"2019_01_08_HTML_components_atlas_", frames: [[0,0,196,137]]}
 ];
 
 
@@ -11,8 +11,8 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedTexturedBitmap_17 = function() {
-	this.initialize(ss["2018_12_14_HTML_components_atlas_"]);
+(lib.CachedTexturedBitmap_1 = function() {
+	this.initialize(ss["2019_01_08_HTML_components_atlas_"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -38,7 +38,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
-	this.instance = new lib.CachedTexturedBitmap_17();
+	this.instance = new lib.CachedTexturedBitmap_1();
 	this.instance.parent = this;
 	this.instance.setTransform(0,0,1.0116,1.0116);
 
@@ -127,7 +127,7 @@ p._updateVisibility = _updateVisibility;
 
 
 // stage content:
-(lib._20181214_HTMLcomponents = function(mode,startPosition,loop) {
+(lib._20190108_HTMLcomponents = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	this.___GetDepth___ = function(obj) {
@@ -266,7 +266,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/2018_12_14_HTML_components_atlas_.png", id:"2018_12_14_HTML_components_atlas_"},
+		{src:"images/2019_01_08_HTML_components_atlas_.png", id:"2019_01_08_HTML_components_atlas_"},
 		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
 		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
 		{src:"components/ui/src/css.js", id:"an.CSS"}

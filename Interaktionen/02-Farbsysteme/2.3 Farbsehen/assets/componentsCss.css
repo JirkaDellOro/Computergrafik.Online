@@ -159,6 +159,13 @@ input[type=range]:focus::-moz-range-track {
 	background: white;
 }
 
+.checkboxContainer
+{
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  /* transform: translate(-50% -50%); */
+}
 
 
 /* The container */
@@ -196,7 +203,7 @@ input[type=range]:focus::-moz-range-track {
 
 /* On mouse-over, add a grey background color */
 .checkContainer:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #333333;
 }
 
 /* When the checkbox is checked, add a blue background */
