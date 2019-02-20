@@ -122,12 +122,18 @@ p._updateVisibility = _updateVisibility;
 		
 		function changeMixMode(targetId){
 			var mixMode = targetId;
+			$('.button-active').removeClass('button-active');
+			//$('button').find('button-active').css( "background-color", "red" );
+			//console.log("Hallo mein freund = " + $('#dom_overlay_container').find('button-active'));
+			//$('button').find('button-active').removeClass('button-active');
+			console.log("test : " + $("#" + mixMode).val());
 			if (mixMode == "softlight")
 					mixMode = "soft-light";
 			if (mixMode == "hardlight")
 					mixMode = "hard-light";
 			console.log(mixMode);
-			theImg.style.mixBlendMode = mixMode;	
+			theImg.style.mixBlendMode = mixMode;
+			$("#" + mixMode).addClass('button-active');
 		}
 		
 		
@@ -281,49 +287,49 @@ p._updateVisibility = _updateVisibility;
 	// script
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
-	this.instance.setTransform(834.25,748.45,1,1,0,0,0,50,11);
+	this.instance.setTransform(834.25,709,1,1,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// buttonHardLight
 	this.hardlight = new lib.an_Button({'id': 'hardlight', 'label':'Hartes Licht', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.hardlight.setTransform(504.25,612.15,1.8524,1.8524);
+	this.hardlight.setTransform(508.1,566.3,2.4369,2.4369);
 
 	this.timeline.addTween(cjs.Tween.get(this.hardlight).wait(1));
 
 	// buttonScreen
-	this.screen = new lib.an_Button({'id': 'screen', 'label':'Negative Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button button'});
+	this.screen = new lib.an_Button({'id': 'screen', 'label':'Neg. Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.screen.setTransform(504.25,562.15,1.8524,1.8524);
+	this.screen.setTransform(508.1,500.5,2.4369,2.4369);
 
 	this.timeline.addTween(cjs.Tween.get(this.screen).wait(1));
 
 	// buttonDarken
 	this.darken = new lib.an_Button({'id': 'darken', 'label':'Abdunkeln', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.darken.setTransform(596.85,682.5,1.8524,1.8524,0,0,0,50,11);
+	this.darken.setTransform(629.95,658.8,2.4369,2.4369,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.darken).wait(1));
 
 	// buttonSoftlight
 	this.softlight = new lib.an_Button({'id': 'softlight', 'label':'Weiches Licht', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.softlight.setTransform(387.25,682.5,1.8524,1.8524,0,0,0,50,11);
+	this.softlight.setTransform(354.2,658.8,2.4369,2.4369,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.softlight).wait(1));
 
 	// buttonMultiply
 	this.multiply = new lib.an_Button({'id': 'multiply', 'label':'Multiplizieren', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.multiply.setTransform(387.25,632.55,1.8524,1.8524,0,0,0,50,11);
+	this.multiply.setTransform(354.2,593.1,2.4369,2.4369,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.multiply).wait(1));
 
 	// buttonNormal
 	this.normal = new lib.an_Button({'id': 'normal', 'label':'Normal', 'disabled':false, 'visible':true, 'class':'ui-button button'});
 
-	this.normal.setTransform(294.65,562.15,1.8524,1.8524);
+	this.normal.setTransform(232.35,500.5,2.4369,2.4369);
 
 	this.timeline.addTween(cjs.Tween.get(this.normal).wait(1));
 
@@ -331,12 +337,12 @@ p._updateVisibility = _updateVisibility;
 	this.backgroundImage = new lib.roboterImage();
 	this.backgroundImage.name = "backgroundImage";
 	this.backgroundImage.parent = this;
-	this.backgroundImage.setTransform(480,270,0.7385,0.7385,0,0,0,649.9,365.6);
+	this.backgroundImage.setTransform(484,202,0.7385,0.7385,0,0,0,649.9,365.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.backgroundImage).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(480,360,480,400);
+p.nominalBounds = new cjs.Rectangle(484,292,480,428.5);
 // library properties:
 lib.properties = {
 	id: '566019D5866C490E8B41A4649C244AD4',

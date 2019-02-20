@@ -122,12 +122,14 @@ p._updateVisibility = _updateVisibility;
 		
 		function changeMixMode(targetId){
 			var mixMode = targetId;
+			$('.button-active').removeClass('button-active');
 			if (mixMode == "softlight")
 					mixMode = "soft-light";
 			if (mixMode == "hardlight")
 					mixMode = "hard-light";
 			console.log(mixMode);
-			theImg.style.mixBlendMode = mixMode;	
+			theImg.style.mixBlendMode = mixMode;
+			$("#" + mixMode).addClass('button-active');
 		}
 		
 		
