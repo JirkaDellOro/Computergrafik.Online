@@ -281,7 +281,7 @@ p._updateVisibility = _updateVisibility;
 	// script
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
-	this.instance.setTransform(800.25,1224.25,1,1,0,0,0,50,11);
+	this.instance.setTransform(834.25,748.45,1,1,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -336,7 +336,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.backgroundImage).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(480,360,480,875.8);
+p.nominalBounds = new cjs.Rectangle(480,360,480,400);
 // library properties:
 lib.properties = {
 	id: '566019D5866C490E8B41A4649C244AD4',
