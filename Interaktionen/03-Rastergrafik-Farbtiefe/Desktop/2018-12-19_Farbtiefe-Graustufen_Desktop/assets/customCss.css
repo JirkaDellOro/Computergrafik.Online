@@ -1,0 +1,42 @@
+body{
+	overscroll-behavior-y: contain;
+}
+
+.buttonContainerLeft{
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 375px;
+}
+.shemeContainerLeft{
+	position: absolute;
+	margin-top: -160px;
+	margin-left: 75px;
+}
+
+.shemeContainerRight{
+	position: absolute;
+	margin-top: -177px;
+	margin-left: 525px;
+}
+
+.buttonContainerRight{
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 825px;
+}
+
+.text{
+	font-size: 20px;
+}
+
+.img_sheme_2bit{
+	padding-top: 19px;
+}
+
+.img_sheme_4bit{
+	padding-top: 19px;
+}
+
+.img_sheme_8bit{
+	padding-top: 18px;
+}
