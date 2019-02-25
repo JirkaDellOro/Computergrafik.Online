@@ -1,22 +1,28 @@
 #controlElements{
-    position: relative;
-    left: 20%;
-    top: 600px;
+    position: absolute;
+
+    top: 350px;
 }
 
 .label{
-    padding: 20px;
+    padding-right: 20px;
 }
 
-#p_width{
+.paragraph{
     display: inline-block;
-    text-align: right;
-    padding: 20px;
+    padding-right:20px;
 }
 
-#height{
+#p_height, #resolution_in_value{
+    text-align: right;
+}
+
+
+
+#width{
     display: inline-block;
     text-align: left;
+    margin-right: 20px;
 }
 
 .button{
