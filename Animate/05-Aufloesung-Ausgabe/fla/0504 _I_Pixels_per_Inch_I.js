@@ -48,7 +48,7 @@ p._updateVisibility = _updateVisibility;
 	// Ebene_1
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/0504_Pixels_per_Inch.css'});
 
-	this.instance.setTransform(822.05,619,1,1,0,0,0,50,11);
+	this.instance.setTransform(480,360,1,1,0,0,0,50,11);
 
 	this.instance_1 = new lib.an_CSS({'id': 'instance_1', 'href':'assets/componentsCss.css'});
 
@@ -95,24 +95,96 @@ p._updateVisibility = _updateVisibility;
 	// timeline functions:
 	this.frame_0 = function() {
 		$('#animation_container').append('<div class="imageContainer" id="imageContainer"></div>');
+		$('#animation_container').prepend('<img class="img" id="img" src="/images/0504_I_Pixels_per_Inch/Roboter4000x3000.png" width="40"> ');
+		//var img = [".\images\0504_I_Pixels_per_Inch\Roboter4000x3000.png"];
 		$('#animation_container').append('<div class="controlElements" id="controlElements">');
+		$('#controlElements').append('<div class="sliderContainer1">');
+		$('.sliderContainer1').append('<span id="sliderPixels_label">Eingabeauflösung</span>');
+		$('.sliderContainer1').append('<input type="range" class="slider" id="sliderPixels" value="0" min="1" max="10" >');
+		$('.sliderContainer1').append('<p id="sliderPixels_value">400 x 300</p>');
 		$('#controlElements').append('<form class="form" id="form_height">');
-		$('#controlElements').append('<label for="height" class="label" id="label_height"> Hoehe</label>');
-		$('#controlElements').append('<input class="input" id="height" type="text" name="height" value="0">');
+		$('#controlElements').append('<label for="width" class="label" id="label_width">Breite des Ausgabemediums in cm</label>');
+		$('#controlElements').append('<input class="input" id="width" type="text" name="width" value="0">');
 		$('#controlElements').append('</form>');
-		$('#controlElements').append('<p class="paragraph" id="p_width">x Breite</p>');
+		$('#controlElements').append('<p class="paragraph" id="p_height">x Höhe</p>');
 		$('#controlElements').append('<button class="button" id="btn_calculate">Berechnen</button>');
+		$('#controlElements').append('<p class="paragraph" id="resolution_in_label">Eingabeauflösung in Pixeln</p>');
+		$('#controlElements').append('<p class="paragraph" id="resolution_in_value"></p></br>');
+		$('#controlElements').append('<p class="paragraph" id="resolution_out_label">Ausgabeauflösung in PPI</p>');
+		$('#controlElements').append('<p class="paragraph" id="resolution_out_value"></p>');
+		var resolution_widths = [400, 500, 600, 700, 800, 900, 1000, 2000, 3000, 4000];
+		var resolution_heights = [300, 375, 450, 525, 600, 675, 750, 1500, 2250, 3000];
 		
-		$('#btn_calculate').click(function(){
-			
-				//$('#p_width').text('test')
-			
-		     
-		})
-		$("#height").on("change paste keyup", function() {
-			 var value = $( this ).val();
-		    $( "#p_width" ).text( value*10 );
-		   
+		$('#btn_calculate').click(function () {
+			var result_resolution_in;
+			var result_resolution_out;
+			for (var i = 1; i < 11; i++) {
+				if ($("#sliderPixels").val() == i) {
+					result_resolution_in = resolution_widths[i - 1] * resolution_heights[i - 1];
+					$("#resolution_in_value").text(result_resolution_in);
+					if ($("#width").val() == 0) {
+						$("#resolution_out_value").text("Du musst eine Breite für das Ausgabemedium eingeben.");
+					} else {
+						result_resolution_out = Math.round((resolution_widths[i - 1] / $("#width").val()) * 2.54);
+						$("#resolution_out_value").text(result_resolution_out);
+					}
+		
+				}
+			}
+		
+		});
+		
+		$("#width").on("change paste keyup", function () {
+			var value = $(this).val();
+		
+			if (value == 0)
+				$("#p_height").text("x Höhe")
+			else
+				$("#p_height").text(value * 0.75);
+		});
+		
+		$(document).on('input', '#sliderPixels', function () {
+			var value = $(this).val();
+			for (var i = 1; i < 11; i++) {
+				if (value == i) {
+					$("#sliderPixels_value").text(resolution_widths[value - 1] + " x " + resolution_heights[value - 1]);
+					switch (i) {
+						case 1:
+							$("#img").width(40);
+							break;
+						case 2:
+							$("#img").width(50);
+							break;
+						case 3:
+							$("#img").width(60);
+							break;
+						case 4:
+							$("#img").width(70);
+							break;
+						case 5:
+							$("#img").width(80);
+							break;
+						case 6:
+							$("#img").width(90);
+							break;
+						case 7:
+							$("#img").width(100);
+							break;
+						case 8:
+							$("#img").width(200);
+							break;
+						case 9:
+							$("#img").width(300);
+							break;
+						case 10:
+							$("#img").width(400);
+							break;
+						default:
+							$("#img").width(40);
+					}
+		
+				}
+			}
 		});
 	}
 
@@ -123,7 +195,7 @@ p._updateVisibility = _updateVisibility;
 	this.Ebene_1 = new lib.Szene_1_Ebene_1();
 	this.Ebene_1.name = "Ebene_1";
 	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(822.1,589,1,1,0,0,0,822.1,589);
+	this.Ebene_1.setTransform(651,459.4,1,1,0,0,0,651,459.4);
 	this.Ebene_1.depth = 0;
 	this.Ebene_1.isAttachedToCamera = 0
 	this.Ebene_1.isAttachedToMask = 0
@@ -134,7 +206,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1251.6,907.4,-378.9999999999999,-276.9);
+p.nominalBounds = new cjs.Rectangle(909.5,708.5,-36.89999999999998,-138.10000000000002);
 // library properties:
 lib.properties = {
 	id: 'F4BF154C7F74274BA442C785CD7F3002',
@@ -144,9 +216,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549462296849", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549462296849", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1549462296849", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js", id:"an.CSS"}
 	],
 	preloads: []
 };
