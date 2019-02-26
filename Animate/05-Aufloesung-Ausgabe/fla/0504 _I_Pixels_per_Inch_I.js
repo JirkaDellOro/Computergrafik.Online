@@ -216,9 +216,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551102391775", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551102391775", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551102391775", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js", id:"an.CSS"}
 	],
 	preloads: []
 };

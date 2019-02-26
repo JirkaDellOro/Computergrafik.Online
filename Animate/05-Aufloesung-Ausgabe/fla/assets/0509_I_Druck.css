@@ -6,7 +6,6 @@ body{
 #imageContainer{
 	position: relative;
 	top: 0px;
-	left: 250px;
 	width: 472px;
 	height: 354px;
 	overflow: hidden;
@@ -24,21 +23,16 @@ body{
 }
 
 .radioContainer{
-	position: absolute;
-	margin-top: -285px;
-	margin-left: 300px;
+	position: relative;
+
 }
 
 body .sliderContainer1{
-	position: absolute;
-	margin-top: -77px !important;
-	margin-left: 300px;
+	position: relative;
 }
 
 .sliderContainer2{
 	position: relative;
-	margin-top: -17px;
-	margin-left: 300px;
 }
 
 /*$('.body').css({
