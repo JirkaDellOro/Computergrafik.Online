@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"6.4 _I_ Farbtiefenreduktion _desktop__atlas_", frames: [[928,632,926,630],[0,0,926,630],[928,1264,926,630],[0,1264,926,630],[928,0,926,630],[0,632,926,630]]}
+		{name:"6.4 _I_ Farbtiefenreduktion _desktop__atlas_", frames: [[0,0,926,630],[928,632,926,630],[928,0,926,630],[0,632,926,630],[928,1264,926,630],[0,1264,926,630]]}
 ];
 
 
@@ -233,7 +233,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// CSS
-	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
+	this.instance = new lib.an_CSS({'id': '', 'href':'assets/.%5CcomponentsCss.css'});
 
 	this.instance.setTransform(621.9,930.1,1,1,0,0,0,50,11);
 
@@ -288,10 +288,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/6.4 _I_ Farbtiefenreduktion _desktop__atlas_.png?1551002377676", id:"6.4 _I_ Farbtiefenreduktion _desktop__atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551002377689", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551002377689", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551002377689", id:"an.CSS"}
+		{src:"images/6.4 _I_ Farbtiefenreduktion _desktop__atlas_.png?1551111812964", id:"6.4 _I_ Farbtiefenreduktion _desktop__atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551111813052", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551111813052", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551111813052", id:"an.CSS"}
 	],
 	preloads: []
 };

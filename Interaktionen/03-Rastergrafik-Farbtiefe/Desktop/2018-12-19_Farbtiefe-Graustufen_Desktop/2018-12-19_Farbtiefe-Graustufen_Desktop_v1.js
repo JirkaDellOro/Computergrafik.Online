@@ -2,7 +2,9 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_", frames: [[0,1422,3000,1420],[0,0,3000,1420],[0,2844,3000,1420],[0,4266,3000,1420]]}
+];
 
 
 // symbols:
@@ -10,27 +12,31 @@ lib.ssMetadata = [];
 
 
 (lib.roboter_farbigesdisplay_1bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_1bit);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);
+	this.spriteSheet = ss["2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.roboter_farbigesdisplay_2bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_2bit);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);
+	this.spriteSheet = ss["2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_"];
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.roboter_farbigesdisplay_4bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_4bit);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);
+	this.spriteSheet = ss["2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_"];
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.roboter_farbigesdisplay_8bit = function() {
-	this.initialize(img.roboter_farbigesdisplay_8bit);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,3000,1420);// helper functions:
+	this.spriteSheet = ss["2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_"];
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -66,7 +72,7 @@ p._updateVisibility = _updateVisibility;
 
 
 
-(lib._8_Bit_Ebene_1 = function(mode,startPosition,loop) {
+(lib._8Bit = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -76,10 +82,10 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._8_Bit_Ebene_1, null, null);
+}).prototype = getMCSymbolPrototype(lib._8Bit, new cjs.Rectangle(0,0,720,340.8), null);
 
 
-(lib._4_Bit_Ebene_1 = function(mode,startPosition,loop) {
+(lib._4Bit = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -89,10 +95,10 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._4_Bit_Ebene_1, null, null);
+}).prototype = getMCSymbolPrototype(lib._4Bit, new cjs.Rectangle(0,0,720,340.8), null);
 
 
-(lib._2_Bit_Ebene_1 = function(mode,startPosition,loop) {
+(lib._2Bit = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -102,10 +108,10 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._2_Bit_Ebene_1, null, null);
+}).prototype = getMCSymbolPrototype(lib._2Bit, new cjs.Rectangle(0,0,720,340.8), null);
 
 
-(lib._1_Bit_Ebene_1 = function(mode,startPosition,loop) {
+(lib._1Bit = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Ebene_1
@@ -115,104 +121,24 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib._1_Bit_Ebene_1, null, null);
+}).prototype = getMCSymbolPrototype(lib._1Bit, new cjs.Rectangle(0,0,720,340.8), null);
 
 
 (lib.Szene_1_script = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// script
-	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/customCss.css'});
+	this.customCSS = new lib.an_CSS({'id': 'customCSS', 'href':'assets/.%5CcustomCss.css'});
 
-	this.customCSS.setTransform(895.15,637.8,1,1,0,0,0,50,11);
+	this.customCSS.setTransform(895.2,637.8,1,1,0,0,0,50,11);
 
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
 
-	this.instance.setTransform(895.15,695.9,1,1,0,0,0,50,11);
+	this.instance.setTransform(895.2,695.9,1,1,0,0,0,50,11);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.customCSS}]}).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Szene_1_script, null, null);
-
-
-(lib._8Bit = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Ebene_1_obj_
-	this.Ebene_1 = new lib._8_Bit_Ebene_1();
-	this.Ebene_1.name = "Ebene_1";
-	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(360,170.4,1,1,0,0,0,360,170.4);
-	this.Ebene_1.depth = 0;
-	this.Ebene_1.isAttachedToCamera = 0
-	this.Ebene_1.isAttachedToMask = 0
-	this.Ebene_1.layerDepth = 0
-	this.Ebene_1.layerIndex = 0
-	this.Ebene_1.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib._8Bit, new cjs.Rectangle(0,0,720,340.8), null);
-
-
-(lib._4Bit = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Ebene_1_obj_
-	this.Ebene_1 = new lib._4_Bit_Ebene_1();
-	this.Ebene_1.name = "Ebene_1";
-	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(360,170.4,1,1,0,0,0,360,170.4);
-	this.Ebene_1.depth = 0;
-	this.Ebene_1.isAttachedToCamera = 0
-	this.Ebene_1.isAttachedToMask = 0
-	this.Ebene_1.layerDepth = 0
-	this.Ebene_1.layerIndex = 0
-	this.Ebene_1.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib._4Bit, new cjs.Rectangle(0,0,720,340.8), null);
-
-
-(lib._2Bit = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Ebene_1_obj_
-	this.Ebene_1 = new lib._2_Bit_Ebene_1();
-	this.Ebene_1.name = "Ebene_1";
-	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(360,170.4,1,1,0,0,0,360,170.4);
-	this.Ebene_1.depth = 0;
-	this.Ebene_1.isAttachedToCamera = 0
-	this.Ebene_1.isAttachedToMask = 0
-	this.Ebene_1.layerDepth = 0
-	this.Ebene_1.layerIndex = 0
-	this.Ebene_1.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib._2Bit, new cjs.Rectangle(0,0,720,340.8), null);
-
-
-(lib._1Bit = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Ebene_1_obj_
-	this.Ebene_1 = new lib._1_Bit_Ebene_1();
-	this.Ebene_1.name = "Ebene_1";
-	this.Ebene_1.parent = this;
-	this.Ebene_1.setTransform(360,170.4,1,1,0,0,0,360,170.4);
-	this.Ebene_1.depth = 0;
-	this.Ebene_1.isAttachedToCamera = 0
-	this.Ebene_1.isAttachedToMask = 0
-	this.Ebene_1.layerDepth = 0
-	this.Ebene_1.layerIndex = 0
-	this.Ebene_1.maskLayerName = 0
-
-	this.timeline.addTween(cjs.Tween.get(this.Ebene_1).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib._1Bit, new cjs.Rectangle(0,0,720,340.8), null);
 
 
 (lib.Szene_1_Bilder = function(mode,startPosition,loop) {
@@ -222,22 +148,22 @@ p._updateVisibility = _updateVisibility;
 	this.img_bit_0 = new lib._1Bit();
 	this.img_bit_0.name = "img_bit_0";
 	this.img_bit_0.parent = this;
-	this.img_bit_0.setTransform(0,0,1.3333,1.3333);
+	this.img_bit_0.setTransform(0,0,1.333,1.333);
 
 	this.img_bit_1 = new lib._2Bit();
 	this.img_bit_1.name = "img_bit_1";
 	this.img_bit_1.parent = this;
-	this.img_bit_1.setTransform(0,0,1.3333,1.3333);
+	this.img_bit_1.setTransform(0,0,1.333,1.333);
 
 	this.img_bit_2 = new lib._4Bit();
 	this.img_bit_2.name = "img_bit_2";
 	this.img_bit_2.parent = this;
-	this.img_bit_2.setTransform(0,0,1.3333,1.3333);
+	this.img_bit_2.setTransform(0,0,1.333,1.333);
 
 	this.img_bit_3 = new lib._8Bit();
 	this.img_bit_3.name = "img_bit_3";
 	this.img_bit_3.parent = this;
-	this.img_bit_3.setTransform(0,0,1.3333,1.3333);
+	this.img_bit_3.setTransform(0,0,1.333,1.333);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.img_bit_3},{t:this.img_bit_2},{t:this.img_bit_1},{t:this.img_bit_0}]}).wait(1));
 
@@ -355,7 +281,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this.Bilder).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(480,360,480,347.4);
+p.nominalBounds = new cjs.Rectangle(480,360,960,707.4);
 // library properties:
 lib.properties = {
 	id: 'E170D18109494A478DDE61B1DE24B264',
@@ -365,13 +291,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/roboter_farbigesdisplay_1bit.png", id:"roboter_farbigesdisplay_1bit"},
-		{src:"images/roboter_farbigesdisplay_2bit.jpg", id:"roboter_farbigesdisplay_2bit"},
-		{src:"images/roboter_farbigesdisplay_4bit.jpg", id:"roboter_farbigesdisplay_4bit"},
-		{src:"images/roboter_farbigesdisplay_8bit.jpg", id:"roboter_farbigesdisplay_8bit"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js", id:"an.CSS"}
+		{src:"images/2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_.png?1551082991430", id:"2018_12_19_Farbtiefe_Graustufen_Desktop_v1_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551082991499", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551082991499", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551082991499", id:"an.CSS"}
 	],
 	preloads: []
 };

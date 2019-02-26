@@ -14,7 +14,7 @@
 <title>2018-12-19_Farbtiefe-Graustufen_Desktop_v1</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="2018-12-19_Farbtiefe-Graustufen_Desktop_v1.js"></script>
+<script src="2018-12-19_Farbtiefe-Graustufen_Desktop_v1.js?1551082991740"></script>
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
@@ -51,7 +51,7 @@ function handleComplete(evt,comp) {
 		createjs.Ticker.setFPS(lib.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage)
 		stage.addEventListener("tick", handleTick)
-		function getProjectionMatrix(container, totalDepth) {
+		function getProjectionMatrix(totalDepth) {
 			var focalLength = 528.25;
 			var projectionCenter = { x : lib.properties.width/2, y : lib.properties.height/2 };
 			var scale = (totalDepth + focalLength)/focalLength;
@@ -67,51 +67,37 @@ function handleComplete(evt,comp) {
 			return projMat;
 		}
 		function handleTick(event) {
-			var cameraInstance = exportRoot.___camera___instance;
-			if(cameraInstance !== undefined && cameraInstance.pinToObject !== undefined)
-			{
-				cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
-				cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
-				if(cameraInstance.pinToObject.parent !== undefined && cameraInstance.pinToObject.parent.depth !== undefined)
-				cameraInstance.depth = cameraInstance.pinToObject.parent.depth + cameraInstance.pinToObject.pinOffsetZ;
-			}
-			applyLayerZDepth(exportRoot);
-		}
-		function applyLayerZDepth(parent)
-		{
-			var cameraInstance = parent.___camera___instance;
 			var focalLength = 528.25;
-			var projectionCenter = { 'x' : 0, 'y' : 0};
-			if(parent === exportRoot)
+			var cameraInstance = exportRoot.___camera___instance;
+		if(cameraInstance !== undefined && cameraInstance.pinToObject !== undefined)
+		{
+			cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
+			cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
+			if(cameraInstance.pinToObject.parent !== undefined && cameraInstance.pinToObject.parent.depth !== undefined)
+				cameraInstance.depth = cameraInstance.pinToObject.parent.depth + cameraInstance.pinToObject.pinOffsetZ;
+		}
+			for(child in exportRoot.children)
 			{
-				var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
-				projectionCenter.x = stageCenter.x;
-				projectionCenter.y = stageCenter.y;
-			}
-			for(child in parent.children)
-			{
-				var layerObj = parent.children[child];
+				var layerObj = exportRoot.children[child];
 				if(layerObj == cameraInstance)
 					continue;
-				applyLayerZDepth(layerObj, cameraInstance);
-				if(layerObj.layerDepth === undefined)
-					continue;
-				if(layerObj.currentFrame != layerObj.parent.currentFrame)
-				{
-					layerObj.gotoAndPlay(layerObj.parent.currentFrame);
-				}
+					if(layerObj.currentFrame != layerObj.parent.currentFrame)
+					{
+						layerObj.gotoAndPlay(layerObj.parent.currentFrame);
+					}
 				var matToApply = new createjs.Matrix2D;
 				var cameraMat = new createjs.Matrix2D;
 				var totalDepth = layerObj.layerDepth ? layerObj.layerDepth : 0;
 				var cameraDepth = 0;
 				if(cameraInstance && !layerObj.isAttachedToCamera)
 				{
+					var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
 					var mat = cameraInstance.getMatrix();
-					mat.tx -= projectionCenter.x;
-					mat.ty -= projectionCenter.y;
+					mat.tx -= stageCenter.x;
+					mat.ty -= stageCenter.y;
 					cameraMat = mat.invert();
-					cameraMat.prependTransform(projectionCenter.x, projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
-					cameraMat.appendTransform(-projectionCenter.x, -projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					cameraMat.prependTransform(stageCenter.x, stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					cameraMat.appendTransform(-stageCenter.x, -stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
 					if(cameraInstance.depth)
 						cameraDepth = cameraInstance.depth;
 				}
@@ -130,7 +116,7 @@ function handleComplete(evt,comp) {
 				{
 					if(layerObj.layerDepth)
 					{
-						var sizeLockedMat = getProjectionMatrix(parent, layerObj.layerDepth);
+						var sizeLockedMat = getProjectionMatrix(layerObj.layerDepth);
 						if(sizeLockedMat)
 						{
 							sizeLockedMat.invert();
@@ -138,7 +124,7 @@ function handleComplete(evt,comp) {
 						}
 					}
 					matToApply.prependMatrix(cameraMat);
-					var projMat = getProjectionMatrix(parent, totalDepth);
+					var projMat = getProjectionMatrix(totalDepth);
 					if(projMat)
 					{
 						matToApply.prependMatrix(projMat);
