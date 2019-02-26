@@ -194,6 +194,7 @@ p._updateVisibility = _updateVisibility;
 			//changeVisibility(_event.target.id);
 		}
 		*/
+		
 		$('#cyan').on('click', function(){
 			checkCyan();
 		});
@@ -205,6 +206,7 @@ p._updateVisibility = _updateVisibility;
 		$('#gelb').on('click', function(){
 			checkYellow();
 		});
+		
 		/*
 			
 			if($('#checkboxColor').val() == 'cyan')
@@ -487,8 +489,8 @@ p._updateVisibility = _updateVisibility;
 	// Mask (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("EguUAkWMAAAhHGMBnSAAAMAAABHGg");
-	mask.setTransform(364.6,232.6);
+	mask.graphics.p("EgzoAjkMAAAhHHMBnRAAAMAAABHHg");
+	mask.setTransform(398.7,237.7);
 
 	// Rot 2
 	this.redlinetwo = new lib.redLineTwo();
@@ -542,8 +544,8 @@ p._updateVisibility = _updateVisibility;
 	// Mask 2 (mask)
 	var mask_1 = new cjs.Shape();
 	mask_1._off = true;
-	mask_1.graphics.p("EAhKAXDMAAAgq3MAlJAAAMAAAAq3g");
-	mask_1.setTransform(449.9,147.5);
+	mask_1.graphics.p("AyjVcMAAAgq3MAlHAAAMAAAAq3g");
+	mask_1.setTransform(780.9,157.8);
 
 	// Roboter
 	this.instance_2 = new lib.roboter_transparent();
@@ -586,15 +588,15 @@ p._updateVisibility = _updateVisibility;
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_5).wait(1));
 
-	// Interaktionsbereich
+	// Ebene_2
 	this.shape_6 = new cjs.Shape();
-	this.shape_6.graphics.f("#FFFFFF").s().p("EhK3AOuIAA9bMCVvAAAIAAdbg");
-	this.shape_6.setTransform(480.9,627.5);
+	this.shape_6.graphics.f("#F5F5F5").s().p("EhK3A4QMAAAhwfMCVvAAAMAAABwfg");
+	this.shape_6.setTransform(480.9,361.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_6).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(481.7,386,958.4,695.7);
+p.nominalBounds = new cjs.Rectangle(481.7,361.7,958.4,720);
 // library properties:
 lib.properties = {
 	id: 'C7EB6231166847CE953FCD5B6E22CB47',
@@ -604,10 +606,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/2.3_Farbsehen_atlas_.png?1551114261022", id:"2.3_Farbsehen_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551114261079", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551114261079", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551114261079", id:"an.CSS"}
+		{src:"images/2.3_Farbsehen_atlas_.png?1551210716592", id:"2.3_Farbsehen_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551210716607", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551210716607", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551210716607", id:"an.CSS"}
 	],
 	preloads: []
 };
