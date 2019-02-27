@@ -445,7 +445,7 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// script
-	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss.css'});
+	this.instance = new lib.an_CSS({'id': '', 'href':'assets/componentsCss_Desk.css'});
 
 	this.instance.setTransform(885,668,1,1,0,0,0,50,11);
 
@@ -606,10 +606,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/2.3_Farbsehen_atlas_.png?1551210716592", id:"2.3_Farbsehen_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551210716607", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551210716607", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551210716607", id:"an.CSS"}
+		{src:"images/2.3_Farbsehen_atlas_.png?1551259209748", id:"2.3_Farbsehen_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551259209762", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551259209762", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551259209762", id:"an.CSS"}
 	],
 	preloads: []
 };
