@@ -147,6 +147,8 @@ p._updateVisibility = _updateVisibility;
 	// timeline functions:
 	this.frame_0 = function() {
 		
+		/* Dieser Code entstand in Zusammenarbeit mit Benedikt Grether */
+		
 		redLine = this.redlinetwo;
 		greenLine = this.greenlinetwo;
 		blueLine = this.bluelinetwo;
@@ -606,10 +608,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/2.3_Farbsehen_atlas_.png?1551259209748", id:"2.3_Farbsehen_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551259209762", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551259209762", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551259209762", id:"an.CSS"}
+		{src:"images/2.3_Farbsehen_atlas_.png?1551350191151", id:"2.3_Farbsehen_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551350191272", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551350191272", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551350191272", id:"an.CSS"}
 	],
 	preloads: []
 };
