@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"6.9 _I_ JPG _desktop__atlas_", frames: [[504,186,250,184],[252,558,250,184],[504,0,250,184],[504,558,250,184],[504,372,250,184],[252,744,250,184],[0,186,250,184],[0,372,250,184],[252,186,250,184],[0,558,250,184],[0,744,250,184],[0,0,250,184],[252,372,250,184],[252,0,250,184]]}
+		{name:"6.9 _I_ JPG _desktop__atlas_", frames: [[0,0,250,184],[504,372,250,184],[252,186,250,184],[504,0,250,184],[504,558,250,184],[252,558,250,184],[252,744,250,184],[252,0,250,184],[252,372,250,184],[504,186,250,184],[0,372,250,184],[0,558,250,184],[0,744,250,184],[0,186,250,184]]}
 ];
 
 
@@ -1434,10 +1434,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/6.9 _I_ JPG _desktop__atlas_.png?1551003560763", id:"6.9 _I_ JPG _desktop__atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551003560819", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551003560819", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551003560819", id:"an.CSS"}
+		{src:"images/6.9 _I_ JPG _desktop__atlas_.png?1551694229248", id:"6.9 _I_ JPG _desktop__atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551694229291", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551694229291", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551694229291", id:"an.CSS"}
 	],
 	preloads: []
 };
