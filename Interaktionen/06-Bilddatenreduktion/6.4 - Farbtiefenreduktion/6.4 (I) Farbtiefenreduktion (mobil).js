@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"6.4 _I_ Farbtiefenreduktion _mobil__atlas_", frames: [[0,632,926,630],[928,632,926,630],[0,1264,926,630],[928,0,926,630],[928,1264,926,630],[0,0,926,630]]}
+		{name:"6.4 _I_ Farbtiefenreduktion _mobil__atlas_", frames: [[0,632,926,630],[0,1264,926,630],[0,0,926,630],[928,0,926,630],[928,632,926,630],[928,1264,926,630]]}
 ];
 
 
@@ -288,10 +288,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/6.4 _I_ Farbtiefenreduktion _mobil__atlas_.png?1551003818171", id:"6.4 _I_ Farbtiefenreduktion _mobil__atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551003818179", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1551003818179", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1551003818179", id:"an.CSS"}
+		{src:"images/6.4 _I_ Farbtiefenreduktion _mobil__atlas_.png?1551693774063", id:"6.4 _I_ Farbtiefenreduktion _mobil__atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1551693774072", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1551693774072", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1551693774072", id:"an.CSS"}
 	],
 	preloads: []
 };
