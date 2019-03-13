@@ -578,14 +578,14 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedTexturedBitmap_2.png?1547475631924", id:"CachedTexturedBitmap_2"},
-		{src:"images/Roboter_LogopngKopie.png?1547475631924", id:"Roboter_LogopngKopie"},
-		{src:"images/Roboter_LogoGroß.jpg?1547475631924", id:"Roboter_LogoGroß"},
-		{src:"images/RGvsVG_atlas_.png?1547475631533", id:"RGvsVG_atlas_"},
-		{src:"sounds/_070202wav.mp3?1547475631924", id:"_070202wav"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1547475631924", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1547475631924", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/css.js?1547475631924", id:"an.CSS"}
+		{src:"images/CachedTexturedBitmap_2.png?1550490949510", id:"CachedTexturedBitmap_2"},
+		{src:"images/Roboter_LogopngKopie.png?1550490949510", id:"Roboter_LogopngKopie"},
+		{src:"images/Roboter_LogoGroß.jpg?1550490949510", id:"Roboter_LogoGroß"},
+		{src:"images/RGvsVG_atlas_.png?1550490948975", id:"RGvsVG_atlas_"},
+		{src:"sounds/_070202wav.mp3?1550490949510", id:"_070202wav"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1550490949510", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1550490949510", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/css.js?1550490949510", id:"an.CSS"}
 	],
 	preloads: []
 };
