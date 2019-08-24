@@ -1,0 +1,2668 @@
+{
+    "section": [{
+            "sectionPage": "Bits und Bytes",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "010",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        },
+                        {
+                            "timeDuration": "",
+                            "informationText": ""
+                        }]
+                    }]
+                },
+                {
+                    "pageName": "Dezimalsystem",
+                    "id": "011",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        },
+                        {
+                            "timeDuration": "",
+                            "informationText": ""
+                        },
+                        {
+                            "timeDuration": "",
+                            "informationText": ""
+                        }]
+                    }]
+                },
+                {
+                    "pageName": "Binärsystem",
+                    "id": "012",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Hexadezimalsystem",
+                    "id": "013",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "( I ) Zahlensysteme",
+                    "id": "014",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Bits und Bytes",
+                    "id": "015",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Maßeinheiten für Datenmengen",
+                    "id": "016",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Farbsysteme",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "020",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "LX9ewRdxzAA",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "10",
+                            "informationText": "Farben werden mit Hilfe des Binärsystems definiert"
+                        },
+                        {
+                            "timeDuration": "11",
+                            "informationText": "additive Farbmischungen"
+                        },
+                        {
+                            "timeDuration": "12",
+                            "informationText": "subtraktive Farbmischung"
+                        },
+                        {
+                            "timeDuration" : "40",
+                            "informationText": "Computergrafik: RGB-, HSB- und YUV-Farbsystem"
+                        }
+                        ]
+                    }]
+                },
+                {
+                    "pageName": "Farbsehen",
+                    "id": "021",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "4oOdwvdnl8I",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "15",
+                            "informationText": "Stäbchen: Sehen bei Nacht"
+                        },
+                        {
+                            "timeDuration" : "15",
+                            "informationText" : "Zapfen: Farbsehen bei Tag"
+                        },
+                        {
+                            "timeDuration" : "15",
+                            "informationText" : "Rezeptoren befinden sich an der Retina (Netzhaut) des Auges)"
+                        },
+                        {
+                            "timeDuration" : "33",
+                            "informationText" : "S-Zapfen: blaues Farbspektrum"
+                        },
+                        {
+                            "timeDuration" : "33",
+                            "informationText" : "M-Zapfen: grünes Farbspektrum"
+                        },
+                        {
+                            "timeDuration" : "33",
+                            "informationText" : "L-Zapfen: rotes Farbspektrum"
+                        },
+                        {
+                            "timeDuration" : "60",
+                            "informationText" : "farbige Objekte: bestimmter Teil des weißen Lichts wird remittiert und der Rest absorbiert"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Farbsehen",
+                    "id": "022",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Additive Farbmischung",
+                    "id": "023",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "fVwenYCbHqg",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "10",
+                            "informationText": "additive Primärfarben: Rot, Grün und Blau"
+                        },
+                        {
+                            "timeDuration" : "18",
+                            "informationText" : "Addieren der drei Primärfarben mit ihrem Maximalwert = Weiß"
+                        },
+                        {
+                            "timeDuration" : "36",
+                            "informationText" : "Varianten des RGB-Farbsystems: HSB und YUV"
+                        },
+                        {
+                            "timeDuration" : "50",
+                            "informationText" : "Farbdarstellung auf Bildschirmen und Monitoren"
+                        }
+                    ]
+
+                    }]
+                },
+                {
+                    "pageName": "RGB-Farbsystem",
+                    "id": "024",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "HSRA5LAomPs",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "5",
+                            "informationText": "basiert auf den Grundfarben Rot, Grün und Blau"
+                        },
+                        {
+                            "timeDuration": "37",
+                            "informationText": "256 Abstufungen jeder der drei Farben"
+                        },
+                        {
+                            "timeDuration": "42",
+                            "informationText": "16,7 Millionen mögliche Farben"
+                        },
+                        {
+                            "timeDuration": "53",
+                            "informationText": "Verwendung: Computerbildschirme und Fernsehgeräte"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) RGB-Farbsystem",
+                    "id": "025",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "HSB-Farbsystem",
+                    "id": "026",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "QT80Q8DohTY",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "8",
+                            "informationText": "Hue (Farbton) in Grad°"
+                        },
+                        {
+                            "timeDuration" : "10",
+                            "informationText" : "Saturation (Sättigung) in %"
+                        },
+                        {
+                            "timeDuration" : "10",
+                            "informationText" : "Brightness (Helligkeit) in %"
+                        },
+                        {
+                            "timeDuration" : "14",
+                            "informationText" : "Saturation (Sättigung) in %"
+                        },
+                        {
+                            "timeDuration" : "24",
+                            "informationText" : "0° = Rot"
+                        },
+                        {
+                            "timeDuration" : "27",
+                            "informationText" : "120° = Grün"
+                        },
+                        {
+                            "timeDuration" : "30",
+                            "informationText" : "240° = Blau"
+                        },
+                        {
+                            "timeDuration" : "39",
+                            "informationText" : "HSI (I = Intensity)"
+                        },
+                        {
+                            "timeDuration" : "40",
+                            "informationText" : "HSL (L = Luma)"
+                        }
+                        ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) HSB-Farbsystem",
+                    "id": "027",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                    }]
+                },
+                {
+                    "pageName": "YUV- und YCbCr-Farbsystem",
+                    "id": "028",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "mc6JFbU_r0k",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "6",
+                            "informationText": "entwickelt für analoges Farbfernsehen"
+                        },
+                        {
+                            "timeDuration" : "24",
+                            "informationText" : "Verringerung der Farbauflösung"
+                        },
+                        {
+                            "timeDuration" : "35",
+                            "informationText" : "Luminanz Y,"
+                        },
+                        {
+                            "timeDuration" : "39",
+                            "informationText" : "Farbkomponenten U und V"
+                        },
+                        {
+                            "timeDuration" : "42",
+                            "informationText" : "Farbkomponenten enthalten Farbinformationen"
+                        },
+                        {
+                            "timeDuration" : "49",
+                            "informationText" : "Differenzsignal R-Y und B-Y"
+                        },
+                        {
+                            "timeDuration" : "62",
+                            "informationText" : "YCbCr-System für Digitalfernsehen"
+                        },
+                        {
+                            "timeDuration" : "71",
+                            "informationText" : "Chrominanz = Buntheit"
+                        }
+                    ]
+
+                    }]
+                },
+                {
+                    "pageName": "Subtraktive Farbmischung (CMY)",
+                    "id": "029",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "bQhDm47_u88",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "6",
+                            "informationText": "Grundfarben: Cyan, Magenta, Yellow"
+                        },
+                        {
+                            "timeDuration" : "41",
+                            "informationText" : "Verwendung: Vierfarbendruck"
+                        },
+                        {
+                            "timeDuration" : "50",
+                            "informationText" : "Theorie: Addition der Grundfarben in voller Intensität = Schwarz"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "CMYK-Farbsystem",
+                    "id": "0210",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "cNiDKYjTX3A",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "8",
+                            "informationText": "Praxis: hinzufügen der Keyfarbe Schwarz"
+                        },
+                        {
+                            "timeDuration" : "",
+                            "informationText" : "kontrastreiche Bilder"
+                        },
+                        {
+                            "timeDuration" : "",
+                            "informationText" : "sparen von Druckfarbe"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "LAB-Farbsystem",
+                    "id": "0211",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "3b9hD_fO4AU",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        },
+                        {
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Rastergrafik und Farbtiefe",
+            "page": [{
+                "pageName": "Einleitung",
+                    "id": "030",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "0wrGLWx8YT0",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                    "time":[{
+                            "timeDuration": "7",
+                            "informationText": "Rastergrafik: Form einer Bilddarstellung"
+                        },
+                        {
+                            "timeDuration": "16",
+                            "informationText": "Eigenschaften einer Rastegrafik: örtliche Auflösung (Höhe und Breite) und Farbtiefe"
+                        },
+                        {
+                            "timeDuration": "20",
+                            "informationText": "Anwendung: bei komplexen Bildern"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Farbtiefe Graustufen",
+                    "id": "031",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "VWojuxlqMhw",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                    "time":[{
+                            "timeDuration": "23",
+                            "informationText": "N<sub>Farbwerte</sub> = 2<sup>Bits</sup>"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Farbtiefe Graustufen",
+                    "id": "032",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop_v1.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Hexadezimaler Farbcode",
+                    "id": "033",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "hasbHc6ZZ30",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "10",
+                            "informationText": "additives Farbmischen = Überlagerung der Farbkanäle"
+                        },
+                        {
+                            "timeDuration" : "23",
+                            "informationText" : "Farbcodierung - hexadezimaler Farbcode"
+                        },
+                        {
+                            "timeDuration" : "30",
+                            "informationText" : "drei zweistellige Hexadezimalzahlen (r g b)"
+                        },
+                        {
+                            "timeDuration" : "45",
+                            "informationText" : "00 = völlig ausgeschaltet"
+                        },
+                        {
+                            "timeDuration" : "50",
+                            "informationText" : "FF = maximales Farbintensität"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Hexadezimaler Farbcode",
+                    "id": "034",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Farbtiefe 16/24 Bit",
+                    "id": "035",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "sSL7RrmOJTI",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "3",
+                            "informationText": "16 Bit = High Color"
+                        },
+                        {
+                            "timeDuration" : "10",
+                            "informationText":"65.536 Farben"             
+                        },
+                        {
+                            "timeDuration" : "14",
+                            "informationText":"roter und blauer Farbkanal: 5 Bit" 
+                        },
+                        {
+                            "timeDuration" : "17",
+                            "informationText":"grüner Farbkanal: 6 Bit" 
+                        },
+                        {
+                            "timeDuration" : "35",
+                            "informationText":"24 Bit = alle 8 Bit" 
+                        },
+                        {
+                            "timeDuration" : "43",
+                            "informationText":"16,7 mio Farben" 
+                        },
+                        {
+                            "timeDuration" : "47",
+                            "informationText":"24 Bit = True Color" 
+                        },
+                        {
+                            "timeDuration" : "63",
+                            "informationText":"30-48 Bit = Deep Color" 
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Farbtiefe 16/24 Bit",
+                    "id": "036",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Indizierte Farben",
+                    "id": "037",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "DsPofKhNRio",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "6",
+                            "informationText": "Speicherungsverfahren"
+                        },
+                        {
+                            "timeDuration" : "27",
+                            "informationText" : "Pixel erhält Index der Farbe in einer Farbtabelle"
+                        }
+                    ]
+
+                    }]
+                },
+                {
+                    "pageName": "Speicherbedarf",
+                    "id": "038",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "bEpGjznCWIo",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "9",
+                            "informationText": "Speicherbedarf abhängig von: Anzahl der Pixel (Höhe und Breite) und der Farbtiefe"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Speicherbedarf",
+                    "id": "039",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/2018-12-09_Speicherbedarf-mit-Slider.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Farbmischmodi ",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "040",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Verschiedene Farbmischmodi",
+                    "id": "041",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "( I ) Verschiedene Farbmischmodi",
+                    "id": "042",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Histogramme",
+                    "id": "043",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Farbtiefe 16/24 Bit",
+                    "id": "044",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Auflösung und Ausgabe",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "050",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "4B3-F3V10QY",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                    "time":[{
+                            "timeDuration": "8",
+                            "informationText": "Kleinste speicherbare Informationseinheit: Pixel"
+                        }
+                    ]
+
+                    }]
+                },
+                {
+                    "pageName": "Auflösung",
+                    "id": "051",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "auLHuiAdSSQ",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "2",
+                            "informationText": "Eingabeauflösung:"
+                        },
+                        {
+                            "timeDuration" : "15",
+                            "informationText" : "Pixel"
+                        },
+                        {
+                            "timeDuration" : "18",
+                            "informationText" : "Höhe x Breite"
+                        },
+                        {
+                            "timeDuration" : "33",
+                            "informationText" : "Ausgabeauflösung"
+                        },
+                        {
+                            "timeDuration" : "42",
+                            "informationText" : "Pixels per Inch"
+                        },
+                        {
+                            "timeDuration" : "42",
+                            "informationText" : "im Verhältnis zum Ausgabemedium"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Pixels per Inch",
+                    "id": "052",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "IZX1SPWygKg",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "6",
+                            "informationText": "Eingabeauflösung: <br> Pixel per Inch"
+                        },
+                        {
+                            "timeDuration" : "11",
+                            "informationText" : "Bild: <br> 472 x 630 Pixel"
+                        },
+                        {
+                            "timeDuration" : "16",
+                            "informationText" : "Bildformat: <br> 4 x 5,33 cm"
+                        },
+                        {
+                            "timeDuration" : "43",
+                            "informationText" : "Pixelanzahl der Breite/Breite des Bildformats = 300 PPI"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Pixels per Inch",
+                    "id": "053",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Monitorauflösung",
+                    "id": "054",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "BC3x2ImNIXw",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "7",
+                            "informationText": "Monitorpixel besteht aus drei farbigen Dots"
+                        },
+                        {
+                            "timeDuration" : "22",
+                            "informationText" : "Dot-Pitch: Abstand zwischen Monitorpixeln"
+                        },
+                        {
+                            "timeDuration" : "40",
+                            "informationText" : "Auflösung in Dots per Inch"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Monitorauflösung",
+                    "id": "055",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Drucktechnik",
+                    "id": "056",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "SSTvVcxOvEw",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "20",
+                            "informationText": "Ausgabeeinheit: Dots per Inch Dot: Druckpunkt Rasterung: Verfahren, um Halbtöne zu simulieren"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Druckraster",
+                    "id": "057",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "3QYbvYkSHm8",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "16",
+                            "informationText": "Rasterungsgrundtypen: -Amplitudenmodulierte Rasterung: Simuliert Tonwerte durch Größe der Druckpunkte"
+                        },
+                        {
+                            "timeDuration" : "19",
+                            "informationText" : "Frequenzmodulierte Rasterung: Häufigkeit der Druckpunkte wird variiert, Druckpunkte werden nach Zufallsprinzip verteilt"
+                        },
+                        {
+                            "timeDuration" : "23",
+                            "informationText" : "Hybridrasterung"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Druck",
+                    "id": "058",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Rasterwinkelung",
+                    "id": "059",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "TYvn52kZiqg",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "17",
+                            "informationText": "Rasterung notwendig, um Moiré-Effekt zu verhindern."
+                        },
+                        {
+                            "timeDuration" : "26",
+                            "informationText" : "Druck mit vier Farben: Winkel werden unterschieden nach symmetrischen/unsymmetrischen Druckpunkten"
+                        },
+                        {
+                            "timeDuration" : "46",
+                            "informationText" : "Symmetrisch: <br>Gelb: 0°<br> Magenta: 15° <br>Cyan: 75° <br>Schwarz: 45°"
+                        },
+                        {
+                            "timeDuration" : "63",
+                            "informationText" : "Unsymmetrisch:<br>Gelb: 0°<br>Magenta: 45°<br>Cyan: 165°<br>Schwarz: 105°"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Rasterwinkelung",
+                    "id": "0510",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./interaktion/0511_I_Rasterwinkelung/0511_I_Rasterwinkelung.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Bilddatenreduktion",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "060",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "j1Bmm8SvhTI",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "20",
+                            "informationText": "Zuschneiden, skalieren oder Farbtiefe reduzieren"
+                        },
+                        {
+                            "timeDuration" : "30",
+                            "informationText" : "Verlustfreie oder verlustbehaftete Kompression"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Skalieren und Beschneiden",
+                    "id": "061",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "uFOipFuiaxU",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "21",
+                            "informationText": "Skalieren und bescheiden verringert die Datenmenge stark"
+                        },
+                        {
+                            "timeDuration" : "36",
+                            "informationText" : "2 Arten der Skalierung: Pixelwiederholung und Interpolation"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Farbtiefenreduktion",
+                    "id": "062",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "Ln7-g2s9zpw",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "3",
+                            "informationText": "Gibt Bits pro Pixel an"
+                        },
+                        {
+                            "timeDuration" : "29",
+                            "informationText" : "Alpha Kanal für Transparenz möglich"
+                        },
+                        {
+                            "timeDuration" : "47",
+                            "informationText" : "Zu geringe Farbtiefe -> Farbverschiebungen"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Farbtiefenreduktion",
+                    "id": "063",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "RLE",
+                    "id": "064",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "GZp4ygH9bdo",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "4",
+                            "informationText": "run-length encoding"
+                        },
+                        {
+                            "timeDuration" : "16",
+                            "informationText" : "Fasst Pixel zusammen"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "LZW",
+                    "id": "065",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Huffman-Kodierung",
+                    "id": "066",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "JPG",
+                    "id": "067",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) JPG",
+                    "id": "068",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "GIF",
+                    "id": "069",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "PNG",
+                    "id": "0610",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Tipps & Tricks",
+                    "id": "0611",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Vektorgrafik",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "070",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "6_YecC_cDkA",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "3",
+                            "informationText": "Aus geometrischen Formen zusammengesetzt"
+                        },
+                        {
+                            "timeDuration" : "15",
+                            "informationText": "Einsatz für einfache Formen wie Logos und Schriften"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Aufbau von Vektoren",
+                    "id": "071",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "E7jaej0J7MY",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "4",
+                            "informationText": "Vektor = lat. Fahrer / Richtung"
+                        },
+                        {
+                            "timeDuration" : "20",
+                            "informationText" : "Definiert einen Punkt im Raum"
+                        },
+                        {
+                            "timeDuration" : "33",
+                            "informationText" : "Vektorobjekt besitzt Vertices, Linienstärke und Füllfarbe"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Aufbau von Vektoren",
+                    "id": "072",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "./interaktion/07_vector/Eigenschaften/Mobile/070102_Aufbau_Von_Vektoren_Int_M.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Unterschied zu Rastergrafiken",
+                    "id": "073",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "jcTD_eBzKqo",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "11",
+                            "informationText": "Rastergrafik für komplexe Bilder geeignet"
+                        },
+                        {
+                            "timeDuration" : "16",
+                            "informationText" : "Vektorgrafik eher für einfache Bilder geeignet"
+                        },
+                        {
+                            "timeDuration" : "20",
+                            "informationText" : "Beliebig skalierbar = immer optimale Auflösung des Ausgabemediums dargestellt"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Unterschied zu Rastergrafiken",
+                    "id": "074",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "./interaktion/07_vector/RGvsVG/Desktop/Unterschied_Zu_Rastergrafiken_Int_D.html",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Kurven und Splines",
+                    "id": "075",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "_0RMsIg-R4Q",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "0",
+                            "informationText": "Beziérkurven = parametisch definierte Kurve"
+                        },
+                        {
+                            "timeDuration": "19",
+                            "informationText" : "mehrere BK = Splines"
+                        },
+                        {
+                            "timeDuration" : "27",
+                            "informationText" : "1. Grades = nicht gekrümmt"
+                        },
+                        {
+                            "timeDuration" : "30",
+                            "informationText" : "2. Grades = ein Kontrollpunkt"
+                        },
+                        {
+                            "timeDuration" : "35",
+                            "informationText" : "3. Grades = zwei Kontrollpunkte"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Kurven und Splines",
+                    "id": "076",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Transformationen",
+                    "id": "077",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "Xgy2XM6bbKM",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "0",
+                            "informationText": "Skallierung Rotation und Scherungen bei Vektorgrafiken verlustfrei"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Transformationsverkettung",
+                    "id": "078",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "BAaea9y7Yb4",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "0",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Transformationsverkettung",
+                    "id": "079",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Rasterung",
+                    "id": "0710",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "CIOpb7XLQcg",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "5",
+                            "informationText": "Bei Rasterung entsteht Aliaseffekt"
+                        },
+                        {
+                            "timeDuration": "9",
+                            "informationText" : "mit Antialiasing verbesstert, Bild jedoch unschärfer"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Rasterung",
+                    "id": "0711",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+
+                    }]
+                },
+                {
+                    "pageName": "Vektorisieren",
+                    "id": "0712",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Vektorisieren",
+                    "id": "0713",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Szenenaufbau",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "080",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Polygonnetze/Meshes",
+                    "id": "081",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Polygonnetze/Meshes",
+                    "id": "082",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Transformationen",
+                    "id": "083",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Transformationen",
+                    "id": "084",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Hierarchie",
+                    "id": "085",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Hierarchie",
+                    "id": "086",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Farbe und Licht",
+                    "id": "087",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Lichtquellen-Typen",
+                    "id": "088",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Lichtquellen-Typen",
+                    "id": "089",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Kamera",
+                    "id": "0810",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Kamera",
+                    "id": "0811",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Perspektivische Projektion",
+                    "id": "0812",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Parallelprojektion",
+                    "id": "0813",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Projektion",
+                    "id": "0814",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Rendering",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "090",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Modell-Transformation",
+                    "id": "091",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Kamera-Transformation",
+                    "id": "092",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Projektions-Transformation",
+                    "id": "093",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Projektions-Transformation",
+                    "id": "094",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Clipping",
+                    "id": "095",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Culling",
+                    "id": "096",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Rasterisierung",
+                    "id": "097",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "z-Buffer",
+                    "id": "098",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Raytracing",
+                    "id": "099",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Raytracing",
+                    "id": "0910",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Volumengrafik",
+                    "id": "0911",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Shader",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "100",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "07hl3-XrNqQ",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "2",
+                            "informationText": "Sind spezielle Programme"
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Flat-Shading",
+                    "id": "101",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Gouraud-Shading",
+                    "id": "102",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Phong-Shading",
+                    "id": "103",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "(I) Vergleich zwischen Flat-, Gouraud - und Phong-Shading",
+                    "id": "104",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Vertex Shader",
+                    "id": "105",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "(I) Vertex Shader",
+                    "id": "106",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Geometry Shader",
+                    "id": "107",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Pixel- / Fragment-Shader",
+                    "id": "108",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Toon-/Cell-Shading",
+                    "id": "109",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Programmierung eines Shaders",
+                    "id": "1010",
+                    "finished": true,
+                    "pageContent": [{
+                        "content": "RlQuRWD2wig",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "0",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Modellierung",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "110",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Grundformen",
+                    "id": "111",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Polygonnetze",
+                    "id": "112",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "High- und Low-Poly-Modelle",
+                    "id": "113",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) High- und Low-Poly-Modelle",
+                    "id": "114",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Extrudieren",
+                    "id": "115",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Subdivision",
+                    "id": "116",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Subdivision",
+                    "id": "117",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Lathe / Rotationskörper",
+                    "id": "118",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Sculpting",
+                    "id": "119",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Mirror-Modifier",
+                    "id": "1110",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Mirror-Modifier",
+                    "id": "1111",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Boolean Operation",
+                    "id": "1112",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Boolean Operation",
+                    "id": "1113",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Texturen",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "120",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Einleitung",
+                    "id": "121",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Texturkoordinaten",
+                    "id": "122",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "UV-Mapping",
+                    "id": "123",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) UV-Mapping",
+                    "id": "124",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Mip-Mapping",
+                    "id": "125",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Bump-Mapping",
+                    "id": "126",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Normal-Mapping",
+                    "id": "127",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Displacement-Mapping",
+                    "id": "128",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Vergleich",
+                    "id": "129",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Environment-Mapping",
+                    "id": "1210",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Kubisches Environment-Mapping",
+                    "id": "1211",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+            "sectionPage": "Animation",
+            "page": [{
+                    "pageName": "Einleitung",
+                    "id": "130",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Animationstechniken",
+                    "id": "131",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Animationstechniken",
+                    "id": "132",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Interpolationsmethoden",
+                    "id": "133",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Interpolationsmethoden",
+                    "id": "134",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Kinematikmethoden",
+                    "id": "135",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Kinematikmethoden",
+                    "id": "136",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Bones",
+                    "id": "137",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Bones",
+                    "id": "138",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "Partikelsysteme",
+                    "id": "139",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                },
+                {
+                    "pageName": "( I ) Partikelsysteme",
+                    "id": "1310",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": false
+                    }],
+                    "pageTime": [{
+                        "time":[{
+                            "timeDuration": "",
+                            "informationText": ""
+                        }
+                    ]
+                    }]
+                }
+            ]
+        },
+        {
+        "sectionPage": "Glossar",
+            "page": [{
+                    "pageName": "Glossar",
+                    "id": "14",
+                    "finished": false,
+                    "pageContent": [{
+                        "content": "",
+                        "youtubeClip": true
+                    }],
+                    "pageTime": [{
+
+                    }]
+                }
+            ]
+        }
+    ]
+}
