@@ -4,7 +4,7 @@
             "page": [{
                     "pageName": "Einleitung",
                     "id": "010",
-                    "finished": false,
+                    "finished": true,
                     "pageContent": [{
                         "content": "",
                         "youtubeClip": true
@@ -23,9 +23,9 @@
                 {
                     "pageName": "Dezimalsystem",
                     "id": "011",
-                    "finished": false,
+                    "finished": true,
                     "pageContent": [{
-                        "content": "",
+                        "content": "VeiLJ4zuoOE",
                         "youtubeClip": true
                     }],
                     "pageTime": [{
@@ -46,7 +46,7 @@
                 {
                     "pageName": "Binärsystem",
                     "id": "012",
-                    "finished": false,
+                    "finished": true,
                     "pageContent": [{
                         "content": "",
                         "youtubeClip": true
@@ -72,7 +72,7 @@
                     "id": "014",
                     "finished": true,
                     "pageContent": [{
-                        "content": "./assets/dist/animate/01bitsandbytes/v01-02-zahlensystem.html",
+                        "content": "./assets/dist/interactions/01-Bits-Bytes/desktop/desktop-zahlensystem.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{
@@ -178,9 +178,9 @@
                 {
                     "pageName": "( I ) Farbsehen",
                     "id": "022",
-                    "finished": false,
+                    "finished": true,
                     "pageContent": [{
-                        "content": "",
+                        "content": "./assets/dist/interactions/02-Farbsysteme/2.3 Farbsehen/Desktop/2.3_Farbsehen.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{
@@ -475,9 +475,9 @@
                 {
                     "pageName": "( I ) Farbtiefe Graustufen",
                     "id": "032",
-                    "finished": false,
+                    "finished": true,
                     "pageContent": [{
-                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop_v1.html",
+                        "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/Farbtiefe-Graustufen.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{
@@ -521,7 +521,7 @@
                     "id": "034",
                     "finished": true,
                     "pageContent": [{
-                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
+                        "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{
@@ -577,7 +577,7 @@
                     "id": "036",
                     "finished": true,
                     "pageContent": [{
-                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
+                        "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{
@@ -626,7 +626,7 @@
                     "id": "039",
                     "finished": true,
                     "pageContent": [{
-                        "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/2018-12-09_Speicherbedarf-mit-Slider.html",
+                        "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/speicherbedarf.html",
                         "youtubeClip": false
                     }],
                     "pageTime": [{

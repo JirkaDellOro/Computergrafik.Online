@@ -1,0 +1,97 @@
+body{
+  overscroll-behavior-y: contain;
+	overscroll-behavior-x: contain;
+	font-size: 30px;
+}
+
+.text{
+	font-size: 30px;
+}
+
+.text.r_text{
+	position: absolute;
+	margin-top: -600px;
+	margin-left: 620px;
+}
+
+.text.g_text{
+	position: absolute;
+	margin-top: -600px;
+	margin-left: 650px;
+}
+
+.text.b_text{
+	position: absolute;
+	margin-top: -600px;
+	margin-left: 690px;
+}
+
+.sliderContainer{
+	position: absolute;
+	margin-top: -300px;
+	margin-left: 680px;
+}
+
+.slider{
+	transform: rotate(270deg);
+}
+
+#r_slider{
+	position: absolute;
+	margin-top: -90px;
+	margin-left: -150px;
+}
+
+#g_slider{
+	position: absolute;
+	margin-top: -90px;
+	margin-left: -50px;
+}
+
+#b_slider{
+	position: absolute;
+	margin-top: -90px;
+	margin-left: 50px;
+}
+
+.rSliderValueContainer{
+	position: absolute;
+	margin-top: -230px;
+	margin-left: 673px;
+}
+
+.gSliderValueContainer{
+	position: absolute;
+	margin-top: -230px;
+	margin-left: 773px;
+}
+
+.bSliderValueContainer{
+	position: absolute;
+	margin-top: -230px;
+	margin-left: 873px;
+}
+
+
+.hexContainer{
+	position: absolute;
+	margin-top: -650px;
+	margin-left: 720px;
+}
+
+#hex_char{
+	font-size: 50px;
+}
+
+#hex_r_color{
+	color: red;
+	font-size: 50px;
+}
+#hex_g_color{
+	color: green;
+	font-size: 50px;
+}
+#hex_b_color{
+	color: blue;
+	font-size: 50px;
+}

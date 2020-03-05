@@ -1,0 +1,13 @@
+body{
+	overscroll-behavior-y: contain;
+}
+
+.buttonContainer{
+	position: absolute;
+	margin-top: -750px;
+  margin-left: 350px;
+}
+
+.container{
+	margin-bottom: 82px;
+}

@@ -1,1 +1,0 @@
-Kleine Beispielfilme zu Animate
