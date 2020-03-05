@@ -19,25 +19,26 @@
     left: 0;
     right: 0;
     top: 0;
-    padding: 12px 24px;
+    padding: 12px 24px!important;
     color: #ffffff;
     font-size: 15px;
     text-align: center;
 }
 
-#check-container {
+#slidercontainer1 {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 12px 24px;
     color: #ffffff;
     font-size: 15px;
 }
 
-
+#sliderinput {
+    width: 75%;
+}
 
 @media screen and (min-width:800px) {
     #col_1 {
@@ -47,22 +48,21 @@
         right: 0;
     }
 
-    .form-check-label {
-         color: #000000;
-     }
-
     #col_2 {
         width: 50%;
         height: 40vh;
         position: absolute;
         left: 0;
     }
-
-    #check-container {
+    #slidercontainer1 {
         position: relative;
         color: #000000;
         text-align: left;
         padding: 24px 48px;
+    }
+
+    #sliderinput {
+        width: 100%;
     }
 
     #instructions {
@@ -72,3 +72,13 @@
         padding: 24px 48px;
     }
 }
+/*#image {*/
+/*    height: 100%;*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*#centerer {*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*}*/
