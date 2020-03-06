@@ -1,1 +1,4 @@
-Da meine Interaktionen den selben Images und Css Ordner nutzen wie die Animationen befinden sich sowohl Interaktionen wie auch Animationen im Animate Ordner.
+Animationen und Interaktionen
+desktop und mobile
+
+HTML Dateien übernehmen, um 'Oswald' Schrift angezeigt zu bekommen.

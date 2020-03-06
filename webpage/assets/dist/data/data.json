@@ -244,10 +244,10 @@
         {
           "pageName": "( I ) Farbsehen",
           "id": "022",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/02-Farbsysteme/2.3 Farbsehen/Desktop/2.3_Farbsehen.html",
               "youtubeClip": false
             }
           ],
@@ -595,10 +595,10 @@
         {
           "pageName": "( I ) Farbtiefe Graustufen",
           "id": "032",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop_v1.html",
+              "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/Farbtiefe-Graustufen.html",
               "youtubeClip": false
             }
           ],
@@ -650,7 +650,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
+              "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
               "youtubeClip": false
             }
           ],
@@ -714,7 +714,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
+              "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
               "youtubeClip": false
             }
           ],
@@ -775,7 +775,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/2018-12-09_Speicherbedarf-mit-Slider.html",
+              "content": "assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/speicherbedarf.html",
               "youtubeClip": false
             }
           ],
@@ -832,10 +832,10 @@
         {
           "pageName": "( I ) Verschiedene Farbmischmodi",
           "id": "042",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/04-Farbmischmodi/desktop/desktop_mixcolormode.html",
               "youtubeClip": false
             }
           ],
@@ -1155,7 +1155,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/0511_I_Rasterwinkelung/0511_I_Rasterwinkelung.html",
+              "content": "assets/dist/interactions/05-Aufloesung-Ausgabe/0511_I_Rasterwinkelung.html",
               "youtubeClip": false
             }
           ],
@@ -1257,10 +1257,10 @@
         {
           "pageName": "( I ) Farbtiefenreduktion",
           "id": "063",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/06-Bilddatenreduktion/6.4 - Farbtiefenreduktion/6.4 (I) Farbtiefenreduktion (desktop).html",
               "youtubeClip": false
             }
           ],
@@ -1366,10 +1366,10 @@
         {
           "pageName": "( I ) JPG",
           "id": "068",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/06-Bilddatenreduktion/6.9 - JPG/6.9 (I) JPG (desktop).html",
               "youtubeClip": false
             }
           ],
@@ -1512,7 +1512,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/07_vector/Eigenschaften/Mobile/070102_Aufbau_Von_Vektoren_Int_M.html",
+              "content": "assets/dist/interactions/07-Vektorgrafik/aufbau-von-vektoren/070104.html",
               "youtubeClip": false
             }
           ],
@@ -1559,10 +1559,10 @@
         {
           "pageName": "( I ) Unterschied zu Rastergrafiken",
           "id": "074",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/07_vector/RGvsVG/Desktop/Unterschied_Zu_Rastergrafiken_Int_D.html",
+              "content": "assets/dist/interactions/07-Vektorgrafik/Neu/RGvsVG/Desktop/Unterschied_Zu_Rastergrafiken_Int_D.html",
               "youtubeClip": false
             }
           ],
@@ -1680,10 +1680,10 @@
         {
           "pageName": "( I ) Transformationsverkettung",
           "id": "079",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/07-Vektorgrafik/transformationsverkettung/070503.html",
               "youtubeClip": false
             }
           ],
@@ -1762,10 +1762,10 @@
         {
           "pageName": "( I ) Vektorisieren",
           "id": "0713",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "assets/dist/interactions/07-Vektorgrafik/vektorisierung/main.html",
               "youtubeClip": false
             }
           ],
@@ -1956,10 +1956,10 @@
         {
           "pageName": "Lichtquellen-Typen",
           "id": "088",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "ZcJW2ycyxtw",
               "youtubeClip": true
             }
           ],
@@ -2108,10 +2108,10 @@
         {
           "pageName": "Einleitung",
           "id": "090",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "fggRf59PXEc",
               "youtubeClip": true
             }
           ],
@@ -2129,10 +2129,10 @@
         {
           "pageName": "Modell-Transformation",
           "id": "091",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "gnKaDNm5yE0",
               "youtubeClip": true
             }
           ],
@@ -2150,10 +2150,10 @@
         {
           "pageName": "Kamera-Transformation",
           "id": "092",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "P5voKK4d",
               "youtubeClip": true
             }
           ],
@@ -2171,10 +2171,10 @@
         {
           "pageName": "Projektions-Transformation",
           "id": "093",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "Onf9DZ7rVyU",
               "youtubeClip": true
             }
           ],
@@ -2213,10 +2213,10 @@
         {
           "pageName": "Clipping",
           "id": "095",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "WP8YX2xW7ME",
               "youtubeClip": true
             }
           ],
@@ -2234,10 +2234,10 @@
         {
           "pageName": "Culling",
           "id": "096",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "QQl-6AwleOc",
               "youtubeClip": true
             }
           ],
@@ -2255,10 +2255,10 @@
         {
           "pageName": "Rasterisierung",
           "id": "097",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "r67OyXQ0__4",
               "youtubeClip": true
             }
           ],
@@ -2276,10 +2276,10 @@
         {
           "pageName": "z-Buffer",
           "id": "098",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "ejFPKcphN-8",
               "youtubeClip": true
             }
           ],
@@ -2297,10 +2297,10 @@
         {
           "pageName": "Raytracing",
           "id": "099",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "TSUov0s_S2c ",
               "youtubeClip": true
             }
           ],
@@ -2900,10 +2900,10 @@
         {
           "pageName": "Einleitung",
           "id": "120",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "3msfExKfkfk",
               "youtubeClip": true
             }
           ],
@@ -2963,10 +2963,10 @@
         {
           "pageName": "UV-Mapping",
           "id": "123",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "PFIU-9MiM-0",
               "youtubeClip": true
             }
           ],
@@ -3005,10 +3005,10 @@
         {
           "pageName": "Mip-Mapping",
           "id": "125",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "m1JPD4sM1kY",
               "youtubeClip": true
             }
           ],
@@ -3026,10 +3026,10 @@
         {
           "pageName": "Bump-Mapping",
           "id": "126",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "lkzSiNmkR0Q",
               "youtubeClip": true
             }
           ],
@@ -3047,10 +3047,10 @@
         {
           "pageName": "Normal-Mapping",
           "id": "127",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "5p8nhH2Vwf8",
               "youtubeClip": true
             }
           ],
@@ -3068,10 +3068,10 @@
         {
           "pageName": "Displacement-Mapping",
           "id": "128",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "Q9nPsOH-fX8 ",
               "youtubeClip": true
             }
           ],
@@ -3157,10 +3157,10 @@
         {
           "pageName": "Einleitung",
           "id": "130",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "WXo9pLn9W5c",
               "youtubeClip": true
             }
           ],
@@ -3178,10 +3178,10 @@
         {
           "pageName": "Animationstechniken",
           "id": "131",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "Ya4MZQwpEdQ ",
               "youtubeClip": true
             }
           ],
@@ -3220,10 +3220,10 @@
         {
           "pageName": "Interpolationsmethoden",
           "id": "133",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "gXopFU4Yjz8 ",
               "youtubeClip": true
             }
           ],
@@ -3262,10 +3262,10 @@
         {
           "pageName": "Kinematikmethoden",
           "id": "135",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "WUHjnNg6oBk ",
               "youtubeClip": true
             }
           ],
@@ -3304,10 +3304,10 @@
         {
           "pageName": "Bones",
           "id": "137",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "dj3nxBc5QOg ",
               "youtubeClip": true
             }
           ],
@@ -3346,10 +3346,10 @@
         {
           "pageName": "Partikelsysteme",
           "id": "139",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "KGgpRyLfB-8 ",
               "youtubeClip": true
             }
           ],
