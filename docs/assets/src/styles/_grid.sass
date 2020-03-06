@@ -1,0 +1,58 @@
+@media (max-width: 480px)
+	.row, .row-no-gap
+		display: block
+		width: 100%
+
+	[class^='col']
+		width: 100%
+		margin: 0 0 1.5em 0
+
+@mixin grid($selector, $breakpoint, $col-count: 12, $col-gap: 3%)
+	@media(min-width: #{$breakpoint + px})
+		@if $col-gap == 0
+			.row-no-gap
+				display: flex
+				flex-flow: row wrap
+				width: 100%
+
+				[class^='col-#{$selector}']
+					margin-left: 0
+
+				.col-#{$selector}
+					@for $i from 1 through $col-count
+						&-#{$i}
+							width: percentage($i / $col-count)
+
+				.gap-#{$selector}
+					@for $i from 1 through $col-count
+						&-#{$i}
+							margin-left: percentage($i / $col-count)
+		@else
+			.row
+				display: flex
+				flex-flow: row wrap
+				width: (100% + $col-gap)
+				margin-left: -$col-gap
+
+				[class^='col-#{$selector}']
+					margin-left: $col-gap
+
+				.col-#{$selector}
+					@for $i from 1 through $col-count
+						&-#{$i}
+							width: (percentage($i / $col-count) - $col-gap)
+
+				.gap-#{$selector}
+					@for $i from 1 through $col-count
+						&-#{$i}
+							margin-left: (percentage($i / $col-count))
+
+@mixin row($col-gap)
+	display: flex
+	flex-flow: row wrap
+	width: (100% + $col-gap)
+	margin-left: -$col-gap
+
+@mixin col($cols, $col-count, $col-gap)
+	width: (percentage($cols / $col-count) - $col-gap)
+	margin-left: $col-gap
