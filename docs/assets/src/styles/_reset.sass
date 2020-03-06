@@ -1,0 +1,108 @@
+html
+	margin: 0
+	padding: 0
+	border: 0
+
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section
+	display: block
+
+body
+	line-height: 1.5
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+caption, th, td
+	text-align: left
+	font-weight: normal
+	float: none !important
+
+table, th, td
+	vertical-align: middle
+
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+
+blockquote, q
+	quotes: "" ""
+
+a img
+	border: none
+
+*, *:after, *:before
+	box-sizing: border-box
+
+.clear
+	clear: both
+	*zoom: 1
+
+.hidden
+	display: none
+	visibility: hidden
+
+.center
+	margin: 0 auto
+
+.f-left
+	float: left !important
+
+.f-right
+	float: right !important
+
+.t-left
+	text-align: left !important
+
+.t-right
+	text-align: right !important
+
+.t-center
+	text-align: center !important
+
+
+
+@mixin break($min, $max: 0)
+	@if $max == 0
+		@media (min-width: #{$min}px)
+			@content
+	@else if $min == 0
+		@media (max-width: #{$max}px)
+			@content
+	@else
+		@media (min-width: #{$min}px) and (max-width: #{$max})
+			@content
+
+
+%clearafter
+	&::after
+        display: table
+        clear: both
+        content: ' '
+
+// https://stackoverflow.com/questions/13905407/append-unit-type-to-the-result-of-a-calculation
+@function between($from, $to, $fromWidth, $toWidth)
+    $fromWidth: $fromWidth * 1px
+    $toWidth: $toWidth * 1px
+
+    $slope: ($to - $from) / ($toWidth - $fromWidth)
+    $base: $from - $slope * $fromWidth
+
+    @return calc(#{$base} + #{100vw * $slope})
+
+
+@mixin between($property, $from, $to, $fromWidth, $toWidth)
+    #{$property}: $from
+
+    +break($fromWidth)
+        #{$property}: between($from, $to, $fromWidth, $toWidth)
+
+    +break($toWidth)
+        #{$property}: $to

@@ -1,0 +1,148 @@
+header
+    position: fixed
+    width: 100%
+    z-index: 5
+    top: 0
+    // bottom: 0
+    overflow-y: scroll
+    overflow-x: hidden
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+
+    +break($break-m)
+        position: fixed
+        width: 280px
+        height: 100%
+        margin-bottom: 20px
+
+    // margin-bottom: 20px
+    // width: 100%
+    // z-index: 5
+    // top: 0
+    // bottom: 0
+    // position: fixed
+    // overflow-y: scroll
+    // overflow-x: hidden
+    
+.navigation-container
+    //height: 50px
+    background-color: $white
+    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+    +break($break-m)
+        min-height: 100%
+        background-color: #E6E6E6
+
+.navigation-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: 10px
+    margin-right: 10px
+    padding-top: 10px
+    padding-bottom: 10px
+    
+    +break($break-m)
+        display: none
+
+.navigation-burgermenu
+    cursor: pointer
+
+.burgermenu
+    display: block
+    background-color: $blue
+    width: 30px
+    height: 4px
+    margin-bottom: 5px
+
+    +break($break-m)
+        display: none
+
+.logo
+    width: 35px
+    height: 35px
+
+.navigation-toggle
+    display: none
+    
+    +break($break-m)
+        display: block
+        padding-top: 100px
+
+@for $navigationCount from 0 through 13
+    
+    .navigation-infos-#{$navigationCount}
+        display: none
+        padding: 5px 0px 5px 120px
+        list-style: none
+        
+        &:hover
+            transition: 0.5s ease
+            background-color: lighten($blue-active, 50)
+            color: $black
+        
+        // a 
+        //     text-decoration: none
+        //     color: $black
+
+        +break($break-m)
+            padding: 5px 0px 5px 80px
+
+    
+    .navigation-status-#{$navigationCount}
+        padding: 5px 0px 5px 90px
+
+        &:hover
+            transition: 0.5s ease
+            background-color: lighten($blue-active, 50)
+            color: $black
+
+        +break($break-m)
+            padding: 5px 0px 5px 50px
+
+.navigation-list
+    cursor: pointer
+
+// #navigation-0, #navigation-1
+//     display: none
+
+.active-navigation
+    background-color: $blue
+    color: $white
+
+.active-infos
+    background-color:  $blue-active
+    color: $white
+    a
+        color: $white
+
+
+.navigation-desktop
+    display: none
+
+    +break($break-m)
+        display: block
+        position: fixed
+        width: 100%
+        background-color: $white
+        z-index: 12
+
+.desktop-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 30px 10px 80px 
+    height: 80px
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35)
+
+    .logo
+        height: 57px
+        width: auto
+    
+    .desktop-headline
+        font-size: 40px
+        color: #393939
+
+.underconstruction
+    background-color: #a9a9a9 !important
+
+.toggleSub
+    cursor: pointer
