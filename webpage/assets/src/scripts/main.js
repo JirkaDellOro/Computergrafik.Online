@@ -228,8 +228,8 @@ function getChapter(chapterIndex, liCount, liLength) {
             $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
-            $('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content +'" target="_blank">' + chapterIndex.pageName + '</a></div>' )
-            // $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'></iframe>")
+            //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content +'" target="_blank">' + chapterIndex.pageName + '</a></div>' )
+            $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'></iframe>")
             getRotation = true;
             checkArrows(chapterIndex, liCount, liLength);
             readDeviceOrientation();

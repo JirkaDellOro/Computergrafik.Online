@@ -1404,7 +1404,5 @@ function _tick(evt) {
 		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
 	}
 }
-
-
 })(createjs = createjs||{}, AdobeAn = AdobeAn||{});
 var createjs, AdobeAn;
