@@ -2641,27 +2641,6 @@
           ]
         },
         {
-          "pageName": "Polygonnetze",
-          "id": "112",
-          "finished": false,
-          "pageContent": [
-            {
-              "content": "",
-              "youtubeClip": true
-            }
-          ],
-          "pageTime": [
-            {
-              "time": [
-                {
-                  "timeDuration": "",
-                  "informationText": ""
-                }
-              ]
-            }
-          ]
-        },
-        {
           "pageName": "High- und Low-Poly-Modelle",
           "id": "113",
           "finished": true,
