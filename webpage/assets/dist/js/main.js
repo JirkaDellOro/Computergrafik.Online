@@ -297,7 +297,7 @@ function getChapter(chapterIndex, liCount, liLength) {
             $('.information-string').remove();
             //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
             $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
-				"onload=\"this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';\" ></iframe>")
+				"onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
             getRotation = true;
             checkArrows(chapterIndex, liCount, liLength);
             readDeviceOrientation();

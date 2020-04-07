@@ -116,10 +116,10 @@ p.nominalBounds = new cjs.Rectangle(-481,-641,962,1282);
 	// timeline functions:
 	this.frame_0 = function() {
 		$('#animation_container').append('<div class="imageContainer" id="imageContainer"></div>');
-		$('#imageContainer').prepend('<img class="img" id="grid_b" height=400px width= 400px src="./images/grid_b.png"/>');
-		$('#imageContainer').prepend('<img class="img" id="grid_m" height=400px width= 400px src="./images/grid_m.png"/>');
-		$('#imageContainer').prepend('<img class="img" id="grid_y" height=400px width= 400px src="./images/grid_y.png"/>');
-		$('#imageContainer').prepend('<img class="img" id="grid_c" height=400px width= 400px src="./images/grid_c.png"/>');
+		$('#imageContainer').prepend('<img class="img" id="grid_b" height=400px width= 400px src="images/grid_b.png"/>');
+		$('#imageContainer').prepend('<img class="img" id="grid_m" height=400px width= 400px src="images/grid_m.png"/>');
+		$('#imageContainer').prepend('<img class="img" id="grid_y" height=400px width= 400px src="images/grid_y.png"/>');
+		$('#imageContainer').prepend('<img class="img" id="grid_c" height=400px width= 400px src="images/grid_c.png"/>');
 		
 		
 		$('#animation_container').append('<div class="sliderContainer">')

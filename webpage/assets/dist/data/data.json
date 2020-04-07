@@ -1098,10 +1098,10 @@
         {
           "pageName": "( I ) Druck",
           "id": "058",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/0509_I_Druck.html",
               "youtubeClip": false
             }
           ],
@@ -1155,7 +1155,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./interaktion/0511_I_Rasterwinkelung/0511_I_Rasterwinkelung.html",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/0511_I_Rasterwinkelung.html",
               "youtubeClip": false
             }
           ],
@@ -1562,7 +1562,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "assets/dist/interactions/07-Vektorgrafik/Neu/RGvsVG/Desktop/Unterschied_Zu_Rastergrafiken_Int_D.html",
+              "content": "./assets/dist/interactions/07-Vektorgrafik/UnterschiedRastergrafiken/main.html",
               "youtubeClip": false
             }
           ],
@@ -1683,7 +1683,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "assets/dist/interactions/07-Vektorgrafik/Neu/Transformationsverkettung/Mobile/Transformationsverkettung_Int_M.html",
+              "content": "./assets/dist/interactions/07-Vektorgrafik/transformationsverkettung/070503.html",
               "youtubeClip": false
             }
           ],
@@ -1726,10 +1726,10 @@
         {
           "pageName": "( I ) Rasterung",
           "id": "0711",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/07-Vektorgrafik/RasterungVonVektorgrafiken/main.html",
               "youtubeClip": false
             }
           ],
@@ -1762,10 +1762,10 @@
         {
           "pageName": "( I ) Vektorisieren",
           "id": "0713",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/07-Vektorgrafik/vektorisierung/main.html",
               "youtubeClip": false
             }
           ],
@@ -2335,27 +2335,6 @@
               ]
             }
           ]
-        },
-        {
-          "pageName": "Volumengrafik",
-          "id": "0911",
-          "finished": false,
-          "pageContent": [
-            {
-              "content": "",
-              "youtubeClip": true
-            }
-          ],
-          "pageTime": [
-            {
-              "time": [
-                {
-                  "timeDuration": "",
-                  "informationText": ""
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -2449,10 +2428,10 @@
         {
           "pageName": "(I) Vergleich zwischen Flat-, Gouraud - und Phong-Shading",
           "id": "104",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/10-Shader/Flat-Gouraud-Phong_Shading/vergleich_zwischen_flat_gouraud_phong_shading.html",
               "youtubeClip": false
             }
           ],
@@ -2688,7 +2667,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/animate/11-Modellierung/High- und Low-Poly-Modelle/highlowpoly.html",
+              "content": "./assets/dist/interactions/11-Modellierung/High- und Low-Poly-Modelle/highlowpoly.html",
               "youtubeClip": false
             }
           ],
@@ -2835,7 +2814,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/animate/11-Modellierung/Mirror-Modifier/mirrormodifier.html",
+              "content": "./assets/dist/interactions/11-Modellierung/Mirror-Modifier/mirrormodifier.html",
               "youtubeClip": false
             }
           ],
@@ -2874,10 +2853,10 @@
         {
           "pageName": "( I ) Boolean Operation",
           "id": "1113",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/animate/11-Modellierung",
+              "content": "./assets/dist/interactions/11-Modellierung/Boolean-Modifier/booleanmodifier.html",
               "youtubeClip": false
             }
           ],
