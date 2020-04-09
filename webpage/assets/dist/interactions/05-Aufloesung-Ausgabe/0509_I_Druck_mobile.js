@@ -98,7 +98,7 @@ p._updateVisibility = _updateVisibility;
 		this.customCSS = this.Actions.customCSS;
 		//HTML
 		$('#animation_container').append('<div class="imageContainer" id="imageContainer"></div>');
-		$('#imageContainer').prepend('<img class="original" id="img" src="./images/RoboterSW.png"/>');
+		$('#imageContainer').prepend('<img class="original" id="img" src="images/RoboterSW.png"/>');
 		//RADIOBUTTONS
 		$('#animation_container').append('<div class="radioContainer">')
 		$('.radioContainer').append('<label class="container">Original<input type="radio" id="original_radio" class="radioBtn" name="radio" value="1"  checked><span class="radioCheckmark"></span></label></br>');
