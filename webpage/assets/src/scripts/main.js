@@ -1,9 +1,6 @@
 import jQuery from "jquery"
 window.$ = jQuery;
 window.jQuery = jQuery;
-
-
-
 var setData;
 var getRotation = false;
 var valueNavigation;
@@ -14,19 +11,11 @@ var constructionText = "Diese Seite befindet sich noch in der Entwicklung";
 $(document).ready(function () {
 
     console.info('DOM Ready');
-
 });
 
 $('.information-container').click(function () {
-    if($(window).width() < 760)
-    {
-        if (openInformation == false) {
-            $('.information-text').css('display', 'block');
-            $('.information-container').animate({
-                right: '250px'
-            }, 500);
-            openInformation = true;
-        } else {
+    if ($(window).width() < 760) {
+        if (openInformation) {
             $('.information-container').animate({
                 right: '-5px'
             }, 500);
@@ -34,19 +23,23 @@ $('.information-container').click(function () {
                 $('.information-text').css('display', 'none');
             }, 500);
             openInformation = false;
+        } else {
+            $('.information-text').css('display', 'block');
+            $('.information-container').animate({
+                right: '250px'
+            }, 500);
+            openInformation = true;
         }
     }
 });
 
 function readDeviceOrientation() {
-    if($(window).width() < 760)
-    {
-        if (getRotation == true) {
+    if ($(window).width() < 760) {
+        if (getRotation === true) {
             if (Math.abs(window.orientation) === 90) {
                 // Landscape
                 $('.modual').css('display', 'block');
                 $('.iframe-interaction').css('display', 'none');
-
             } else {
                 // Portrait
                 //document.getElementById("orientation").innerHTML = "PORTRAIT";
@@ -57,7 +50,6 @@ function readDeviceOrientation() {
         }
     }
 }
-
 
 window.onorientationchange = readDeviceOrientation;
 
@@ -73,13 +65,13 @@ request.onload = function () {
     var getDataFromJson = request.response;
     setData = JSON.parse(getDataFromJson);
     setChapter(setData);
-}
+};
 
 function setChapter(jsonObj) {
     var chapter = jsonObj['section'];
     var addChapter = document.getElementsByClassName('navigation-toggle')[0];
 
-    for (let i = 0; i < chapter.length; i++) {
+    for (var i = 0; i < chapter.length; i++) {
         var myChapter = document.createElement('div');
         var ulList = document.createElement('ul');
         // ulList.className = "navigation-list";
@@ -90,18 +82,22 @@ function setChapter(jsonObj) {
         addChapter.appendChild(ulList);
         ulList.appendChild(myChapter);
 
+        for (var j = 0; j < chapter[i].page.length; j++) {
 
-        for (let j = 0; j < chapter[i].page.length; j++) {
             var liList = document.createElement('li');
             liList.className = "navigation-infos-" + [i] + " toggleSub";
-            if(chapter[i].page[j].finished == false)
+
+            if (!chapter[i].page[j].finished) {
                 liList.className = "navigation-infos-" + [i] + " toggleSub underconstruction";
+            }
+
             liList.id = chapter[i].page[j].id;
-            liList.textContent = chapter[i].page[j].pageName
+            liList.textContent = chapter[i].page[j].pageName;
             ulList.appendChild(liList);
         }
     }
     setNaviagtion();
+    // TODO: after finishing a chapter the next chapter should be opened automatically
     // setNextChapter();
 }
 
@@ -110,7 +106,7 @@ function setNaviagtion() {
     var toggleNav = true;
 
     $('#toggleMenu').click(function () {
-        if (toggleNav == true) {
+        if (toggleNav) {
             $('.navigation-toggle').slideToggle();
             $('.navigation-header').css('bottom', '0');
             toggleNav = false;
@@ -142,12 +138,11 @@ function setNaviagtion() {
         $(this).addClass('active-infos');
         // if()
         console.log($(window).width());
-        if($(window).width() < 760)
-            $('.navigation-toggle').slideToggle();
+        if ($(window).width() < 760) $('.navigation-toggle').slideToggle();
         var strSubHeadline = $(this).text();
         $(".subheadline").html(strSubHeadline);
         $('.navigation-header').css('bottom', '');
-        $('.information-container').css('display', 'block')
+        $('.information-container').css('display', 'block');
         $('.projekt-text').css('display', 'none');
         toggleNav = true;
     });
@@ -156,30 +151,29 @@ function setNaviagtion() {
         index = $(this).attr('id');
         console.log(index);
         var chapter = setData['section'];
-        for (let i = 0; i < chapter.length; i++) {
-            for (let j = 0; j < chapter[i].page.length; j++) {
+        for (var i = 0; i < chapter.length; i++) {
+            for (var j = 0; j < chapter[i].page.length; j++) {
                 if (chapter[i].page[j].id == index) {
 
                     var chapterIndex = chapter[i].page[j];
                     var liCount = chapter[i].page;
                     var liLength = liCount.length - 1;
-                    getChapter(chapterIndex , liCount, liLength);
+                    getChapter(chapterIndex, liCount, liLength);
                 }
             }
         }
     });
 };
 
-
 $('.next').click(function () {
     var chapter = setData['section'];
-    for (let i = 0; i < chapter.length; i++) {
-        for (let j = 0; j < chapter[i].page.length; j++) {
-            if (chapter[i].page[j].id == index) {
+    for (var i = 0; i < chapter.length; i++) {
+        for (var j = 0; j < chapter[i].page.length; j++) {
+            if (index === chapter[i].page[j].id) {
                 var chapterIndex = chapter[i].page[j + 1];
                 var liCount = chapter[i].page;
                 var liLength = liCount.length - 1;
-                getChapter(chapterIndex , liCount, liLength);
+                getChapter(chapterIndex, liCount, liLength);
                 index = chapter[i].page[j + 1];
                 setHeadline(index.id, index.pageName);
             }
@@ -190,13 +184,13 @@ $('.next').click(function () {
 
 $('.prev').click(function () {
     var chapter = setData['section'];
-    for (let i = 0; i < chapter.length; i++) {
-        for (let j = 0; j < chapter[i].page.length; j++) {
-            if (chapter[i].page[j].id == index) {
+    for (var i = 0; i < chapter.length; i++) {
+        for (var j = 0; j < chapter[i].page.length; j++) {
+            if (index === chapter[i].page[j].id) {
                 var chapterIndex = chapter[i].page[j - 1];
                 var liCount = chapter[i].page;
                 var liLength = liCount.length - 1;
-                getChapter(chapterIndex , liCount, liLength);
+                getChapter(chapterIndex, liCount, liLength);
                 index = chapter[i].page[j - 1];
                 setHeadline(index.id, index.pageName);
             }
@@ -205,11 +199,9 @@ $('.prev').click(function () {
     index = index.id;
 });
 
-
 function getChapter(chapterIndex, liCount, liLength) {
     $('.iframe-interaction').empty();
-    if(chapterIndex.finished == true)
-    {
+    if (chapterIndex.finished == true) {
         $('.construction-text').css('display', 'none');
         if (chapterIndex.pageContent[0].youtubeClip == true) {
             // $('.content-container').css('padding-bottom', '56.25%');
@@ -219,21 +211,22 @@ function getChapter(chapterIndex, liCount, liLength) {
             $('.information-string').remove();
             player.loadVideoById(chapterIndex.pageContent[0].content);
             setInformation(chapterIndex.pageTime);
-            getRotation =  false;
+            getRotation = false;
             checkArrows(chapterIndex, liCount, liLength);
-
         } else {
             stopVideo();
             $('.content-container').css('display', 'none');
             $('.youtube-player').css('display', 'none');
-            $('.container-next-prev').css('position', 'absolute');
-            $('.iframe-interaction').css('display', 'block').css('position', 'relative');
+            $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
+            //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
+            $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
+                "onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
             getRotation = true;
             checkArrows(chapterIndex, liCount, liLength);
             readDeviceOrientation();
         }
-    }else{
+    } else {
         $('.youtube-player').css('display', 'none');
         $('.iframe-interaction').css('display', 'none');
         $('.content-container').css('display', 'block');
@@ -244,33 +237,27 @@ function getChapter(chapterIndex, liCount, liLength) {
     return index = chapterIndex.id;
 }
 
-function setHeadline(id, pageName){
+function setHeadline(id, pageName) {
     var indexNumeration = "#" + id;
     $(".subheadline").html(pageName);
     $('.toggleSub').removeClass('active-infos');
     $(indexNumeration).addClass('active-infos');
 }
 
-function checkArrows(chapterIndex, liCount, liLength)
-{
-    if(liCount[0] == chapterIndex)
-    {
+function checkArrows(chapterIndex, liCount, liLength) {
+    if (liCount[0] == chapterIndex) {
         $('.next').css('opacity', '1');
         $('.prev').css('opacity', '0');
-    }
-    else if(liCount[liLength] == chapterIndex)
-    {
+    } else if (liCount[liLength] == chapterIndex) {
         $('.next').css('opacity', '0');
         $('.prev').css('opacity', '1');
-    }
-    else
-    {
+    } else {
         $('.next').css('opacity', '1');
         $('.prev').css('opacity', '1');
     }
 }
 
-function setInformation(pageInformation){
+function setInformation(pageInformation) {
     // var currentTime = startInterval();
     // console.log(startInterval())
     startInterval(pageInformation);

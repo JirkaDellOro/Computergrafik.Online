@@ -97,27 +97,27 @@ $(document).ready(function () {
 
 $('.information-container').click(function () {
     if ($(window).width() < 760) {
-        if (openInformation == false) {
-            $('.information-text').css('display', 'block');
-            $('.information-container').animate({
-                right: '250px'
-            }, 500);
-            openInformation = true;
-        } else {
-            $('.information-container').animate({
-                right: '-5px'
-            }, 500);
-            setTimeout(function () {
-                $('.information-text').css('display', 'none');
-            }, 500);
-            openInformation = false;
-        }
-    }
+		if (openInformation) {
+			$('.information-container').animate({
+				right: '-5px'
+			}, 500);
+			setTimeout(function () {
+				$('.information-text').css('display', 'none');
+			}, 500);
+			openInformation = false;
+		} else {
+			$('.information-text').css('display', 'block');
+			$('.information-container').animate({
+				right: '250px'
+			}, 500);
+			openInformation = true;
+		}
+	}
 });
 
 function readDeviceOrientation() {
     if ($(window).width() < 760) {
-        if (getRotation == true) {
+        if (getRotation === true) {
             if (Math.abs(window.orientation) === 90) {
                 // Landscape
                 $('.modual').css('display', 'block');
@@ -165,15 +165,21 @@ function setChapter(jsonObj) {
         ulList.appendChild(myChapter);
 
         for (var j = 0; j < chapter[i].page.length; j++) {
-            var liList = document.createElement('li');
+
+        	var liList = document.createElement('li');
             liList.className = "navigation-infos-" + [i] + " toggleSub";
-            if (chapter[i].page[j].finished == false) liList.className = "navigation-infos-" + [i] + " toggleSub underconstruction";
-            liList.id = chapter[i].page[j].id;
+
+			if (!chapter[i].page[j].finished) {
+				liList.className = "navigation-infos-" + [i] + " toggleSub underconstruction";
+			}
+
+			liList.id = chapter[i].page[j].id;
             liList.textContent = chapter[i].page[j].pageName;
             ulList.appendChild(liList);
         }
     }
     setNaviagtion();
+    // TODO: after finishing a chapter the next chapter should be opened automatically
     // setNextChapter();
 }
 
@@ -182,7 +188,7 @@ function setNaviagtion() {
     var toggleNav = true;
 
     $('#toggleMenu').click(function () {
-        if (toggleNav == true) {
+        if (toggleNav) {
             $('.navigation-toggle').slideToggle();
             $('.navigation-header').css('bottom', '0');
             toggleNav = false;
@@ -245,7 +251,7 @@ $('.next').click(function () {
     var chapter = setData['section'];
     for (var i = 0; i < chapter.length; i++) {
         for (var j = 0; j < chapter[i].page.length; j++) {
-            if (chapter[i].page[j].id == index) {
+            if (index === chapter[i].page[j].id) {
                 var chapterIndex = chapter[i].page[j + 1];
                 var liCount = chapter[i].page;
                 var liLength = liCount.length - 1;
@@ -262,7 +268,7 @@ $('.prev').click(function () {
     var chapter = setData['section'];
     for (var i = 0; i < chapter.length; i++) {
         for (var j = 0; j < chapter[i].page.length; j++) {
-            if (chapter[i].page[j].id == index) {
+            if (index === chapter[i].page[j].id) {
                 var chapterIndex = chapter[i].page[j - 1];
                 var liCount = chapter[i].page;
                 var liLength = liCount.length - 1;
@@ -295,8 +301,9 @@ function getChapter(chapterIndex, liCount, liLength) {
             $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
-            $('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
-            // $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'></iframe>")
+            //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
+            $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
+				"onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
             getRotation = true;
             checkArrows(chapterIndex, liCount, liLength);
             readDeviceOrientation();
