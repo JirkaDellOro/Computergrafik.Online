@@ -1,0 +1,115 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+#imgcontainer {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #242424;
+}
+
+#instructions {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: rgba(36, 36, 36, 0.7);
+    font-size: 14px;
+    text-align: center;
+}
+
+#check-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    background-color: rgba(36, 36, 36, 0.7);
+    padding: 5px 12.5%;
+    color: #ffffff;
+}
+
+#check-container1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.form-check {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#form-container {
+
+}
+
+.button-container {
+    padding-bottom: 12px;
+}
+
+
+
+@media screen and (min-width:1024px) {
+    #col_1 {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    .form-check-label {
+        color: #000000;
+    }
+
+    #col_2 {
+        width: 50%;
+        height: 40vh;
+        padding-top: 30px;
+        position: absolute;
+        left: 0;
+    }
+
+    #form-container {
+        position: relative;
+        color: #000000;
+        text-align: left;
+        padding: 24px 48px;
+    }
+
+    #instructions {
+        position: relative;
+        color: #000000;
+        text-align: center;
+        padding: 24px 48px;
+        background-color: transparent;
+        font-size: 16px;
+    }
+
+    #check-container {
+        position: relative;
+        color: #000000;
+        font-size: 16px;
+        background-color: transparent;
+    }
+    #check-container2 {
+        padding-top: 30px;
+    }
+
+    .form-check {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+}
