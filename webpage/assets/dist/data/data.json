@@ -325,10 +325,10 @@
         {
           "pageName": "( I ) RGB-Farbsystem",
           "id": "025",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/02-Farbsysteme/RGB_Farbsystem/rgb_system_interaction.html",
               "youtubeClip": false
             }
           ],

@@ -12,8 +12,8 @@ var checkInt;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '360',
-        width: '640',
+        height: '100%',
+        width: '100%',
         playerVars: {
             'playsinline': 1
         },
@@ -59,7 +59,7 @@ function startInterval(information) {
                 // $('.information-string').removeClass('active-information');
                 setHighlight();
                 $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-                
+
                 // $('.infroamtion-string').addClass('active-infos');
                 i = i+ 1;
             }
@@ -68,7 +68,7 @@ function startInterval(information) {
                 $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
                 i = i + 1;
             }
-            
+
         };
     }, 100)
 }
