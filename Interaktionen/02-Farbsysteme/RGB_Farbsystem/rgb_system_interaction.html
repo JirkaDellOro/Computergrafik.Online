@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{margin:0;padding:0;background:white;}
+    body{overflow:hidden;}
+    form{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#efefef;
+        padding:1em;
+        text-align:center;
+    }
+</style>
+<body>
+<form>
+    <input id="r" type="range" value="0" min="0" max="255">
+    <input id="g" type="range" value="0" min="0" max="255">
+    <input id="b" type="range" value="0" min="0" max="255">
+</form>
+</body>
+<script>
+    var canvas = document.createElement('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    var ctx = canvas.getContext('2d');
+
+    // Pick out the form elements for easy access later
+    var r = document.querySelector('#r');
+    var g = document.querySelector('#g');
+    var b = document.querySelector('#b');
+
+    // Animation function
+    function draw(){
+        // clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // draw the cube
+        drawCube(
+            window.innerWidth/2,
+            window.innerHeight/2 + 255 ,
+            255,
+            255,
+            255,
+            Number(r.value),
+            Number(g.value),
+            Number(b.value)
+        );
+        requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Draw a cube to the specified specs
+    function drawCube(x, y, wx, wy, h, r, g, b) {
+
+        ctx.beginPath();
+        // blue(Z-Axis)
+        ctx.moveTo(x - wx , y - wx * 0.5);
+        ctx.lineTo(x , y - wx);
+        // red(X-Axis)
+        ctx.lineTo(x + wx, y - wx * 0.5);
+        // green(Y-Axis)
+        ctx.moveTo(x, y - wx);
+        ctx.lineTo(x, y - h - wx);
+        ctx.strokeStyle = "#000000";
+        ctx.stroke();
+        ctx.closePath();
+
+        //draw the current location of the dot
+        ctx.beginPath();
+        ctx.arc(x - r + b, y - h + r * 0.5 + b * 0.5 - g, 15, 0, 2 * Math.PI);
+        var rgbString = "rgb(" + r.toString() +"," + g.toString() + "," + b.toString() + ")";
+        ctx.strokeStyle = rgbString;
+        ctx.stroke();
+        ctx.fillStyle = rgbString;
+        ctx.fill();
+        ctx.closePath();
+        //draw the declarations
+        //red
+        ctx.beginPath();
+        ctx.fillStyle = "#ff0000";
+        ctx.font = "25px Arial";
+        ctx.fillText("Red(1,0,0)", x - wx - 40, y - wx * 0.5 + 30);
+        //blue
+        ctx.fillStyle = "#0000ff";
+        ctx.fillText("Blue(0,0,1)", x + wx - 40, y - wx * 0.5 + 30)
+        //green
+        ctx.fillStyle = "#00ff00";
+        ctx.fillText("Green(0,1,0)", x - 50, y - wx * 2 - 25);
+
+
+    }
+</script>
+</html>

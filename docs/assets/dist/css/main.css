@@ -4611,16 +4611,17 @@ main {
 
 @media (min-width: 760px) {
   main {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: 50px;
     bottom: 0px;
     left: 280px;
     width: calc(100% - 380px);
-    overflow: scroll;
     margin-left: 100px;
     z-index: -1;
+    height: calc(100% - 80px)
   }
 }
+
 
 .headline-container {
   text-align: center;
@@ -4700,7 +4701,7 @@ main {
 @media (min-width: 760px) {
   .content-container {
     width: calc(100% - 280px);
-    height: 50vh;
+    height: 100%;
     padding-bottom: 0px;
   }
 }
@@ -4727,6 +4728,8 @@ main {
 }
 
 .iframe-container {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
