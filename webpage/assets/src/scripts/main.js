@@ -1,6 +1,3 @@
-import jQuery from "jquery"
-window.$ = jQuery;
-window.jQuery = jQuery;
 var setData;
 var getRotation = false;
 var valueNavigation;
@@ -203,11 +200,16 @@ function getChapter(chapterIndex, liCount, liLength) {
     $('.iframe-interaction').empty();
     if (chapterIndex.finished == true) {
         $('.construction-text').css('display', 'none');
-        if (chapterIndex.pageContent[0].youtubeClip == true) {
+        $('.iframe-interaction').css('display', 'none');
+        $('.iframe-interaction').css('display', 'none');
+        $('.content-container').css('display', 'none');
+        $('.youtube-player').css('display', 'none');
+        if (chapterIndex.pageContent[0].youtubeClip === true) {
             // $('.content-container').css('padding-bottom', '56.25%');
             $('.content-container').css('display', 'block');
             $('.youtube-player').css('display', 'block');
-            $('.iframe-interaction').css('display', 'none');
+            $('.youtube-player').css('width', '100%');
+            $('.youtube-player').css('height', '100%');
             $('.information-string').remove();
             player.loadVideoById(chapterIndex.pageContent[0].content);
             setInformation(chapterIndex.pageTime);
@@ -215,13 +217,12 @@ function getChapter(chapterIndex, liCount, liLength) {
             checkArrows(chapterIndex, liCount, liLength);
         } else {
             stopVideo();
-            $('.content-container').css('display', 'none');
-            $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
             //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
-            $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
-                "onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
+            $('.iframe-interaction').html("<iframe class='interaction' src='" + chapterIndex.pageContent[0].content + "'></iframe>")
+            $('.iframe-interaction').css('height', '100%');
+            $('.interaction').css('height', '100%');
             getRotation = true;
             checkArrows(chapterIndex, liCount, liLength);
             readDeviceOrientation();
