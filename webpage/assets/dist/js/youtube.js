@@ -15,7 +15,10 @@ function onYouTubeIframeAPIReady() {
         height: '100%',
         width: '100%',
         playerVars: {
-            'playsinline': 1
+            'playsinline': 1,
+            'autoplay': 0,
+            'frameborder': 0,
+            'rel': 0
         },
         //videoId: src,
         events: {

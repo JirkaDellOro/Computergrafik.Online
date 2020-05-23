@@ -285,10 +285,9 @@
 			$('.iframe-interaction').empty();
 			if (chapterIndex.finished == true) {
 				$('.construction-text').css('display', 'none');
-				$('.iframe-interaction').css('display', 'none');
-				$('.iframe-interaction').css('display', 'none');
 				$('.content-container').css('display', 'none');
 				$('.youtube-player').css('display', 'none');
+				$('.iframe-interaction').css('display', 'none');
 				if (chapterIndex.pageContent[0].youtubeClip === true) {
 					// $('.content-container').css('padding-bottom', '56.25%');
 					$('.content-container').css('display', 'block');
@@ -301,7 +300,10 @@
 					getRotation = false;
 					checkArrows(chapterIndex, liCount, liLength);
 				} else {
-					stopVideo();
+					stopVideo()
+					$('.construction-text').css('display', 'none');
+					$('.content-container').css('display', 'none');
+					$('.youtube-player').css('display', 'none');
 					$('.iframe-interaction').css('display', 'block');
 					$('.information-string').remove();
 					//$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
