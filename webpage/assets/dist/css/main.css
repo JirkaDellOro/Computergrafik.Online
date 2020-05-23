@@ -4612,11 +4612,10 @@ main {
 @media (min-width: 760px) {
   main {
     position: absolute;
-    top: 50px;
+    top: 32px;
     bottom: 0px;
     left: 280px;
-    width: calc(100% - 380px);
-    margin-left: 100px;
+    width: calc(100% - 182px);
     z-index: -1;
     height: calc(100% - 80px)
   }
