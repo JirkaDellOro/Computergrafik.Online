@@ -4857,20 +4857,20 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #00A8FF;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 @media (min-width: 760px) {
   .container-next-prev {
-    margin-bottom: 50px;
     width: calc(100% - 280px);
   }
 }
 
 .next, .prev {
   opacity: 0;
+  margin: 0 15px;
 }
 
 .information-string {
