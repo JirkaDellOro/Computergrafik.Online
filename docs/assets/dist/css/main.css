@@ -50,7 +50,7 @@ a img {
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .clear {
@@ -108,8 +108,8 @@ a img {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     width: 103%;
     margin-left: -3%;
   }
@@ -197,8 +197,8 @@ a img {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     width: 103%;
     margin-left: -3%;
   }
@@ -286,8 +286,8 @@ a img {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     width: 103%;
     margin-left: -3%;
   }
@@ -375,8 +375,8 @@ a img {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     width: 103%;
     margin-left: -3%;
   }
@@ -584,70 +584,70 @@ a img {
 
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
-          animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
   -webkit-animation: fa-spin 1s infinite steps(8);
-          animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 
 @-webkit-keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 .fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1);
+  transform: scale(-1, -1);
 }
 
 :root .fa-rotate-90,
@@ -656,7 +656,7 @@ a img {
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .fa-stack {
@@ -3956,7 +3956,7 @@ header {
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 760px) {
@@ -3984,11 +3984,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 10px;
   margin-right: 10px;
   padding-top: 10px;
@@ -4576,15 +4576,15 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px 30px 10px 80px;
   height: 80px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
 }
 
 .desktop-wrapper .logo {
@@ -4612,11 +4612,10 @@ main {
 @media (min-width: 760px) {
   main {
     position: absolute;
-    top: 50px;
+    top: 32px;
     bottom: 0px;
     left: 280px;
-    width: calc(100% - 380px);
-    margin-left: 100px;
+    width: calc(100% - 182px);
     z-index: -1;
     height: calc(100% - 80px)
   }
@@ -4662,7 +4661,7 @@ main {
   padding: 15px;
   border-radius: 10px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   text-decoration: none;
@@ -4672,7 +4671,7 @@ main {
 .btn-interaktion:hover {
   color: #006599;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
 }
 
 .btn-container {
@@ -4680,15 +4679,15 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 30px;
 }
 
 @-moz-document domain("youtube.com") {}.yt-player {
-  min-width: 320px;
-  height: auto;
-}
+                                         min-width: 320px;
+                                         height: auto;
+                                       }
 
 .content-container {
   position: relative;
@@ -4712,7 +4711,7 @@ main {
   left: 50%;
   height: 50vh;
   -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 @media (max-width: 900px) {
@@ -4752,7 +4751,7 @@ main {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   cursor: pointer;
@@ -4763,7 +4762,7 @@ main {
     top: 0px;
     cursor: auto;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
 
@@ -4791,7 +4790,7 @@ main {
   background-color: white;
   font-size: 16px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 760px) {
@@ -4806,7 +4805,7 @@ main {
     top: 0px;
     background-color: #E6E6E6;
     -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   }
 }
 
@@ -4833,7 +4832,7 @@ main {
   height: 50vh;
   width: 100%;
   -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 @media (max-width: 900px) {
@@ -4850,7 +4849,7 @@ main {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .container-next-prev {
@@ -4858,20 +4857,20 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-between;
   color: #00A8FF;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 @media (min-width: 760px) {
   .container-next-prev {
-    margin-bottom: 50px;
     width: calc(100% - 280px);
   }
 }
 
 .next, .prev {
   opacity: 0;
+  margin: 0 15px;
 }
 
 .information-string {
