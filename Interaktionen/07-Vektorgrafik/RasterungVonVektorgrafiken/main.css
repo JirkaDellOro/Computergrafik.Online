@@ -1,12 +1,79 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-body{
-    background-color: white;
+#container {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
 }
-#main{
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 50px;
+
+canvas {
+    border: 3px solid black;
+    border-radius: 20px;
 }
+
+.points {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: deepskyblue;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#pointOne {
+    top: 100px;
+    left: 100px;
+}
+
+#pointTwo {
+    top: 300px;
+    left: 400px;
+}
+
+#pointThree {
+    top: 300px;
+    left: 100px;
+}
+
+#options {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#options button {
+    width: 50px;
+}
+
+.active {
+    background-color: #42b983;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 250px;
+        height: 200px;
+    }
+
+    #pointOne {
+        top: 50px;
+        left: 50px;
+    }
+    
+    #pointTwo {
+        top: 150px;
+        left: 200px;
+    }
+    
+    #pointThree {
+        top: 150px;
+        left: 50px;
+    }
+  }
