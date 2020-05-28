@@ -4597,6 +4597,12 @@ header {
   color: #393939;
 }
 
+@media(min-width: 1255px) {
+  .desktop-wrapper .desktop-headline {
+    font-size: 25px;
+  }
+}
+
 .underconstruction {
   background-color: #a9a9a9 !important;
 }

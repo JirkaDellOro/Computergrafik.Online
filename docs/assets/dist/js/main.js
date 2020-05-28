@@ -321,7 +321,7 @@
         });
 
         function getChapter(chapterIndex, liCount, liLength) {
-            $('.iframe-interaction').empty();
+            $('.desktop-headline').html(chapterIndex.pageName);
             if (chapterIndex.finished == true) {
                 $('.construction-text').css('display', 'none');
                 $('.iframe-interaction').css('display', 'none');
@@ -343,7 +343,6 @@
                     stopVideo();
                     $('.iframe-interaction').css('display', 'block');
                     $('.information-string').remove();
-                    //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
                     $('.iframe-interaction').html("<iframe class='interaction' src='" + chapterIndex.pageContent[0].content + "'></iframe>")
                     $('.iframe-interaction').css('height', '100%');
                     $('.interaction').css('height', '100%');

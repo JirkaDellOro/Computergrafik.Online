@@ -1027,10 +1027,10 @@
         {
           "pageName": "( I ) Monitorauflösung",
           "id": "055",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Aufloesung-eines-Monitors/aufloesung-eines-monitors.html",
               "youtubeClip": false
             }
           ],
@@ -1101,7 +1101,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/0509_I_Druck.html",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Druck/druck.html",
               "youtubeClip": false
             }
           ],
@@ -2945,7 +2945,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "PFIU-9MiM-0",
+              "content": "6dZzDrEfvUw",
               "youtubeClip": true
             }
           ],
@@ -3050,7 +3050,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "Q9nPsOH",
+              "content": "Q9nPsOH-fX8",
               "youtubeClip": true
             }
           ],
