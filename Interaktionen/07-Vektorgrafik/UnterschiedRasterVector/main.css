@@ -1,0 +1,103 @@
+* {box-sizing: border-box;}
+
+body{
+    background-color: white;
+}
+
+#main{
+    margin: auto;
+    max-width: 1200px;
+}
+.images{
+  position: relative;
+  height: 150px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-evenly;
+    
+}
+
+.img{
+  position: relative;
+  height: 100%;
+  width: 150px;
+}
+
+img{
+  height: CALC(100% - 20px);
+}
+
+#range{
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  margin: auto;
+  padding: 5px;
+}
+
+.img-hover-zoom {
+  height:150px;
+  width: 150px;
+  overflow: hidden; /* Removing this will break the effects */
+  border-radius: 100%;
+  border: 5px solid #3d3a3a;
+  background-color: #7ed5fc;
+}
+
+.img-hover-zoom img {
+  position: relative;
+  top:21%;
+  left:0%;
+  height:100% ;
+  padding: 0px;/*entvernen*/
+  
+}
+
+input {
+  -webkit-appearance: none;
+  width: 100%;
+  display: block;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 20px auto 0;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #00A8FF;
+  cursor: pointer;
+}
+
+input::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00A8FF;
+  cursor: pointer;
+}
+
+  
+@media screen and (max-width: 600px) {
+  .img-hover-zoom {
+    height:100px;
+    width: 100px;
+  }
+
+  .images {
+    height: 100px;
+  }
+
+  .img{
+    width: 100px;
+  }
+
+}
