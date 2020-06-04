@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+/*#imgcontainer {*/
+/*    height: 80%;*/
+/*    overflow: hidden;*/
+/*    width: 100%;*/
+/*    position:absolute;*/
+/*    text-align: center;*/
+/*}*/
+
 #imgcontainer {
     min-height: 100vh;
     background-position: center;
@@ -37,7 +45,9 @@
     font-size: 15px;
 }
 
-
+#sliderinput {
+    width: 75%;
+}
 
 @media screen and (min-width:800px) {
     #col_1 {
@@ -47,22 +57,21 @@
         right: 0;
     }
 
-    .form-check-label {
-         color: #000000;
-     }
-
     #col_2 {
         width: 50%;
         height: 40vh;
         position: absolute;
         left: 0;
     }
-
     #check-container {
         position: relative;
         color: #000000;
         text-align: left;
         padding: 24px 48px;
+    }
+
+    #sliderinput {
+        width: 100%;
     }
 
     #instructions {
