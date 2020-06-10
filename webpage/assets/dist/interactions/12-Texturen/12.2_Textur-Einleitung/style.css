@@ -1,0 +1,100 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+#imgcontainer {
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+
+#instructions {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+}
+
+#check-container {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 5%;
+    right: 0;
+    bottom: 0;
+    padding: 12px 25%;
+    color: #ffffff;
+    font-size: 15px;
+}
+.form-check-input{
+    margin-left: 15px;
+}
+.form-check-label {
+    margin-left: 32px;
+}
+
+@media screen and (max-width: 500px){
+    #check-container {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+     left: 5%; 
+    right: 0;
+    bottom: 0;
+    padding: 12px 5%;
+    color: #ffffff;
+    font-size: 15px;}
+    #imgcontainer {
+        min-height: 100vh;
+        min-width: 67vh;
+        background-position: center;
+        background-size: cover;
+        display: block;
+        position: relative;
+    }
+    
+}
+
+/* @media screen and (min-width:800px) {
+    #col_1 {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+    }
+
+    .form-check-label {
+        color: #000000;
+    }
+
+    #col_2 {
+        width: 50%;
+        height: 40vh;
+        position: absolute;
+        left: 0;
+    }
+
+    #check-container {
+        position: relative;
+        color: #000000;
+        text-align: left;
+        padding: 24px 48px;
+    }
+
+    #instructions {
+        position: relative;
+        color: #000000;
+        text-align: left;
+        padding: 24px 48px;
+    }
+} */
