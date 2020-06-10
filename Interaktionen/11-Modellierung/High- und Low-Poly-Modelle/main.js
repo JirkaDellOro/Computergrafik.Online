@@ -5,9 +5,7 @@ window.addEventListener("load", main);
 function main() {
     slider = document.getElementById("sliderinput");
     imgContainer = document.getElementById("imgcontainer");
-    console.log(slider);
     load();
-    slider.addEventListener("change", this.changeState);
 }
 function preload() {
     for (var i = 0; i < arguments.length; i++) {

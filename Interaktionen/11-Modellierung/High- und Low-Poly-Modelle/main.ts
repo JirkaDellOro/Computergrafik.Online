@@ -8,9 +8,7 @@ window.addEventListener("load", main);
 function main(): void {
     slider = document.getElementById("sliderinput") as HTMLInputElement;
     imgContainer = document.getElementById("imgcontainer") as HTMLDivElement;
-    console.log(slider);
     load();
-    slider.addEventListener("change", this.changeState);
 }
 
 function preload(): void {
