@@ -5,20 +5,26 @@ window.addEventListener("load", main);
 function main() {
     slider = document.getElementById("sliderinput");
     imgContainer = document.getElementById("imgcontainer");
-    images = ["img/Low-High-Poly 1.png", "img/Low-High-Poly 2.png", "img/Low-High-Poly 3.png", "img/Low-High-Poly 4.png", "img/Low-High-Poly 5.png", "img/Low-High-Poly 6.png"];
     console.log(slider);
     load();
     slider.addEventListener("change", this.changeState);
 }
-function load() {
-    changeState();
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
 }
-function changeState() {
-    console.log("test");
+// @ts-ignore
+preload("img/Low_High_Poly_1.jpg", "img/Low_High_Poly_2.jpg", "img/Low_High_Poly_3.jpg", "img/Low_High_Poly_4.jpg", "img/Low_High_Poly_5.jpg", "img/Low_High_Poly_6.jpg");
+function load() {
+    updateSlider();
+}
+function updateSlider() {
     var currentIndex = parseInt(slider.value);
     for (var i = 1; i < 7; i++) {
         if (currentIndex == i) {
-            imgContainer.style.backgroundImage = "url('img/Low-High-Poly " + (currentIndex).toString() + ".png')";
+            imgContainer.style.backgroundImage = "url('img/Low_High_Poly_" + (currentIndex).toString() + ".jpg')";
         }
     }
 }
