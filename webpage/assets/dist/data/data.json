@@ -977,10 +977,10 @@
         {
           "pageName": "( I ) Pixels per Inch",
           "id": "053",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Pixels-per-Inch/pixels-per-inch.html",
               "youtubeClip": false
             }
           ],
@@ -2470,10 +2470,10 @@
         {
           "pageName": "(I) Vertex Shader",
           "id": "106",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/10-Shader/Vertex_Shader/vertexshader.html",
               "youtubeClip": false
             }
           ],
@@ -2667,7 +2667,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/interactions/11-Modellierung/High- und Low-Poly-Modelle/highlowpoly.html",
+              "content": "./assets/dist/interactions/11-Modellierung/High-_und_Low-Poly-Modelle/highlowpoly.html",
               "youtubeClip": false
             }
           ],
@@ -2730,7 +2730,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "assets/dist/interactions/11-Modellierung/Subdivision Surface/subdivisionsurface.html",
+              "content": "./assets/dist/interactions/11-Modellierung/Subdivision_Surface/subdivisionsurface.html",
               "youtubeClip": false
             }
           ],
@@ -2835,7 +2835,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "gX9GP1jCJJ0",
+              "content": "18EPyvOwwFo",
               "youtubeClip": true
             }
           ],
@@ -2900,10 +2900,10 @@
         {
           "pageName": "( I ) Einleitung",
           "id": "121",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/12-Texturen/12.2_Textur-Einleitung/index.html",
               "youtubeClip": false
             }
           ],
@@ -2924,7 +2924,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "Pz26AJ7bsNI",
+              "content": "6KdeIgvrTw4",
               "youtubeClip": true
             }
           ],
@@ -2963,10 +2963,10 @@
         {
           "pageName": "( I ) UV-Mapping",
           "id": "124",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/12-Texturen/12.5_UV-Mapping",
               "youtubeClip": false
             }
           ],
@@ -2987,7 +2987,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "m1JPD4sM1kY",
+              "content": "BKyfpckhSGs",
               "youtubeClip": true
             }
           ],
@@ -3008,7 +3008,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "lkzSiNmkR0Q",
+              "content": "DB9wPxY8Mm8",
               "youtubeClip": true
             }
           ],
@@ -3029,7 +3029,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "5p8nhH2Vwf8",
+              "content": "luR9P8DJ3Xo",
               "youtubeClip": true
             }
           ],
@@ -3092,7 +3092,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "Vc6cVy6x-Aw",
+              "content": "KiZpfPX6fbo",
               "youtubeClip": true
             }
           ],
@@ -3113,7 +3113,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "mCTIrR0sdgM",
+              "content": "gMgp2yX76fk",
               "youtubeClip": true
             }
           ],
