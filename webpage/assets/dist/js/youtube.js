@@ -16,8 +16,6 @@ function onYouTubeIframeAPIReady() {
         width: '100%',
         playerVars: {
             'playsinline': 1,
-            'autoplay': 0,
-            'frameborder': 0,
             'rel': 0
         },
         //videoId: src,
@@ -37,10 +35,10 @@ function onPlayerReady(event) {
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
 
-/* 
+/*
 var done = false;
 function onPlayerStateChange(event) {
-if (event.data == YT.PlayerState.PLAYING && !done) {	
+if (event.data == YT.PlayerState.PLAYING && !done) {
       setTimeout(stopVideo, 6000);
       done = true;
 }
