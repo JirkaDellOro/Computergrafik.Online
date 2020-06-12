@@ -977,10 +977,10 @@
         {
           "pageName": "( I ) Pixels per Inch",
           "id": "053",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Pixels-per-Inch/pixels-per-inch.html",
               "youtubeClip": false
             }
           ],
