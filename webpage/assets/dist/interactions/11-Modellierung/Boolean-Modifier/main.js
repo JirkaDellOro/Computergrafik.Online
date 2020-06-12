@@ -2,6 +2,7 @@ var imgContainer;
 var btnIntersect;
 var btnUnion;
 var btnDifference;
+var images = [];
 window.addEventListener("load", main);
 function main() {
     btnIntersect = document.getElementById("intersect");
@@ -13,6 +14,14 @@ function main() {
     btnUnion.onclick = function () { changeState((btnUnion.id)); };
     btnDifference.onclick = function () { changeState((btnDifference.id)); };
 }
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+// @ts-ignore
+preload("img/difference.png", "img/intersect.png", "img/union.png");
 function load() {
     imgContainer.style.backgroundImage = "url('img/union.png')";
 }
