@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+/*#imgcontainer {*/
+/*    height: 80%;*/
+/*    overflow: hidden;*/
+/*    width: 100%;*/
+/*    position:absolute;*/
+/*    text-align: center;*/
+/*}*/
+
 #imgcontainer {
     min-height: 100vh;
     background-position: center;
@@ -68,7 +76,6 @@
     #instructions {
         position: relative;
         color: #000000;
-        text-align: left;
         padding: 24px 48px;
     }
 }
