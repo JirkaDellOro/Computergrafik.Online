@@ -4593,11 +4593,12 @@ header {
 }
 
 .desktop-wrapper .desktop-headline {
-  font-size: 40px;
+  font-size: 35px;
   color: #393939;
+  margin-bottom: 5px;
 }
 
-@media(min-width: 1255px) {
+@media(max-width: 1255px) {
   .desktop-wrapper .desktop-headline {
     font-size: 25px;
   }
@@ -4623,7 +4624,7 @@ main {
     left: 280px;
     width: calc(100% - 182px);
     z-index: -1;
-    height: calc(100% - 80px)
+    height: calc(100% - 25px)
   }
 }
 
@@ -4857,7 +4858,9 @@ main {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+.fa {
+  font-size: 50px;
+}
 .container-next-prev {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4870,7 +4873,7 @@ main {
 
 @media (min-width: 760px) {
   .container-next-prev {
-    width: calc(100% - 280px);
+    width: 60%;
   }
 }
 
