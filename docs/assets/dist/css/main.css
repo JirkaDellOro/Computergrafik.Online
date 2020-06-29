@@ -4624,7 +4624,6 @@ main {
     left: 280px;
     width: calc(100% - 182px);
     z-index: -1;
-    height: calc(100% - 25px)
   }
 }
 
