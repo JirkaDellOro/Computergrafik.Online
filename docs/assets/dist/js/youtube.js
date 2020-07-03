@@ -35,10 +35,10 @@ function onPlayerReady(event) {
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
 
-/* 
+/*
 var done = false;
 function onPlayerStateChange(event) {
-if (event.data == YT.PlayerState.PLAYING && !done) {	
+if (event.data == YT.PlayerState.PLAYING && !done) {
       setTimeout(stopVideo, 6000);
       done = true;
 }
@@ -60,7 +60,7 @@ function startInterval(information) {
                 // $('.information-string').removeClass('active-information');
                 setHighlight();
                 $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-                
+
                 // $('.infroamtion-string').addClass('active-infos');
                 i = i+ 1;
             }
@@ -69,7 +69,7 @@ function startInterval(information) {
                 $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
                 i = i + 1;
             }
-            
+
         };
     }, 100)
 }
