@@ -8,61 +8,46 @@ html, body {
 }
 
 #renderCanvas {
+    position: absolute;
     width   : 100%;
     height  : 100%;
     touch-action: none;
+    
 }
 *
 {
     padding: 0;
     margin: 0;
 }
-
-@media(max-width:376px) {
-      
-    #imgcontainer { 
-      float: left;
-      width:  30%;
-      margin-bottom: 3%;
-      margin-left: 3%;}
-    
-    #check-container {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        bottom: 0%;
-        padding: 12px 25%;
-        color: #ffffff;
-        font-size: 15px;
-    }   
+#Textüberschrift{
+    position: relative;
+    margin-left: 20%;
 }
-    img {
-        height: 180px;
-        width: 230px;
-    }
-    #check-container {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        height: 20%;
-        width: 75%;
-        left: 0;
-        right: 0;
-        bottom: 15%;
-        padding: 12px 5%;
-        color: whitesmoke;
-        font-size: 15px;
+#zeichenpad{
+    position: relative;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 80%;
+}
+#canvas1{
+    position: relative;
+    
+    background-color: rgb(255, 255, 255);
+}
+#clear{
+    border: 2ex;
+    color: aliceblue;
+    background-color: rgb(155, 150, 150);
+    margin-left: 2%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.überschrift{
+    position: relative;
+    margin-left: 8em;
+    color: white;
+}
 
-    }
-    #imgcontainer { 
-        float: left;
-        width:  30%;
-        margin-bottom: 10%;
-        margin-left: 3%;
-        
-     }  
      
     
     
