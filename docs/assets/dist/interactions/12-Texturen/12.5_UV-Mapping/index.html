@@ -8,40 +8,23 @@
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
     <script src="game.js"></script>
     <!-- <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    <div id="check-container">
-
-        <div id="imgcontainer">
-            <input class="" type="radio" name="radios" id="StoneTexture" value="option1" checked>
-            <label class="" for="StoneTexture">
-                Pokeball Texture
-            </label>
-            <img src="pic/pokeball.png" >
-        </div>
-        <div id="imgcontainer">
-            <input class="" type="radio" name="radios" id="ColorTexture" value="option2">
-            <label class="" for="ColorTexture">
-                Colorful Textur
-            </label>
-            <img src="pic/colorful.jpg" >
-        </div>
-        <div id="imgcontainer">
-            <input class="" type="radio" name="radios" id="EarthTexture" value="option3">
-            <label class="" for="EarthTexture">
-                Earth Textur
-            </label>
-            <img src="pic/earth.jpg" >
-        </div>
-
-
-
-
-    </div>
     <canvas id="renderCanvas"></canvas>
+        <div id="Textüberschrift">
+            <p class="überschrift">Schau dir die neue Textur an, indem du mit der Kamera um die Sphere lenkst</p>
+        </div>
+    <div id="zeichenpad">
+        <p class="überschrift">Hier Zeichen</p>
+        <canvas id="canvas1" width="380" height="220">
+        </canvas>
+        <button id="clear">Clear</button>
+    </div>
 </body>
 
 </html>
