@@ -4872,7 +4872,8 @@ main {
 
 @media (min-width: 760px) {
   .container-next-prev {
-    width: 60%;
+  margin-left: 135px;
+    width: 100%;
   }
 }
 
@@ -4882,8 +4883,7 @@ main {
 }
 
 .information-string {
-  display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }

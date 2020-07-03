@@ -42,16 +42,16 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "4",
+                  "informationText": "- Basis 10\n"
                 },
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "19",
+                  "informationText": "- Ziffern von 0 bis 9, danach\nzusammengesetzt\n"
                 },
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "45",
+                  "informationText": "- weltweit verbreitetste\nZahlensystem"
                 }
               ]
             }
@@ -69,6 +69,20 @@
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": 8,
+                  "informationText": "- Basis 2\n"
+                },
+                {
+                  "timeDuration": "11",
+                  "informationText": "- Ziffern: 0 und 1\n"
+                },
+                {
+                  "timeDuration": "19",
+                  "informationText": "- Mit jeder weiteren Stelle\nverdoppelt sich der\nZahlenwert"
+                }
+              ]
             }
           ]
         },
@@ -84,6 +98,24 @@
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": "6",
+                  "informationText": "- Basis 16"
+                },
+                {
+                  "timeDuration": "15",
+                  "informationText": "- Ziffern: 0 bis 15\n"
+                },
+                {
+                  "timeDuration": "18",
+                  "informationText": "- Wichtigste Zahlensystem\nder Digitaltechnik"
+                },
+                {
+                  "timeDuration": "20",
+                  "informationText": "- Einfache Realisierung"
+                }
+              ]
             }
           ]
         },
@@ -99,6 +131,12 @@
           ],
           "pageTime": [
             {
+              "time": [
+              {
+                "timeDuration": "0",
+                "informationText": "Über die Regler können die\nZahlenwerte verändert\nwerden. "
+              }
+                ]
             }
           ]
         },
@@ -114,6 +152,20 @@
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": "0",
+                  "informationText": "- Maßeinheiten für\nDatenmengen"
+                },
+                {
+                  "timeDuration": "0",
+                  "informationText": "- Ein Bit entspricht 1 oder 0"
+                },
+                {
+                  "timeDuration": "0",
+                  "informationText": "- Ein Byte besteht aus 8 Bits"
+                }
+              ]
             }
           ]
         },
@@ -123,7 +175,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "kgwlDW36PkE",
+              "content": "1QrH3DnwOwQ",
               "youtubeClip": true
             }
           ],
@@ -497,15 +549,15 @@
             {
               "time": [
                 {
-                  "timeDuration": "8",
+                  "timeDuration": "30",
                   "informationText": "Praxis: hinzufügen der Keyfarbe Schwarz"
                 },
                 {
-                  "timeDuration": "",
+                  "timeDuration": "45",
                   "informationText": "kontrastreiche Bilder"
                 },
                 {
-                  "timeDuration": "",
+                  "timeDuration": "48",
                   "informationText": "sparen von Druckfarbe"
                 }
               ]
@@ -526,12 +578,32 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "7",
+                  "informationText": "- alle für den Menschen\nwahrnehmbaren Farben\n"
                 },
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "16",
+                  "informationText": "- Geräteunabhängigkeit\n"
+                },
+                {
+                  "timeDuration": "22",
+                  "informationText": "- Luminanz (Helligkeit)"
+                },
+                {
+                  "timeDuration": "24",
+                  "informationText": "- Farbkomponente a"
+                },
+                {
+                  "timeDuration": "26",
+                  "informationText": "- Farbkomponente b"
+                },
+                {
+                  "timeDuration": "30",
+                  "informationText": "- Luminanzwert 100 = Weiß"
+                },
+                {
+                  "timeDuration": "40",
+                  "informationText": "- Farbkomponenten können\neinen Wert zwischen -128\nund +127 annehmen\n"
                 }
               ]
             }
@@ -575,7 +647,7 @@
           "pageName": "Farbtiefe Graustufen",
           "id": "031",
           "finished": true,
-          "pageContent": [
+            "pageContent": [
             {
               "content": "VWojuxlqMhw",
               "youtubeClip": true
@@ -584,6 +656,10 @@
           "pageTime": [
             {
               "time": [
+                {
+                  "timeDuration": "7",
+                  "informationText": "Farb- & Helligkeitswerte werden in Pixeln\ngespeichert"
+                },
                 {
                   "timeDuration": "23",
                   "informationText": "N<sub>Farbwerte</sub> = 2<sup>Bits</sup>"
@@ -803,12 +879,36 @@
             {
               "time": [
                 {
-                  "timeDuration": "10",
-                  "informationText": "Bestimmt, wie Farbwerte von Pixeln bei der Überlagerung verrechnet werden sollen."
+                  "timeDuration": "29",
+                  "informationText": "- Abdunkeln\n"
                 },
                 {
-                  "timeDuration": "18",
-                  "informationText": "Für jeden Bildpunkt: Farbwert 1 und 2 wird berechnet und als neuer Farbwert dargestellt"
+                  "timeDuration": "31",
+                  "informationText": "- Weiches Licht"
+                },
+                {
+                  "timeDuration": "33",
+                  "informationText": "- Hartes Licht"
+                },
+                {
+                  "timeDuration": "35",
+                  "informationText": "- Strahlendes Licht"
+                },
+                {
+                  "timeDuration": "37",
+                  "informationText": "- Multiplizieren"
+                },
+                {
+                  "timeDuration": "39",
+                  "informationText": "- Negativ\nMultiplizieren"
+                },
+                {
+                  "timeDuration": "41",
+                  "informationText": "- Dunklere Farbe"
+                },
+                {
+                  "timeDuration": "43",
+                  "informationText": "- Hart Mischen\n"
                 }
               ]
             }
@@ -826,6 +926,16 @@
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": "30",
+                  "informationText": "- Abdunkeln: Das\nBild wird\ndunkler"
+                },
+                {
+                  "timeDuration": "31",
+                  "informationText": "- Weiches Licht:\nJe nach\naufzutragender\nFarbe werden\ndie Farben\naufgehellt oder\nverdunkelt\n"
+                }
+              ]
             }
           ]
         },
@@ -1398,8 +1508,12 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "6",
+                  "informationText": "- Verlustfrei\n"
+                },
+                {
+                  "timeDuration": "15",
+                  "informationText": "- Animationen"
                 }
               ]
             }
@@ -1533,7 +1647,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "jcTD_eBzKqo",
+              "content": "khz0kjiMJsM",
               "youtubeClip": true
             }
           ],
@@ -1662,7 +1776,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "BAaea9y7Yb4",
+              "content": "Wa8NRFvOGUE",
               "youtubeClip": true
             }
           ],
@@ -1998,10 +2112,10 @@
         {
           "pageName": "Kamera",
           "id": "0810",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "kWXz-UaCduM",
               "youtubeClip": true
             }
           ],
@@ -2040,10 +2154,10 @@
         {
           "pageName": "Perspektivische Projektion",
           "id": "0812",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "1d1V0Aximjg",
               "youtubeClip": true
             }
           ],
@@ -2061,10 +2175,10 @@
         {
           "pageName": "Parallelprojektion",
           "id": "0813",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "P-NFrej_DHg",
               "youtubeClip": true
             }
           ],
@@ -2620,27 +2734,6 @@
           ]
         },
         {
-          "pageName": "Polygonnetze",
-          "id": "112",
-          "finished": false,
-          "pageContent": [
-            {
-              "content": "",
-              "youtubeClip": true
-            }
-          ],
-          "pageTime": [
-            {
-              "time": [
-                {
-                  "timeDuration": "",
-                  "informationText": ""
-                }
-              ]
-            }
-          ]
-        },
-        {
           "pageName": "High- und Low-Poly-Modelle",
           "id": "113",
           "finished": true,
@@ -2966,7 +3059,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "./assets/dist/interactions/12-Texturen/12.5_UV-Mapping",
+              "content": "./assets/dist/interactions/12-Texturen/12.5_UV-Mapping/index.html",
               "youtubeClip": false
             }
           ],
@@ -3068,10 +3161,10 @@
         {
           "pageName": "( I ) Vergleich",
           "id": "129",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/12-Texturen/12.10_Vergleich/index.html",
               "youtubeClip": false
             }
           ],
@@ -3361,26 +3454,6 @@
                   "informationText": ""
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "sectionPage": "Glossar",
-      "page": [
-        {
-          "pageName": "Glossar",
-          "id": "14",
-          "finished": false,
-          "pageContent": [
-            {
-              "content": "",
-              "youtubeClip": true
-            }
-          ],
-          "pageTime": [
-            {
             }
           ]
         }
