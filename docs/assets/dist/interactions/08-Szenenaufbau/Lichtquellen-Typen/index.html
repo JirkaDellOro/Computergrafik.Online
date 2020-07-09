@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>UV-Mapping</title>
+    <!--- link to the last version of babylon --->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script src="interaction.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div>
+
+        <div id="slidercontainer1" style="text-align: center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" data-group="ambient-light-group" class="btn btn-secondary">Ambient-Light</button>
+                <button type="button" data-group="point-light-group" class="btn btn-secondary">Point-Light</button>
+                <button type="button" data-group="directional-light-group" class="btn btn-secondary">Directional-Light</button>
+                    <button type="button" data-group="spot-light-group" class="btn btn-secondary">Spot-Light</button>
+            </div>
+            <div class="input-wrapper">
+                <div id="ambient-light-group" class="light-group">
+                    <input id="ambient-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="x-axis-ambient-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="y-axis-ambient-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="z-axis-ambient-light" class="custom-range" type="range" value="1" min="1" max="100">
+                </div>
+                <div id="point-light-group" class="light-group">
+                    <input id="point-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="x-axis-point-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="y-axis-point-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="z-axis-point-light" class="custom-range" type="range" value="1" min="1" max="100">
+                </div>
+                <div id="directional-light-group" class="light-group">
+                    <input id="directional-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="x-axis-directional-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="y-axis-directional-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="z-axis-directional-light" class="custom-range" type="range" value="1" min="1" max="100">
+                </div>
+                <div id="spot-light-group" class="light-group">
+                    <input id="spot-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="x-axis-spot-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="y-axis-spot-light" class="custom-range" type="range" value="1" min="1" max="100">
+                    <input id="z-axis-spot-light" class="custom-range" type="range" value="1" min="1" max="100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
