@@ -154,16 +154,24 @@
             {
               "time": [
                 {
-                  "timeDuration": "0",
-                  "informationText": "- Maßeinheiten für\nDatenmengen"
-                },
-                {
-                  "timeDuration": "0",
+                  "timeDuration": "8",
                   "informationText": "- Ein Bit entspricht 1 oder 0"
                 },
                 {
-                  "timeDuration": "0",
+                  "timeDuration": "16",
+                  "informationText": "- Maßeinheiten für\nDatenmengen"
+                },
+                {
+                  "timeDuration": "29",
                   "informationText": "- Ein Byte besteht aus 8 Bits"
+                },
+                {
+                  "timeDuration": "44",
+                  "informationText": "- Bit/s : Datentransferrate"
+                },
+                {
+                  "timeDuration": "57",
+                  "informationText": "- Byte : Größe des Speicherplatzes"
                 }
               ]
             }
@@ -975,7 +983,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "VHa2G8-xFFI",
+              "content": "KiZpfPX6fbo",
               "youtubeClip": true
             }
           ],
@@ -1986,10 +1994,10 @@
         {
           "pageName": "( I ) Transformationen",
           "id": "084",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/08-Szenenaufbau/Tranformationen/index.html",
               "youtubeClip": false
             }
           ],
@@ -2091,10 +2099,10 @@
         {
           "pageName": "( I ) Lichtquellen-Typen",
           "id": "089",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/08-Szenenaufbau/Lichtquellen-Typen/index.html",
               "youtubeClip": false
             }
           ],
@@ -2726,8 +2734,16 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "11",
+                  "informationText": "- Sphäre"
+                },
+                {
+                  "timeDuration": "12",
+                  "informationText": "- Kubus"
+                },
+                {
+                  "timeDuration": "13",
+                  "informationText": "- Zylinder"
                 }
               ]
             }
@@ -2747,8 +2763,28 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "18",
+                  "informationText": "Low-Poly-Modell: wenig Polygone"
+                },
+                {
+                  "timeDuration": "23",
+                  "informationText": "High-Poly-Modell: viele Polygone"
+                },
+                {
+                  "timeDuration": "30",
+                  "informationText": "Anwendungsbeispiele:"
+                },
+                {
+                  "timeDuration": "31",
+                  "informationText": "Low-Poly-Modell: - Augmented Reality /\nVirtual Reality"
+                },
+                {
+                  "timeDuration": "47",
+                  "informationText": "High-Poly-Modell: - Fotorealistische \n3DRenderings"
+                },
+                {
+                  "timeDuration": "48",
+                  "informationText": "- 3D Animationen mit zoom-in Effekt"
                 }
               ]
             }
@@ -2844,7 +2880,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "L78rWn627o",
+              "content": "-L78rWn627o",
               "youtubeClip": true
             }
           ],
@@ -3185,7 +3221,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "O79uJmfLI70",
+              "content": "KiZpfPX6fbo",
               "youtubeClip": true
             }
           ],
@@ -3397,10 +3433,10 @@
         {
           "pageName": "( I ) Bones",
           "id": "138",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/13-Animation/13.4 Bone_Animation/BoneAnimation/main.html",
               "youtubeClip": false
             }
           ],
@@ -3439,10 +3475,10 @@
         {
           "pageName": "( I ) Partikelsysteme",
           "id": "1310",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/13-Animation/13.5 Partikelsysteme/index.html",
               "youtubeClip": false
             }
           ],

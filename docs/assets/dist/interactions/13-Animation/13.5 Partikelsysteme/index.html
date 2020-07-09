@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>UV-Mapping</title>
+    <!--- link to the last version of babylon --->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="interaction.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<canvas id="renderCanvas"></canvas>
+<div>
+    <div id="slidercontainer1">
+        <label>particles life time</label>
+        <input id="particles-lifetime" class="custom-range" type="range" value="1" min="1" max="100">
+        <label>particles emit rate</label>
+        <input id="particles-emit-rate" class="custom-range" type="range" value="1" min="1" max="100">
+        <label>particles minimum size</label>
+        <input id="min-size" class="custom-range" type="range" value="0.1" min="1" max="100">
+        <label>particles maximum size</label>
+        <input id="max-size" class="custom-range" type="range" value="0.2" min="1" max="100">
+    </div>
+</div>
+</body>
+</html>
