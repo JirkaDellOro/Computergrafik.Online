@@ -25,6 +25,7 @@ namespace UvMapping {
 
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.setPosition(new BABYLON.Vector3(0, 0, 6));
+            this._camera.wheelPrecision = 100;
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
 

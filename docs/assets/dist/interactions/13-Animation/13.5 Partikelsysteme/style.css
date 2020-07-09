@@ -1,0 +1,69 @@
+label {
+    line-height: 1;
+    margin: 0;
+}
+html, body {
+    overflow: hidden;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+
+#renderCanvas {
+    position: absolute;
+    width   : 100%;
+    height  : 100%;
+    touch-action: none;
+
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+#Textüberschrift{
+    position: relative;
+    margin-left: 20%;
+}
+
+#canvas1{
+    position: relative;
+
+    background-color: rgb(255, 255, 255);
+}
+#slidercontainer1 {
+    padding: 12px;
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.überschrift{
+    position: relative;
+    margin-left: 8em;
+    color: white;
+}
+.input-wrapper{
+    margin-top: 15px;
+}
+.btn-secondary:active{
+    background-color:  #00A8FF;
+}
+
+
+
+
+
+
+
+
+
+

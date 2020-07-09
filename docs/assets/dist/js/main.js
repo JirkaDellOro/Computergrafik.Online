@@ -331,6 +331,7 @@
                 if (chapterIndex.pageContent[0].youtubeClip === true) {
                     // $('.content-container').css('padding-bottom', '56.25%');
                     player.loadVideoById(chapterIndex.pageContent[0].content);
+                    player.setVolume(50);
                     $('.youtube-player').css('display', 'block');
                     $('.content-container').css('display', 'block');
                     $('.youtube-player').css('width', '100%');
@@ -345,16 +346,20 @@
                     $('.iframe-interaction').html("<iframe class='interaction' src='" + chapterIndex.pageContent[0].content + "'></iframe>")
                     $('.iframe-interaction').css('height', '100%');
                     $('.interaction').css('height', '100%');
+                    //player.setVolume(0);
+                    player.pauseVideo();
                     getRotation = true;
                     checkArrows(chapterIndex, liCount, liLength);
                     readDeviceOrientation();
                 }
             } else {
+                player.pauseVideo();
                 $('.youtube-player').css('display', 'none');
                 $('.iframe-interaction').css('display', 'none');
                 $('.content-container').css('display', 'block');
                 $('.construction-text').css('display', 'block');
                 $('.information-string').remove();
+                //player.setVolume(0);
             }
             return index = chapterIndex.id;
         }

@@ -1994,10 +1994,10 @@
         {
           "pageName": "( I ) Transformationen",
           "id": "084",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/08-Szenenaufbau/Tranformationen/index.html",
               "youtubeClip": false
             }
           ],
@@ -3433,10 +3433,10 @@
         {
           "pageName": "( I ) Bones",
           "id": "138",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/13-Animation/13.4 Bone_Animation/BoneAnimation/main.html",
               "youtubeClip": false
             }
           ],

@@ -1,16 +1,16 @@
 ///<reference path="babylon.d.ts" />
+
 namespace UvMapping {
     // let canvas: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById("canvas1");
-    import SceneLoader = BABYLON.SceneLoader;
 
-    export class Interaction {
+    class Interaction {
         _scene: BABYLON.Scene;
-        private _box: any;
-        private _boxMaterial: any;
         private _canvas: HTMLCanvasElement;
         private _engine: BABYLON.Engine;
         private _camera: BABYLON.ArcRotateCamera;
 
+        private _lightBulb: BABYLON.Mesh;
+        private _plane: BABYLON.Mesh;
         private _ambientLight: BABYLON.HemisphericLight;
         private _pointLight: BABYLON.PointLight;
         private _directionalLight: BABYLON.DirectionalLight;
@@ -28,17 +28,29 @@ namespace UvMapping {
             this._scene = new BABYLON.Scene(this._engine);
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
+            this._camera.wheelPrecision = 100;
             this._camera.setPosition(new BABYLON.Vector3(10, 10, 0));
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
-            this._roboter = SceneLoader.ImportMesh("body", "", "v_0_0_3_Roboter_szene.babylon");
+            //this._roboter = BABYLON.MeshBuilder.CreateBox("box", {}, this._scene);
+            this._roboter = BABYLON.SceneLoader.ImportMesh("body", "", "v_0_0_3_Roboter_szene(1).babylon");
+            //BABYLON.SceneLoader.ImportMesh("birne", "", "KORTE.babylon", this._scene);
+            this._plane = BABYLON.MeshBuilder.CreateGround('ground1',
+                {width: 6, height: 6, subdivisions: 2}, this._scene);
+
 
             // Create the 4 types of light
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
             this._pointLight = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(-0, 5, 0), this._scene);
-            this._directionalLight = new BABYLON.DirectionalLight("directionalLight", new BABYLON.Vector3(0, 10, 0), this._scene);
+            this._pointLight.diffuse = new BABYLON.Color3(1, 1, 1);
+            this._pointLight.specular = new BABYLON.Color3(1, 1, 1);
+            this._pointLight.direction = new BABYLON.Vector3(0,-1,0)
+            this._pointLight.position = new BABYLON.Vector3(0, 5, 0);
+            this._directionalLight = new BABYLON.DirectionalLight("directionalLight", new BABYLON.Vector3(0,0,0), this._scene);
+            this._directionalLight.position = new BABYLON.Vector3(10,10,0);
             this._spotLight = new BABYLON.SpotLight("spotLight", new BABYLON.Vector3(0, 10, 0),
                 new BABYLON.Vector3(0, -1, 0), Math.PI , 2, this._scene);
+            this._spotLight.position = new BABYLON.Vector3(0,10,0);
             // Create a built-in "box" shape with the default parameters.
             this._ambientLight.intensity = 0;
             this._pointLight.intensity = 0;
@@ -76,14 +88,14 @@ namespace UvMapping {
         setPosZPointLight(_posZ:number){
             this._pointLight.position.z = _posZ;
         }
-        setPosXDirectionalLight(_posX:number){
-            this._directionalLight.position.x = _posX;
+        setDirXDirectionalLight(_posX:number){
+            this._directionalLight.direction.x = _posX;
         }
-        setPosYDirectionalLight(_posY:number){
-            this._directionalLight.position.z = _posY;
+        setDirYDirectionalLight(_posY:number){
+            this._directionalLight.direction.z = _posY;
         }
-        setPosZDirectionalLight(_posZ:number){
-            this._directionalLight.position.z = _posZ;
+        setDirZDirectionalLight(_posZ:number){
+            this._directionalLight.direction.z = _posZ;
         }
         setPosXSpotLight(_posX:number){
             this._spotLight.position.x = _posX;
@@ -93,6 +105,9 @@ namespace UvMapping {
         }
         setPosZSpotLight(_posZ:number){
             this._spotLight.position.z = _posZ;
+        }
+        setPosLightBulb(_posX:number, _posY:number, _posZ:number) {
+            this._scene.getMeshByName("Birne").position = new BABYLON.Vector3(_posX, _posY, _posZ);
         }
     }
     let inputAmbientLight: HTMLInputElement;
@@ -191,25 +206,25 @@ namespace UvMapping {
     function adaptPointLight() {
         let pointLight : number;
         pointLight = document.getElementById('point-light').value;
-        scene._scene.getLightByName("pointLight").intensity = pointLight/100;
+        scene._scene.getLightByName("pointLight").intensity = pointLight/50;
     }
 
     function adaptAmbientLight(){
         let ambientInput : number;
         ambientInput = document.getElementById('ambient-light').value;
-        scene._scene.getLightByName("ambientLight").intensity = ambientInput/100;
+        scene._scene.getLightByName("ambientLight").intensity = ambientInput/50;
     }
 
     function adaptDirectionalLight() {
         let directionalInput : number;
         directionalInput = document.getElementById('directional-light').value;
-        scene._scene.getLightByName("directionalLight").intensity = directionalInput/100;
+        scene._scene.getLightByName("directionalLight").intensity = directionalInput/50;
     }
 
     function adaptSpotLight() {
         let directionalInput : number;
         directionalInput = document.getElementById('spot-light').value;
-        scene._scene.getLightByName("spotLight").intensity = directionalInput/100;
+        scene._scene.getLightByName("spotLight").intensity = directionalInput/50;
     }
 
     function adaptAmbientLightDirection() {
@@ -219,9 +234,10 @@ namespace UvMapping {
         xAxis = document.getElementById('x-axis-ambient-light').value;
         yAxis = document.getElementById('y-axis-ambient-light').value;
         zAxis = document.getElementById('z-axis-ambient-light').value;
-        scene.setPosXAmbientLight(xAxis/100);
-        scene.setPosYAmbientLight(yAxis/100);
-        scene.setPosZAmbientLight(zAxis/100)
+        scene.setPosXAmbientLight(xAxis/10);
+        scene.setPosYAmbientLight(yAxis/10);
+        scene.setPosZAmbientLight(zAxis/10)
+        //scene.setPosLightBulb(xAxis/10, yAxis/40, zAxis/40);
     }
 
     function adaptPointLightPosition() {
@@ -231,9 +247,10 @@ namespace UvMapping {
         xAxis = document.getElementById('x-axis-point-light').value;
         yAxis = document.getElementById('y-axis-point-light').value;
         zAxis = document.getElementById('z-axis-point-light').value;
-        scene.setPosXPointLight(xAxis/100);
-        scene.setPosYPointLight(yAxis/100);
-        scene.setPosZPointLight(zAxis/100)
+        scene.setPosXPointLight(xAxis/10);
+        scene.setPosYPointLight(yAxis/10);
+        scene.setPosZPointLight(zAxis/10)
+        //scene.setPosLightBulb(xAxis/40, yAxis/40, zAxis/40);
     }
 
     function adaptDirectionalLightDirection() {
@@ -243,9 +260,9 @@ namespace UvMapping {
         xAxis = document.getElementById('x-axis-directional-light').value;
         yAxis = document.getElementById('y-axis-directional-light').value;
         zAxis = document.getElementById('z-axis-directional-light').value;
-        scene.setPosXDirectionalLight(xAxis/100);
-        scene.setPosYDirectionalLight(yAxis/100);
-        scene.setPosZDirectionalLight(zAxis/100)
+        scene.setDirXDirectionalLight(xAxis/10);
+        scene.setDirYDirectionalLight(yAxis/10);
+        scene.setDirZDirectionalLight(zAxis/10)
     }
 
     function adaptSpotLightPosition() {
@@ -255,9 +272,9 @@ namespace UvMapping {
         xAxis = document.getElementById('x-axis-spot-light').value;
         yAxis = document.getElementById('y-axis-spot-light').value;
         zAxis = document.getElementById('z-axis-spot-light').value;
-        scene.setPosXSpotLight(xAxis/50);
-        scene.setPosYSpotLight(yAxis/50);
-        scene.setPosZSpotLight(zAxis/50);
+        scene.setPosXSpotLight(xAxis/10);
+        scene.setPosYSpotLight(yAxis/10);
+        scene.setPosZSpotLight(zAxis/10);
     }
 
     function displayInputFields(){
