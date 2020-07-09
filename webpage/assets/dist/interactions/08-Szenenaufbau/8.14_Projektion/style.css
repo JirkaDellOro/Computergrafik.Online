@@ -1,0 +1,55 @@
+
+html, body {
+    overflow: hidden;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+
+#container{
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 100%;
+    
+}
+#renderCanvas {
+    
+    width   : 49.5%;
+    height  : 100%;
+    touch-action: none;
+    float: left;
+    
+}
+#renderCanvasPara {
+    
+    width   : 49.5%;
+    height  : 100%;
+    touch-action: none;
+    float: right;
+    
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.überschrift{
+    position: relative;
+    margin-left: 8em;
+    color: white;
+}
+
+     
+    
+    
+    
+   
+
+    
+        
+
