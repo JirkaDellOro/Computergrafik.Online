@@ -1,4 +1,8 @@
 
+label {
+    line-height: 1;
+    margin: 0;
+}
 html, body {
     overflow: hidden;
     width   : 100%;
@@ -30,9 +34,9 @@ html, body {
     background-color: rgb(255, 255, 255);
 }
 #slidercontainer1 {
-    padding: 15px;
+    padding: 12px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -50,6 +54,9 @@ html, body {
 }
 .input-wrapper{
     margin-top: 15px;
+}
+.btn-secondary:active{
+    background-color:  #00A8FF;
 }
 
 

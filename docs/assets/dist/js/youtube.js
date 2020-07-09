@@ -26,9 +26,10 @@ function onYouTubeIframeAPIReady() {
     });
 }
 // 4. The API will call this function when the video player is ready.
+//TODO: DOES ONLY WORK WHEN LOADING THE PAGE!
 function onPlayerReady(event) {
     // event.target.setVolume(0);
-    event.target.playVideo();
+    setTimeout(event.target.playVideo(), 2000)
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -55,7 +56,7 @@ function startInterval(information) {
     checkInt = setInterval(function () {
         if (player.getCurrentTime() != player.getDuration()) {
             var currentTime = Math.floor(player.getCurrentTime());
-            if(i < timeInformation.length && currentTime == timeInformation[i].timeDuration)
+            if(i <= timeInformation.length && currentTime == timeInformation[i].timeDuration)
             {
                 // $('.information-string').removeClass('active-information');
                 setHighlight();
@@ -64,7 +65,7 @@ function startInterval(information) {
                 // $('.infroamtion-string').addClass('active-infos');
                 i = i+ 1;
             }
-            if(i < timeInformation.length && timeInformation[i].timeDuration < currentTime )
+            if(i < timeInformation.length && timeInformation[i].timeDuration <= currentTime )
             {
                 $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
                 i = i + 1;

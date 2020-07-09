@@ -330,17 +330,16 @@
                 $('.youtube-player').css('display', 'none');
                 if (chapterIndex.pageContent[0].youtubeClip === true) {
                     // $('.content-container').css('padding-bottom', '56.25%');
-                    $('.content-container').css('display', 'block');
+                    player.loadVideoById(chapterIndex.pageContent[0].content);
                     $('.youtube-player').css('display', 'block');
+                    $('.content-container').css('display', 'block');
                     $('.youtube-player').css('width', '100%');
                     $('.youtube-player').css('height', '100%');
                     $('.information-string').remove();
-                    player.loadVideoById(chapterIndex.pageContent[0].content);
                     setInformation(chapterIndex.pageTime);
                     getRotation = false;
                     checkArrows(chapterIndex, liCount, liLength);
                 } else {
-                    stopVideo();
                     $('.iframe-interaction').css('display', 'block');
                     $('.information-string').remove();
                     $('.iframe-interaction').html("<iframe class='interaction' src='" + chapterIndex.pageContent[0].content + "'></iframe>")
@@ -356,7 +355,6 @@
                 $('.content-container').css('display', 'block');
                 $('.construction-text').css('display', 'block');
                 $('.information-string').remove();
-                stopVideo();
             }
             return index = chapterIndex.id;
         }
