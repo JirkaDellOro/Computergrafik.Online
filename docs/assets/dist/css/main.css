@@ -3953,6 +3953,10 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.fa{
+  transition: 0.2s;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -4590,7 +4594,7 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px 30px 10px 80px;
+  padding: 10px 10px 10px 48px;
   height: 80px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
@@ -4907,7 +4911,7 @@ main {
   justify-content: space-between;
   color: #00A8FF;
   font-size: 35px;
-  margin-left: 135px;
+  margin-left: 165px;
 }
 
 @media(max-width: 760px) {
@@ -4929,9 +4933,20 @@ main {
     width: 100%;
   }
 }
+.fa-chevron-left:hover {
+  transform:translateX(-5px);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.fa-chevron-right:hover {
+  transform:translateX(5px);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
 .next, .prev {
   opacity: 0;
   margin: 0 15px;
+  cursor: pointer;
 }
 
 .information-string {
