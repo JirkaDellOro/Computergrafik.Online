@@ -10,7 +10,9 @@ namespace Transformations {
         private _camera: BABYLON.ArcRotateCamera;
 
         private _ambientLight: BABYLON.HemisphericLight;
-        private _cube : BABYLON.Mesh;
+        private _cube: BABYLON.Mesh;
+        private _animationBox: BABYLON.Animation;
+        private _animationKeys: [{frame:number; value:number;}]
 
         constructor(canvasElement: string) {
             // Create canvas and engine.
@@ -24,12 +26,24 @@ namespace Transformations {
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.wheelPrecision = 100;
+            this._camera.setPosition(new BABYLON.Vector3(10, 10, 0));
             this._camera.attachControl(this._canvas, false);
-            this._camera.setPosition(new BABYLON.Vector3(10,  0, 0));
             this._camera.setTarget(BABYLON.Vector3.Zero());
 
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
             this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene)
+            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+                BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+
+            this._animationKeys = [{frame:0, value:1}];
+
+            this._animationKeys.push({
+                frame: 5,
+                value: 10
+            });
+
+            this._animationBox.setKeys(this._animationKeys);
+            this._cube.animations.push(this._animationBox);
         }
 
         doRender(): void {
@@ -47,6 +61,10 @@ namespace Transformations {
 
         setRotationX(_xValue: number) {
             this._cube.rotation.x = _xValue;
+        }
+
+        getRotationX() {
+            return this._cube.rotation;
         }
 
         setRotationY(_yValue: number) {
@@ -80,8 +98,15 @@ namespace Transformations {
         setPositionZ(_zValue: number) {
             this._cube.position.z = _zValue;
         }
-
-
+        startAnimation() {
+            this._scene.beginAnimation(this._cube, 0, 100, true);
+        }
+        setKeyFrame(_frame: number, _value: number) {
+            this._animationKeys.push({
+                frame: _frame,
+                value: _value
+            })
+        }
     }
 
     let transformationButtons: NodeListOf<HTMLButtonElement>;
@@ -97,8 +122,12 @@ namespace Transformations {
     let inputTranslationCubeXAxis: HTMLInputElement;
     let inputTranslationCubeYAxis: HTMLInputElement;
     let inputTranslationCubeZAxis: HTMLInputElement;
+    let buttonSetKeyframe: HTMLButtonElement;
 
     function main(): void {
+        buttonSetKeyframe = <HTMLButtonElement>document.getElementById("set-kf");
+        buttonSetKeyframe.addEventListener('onclick', setKeyFrame);
+
         // Adding event listener to rotation input
         inputRotateCubeXAxis = <HTMLInputElement>document.getElementById("x-axis-rotate");
         inputRotateCubeXAxis.addEventListener("input", rotateCube);
@@ -143,6 +172,7 @@ namespace Transformations {
         main();
         // Create the scene.
         scene.createScene();
+        scene.startAnimation();
         // Start render loop.
         scene.doRender();
     }
@@ -194,5 +224,10 @@ namespace Transformations {
         scene.setPositionX(xAxis/10);
         scene.setPositionY(yAxis/10);
         scene.setPositionZ(zAxis/10);
+    }
+
+    function setKeyFrame(){
+        let rotationX = scene.getRotationX();
+        scene.s
     }
 }
