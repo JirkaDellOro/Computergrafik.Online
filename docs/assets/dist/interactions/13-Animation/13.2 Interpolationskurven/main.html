@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <div id="container">
+        <div class="graph">
+            <figure>
+                <div style="height: 75%">
+                    <canvas id="curve" width="200" height="350"></canvas>
+                </div>
+                <figcaption id="axisTime">Time</figcaption>
+                <figcaption id="axisAnimation">Animation</figcaption>
+            </figure>
+        </div>
+
+        <div class="options">
+            <div class="tween-container">
+                <div id="box" class="" style="background-image: url(assets/square.jpg);"></div>
+            </div>
+
+            <div id="options">
+                <label><input type="radio" name="tweening" value="0.420, 0.000, 1.000, 1.000" checked>ease-in</label>
+                <label><input type="radio" name="tweening" value="0.000, 0.000, 0.580, 1.000">ease-out</label>
+                <label><input type="radio" name="tweening" value="0.420, 0.000, 0.580, 1.000">ease-in-out</label>
+                <label><input type="radio" name="tweening" value="0.500, 0.250, 0.500, 0.750">custom</label>
+            </div>
+
+            <label>
+                <input type="button" name="tween" value="Start" id="tween" class="testButton">
+            </label>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+
+    </div>
+</body>
+<script src='main.js'></script>
+
+</html>

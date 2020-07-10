@@ -2026,8 +2026,16 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "4",
+                  "informationText": "hierarchische Verknüpfung von Objekten"
+                },
+                {
+                  "timeDuration": "25",
+                  "informationText": "Elternobjekt beeinflusst Kinderobjekt & Kindes-Kinder"
+                },
+                {
+                  "timeDuration": "25",
+                  "informationText": "Elternobjekt beeinflusst Kinderobjekt & Kindes-Kinder"
                 }
               ]
             }
@@ -2036,10 +2044,10 @@
         {
           "pageName": "( I ) Hierarchie",
           "id": "086",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/08-Szenenaufbau/8.7 Hierachie/main.html",
               "youtubeClip": false
             }
           ],
@@ -3326,7 +3334,7 @@
           ]
         },
         {
-          "pageName": "Interpolationsmethoden",
+          "pageName": "Interpolationskurven",
           "id": "133",
           "finished": true,
           "pageContent": [
@@ -3339,20 +3347,37 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "16",
+                  "informationText": "Zustandsänderungen zwischen Keyframes"
+                },
+                {
+                  "timeDuration": "30",
+                  "informationText": "Interpolationsmethoden:"
+                },
+                {
+                  "timeDuration": "31",
+                  "informationText": "- Ease-in:"
+                },
+                {
+                  "timeDuration": "32",
+                  "informationText": "- Ease-out:"
+                },
+                {
+                  "timeDuration": "33",
+                  "informationText": "- Ease-in-out:"
                 }
+
               ]
             }
           ]
         },
         {
-          "pageName": "( I ) Interpolationsmethoden",
+          "pageName": "( I ) Interpolationskurven",
           "id": "134",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/13-Animation/13.2 Interpolationskurven/main.html",
               "youtubeClip": false
             }
           ],
