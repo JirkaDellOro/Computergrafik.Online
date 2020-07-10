@@ -4899,6 +4899,7 @@ main {
   justify-content: space-between;
   color: #00A8FF;
   font-size: 35px;
+  margin-left: 135px;
 }
 
 @media(max-width: 760px) {
