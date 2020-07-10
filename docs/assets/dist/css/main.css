@@ -3930,6 +3930,15 @@ html {
 body {
   font-family: "Oswald", "sans-serif";
 }
+@media(max-width: 760px) {
+  body {
+    height: 100vh;
+    font-family: "Oswald", "sans-serif";
+  }
+  .headline-container {
+    display: none;
+  }
+}
 
 .modual {
   display: none;
@@ -4598,6 +4607,11 @@ header {
   margin-bottom: 5px;
 }
 
+.mobile-headline {
+  font-size: 15px;
+  color: black;
+}
+
 @media(max-width: 1255px) {
   .desktop-wrapper .desktop-headline {
     font-size: 25px;
@@ -4613,7 +4627,19 @@ header {
 }
 
 main {
+  display:flex;
+  flex-direction: column;
+  height: calc(100% - 33px);
   padding-top: 50px;
+}
+
+@media(max-width: 760px) {
+  main {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 50px;
+  }
 }
 
 @media (min-width: 760px) {
@@ -4696,7 +4722,6 @@ main {
                                        }
 
 .content-container {
-  position: relative;
   padding-bottom: 56.25%;
   height: 0;
   width: 100%;
@@ -4860,6 +4885,12 @@ main {
 .fa {
   font-size: 50px;
 }
+@media(max-width: 760px) {
+  .fa {
+    font-size: 30px;
+  }
+
+}
 .container-next-prev {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4870,13 +4901,24 @@ main {
   font-size: 35px;
 }
 
-@media (min-width: 760px) {
+@media(max-width: 760px) {
   .container-next-prev {
-  margin-left: 135px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+    color: #00A8FF;
+    font-size: 15px;
     width: 100%;
   }
 }
 
+@media (min-width: 760px) {
+  .container-next-prev {
+    width: 100%;
+  }
+}
 .next, .prev {
   opacity: 0;
   margin: 0 15px;

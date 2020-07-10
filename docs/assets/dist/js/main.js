@@ -322,6 +322,7 @@
 
         function getChapter(chapterIndex, liCount, liLength) {
             $('.desktop-headline').html(chapterIndex.pageName);
+            $('.mobile-headline').html(chapterIndex.pageName);
             if (chapterIndex.finished == true) {
                 $('.construction-text').css('display', 'none');
                 $('.iframe-interaction').css('display', 'none');
