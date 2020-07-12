@@ -24,7 +24,7 @@ namespace Transformations {
             this._scene = new BABYLON.Scene(this._engine);
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
-            this._camera.setPosition(new BABYLON.Vector3(10, 10, 0));
+            this._camera.setPosition(new BABYLON.Vector3(30, 0, 30));
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
             this._camera.wheelPrecision = 100;
@@ -60,6 +60,9 @@ namespace Transformations {
                 out.z = Math.random() * 5;
             }
             this._particleSystem.particleTexture = new BABYLON.Texture("/textures/flare.png", this._scene);
+            this._particleSystem.minSize = 0.05;
+            this._particleSystem.maxSize = 0.1;
+            this._particleSystem.emitRate = 1000;
             this._particleSystem.particleEmitterType = this._customEmitter;
             this._particleSystem.emitter = this._fountain;
 

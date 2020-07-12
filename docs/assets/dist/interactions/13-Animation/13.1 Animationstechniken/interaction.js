@@ -19,14 +19,8 @@ var Transformations;
             this._camera.setTarget(BABYLON.Vector3.Zero());
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
             this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene);
-            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
-            this._animationKeys = [{ frame: 0, value: 1 }];
-            this._animationKeys.push({
-                frame: 5,
-                value: 10
-            });
-            this._animationBox.setKeys(this._animationKeys);
-            this._cube.animations.push(this._animationBox);
+            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationKeys = [{ frame: 0, value: new BABYLON.Vector3(1, 1, 1) }];
         };
         Interaction.prototype.doRender = function () {
             var _this = this;
@@ -43,7 +37,7 @@ var Transformations;
         Interaction.prototype.setRotationX = function (_xValue) {
             this._cube.rotation.x = _xValue;
         };
-        Interaction.prototype.getRotationX = function () {
+        Interaction.prototype.getRotation = function () {
             return this._cube.rotation;
         };
         Interaction.prototype.setRotationY = function (_yValue) {
@@ -51,6 +45,9 @@ var Transformations;
         };
         Interaction.prototype.setRotationZ = function (_zValue) {
             this._cube.rotation.z = _zValue;
+        };
+        Interaction.prototype.getScaling = function () {
+            return this._cube.scaling;
         };
         Interaction.prototype.setScalingX = function (_xValue) {
             this._cube.scaling.x = _xValue;
@@ -70,8 +67,13 @@ var Transformations;
         Interaction.prototype.setPositionZ = function (_zValue) {
             this._cube.position.z = _zValue;
         };
+        Interaction.prototype.getPosition = function () {
+            return this._cube.position;
+        };
         Interaction.prototype.startAnimation = function () {
-            this._scene.beginAnimation(this._cube, 0, 100, true);
+            this._animationBox.setKeys(this._animationKeys);
+            this._cube.animations.push(this._animationBox);
+            this._scene.beginAnimation(this._cube, 0, 100, false);
         };
         Interaction.prototype.setKeyFrame = function (_frame, _value) {
             this._animationKeys.push({
@@ -92,9 +94,8 @@ var Transformations;
     var inputTranslationCubeYAxis;
     var inputTranslationCubeZAxis;
     var buttonSetKeyframe;
+    var buttonStartAnimation;
     function main() {
-        buttonSetKeyframe = document.getElementById("set-kf");
-        buttonSetKeyframe.addEventListener('onclick', setKeyFrame);
         // Adding event listener to rotation input
         inputRotateCubeXAxis = document.getElementById("x-axis-rotate");
         inputRotateCubeXAxis.addEventListener("input", rotateCube);
@@ -116,9 +117,13 @@ var Transformations;
         inputTranslationCubeYAxis.addEventListener("input", translatCube);
         inputTranslationCubeZAxis = document.getElementById("z-axis-translation");
         inputTranslationCubeZAxis.addEventListener("input", translatCube);
+        buttonSetKeyframe = document.getElementById("set-kf");
+        buttonSetKeyframe.addEventListener('click', setKeyFrameScaling);
+        buttonStartAnimation = document.getElementById("start-animation");
+        buttonStartAnimation.addEventListener('click', startAnimation);
         disableGroups();
         transformationButtons = document.querySelectorAll(".btn");
-        for (var i = 0; i < transformationButtons.length; i++) {
+        for (var i = 0; i < transformationButtons.length - 2; i++) {
             transformationButtons[i].addEventListener('click', displayInputFields);
         }
     }
@@ -129,7 +134,6 @@ var Transformations;
         main();
         // Create the scene.
         scene.createScene();
-        scene.startAnimation();
         // Start render loop.
         scene.doRender();
     }
@@ -177,8 +181,12 @@ var Transformations;
         scene.setPositionY(yAxis / 10);
         scene.setPositionZ(zAxis / 10);
     }
-    function setKeyFrame() {
-        var rotationX = scene.getRotationX();
-        scene.s;
+    function setKeyFrameScaling() {
+        var keyframe;
+        keyframe = document.getElementById('keyframe').value;
+        scene.setKeyFrame(keyframe, scene.getScaling());
+    }
+    function startAnimation() {
+        scene.startAnimation();
     }
 })(Transformations || (Transformations = {}));

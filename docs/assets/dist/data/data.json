@@ -15,7 +15,7 @@
           ],
           "pageTime": [
             {
-              "time": [                                                           
+              "time": [
                 {
                   "timeDuration": "",
                   "informationText": ""
@@ -2044,10 +2044,10 @@
         {
           "pageName": "( I ) Hierarchie",
           "id": "086",
-          "finished": true,
+          "finished": false,
           "pageContent": [
             {
-              "content": "./assets/dist/interactions/08-Szenenaufbau/8.7 Hierachie/main.html",
+              "content": "",
               "youtubeClip": false
             }
           ],
@@ -3348,6 +3348,8 @@
           ],
           "pageTime": [
             {
+              "time": [
+              ]
             }
           ]
         },
@@ -3384,7 +3386,6 @@
                   "timeDuration": "33",
                   "informationText": "- Ease-in-out:"
                 }
-
               ]
             }
           ]

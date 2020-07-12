@@ -12,7 +12,7 @@ namespace Transformations {
         private _ambientLight: BABYLON.HemisphericLight;
         private _cube: BABYLON.Mesh;
         private _animationBox: BABYLON.Animation;
-        private _animationKeys: [{frame:number; value:number;}]
+        private _animationKeys: [{frame:number; value:BABYLON.Vector3;}]
 
         constructor(canvasElement: string) {
             // Create canvas and engine.
@@ -32,18 +32,11 @@ namespace Transformations {
 
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
             this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene)
-            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationKeys = [{frame:0, value: new BABYLON.Vector3(1,1,1)}];
 
-            this._animationKeys = [{frame:0, value:1}];
 
-            this._animationKeys.push({
-                frame: 5,
-                value: 10
-            });
-
-            this._animationBox.setKeys(this._animationKeys);
-            this._cube.animations.push(this._animationBox);
         }
 
         doRender(): void {
@@ -63,7 +56,7 @@ namespace Transformations {
             this._cube.rotation.x = _xValue;
         }
 
-        getRotationX() {
+        getRotation() {
             return this._cube.rotation;
         }
 
@@ -73,6 +66,10 @@ namespace Transformations {
 
         setRotationZ(_zValue: number) {
             this._cube.rotation.z = _zValue;
+        }
+
+        getScaling(){
+            return this._cube.scaling;
         }
 
         setScalingX(_xValue: number) {
@@ -98,10 +95,15 @@ namespace Transformations {
         setPositionZ(_zValue: number) {
             this._cube.position.z = _zValue;
         }
-        startAnimation() {
-            this._scene.beginAnimation(this._cube, 0, 100, true);
+        getPosition() {
+            return this._cube.position;
         }
-        setKeyFrame(_frame: number, _value: number) {
+        startAnimation() {
+            this._animationBox.setKeys(this._animationKeys);
+            this._cube.animations.push(this._animationBox);
+            this._scene.beginAnimation(this._cube, 0, 100, false);
+        }
+        setKeyFrame(_frame: number, _value:BABYLON.Vector3) {
             this._animationKeys.push({
                 frame: _frame,
                 value: _value
@@ -122,12 +124,12 @@ namespace Transformations {
     let inputTranslationCubeXAxis: HTMLInputElement;
     let inputTranslationCubeYAxis: HTMLInputElement;
     let inputTranslationCubeZAxis: HTMLInputElement;
+
     let buttonSetKeyframe: HTMLButtonElement;
+    let buttonStartAnimation: HTMLButtonElement;
+
 
     function main(): void {
-        buttonSetKeyframe = <HTMLButtonElement>document.getElementById("set-kf");
-        buttonSetKeyframe.addEventListener('onclick', setKeyFrame);
-
         // Adding event listener to rotation input
         inputRotateCubeXAxis = <HTMLInputElement>document.getElementById("x-axis-rotate");
         inputRotateCubeXAxis.addEventListener("input", rotateCube);
@@ -158,9 +160,15 @@ namespace Transformations {
         inputTranslationCubeZAxis = <HTMLInputElement>document.getElementById("z-axis-translation");
         inputTranslationCubeZAxis.addEventListener("input", translatCube);
 
+        buttonSetKeyframe = <HTMLButtonElement>document.getElementById("set-kf");
+        buttonSetKeyframe.addEventListener('click', setKeyFrameScaling);
+
+        buttonStartAnimation = <HTMLButtonElement>document.getElementById("start-animation");
+        buttonStartAnimation.addEventListener('click', startAnimation);
+
         disableGroups();
         transformationButtons = document.querySelectorAll(".btn");
-        for(let i = 0; i < transformationButtons.length; i++) {
+        for(let i = 0; i < transformationButtons.length-2; i++) {
             transformationButtons[i].addEventListener('click', displayInputFields)
         }
     }
@@ -172,7 +180,6 @@ namespace Transformations {
         main();
         // Create the scene.
         scene.createScene();
-        scene.startAnimation();
         // Start render loop.
         scene.doRender();
     }
@@ -226,8 +233,13 @@ namespace Transformations {
         scene.setPositionZ(zAxis/10);
     }
 
-    function setKeyFrame(){
-        let rotationX = scene.getRotationX();
-        scene.s
+    function setKeyFrameScaling(){
+        let keyframe : number;
+        keyframe = document.getElementById('keyframe').value;
+        scene.setKeyFrame(keyframe, scene.getScaling())
+    }
+
+    function startAnimation() {
+        scene.startAnimation();
     }
 }
