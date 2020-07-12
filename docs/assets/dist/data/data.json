@@ -2044,10 +2044,10 @@
         {
           "pageName": "( I ) Hierarchie",
           "id": "086",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/08-Szenenaufbau/8.7 Hierachie/main.html",
               "youtubeClip": false
             }
           ],
