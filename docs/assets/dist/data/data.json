@@ -1529,7 +1529,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "EDANPrgWUFg",
+              "content": "whh9JwKrj4Y",
               "youtubeClip": true
             }
           ],
@@ -1537,8 +1537,24 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "25",
+                  "informationText": "- Unterstützt 8, 24 und 32 Bit"
+                },
+                {
+                  "timeDuration": "29",
+                  "informationText": "- Transparenz möglich\n"
+                },
+                {
+                  "timeDuration": "39",
+                  "informationText": "- Ähnlich Farbwerte werden vereinheitlicht\n"
+                },
+                {
+                  "timeDuration": "65",
+                  "informationText": "- Wiederholende Sequenzen erzeugen nur Verweis\n"
+                },
+                {
+                  "timeDuration": "67",
+                  "informationText": "-> spart Speicherplatz\n"
                 }
               ]
             }
