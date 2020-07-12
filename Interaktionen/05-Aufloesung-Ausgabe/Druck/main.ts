@@ -73,12 +73,15 @@ function updateDotSlider(_r: HTMLInputElement) {
 function updateRadioButtons(_r: HTMLInputElement) {
     if (_r.id == "radio-original") {
         activeRadioValue = "OG";
+        rangeInputDots.disabled = true;
     }
     else if (_r.id == "radio-amplitude") {
         activeRadioValue = "AM";
+        rangeInputDots.disabled = false;
     }
     else if (_r.id == "radio-frequency") {
         activeRadioValue = "FM";
+        rangeInputDots.disabled = false;
     }
     updateImage();
 }

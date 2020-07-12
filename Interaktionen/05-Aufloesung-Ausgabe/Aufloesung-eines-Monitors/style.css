@@ -74,7 +74,7 @@
         position: relative;
     }
     #col_1 {
-        width: 50%;
+        width: 70%;
         height: 100%;
         position: absolute;
         right: 0;
@@ -85,7 +85,7 @@
     }
 
     #col_2 {
-        width: 50%;
+        width: 30%;
         height: 40vh;
         position: absolute;
         top: 5vh;

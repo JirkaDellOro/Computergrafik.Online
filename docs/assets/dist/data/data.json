@@ -15,7 +15,7 @@
           ],
           "pageTime": [
             {
-              "time": [
+              "time": [                                                           
                 {
                   "timeDuration": "",
                   "informationText": ""
@@ -3305,8 +3305,32 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "17",
+                  "informationText": "Tweening: Berechnung der Zwischenzustände"
+                },
+                {
+                  "timeDuration": "21",
+                  "informationText": "Keyframing"
+                },
+                {
+                  "timeDuration": "24",
+                  "informationText": "- Es können unterschiedliche Eigenschaften eines Objekts verändert werden:"
+                },
+                {
+                  "timeDuration": "26",
+                  "informationText": "• Rotation"
+                },
+                {
+                  "timeDuration": "27",
+                  "informationText": "• Position"
+                },
+                {
+                  "timeDuration": "28",
+                  "informationText": "• Skalierung"
+                },
+                {
+                  "timeDuration": "29",
+                  "informationText": "• Scherung"
                 }
               ]
             }
