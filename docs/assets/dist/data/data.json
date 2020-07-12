@@ -196,7 +196,7 @@
                 },
                 {
                   "timeDuration": "20",
-                  "informationText": "Damals: Verewendung der Dezimalprefixen"
+                  "informationText": "Damals: Verwendung der Dezimalprefixen"
                 },
                 {
                   "timeDuration": "34",
@@ -208,11 +208,7 @@
                 },
                 {
                   "timeDuration": "60",
-                  "informationText": "IEC: Einführung von Kibibyte, Mibibyte, Gibibyte"
-                },
-                {
-                  "timeDuration": "60",
-                  "informationText": "IEC: Einführung von Kibibyte, Mibibyte, Gibibyte"
+                  "informationText": "IEC: Einführung von Kibibyte, Mebibyte, Gibibyte"
                 }
               ]
             }
