@@ -1,0 +1,51 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  border: 1px solid;
+}
+
+ #container {
+  max-width: 1200px;
+  position: absolute;
+  left: 35%;
+  display: flex;
+  flex-direction: column;
+ }
+ 
+#options{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label{
+  padding: 10px;
+}
+
+.controls {
+  border-bottom: 1px solid #fff;
+}
+
+ 
+
+
+.options {
+   max-width: 560px;
+   align-self: center;
+}
+
+ 
+ label {
+   display: block;
+   margin-bottom: 10px;
+ }
+
+ label .text {
+   display: inline-block;
+   width: 60px;
+ }
+ 
+
+ 
+ 

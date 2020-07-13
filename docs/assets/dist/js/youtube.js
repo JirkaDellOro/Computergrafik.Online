@@ -29,7 +29,7 @@ function onYouTubeIframeAPIReady() {
 //TODO: DOES ONLY WORK WHEN LOADING THE PAGE!
 function onPlayerReady(event) {
     // event.target.setVolume(0);
-    setTimeout(event.target.playVideo(), 2000)
+    event.target.playVideo();
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -53,26 +53,28 @@ function stopVideo() {
 function startInterval(information) {
     var timeInformation = information[0].time;
     var i = 0;
-    checkInt = setInterval(function () {
-        if (player.getCurrentTime() != player.getDuration()) {
-            var currentTime = Math.floor(player.getCurrentTime());
-            if(i <= timeInformation.length && currentTime == timeInformation[i].timeDuration)
-            {
-                // $('.information-string').removeClass('active-information');
-                setHighlight();
-                $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
+    if(timeInformation != null || timeInformation != undefined) {
+        checkInt = setInterval(function () {
+            if (player.getCurrentTime() !== player.getDuration()) {
+                var currentTime = Math.floor(player.getCurrentTime());
+                if(i < timeInformation.length - 1 && currentTime === timeInformation[i].timeDuration)
+                {
+                    // $('.information-string').removeClass('active-information');
+                    setHighlight();
+                    $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
 
-                // $('.infroamtion-string').addClass('active-infos');
-                i = i+ 1;
-            }
-            if(i < timeInformation.length && timeInformation[i].timeDuration <= currentTime )
-            {
-                $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-                i = i + 1;
-            }
+                    // $('.infroamtion-string').addClass('active-infos');
+                    i = i+ 1;
+                }
+                if(i < timeInformation.length && timeInformation[i].timeDuration <= currentTime )
+                {
+                    $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
+                    i = i + 1;
+                }
 
-        };
-    }, 100)
+            };
+        }, 100)
+    }
 }
 
 function setHighlight(){
@@ -83,4 +85,19 @@ function setHighlight(){
         $('.information-container').removeClass('information-container-highlight');
         $('.information-wrapper').removeClass('information-wrapper-highlight');
     },2000);
+}
+
+function startInterval2(information){
+    var i = 0;
+    var timeInformation = information[0].time;
+    if(information != null || timeInformation != null || timeInformation !== undefined) {
+        checkTime = setInterval(function () {
+            var currentTime = Math.floor(player.getCurrentTime());
+                    if (timeInformation[i] != null && timeInformation[i].timeDuration == currentTime) {
+                            setHighlight()
+                            $('.information-text').append('<p class="information-string">' + timeInformation[currentTime].informationText + '</p>');
+                            i++;
+            }
+        }, 100);
+    }
 }

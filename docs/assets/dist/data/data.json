@@ -9,7 +9,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "0zp6nV7Bx6U",
+              "content": "9XIz9Ihwpyw",
               "youtubeClip": true
             }
           ],
@@ -17,12 +17,20 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "80",
+                  "informationText": "Zuse Z3:"
                 },
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "81",
+                  "informationText": "- Erster Digitalrechner der Welt"
+                },
+                {
+                  "timeDuration": "98",
+                  "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
+                },
+                {
+                  "timeDuration": "115",
+                  "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
                 }
               ]
             }
@@ -745,7 +753,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "sSL7RrmOJTI",
+              "content": "VHa2G8-xFFI",
               "youtubeClip": true
             }
           ],
@@ -875,7 +883,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "YXfdfbpKUXg",
+              "content": "kaKiWJ_20tM",
               "youtubeClip": true
             }
           ],
@@ -924,7 +932,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "eeO2AYnXWQY",
+              "content": "uoss_SAfOLk",
               "youtubeClip": true
             }
           ],
@@ -964,12 +972,30 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "j2St-52B3bs",
+              "content": "xBoS0xrhxJ0",
               "youtubeClip": true
             }
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": "11",
+                  "informationText": "Histogramm zeigt Häufigkeitsverteilung der Helligkeitsstufen an"
+                },
+                {
+                  "timeDuration": "24",
+                  "informationText": "- Linker Bereich: Tiefe "
+                },
+                {
+                  "timeDuration": "26",
+                  "informationText": "- Mittlerer Bereich: Mitteltöne"
+                },
+                {
+                  "timeDuration": "28",
+                  "informationText": "- Rechter Bereich: Lichter"
+                }
+              ]
             }
           ]
         },
@@ -979,12 +1005,46 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "KiZpfPX6fbo",
+              "content": "VHa2G8-xFFI",
               "youtubeClip": true
             }
           ],
           "pageTime": [
             {
+              "time": [
+                {
+                  "timeDuration": "2",
+                  "informationText": "- 16 Bit = High Color"
+                },
+                {
+                  "timeDuration": "10",
+                  "informationText": "- 65.536 Farben"
+                },
+                {
+                  "timeDuration": "14",
+                  "informationText": "- roter und blauer Farbkanal: 5 Bit"
+                },
+                {
+                  "timeDuration": "16",
+                  "informationText": "- grüner Farbkanal: 6 Bit"
+                },
+                {
+                  "timeDuration": "34",
+                  "informationText": "- 24 Bit = alle 8 Bit"
+                },
+                {
+                  "timeDuration": "43",
+                  "informationText": "- 16,7 mio Farben"
+                },
+                {
+                  "timeDuration": "46",
+                  "informationText": "- 24 Bit = True Color\n"
+                },
+                {
+                  "timeDuration": "63",
+                  "informationText": "- 30-48 Bit = Deep Color\n"
+                }
+              ]
             }
           ]
         }
@@ -1751,10 +1811,10 @@
         {
           "pageName": "( I ) Kurven und Splines",
           "id": "076",
-          "finished": false,
+          "finished": true,
           "pageContent": [
             {
-              "content": "",
+              "content": "./assets/dist/interactions/07-Vektorgrafik/kurvenUndSplines/main.html",
               "youtubeClip": false
             }
           ],
@@ -1762,8 +1822,8 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "0",
+                  "informationText": "Wähle den Grad der Kurve aus, verschiebe danach die Kontroll- und Endpunkte und steuere somit die Kurve. "
                 }
               ]
             }
@@ -1925,7 +1985,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "CEwGd2c09gc",
+              "content": "r4OaX2jXyv8",
               "youtubeClip": true
             }
           ],
@@ -1933,8 +1993,12 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "14",
+                  "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
+                },
+                {
+                  "timeDuration": "23",
+                  "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
                 }
               ]
             }
@@ -1946,7 +2010,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "SpFjxTIGr60",
+              "content": "UVNlk6lbn6c",
               "youtubeClip": true
             }
           ],
@@ -1954,8 +2018,20 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "30",
+                  "informationText": "Meshes bestehen aus:"
+                },
+                {
+                  "timeDuration": "31",
+                  "informationText": "- Eckpunkte(Vertices)"
+                },
+                {
+                  "timeDuration": "32",
+                  "informationText": "- Kanten(Edges)"
+                },
+                {
+                  "timeDuration": "33",
+                  "informationText": "- Flächen(Faces)"
                 }
               ]
             }
@@ -1988,7 +2064,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "3afnMgcFJfM",
+              "content": "HH75X9B-4GM",
               "youtubeClip": true
             }
           ],
@@ -1996,8 +2072,20 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "12",
+                  "informationText": "Transformationen:"
+                },
+                {
+                  "timeDuration": "13",
+                  "informationText": "- Translation (Verschiebung) "
+                },
+                {
+                  "timeDuration": "14",
+                  "informationText": "- Rotation (Drehung)"
+                },
+                {
+                  "timeDuration": "15",
+                  "informationText": "- Skalierung (Veränderung der Größe)\n"
                 }
               ]
             }
@@ -2030,7 +2118,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "iGTlDzy0opI",
+              "content": "DUhX6N6IsFA",
               "youtubeClip": true
             }
           ],
@@ -2040,10 +2128,6 @@
                 {
                   "timeDuration": "4",
                   "informationText": "hierarchische Verknüpfung von Objekten"
-                },
-                {
-                  "timeDuration": "25",
-                  "informationText": "Elternobjekt beeinflusst Kinderobjekt & Kindes-Kinder"
                 },
                 {
                   "timeDuration": "25",
@@ -2080,7 +2164,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "LG8oCr_p2hA",
+              "content": "qOD8Sg5-D10",
               "youtubeClip": true
             }
           ],
@@ -2088,8 +2172,28 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "10",
+                  "informationText": "ist abhängig von:"
+                },
+                {
+                  "timeDuration": "11",
+                  "informationText": "- Position "
+                },
+                {
+                  "timeDuration": "12",
+                  "informationText": "- Flächennormalen "
+                },
+                {
+                  "timeDuration": "17",
+                  "informationText": "- Materialeigenschaften"
+                },
+                {
+                  "timeDuration": "20",
+                  "informationText": "- Farbe, Intensität, Richtung des Lichtes "
+                },
+                {
+                  "timeDuration": "25",
+                  "informationText": "- Rotation/Position der Kamera\n"
                 }
               ]
             }
@@ -2101,7 +2205,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "ZcJW2ycyxtw",
+              "content": "jtFXZSLmaAk",
               "youtubeClip": true
             }
           ],
@@ -2109,8 +2213,28 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "8",
+                  "informationText": "5 Lichtquellen:"
+                },
+                {
+                  "timeDuration": "9",
+                  "informationText": "- Umgebungslicht"
+                },
+                {
+                  "timeDuration": "10",
+                  "informationText": "- Richtungslicht"
+                },
+                {
+                  "timeDuration": "12",
+                  "informationText": "- Punktlicht"
+                },
+                {
+                  "timeDuration": "13",
+                  "informationText": "- Spotlicht"
+                },
+                {
+                  "timeDuration": "14",
+                  "informationText": "- Flächenlicht"
                 }
               ]
             }
@@ -2130,8 +2254,8 @@
             {
               "time": [
                 {
-                  "timeDuration": "",
-                  "informationText": ""
+                  "timeDuration": "0",
+                  "informationText": "Wähle und kombiniere die verschiedenen Lichtquellen."
                 }
               ]
             }
@@ -2143,29 +2267,8 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "kWXz-UaCduM",
+              "content": "WBka9I-gJR8",
               "youtubeClip": true
-            }
-          ],
-          "pageTime": [
-            {
-              "time": [
-                {
-                  "timeDuration": "",
-                  "informationText": ""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "pageName": "( I ) Kamera",
-          "id": "0811",
-          "finished": false,
-          "pageContent": [
-            {
-              "content": "",
-              "youtubeClip": false
             }
           ],
           "pageTime": [
@@ -2477,9 +2580,31 @@
               ]
             }
           ]
+        },
+        {
+          "pageName": "Volumengrafik",
+          "id": "0911",
+          "finished": true,
+          "pageContent": [
+            {
+              "content": "wvsA-IQq3FU",
+              "youtubeClip": true
+            }
+          ],
+          "pageTime": [
+            {
+              "time": [
+                {
+                  "timeDuration": "",
+                  "informationText": ""
+                }
+              ]
+            }
+          ]
         }
       ]
     },
+
     {
       "sectionPage": "Shader",
       "page": [
@@ -2510,7 +2635,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "q8EiksxQvIY",
+              "content": "R-Iuazdh8qQ",
               "youtubeClip": true
             }
           ],
@@ -2552,7 +2677,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "A867z8Lw0ao",
+              "content": "jAmVD1iGgPc",
               "youtubeClip": true
             }
           ],
@@ -2594,7 +2719,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "IjrCT1mRobE",
+              "content": "X83oCu6Nm6M",
               "youtubeClip": true
             }
           ],
@@ -2636,7 +2761,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "Yq0J9JSWw5c",
+              "content": "5H532jQlRFs",
               "youtubeClip": true
             }
           ],
@@ -2657,7 +2782,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "UUW6qKx3KZU",
+              "content": "oK6xNGnnzEE",
               "youtubeClip": true
             }
           ],
@@ -2678,7 +2803,7 @@
           "finished": true,
           "pageContent": [
             {
-              "content": "MF0OwkQdv8U",
+              "content": "MbHoCRS9vhA",
               "youtubeClip": true
             }
           ],

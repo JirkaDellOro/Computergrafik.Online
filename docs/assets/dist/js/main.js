@@ -349,6 +349,8 @@
                     $('.interaction').css('height', '100%');
                     //player.setVolume(0);
                     player.pauseVideo();
+                    setHighlight();
+                    $('.information-text').append('<p class="information-string">' + chapterIndex.pageTime[0].time[0].informationText + '</p>');
                     getRotation = true;
                     checkArrows(chapterIndex, liCount, liLength);
                     readDeviceOrientation();

@@ -260,5 +260,5 @@ function checkArrows(chapterIndex, liCount, liLength) {
 function setInformation(pageInformation) {
     // var currentTime = startInterval();
     // console.log(startInterval())
-    startInterval(pageInformation);
+    startInterval2(pageInformation);
 }
