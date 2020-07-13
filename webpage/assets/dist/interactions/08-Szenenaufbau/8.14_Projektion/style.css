@@ -1,0 +1,65 @@
+
+html, body {
+    overflow: hidden;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+    background-color: blueviolet;
+}
+
+#container{
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 100%;
+    
+}
+#renderCanvas {
+    
+    width   : 49.5%;
+    height  : 100%;
+    touch-action: none;
+    float: left;
+    
+}
+#renderCanvasPara {
+    
+    width   : 49.5%;
+    height  : 100%;
+    touch-action: none;
+    float: right;
+    
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#pers{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 17%;
+    margin-right: 60%;
+    color: white;
+}
+
+#para{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 70%;
+    margin-right: 20%;
+    color: white;
+}
+     
+    
+    
+    
+   
+
+    
+        
+
