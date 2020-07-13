@@ -275,7 +275,6 @@
                 for (var i = 0; i < chapter.length; i++) {
                     for (var j = 0; j < chapter[i].page.length; j++) {
                         if (chapter[i].page[j].id == index) {
-
                             var chapterIndex = chapter[i].page[j];
                             var liCount = chapter[i].page;
                             var liLength = liCount.length - 1;

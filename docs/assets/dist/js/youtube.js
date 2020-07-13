@@ -53,25 +53,23 @@ function stopVideo() {
 function startInterval(information) {
     var timeInformation = information[0].time;
     var i = 0;
-    if(timeInformation != null || timeInformation != undefined) {
+    if(timeInformation != null || timeInformation !== undefined) {
         checkInt = setInterval(function () {
             if (player.getCurrentTime() !== player.getDuration()) {
                 var currentTime = Math.floor(player.getCurrentTime());
-                if(i < timeInformation.length - 1 && currentTime === timeInformation[i].timeDuration)
+                if(i <= timeInformation.length - 1 && currentTime === timeInformation[i].timeDuration)
                 {
                     // $('.information-string').removeClass('active-information');
                     setHighlight();
                     $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-
                     // $('.infroamtion-string').addClass('active-infos');
                     i = i+ 1;
                 }
-                if(i < timeInformation.length && timeInformation[i].timeDuration <= currentTime )
+                if(i <= timeInformation.length && timeInformation[i].timeDuration <= currentTime )
                 {
                     $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
                     i = i + 1;
                 }
-
             };
         }, 100)
     }
