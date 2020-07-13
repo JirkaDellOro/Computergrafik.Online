@@ -5,6 +5,7 @@ html, body {
     height  : 100%;
     margin  : 0;
     padding : 0;
+    background-color: blueviolet;
 }
 
 #container{
@@ -38,12 +39,21 @@ html, body {
 
 
 
-.überschrift{
-    position: relative;
-    margin-left: 8em;
+#pers{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 17%;
+    margin-right: 60%;
     color: white;
 }
 
+#para{
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 70%;
+    margin-right: 20%;
+    color: white;
+}
      
     
     
