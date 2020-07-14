@@ -29,7 +29,7 @@ namespace UvMapping {
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.wheelPrecision = 100;
-            this._camera.setPosition(new BABYLON.Vector3(10, 10, 0));
+            this._camera.setPosition(new BABYLON.Vector3(0, 0, 10));
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
             //this._roboter = BABYLON.MeshBuilder.CreateBox("box", {}, this._scene);
@@ -37,6 +37,9 @@ namespace UvMapping {
             //BABYLON.SceneLoader.ImportMesh("birne", "", "KORTE.babylon", this._scene);
             this._plane = BABYLON.MeshBuilder.CreateGround('ground1',
                 {width: 6, height: 6, subdivisions: 2}, this._scene);
+            let material: any = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
+            material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
+            this._plane.material = material;
 
 
             // Create the 4 types of light
