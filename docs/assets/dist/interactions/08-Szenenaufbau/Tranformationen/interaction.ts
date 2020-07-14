@@ -29,7 +29,12 @@ namespace Transformations {
             this._camera.setTarget(BABYLON.Vector3.Zero());
 
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
-            this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene)
+            this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene);
+
+            let material: any = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
+            material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
+            this._cube.material = material;
+
         }
 
         doRender(): void {

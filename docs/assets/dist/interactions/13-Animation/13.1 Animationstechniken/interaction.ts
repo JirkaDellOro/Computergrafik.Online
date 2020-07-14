@@ -11,7 +11,9 @@ namespace Transformations {
 
         private _ambientLight: BABYLON.HemisphericLight;
         private _cube: BABYLON.Mesh;
-        private _animationBox: BABYLON.Animation;
+        private _initialPos: BABYLON.Vector3;
+        private _animationBoxScaling: BABYLON.Animation;
+        private _animationBoxTranslation: BABYLON.Animation;
         private _animationKeys: [{frame:number; value:BABYLON.Vector3;}]
 
         constructor(canvasElement: string) {
@@ -32,7 +34,13 @@ namespace Transformations {
 
             this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
             this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene)
-            this._animationBox = new BABYLON.Animation("boxAnimation", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+            this._initialPos = this._cube.position;
+            let material: any = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
+            material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
+            this._cube.material = material;
+            this._animationBoxScaling = new BABYLON.Animation("boxAnimationScaling", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+                BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationBoxTranslation = new BABYLON.Animation("boxAnimationTranslation", "translation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationKeys = [{frame:0, value: new BABYLON.Vector3(1,1,1)}];
 
@@ -99,9 +107,12 @@ namespace Transformations {
             return this._cube.position;
         }
         startAnimation() {
-            this._animationBox.setKeys(this._animationKeys);
-            this._cube.animations.push(this._animationBox);
-            this._scene.beginAnimation(this._cube, 0, 100, false);
+            this._animationBoxScaling.setKeys(this._animationKeys);
+            this._animationBoxTranslation.setKeys(this._animationKeys)
+            this._cube.animations.push(this._animationBoxScaling);
+            this._cube.animations.push(this._animationBoxTranslation);
+            this._cube.position = this._initialPos;
+            this._scene.beginAnimation(this._cube, 0, 1000, false);
         }
         setKeyFrame(_frame: number, _value:BABYLON.Vector3) {
             this._animationKeys.push({
@@ -161,7 +172,7 @@ namespace Transformations {
         inputTranslationCubeZAxis.addEventListener("input", translatCube);
 
         buttonSetKeyframe = <HTMLButtonElement>document.getElementById("set-kf");
-        buttonSetKeyframe.addEventListener('click', setKeyFrameScaling);
+        buttonSetKeyframe.addEventListener('click', setKeyFrame);
 
         buttonStartAnimation = <HTMLButtonElement>document.getElementById("start-animation");
         buttonStartAnimation.addEventListener('click', startAnimation);
@@ -191,10 +202,19 @@ namespace Transformations {
         }
     }
 
+    function setButtonsToInactive() {
+        let buttons = document.getElementsByClassName("btn");
+        for(let i = 0; i < buttons.length; i ++) {
+            buttons[i].classList.remove('active');
+        }
+    }
+
     function displayInputFields() {
         disableGroups();
+        setButtonsToInactive();
         let group = this.getAttribute("data-group");
-        document.getElementById(group).style.display = 'block'
+        document.getElementById(group).style.display = 'block';
+        this.classList.add('active');
     }
 
     function rotateCube() {
@@ -233,10 +253,38 @@ namespace Transformations {
         scene.setPositionZ(zAxis/10);
     }
 
-    function setKeyFrameScaling(){
+    function setKeyFrame(){
         let keyframe : number;
+        let group : string;
+        let x;
+        let y;
+        let z;
+
+        let buttons = document.getElementsByClassName('active');
+        for (let i = 0; i < buttons.length; i++) {
+            group = buttons[i].getAttribute('data-group')
+        }
+
+        let inputs = document.getElementById(group).getElementsByClassName('custom-range');
+
+        console.log(inputs)
+        for(let i = 0; i < inputs.length; i++) {
+            let input = inputs[i].getAttribute('axis');
+            console.log(input)
+            switch (input) {
+                case 'x': {
+                    x = inputs[i].value/15;
+                }
+                case 'y': {
+                    y = inputs[i].value/15;
+                }
+                case 'z': {
+                    z = inputs[i].value/15;
+                }
+            }
+        }
         keyframe = document.getElementById('keyframe').value;
-        scene.setKeyFrame(keyframe, scene.getScaling())
+        scene.setKeyFrame(keyframe, new BABYLON.Vector3(x, y, z))
     }
 
     function startAnimation() {

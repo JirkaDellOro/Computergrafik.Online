@@ -59,7 +59,7 @@ namespace Transformations {
                 out.y = y;
                 out.z = Math.random() * 5;
             }
-            this._particleSystem.particleTexture = new BABYLON.Texture("/textures/flare.png", this._scene);
+            this._particleSystem.particleTexture = new BABYLON.Texture("./textures/smoke2.png", this._scene);
             this._particleSystem.minSize = 0.05;
             this._particleSystem.maxSize = 0.1;
             this._particleSystem.emitRate = 1000;

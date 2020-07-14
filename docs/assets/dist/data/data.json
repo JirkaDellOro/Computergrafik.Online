@@ -797,7 +797,7 @@
             "content": "assets/dist/interactions/04-Farbmischmodi/desktop/desktop_mixcolormode.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": []
         },
         {
           "pageName": "Histogramme",
@@ -823,50 +823,6 @@
               {
                 "timeDuration": "28",
                 "informationText": "- Rechter Bereich: Lichter"
-              }
-            ]
-          }]
-        },
-        {
-          "pageName": "Farbtiefe 16/24 Bit",
-          "id": "044",
-          "finished": true,
-          "pageContent": [{
-            "content": "VHa2G8-xFFI",
-            "youtubeClip": true
-          }],
-          "pageTime": [{
-            "time": [{
-              "timeDuration": "2",
-              "informationText": "- 16 Bit = High Color"
-            },
-              {
-                "timeDuration": "10",
-                "informationText": "- 65.536 Farben"
-              },
-              {
-                "timeDuration": "14",
-                "informationText": "- roter und blauer Farbkanal: 5 Bit"
-              },
-              {
-                "timeDuration": "16",
-                "informationText": "- grüner Farbkanal: 6 Bit"
-              },
-              {
-                "timeDuration": "34",
-                "informationText": "- 24 Bit = alle 8 Bit"
-              },
-              {
-                "timeDuration": "43",
-                "informationText": "- 16,7 mio Farben"
-              },
-              {
-                "timeDuration": "46",
-                "informationText": "- 24 Bit = True Color\n"
-              },
-              {
-                "timeDuration": "63",
-                "informationText": "- 30-48 Bit = Deep Color\n"
               }
             ]
           }]
@@ -1817,7 +1773,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Wähle und kombiniere die verschiedenen Lichtquellen."
+              "informationText": "Wähle und kombiniere die verschiedenen Lichtquellen. Verwende die Maus um die Kamera zu drehen."
             }]
           }]
         },
@@ -1876,8 +1832,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Du siehst dasselbe Bild einmal als Perspektivische Projektion links, und als Parallelprojektion rechts. Rotiere nun die Kamera und die Auswirkungen der verschiedenen Projektionsarten zu verstehen."
             }]
           }]
         }
@@ -2584,8 +2540,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Nun kannst du die von Hand abgewickelte Textur der Sphäre bemalen."
             }]
           }]
         },
@@ -2897,9 +2853,41 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "9",
+              "informationText": "- große Menge an winzigen Objekten werden animiert"
+            },
+              {
+                "timeDuration": "16",
+                "informationText": "- auf Basis mathematischer & physikalischer Funktionen"
+              },{
+                "timeDuration": "18",
+                "informationText": "Simulation von:"
+              },{
+                "timeDuration": "19",
+                "informationText": "- Feuer"
+              },{
+                "timeDuration": "20",
+                "informationText": "- Rauch"
+              },{
+                "timeDuration": "22",
+                "informationText": "- Explosionen"
+              },
+              {
+                "timeDuration": "23",
+                "informationText": "- Flüssigkeiten"
+              },
+              {
+                "timeDuration": "30",
+                "informationText": "- Emitter: stößt Partikel aus"
+              },
+              {
+                "timeDuration": "36",
+                "informationText": "Parameter:"
+              },
+              {
+                "timeDuration": "37",
+                "informationText": "- Ausstoßgeschwindigkeit, Lebensdauer, Dämpfung, Anzahl der Partikel, Zufälligkeit"
+              }]
           }]
         },
         {
@@ -2912,8 +2900,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Du siehst nun eine Partikelanimation. Benutze die Schieberegler um die Parameter zu verändern."
             }]
           }]
         }

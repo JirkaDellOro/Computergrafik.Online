@@ -55,7 +55,8 @@ html, body {
 .input-wrapper{
     margin-top: 15px;
 }
-.btn-secondary:active{
+
+.btn.active {
     background-color:  #00A8FF;
 }
 
