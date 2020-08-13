@@ -10,7 +10,7 @@ body{
 }
 .images{
   position: relative;
-  height: 150px;
+  height: 200px;
   margin: 0 auto 10px;
   display: flex;
   justify-content: space-evenly;
@@ -20,11 +20,11 @@ body{
 .img{
   position: relative;
   height: 100%;
-  width: 150px;
+  width: 200px;
 }
 
 img{
-  height: CALC(100% - 20px);
+  width: 200px;
 }
 
 #range{
@@ -36,8 +36,8 @@ img{
 }
 
 .img-hover-zoom {
-  height:150px;
-  width: 150px;
+  height:200px;
+  width: 200px;
   overflow: hidden; /* Removing this will break the effects */
   border-radius: 100%;
   border: 5px solid #3d3a3a;
@@ -48,7 +48,6 @@ img{
   position: relative;
   top:21%;
   left:0%;
-  height:100% ;
   padding: 0px;/*entvernen*/
   
 }
@@ -97,6 +96,10 @@ input::-moz-range-thumb {
   }
 
   .img{
+    width: 100px;
+  }
+
+  img{
     width: 100px;
   }
 
