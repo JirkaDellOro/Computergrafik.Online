@@ -32,6 +32,7 @@ namespace BoneAnimation {
     function videoEnded(): void {
         console.log("test");
         (<HTMLImageElement>show.children[0]).style.opacity = "1";
+        video.currentTime = 0;
         video.style.display = "none";
         input.disabled=false;
     }

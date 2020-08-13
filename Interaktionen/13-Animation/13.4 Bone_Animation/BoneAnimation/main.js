@@ -26,6 +26,7 @@ var BoneAnimation;
     function videoEnded() {
         console.log("test");
         show.children[0].style.opacity = "1";
+        video.currentTime = 0;
         video.style.display = "none";
         input.disabled = false;
     }
