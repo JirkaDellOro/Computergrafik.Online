@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <canvas width="300px" height="300px"></canvas>
+    </div>
+    <div id="controls">
+        <label for="red"><span>Rot</span>
+            <input id="red" type="range" min="0" max="255" value="0">
+        </label>
+        <label for="green"><span>Grün</span>
+            <input id="green" type="range" min="0" max="255" value="0">
+        </label>
+        <label for="blue"><span>Blau</span>
+            <input id="blue" type="range" min="0" max="255" value="0">
+        </label>
+        <label for="line"><span>Linienstärke</span>
+            <input id="line" type="range" min="0" max="15" value="5">
+        </label>
+        <div id="object">
+            <label for="square"><span>Quadrat</span>
+                <input id="square" type="radio" name="type" checked>
+            </label>
+            <label for="triangle"><span>Dreieck</span>
+                <input id="triangle" type="radio" name="type">
+            </label>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
