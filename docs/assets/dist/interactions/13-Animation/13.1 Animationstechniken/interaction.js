@@ -24,8 +24,11 @@ var Transformations;
             material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
             this._cube.material = material;
             this._animationBoxScaling = new BABYLON.Animation("boxAnimationScaling", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
-            this._animationBoxTranslation = new BABYLON.Animation("boxAnimationTranslation", "translation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationBoxRotation = new BABYLON.Animation("boxRotationScaling", "rotation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationBoxTranslation = new BABYLON.Animation("boxAnimationTranslation", "position.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationKeys = [{ frame: 0, value: new BABYLON.Vector3(1, 1, 1) }];
+            this._animationKeysRotation = [{ frame: 0, value: new BABYLON.Vector3(0, 0, 0) }];
+            this._animationKeysTranslation = [{ frame: 0, value: 0 }];
         };
         Interaction.prototype.doRender = function () {
             var _this = this;
@@ -77,10 +80,14 @@ var Transformations;
         };
         Interaction.prototype.startAnimation = function () {
             this._animationBoxScaling.setKeys(this._animationKeys);
-            this._animationBoxTranslation.setKeys(this._animationKeys);
+            this._animationBoxTranslation.setKeys(this._animationKeysTranslation);
+            this._animationBoxRotation.setKeys(this._animationKeysRotation);
             this._cube.animations.push(this._animationBoxScaling);
             this._cube.animations.push(this._animationBoxTranslation);
-            this._cube.position = this._initialPos;
+            this._cube.animations.push(this._animationBoxRotation);
+            this._cube.position = new BABYLON.Vector3(0, 0, 0);
+            this._cube.scaling = new BABYLON.Vector3(1, 1, 1);
+            this._cube.rotation = new BABYLON.Vector3(0, 0, 0);
             this._scene.beginAnimation(this._cube, 0, 1000, false);
         };
         Interaction.prototype.setKeyFrame = function (_frame, _value) {
@@ -88,6 +95,20 @@ var Transformations;
                 frame: _frame,
                 value: _value
             });
+            console.log(this._animationKeys);
+        };
+        Interaction.prototype.setKeyFrameTranslation = function (_frame, _value) {
+            this._animationKeysTranslation.push({
+                frame: _frame,
+                value: _value
+            });
+        };
+        Interaction.prototype.setKeyFramesRotation = function (_frame, _value) {
+            this._animationKeysRotation.push({
+                frame: _frame,
+                value: _value
+            });
+            console.log(this._animationKeysRotation);
         };
         return Interaction;
     }());
@@ -182,6 +203,7 @@ var Transformations;
         xAxis = document.getElementById('x-axis-scaling').value;
         yAxis = document.getElementById('y-axis-scaling').value;
         zAxis = document.getElementById('z-axis-scaling').value;
+        console.log(scene.getScaling());
         scene.setScalingX(xAxis / 10);
         scene.setScalingY(yAxis / 10);
         scene.setScalingZ(zAxis / 10);
@@ -206,6 +228,7 @@ var Transformations;
         var buttons = document.getElementsByClassName('active');
         for (var i = 0; i < buttons.length; i++) {
             group = buttons[i].getAttribute('data-group');
+            console.log(group);
         }
         var inputs = document.getElementById(group).getElementsByClassName('custom-range');
         console.log(inputs);
@@ -214,18 +237,30 @@ var Transformations;
             console.log(input);
             switch (input) {
                 case 'x': {
-                    x = inputs[i].value / 15;
+                    x = inputs[i].value / 10;
+                    break;
                 }
                 case 'y': {
-                    y = inputs[i].value / 15;
+                    y = inputs[i].value / 10;
+                    break;
                 }
                 case 'z': {
-                    z = inputs[i].value / 15;
+                    z = inputs[i].value / 10;
+                    break;
                 }
             }
         }
         keyframe = document.getElementById('keyframe').value;
-        scene.setKeyFrame(keyframe, new BABYLON.Vector3(x, y, z));
+        if (group === 'translation-group') {
+            scene.setKeyFrameTranslation(keyframe, x);
+        }
+        if (group === 'scaling-group') {
+            scene.setKeyFrame(keyframe, new BABYLON.Vector3(x, y, z));
+        }
+        console.log(group);
+        if (group === 'rotate-group') {
+            scene.setKeyFramesRotation(keyframe, new BABYLON.Vector3(x, y, z));
+        }
     }
     function startAnimation() {
         scene.startAnimation();
