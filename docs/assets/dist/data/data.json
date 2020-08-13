@@ -264,14 +264,19 @@
             "content": "./assets/dist/interactions/02-Farbsysteme/2.3 Farbsehen/Desktop/2.3_Farbsehen.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Über die Regler können die\nZahlenwerte verändert\nwerden. "
+            }]
+          }]
         },
         {
           "pageName": "Additive Farbmischung",
           "id": "023",
           "finished": true,
           "pageContent": [{
-            "content": "fVwenYCbHqg",
+            "content": "ZHaqqbnCY-A",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -330,7 +335,13 @@
             "content": "./assets/dist/interactions/02-Farbsysteme/RGB_Farbsystem/rgb_system_interaction.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Verschiebe die Regler R, G und B\nund beobachte, an welchem Punkt\nsich die ausgewählte Farbe im\nRGB-Farbraum befindet."
+            }
+            ]
+          }]
         },
         {
           "pageName": "HSB-Farbsystem",
@@ -395,7 +406,7 @@
           "id": "028",
           "finished": true,
           "pageContent": [{
-            "content": "mc6JFbU_r0k",
+            "content": "F9Nl-o11hag",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -531,7 +542,7 @@
         "id": "030",
         "finished": true,
         "pageContent": [{
-          "content": "0wrGLWx8YT0",
+          "content": "UP-8FCrc3XQ",
           "youtubeClip": true
         }],
         "pageTime": [{
@@ -578,7 +589,12 @@
             "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_Farbtiefe-Graustufen_Desktop/Farbtiefe-Graustufen.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [ {
+              "timeDuration": "0",
+              "informationText": "Betrachte, welche Auswirkungen das\nVerändern der Bit-Anzahl auf das\nBild hat."
+            }]
+          }]
         },
         {
           "pageName": "Hexadezimaler Farbcode",
@@ -620,7 +636,12 @@
             "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop/2018-12-18_hexadezimaler-Farbcode_Desktop_v1.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Stelle die Farbintensitäten mit Hilfe\nder Schieberegler ein und betrachte\ndie daraus resultierende Farbe."
+            }]
+          }]
         },
         {
           "pageName": "Farbtiefe 16/24 Bit",
@@ -674,7 +695,12 @@
             "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop/2018-12-19_16-24_Bit-Farbtiefe_Desktop_v1.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Wähle eine Farbtiefe und betrachte\nwelche Auswirkungen das auf das\nBild hat."
+            }]
+          }]
         },
         {
           "pageName": "Indizierte Farben",
@@ -701,7 +727,7 @@
           "id": "038",
           "finished": true,
           "pageContent": [{
-            "content": "bEpGjznCWIo",
+            "content": "nEG2HtyJPoI",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -719,7 +745,12 @@
             "content": "./assets/dist/interactions/03-Rastergrafik-Farbtiefe/Desktop/2019-01-03_speicherbedarf-mit-Slider_buttons_Desktop/speicherbedarf.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Bestimme alle Komponenten selbst\nund schaue wie groß die Datei\nschlussendlich ist. Wähle dazu eine\nFarbtiefe aus und skaliere das Bild\nüber den Schieberegler."
+            }]
+          }]
         }
       ]
     },
@@ -797,7 +828,12 @@
             "content": "assets/dist/interactions/04-Farbmischmodi/desktop/desktop_mixcolormode.html",
             "youtubeClip": false
           }],
-          "pageTime": []
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Wähle einen Farbmischmodus aus und betrachte das\nErgebnis. Das Testbild kann über den Roboter verschoben\nwerden."
+            }]
+          }]
         },
         {
           "pageName": "Histogramme",
@@ -920,8 +956,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verändere die\nPixelanzahl und die\nBildgröße. Lasse dir\ndie Eingabe- und\nAusgabeauflösung\nberechnen."
             }]
           }]
         },
@@ -959,8 +995,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Vergrößere den\nBildausschnitt, um\ndie Dots eines\nMonitors zu\nerkennen."
             }]
           }]
         },
@@ -984,7 +1020,7 @@
           "id": "057",
           "finished": true,
           "pageContent": [{
-            "content": "3QYbvYkSHm8",
+            "content": "Eh8_I1BlRko",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -1013,8 +1049,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle nun zwischen dem Original, der\namplitudenmoduliert gerasterten Version\noder der frequenzmoduliert gerasterten\nVersion und vergrößere das Bild. Außerdem\nkannst du die Dot-Anzahl verändern."
             }]
           }]
         },
@@ -1056,8 +1092,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verändere die Winkel der\nRasterwinkelungen und beobachte den\nMoiré-Effekt."
             }]
           }]
         }
@@ -1139,8 +1175,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Probiere nun selbst die Farbtiefe einzustellen und\nbeobachte dabei die jeweilige Datenmenge."
             }]
           }]
         },
@@ -1169,7 +1205,7 @@
           "id": "065",
           "finished": true,
           "pageContent": [{
-            "content": "XlNXfd85RgQ",
+            "content": "q2C8gD-IiSQ",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -1219,8 +1255,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Probiere nun die JPG Kompression mithilfe des\nReglers durchzuführen, beobachte dabei die\nBildung von Blockartefakten im Bild."
             }]
           }]
         },
@@ -1349,8 +1385,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verändere durch die Regler\ndie Eigenschaften der\nVektorobjekte."
             }]
           }]
         },
@@ -1388,8 +1424,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Nutze den Schieberegler um\ndie Grafiken zu vergrößern und\nmache dir die Unterschiede\nklar."
             }]
           }]
         },
@@ -1480,7 +1516,7 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
+              "timeDuration": "0",
               "informationText": ""
             }]
           }]
@@ -1513,7 +1549,12 @@
             "content": "./assets/dist/interactions/07-Vektorgrafik/RasterungVonVektorgrafiken/index.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Verschiebe die Ankerpunkte\nund schalte das Antialiasing an\nund aus."
+            }]
+          }]
         },
         {
           "pageName": "Vektorisieren",
@@ -1540,8 +1581,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verändere die Qualität des\nTracens in dem du durch die\nSchieberegler Genauigkeit und\nFarbschwellenwert veränderst"
             }]
           }]
         }
@@ -1607,8 +1648,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Bewege die Vertices, Edges und Faces, um\nihr Zusammenspiel zu verstehen. Du kannst\nauch neue Vertices erstellen und verbinden."
             }]
           }]
         },
@@ -1650,8 +1691,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verschiebe, skaliere\nund drehe den\nKubus."
             }]
           }]
         },
@@ -1685,8 +1726,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Setze die Pivot Points entweder in die\nObjektursprünge, oder an die gewünschten\nRotationszentren. Spiele dann die Animation\nab."
             }]
           }]
         },
@@ -1911,8 +1952,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle zwischen perspektivischer\nund orthografi scher Projektion aus\nund betrachte die Änderungen."
             }]
           }]
         },
@@ -2001,8 +2042,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle zwischen reinem Shading\nund Raytracing aus und betrachte\ndie Änderungen."
             }]
           }]
         },
@@ -2157,8 +2198,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Hier kannst du die verschiedenen Shader anhand\neines Objekts vergleichen, indem du unten einen\nShader auswählst."
             }]
           }]
         },
@@ -2187,8 +2228,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Hier ist ein Vertex Shader aktiv, welcher durch\nverschieben des Reglers Einfluss auf die\nGeometrie der Wellen nimmt."
             }]
           }]
         },
@@ -2341,8 +2382,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Stelle über den Schieberegler die\nPolygonanzahl des 3D-Objekts ein\nund schau dir an, wie sich das Objekt\ndabei verädert."
             }]
           }]
         },
@@ -2386,8 +2427,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Stelle mit dem Schieberegler die Anzahl\nder Rekursionsschritte ein und\nbeobachte die Auswirkungen auf das\nObjekt."
             }]
           }]
         },
@@ -2446,8 +2487,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle eine der Achsen aus und\nspiegle das Objekt an dieser."
             }]
           }]
         },
@@ -2476,8 +2517,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle eine der Einstellungen aus und\nsieh, wie sich dadurch das Endresultat\nändert."
             }]
           }]
         }
@@ -2510,8 +2551,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle den Kubus oder die Sphäre\nund anschließend eine Textur aus\nder vordefinierten Liste aus und\nlasse dir den Vergleich von dem\n3D-Objekt ohne und mit Textur\nanzeigen. Betrachte das 3D-Objekt\ndabei von allen Seiten."
             }]
           }]
         },
@@ -2555,8 +2596,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle den Pinsel und suche dir eine\nbeliebige Farbe aus. Nun kannst du\ndie von Hand abgewickelte Textur\ndes Roboters oder den Roboter\ndirekt bemalen."
             }]
           }]
         },
@@ -2630,8 +2671,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Hier wird der Unterschied zwischen\ndem Normal-Mapping und dem\nDisplacement-Mapping dargestellt.\nBetrachte die texturierten\n3D-Objekte von allen Seiten."
             }]
           }]
         },
@@ -2733,7 +2774,10 @@
             "youtubeClip": false
           }],
           "pageTime": [{
-            "time": []
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Ziehe den Kubus nach rechts oder links,\nbis Du die gewünschte Position erreicht\nhast. Rotiere ihn danach durch die\nSchieberegler. Speichere die Werte\ndurch den „Setzen“ Button und starte\ndann die Animation.\nDu kannst bis zu Fünf Keyframes Setzen"
+            }]
           }]
         },
         {
@@ -2778,8 +2822,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Verschiebe die Punkte der\nInterpolationskurve und starte die\nAnimation."
             }]
           }]
         },
@@ -2838,8 +2882,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Nutze den Schieberegler um die Menge der\nBones zu verändern und lasse die Animation\nabspielen"
             }]
           }]
         },

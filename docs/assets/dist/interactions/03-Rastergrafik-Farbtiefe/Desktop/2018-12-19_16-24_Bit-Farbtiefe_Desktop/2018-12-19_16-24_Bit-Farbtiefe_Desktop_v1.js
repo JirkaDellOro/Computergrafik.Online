@@ -251,11 +251,8 @@ p._updateVisibility = _updateVisibility;
 		});
 		
 		function myFunction(value) {
-			console.log("test " + value);
 			for (var i = 0; i <= 1; i++) {
-				console.log(i);
 				if (value == i) {
-					console.log("test : " + i);
 					elem[i].alpha = 1;
 				} else {
 					elem[i].alpha = 0;
