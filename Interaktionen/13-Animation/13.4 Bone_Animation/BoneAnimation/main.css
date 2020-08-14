@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 
 #main{
-    margin: auto;
+    margin: 20px auto 0;
     max-width: 1200px;
 }
 .images{
