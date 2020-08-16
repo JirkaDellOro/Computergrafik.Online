@@ -6,6 +6,9 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='Graph.js'></script>
+    <script src='Handle.js'></script>
+    <script src='new.js'></script>
 </head>
 
 <body>
@@ -15,12 +18,15 @@
                 <canvas id="curve" width="200" height="450"></canvas>
                 <figcaption id="axisTime">Time</figcaption>
                 <figcaption id="axisAnimation">Animation</figcaption>
+
+                <div id="helper"></div>
             </figure>
         </div>
 
+
         <div class="options">
             <div class="tween-container">
-                <div id="box" class="" style="background-image: url(assets/square.jpg);"></div>
+                <div id="box" class=""></div>
             </div>
 
             <div id="options">
@@ -31,15 +37,12 @@
             </div>
 
             <label>
-                <input type="button" name="tween" value="Start" id="tween" class="testButton">
+                <input type="button" value="Start" id="tween" class="testButton">
             </label>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-        <script src="main.js"></script>
-
     </div>
 </body>
-<script src='main.js'></script>
+
 
 </html>
