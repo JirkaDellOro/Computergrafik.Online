@@ -43,7 +43,6 @@ function readDeviceOrientation() {
             } else {
                 // Portrait
                 //document.getElementById("orientation").innerHTML = "PORTRAIT";
-
                 $('.modual').css('display', 'none');
                 $('.iframe-interaction').css('display', 'block');
             }
@@ -74,7 +73,6 @@ function setChapter(jsonObj) {
     for (var i = 0; i < chapter.length; i++) {
         var myChapter = document.createElement('div');
         var ulList = document.createElement('ul');
-        // ulList.className = "navigation-list";
         ulList.id = [i];
         myChapter.className = "navigation-status-" + [i] + " navigation-list";
         myChapter.id = [i];
@@ -115,7 +113,6 @@ function setNaviagtion() {
             $('.navigation-header').css('bottom', '');
             toggleNav = true;
         }
-        // var countNav = $('ul').length;
     });
 
     $('.navigation-list').click(function () {
@@ -136,7 +133,6 @@ function setNaviagtion() {
     $('.toggleSub').click(function () {
         $('.toggleSub').removeClass('active-infos');
         $(this).addClass('active-infos');
-        // if()
         console.log($(window).width());
         if ($(window).width() < 760) $('.navigation-toggle').slideToggle();
         var strSubHeadline = $(this).text();
@@ -154,7 +150,6 @@ function setNaviagtion() {
         for (var i = 0; i < chapter.length; i++) {
             for (var j = 0; j < chapter[i].page.length; j++) {
                 if (chapter[i].page[j].id == index) {
-
                     var chapterIndex = chapter[i].page[j];
                     var liCount = chapter[i].page;
                     var liLength = liCount.length - 1;
@@ -204,22 +199,21 @@ function getChapter(chapterIndex, liCount, liLength) {
     if (chapterIndex.finished == true) {
         $('.construction-text').css('display', 'none');
         if (chapterIndex.pageContent[0].youtubeClip == true) {
-            // $('.content-container').css('padding-bottom', '56.25%');
             $('.content-container').css('display', 'block');
             $('.youtube-player').css('display', 'block');
             $('.iframe-interaction').css('display', 'none');
             $('.information-string').remove();
+            player.stopVideo();
             player.loadVideoById(chapterIndex.pageContent[0].content);
             setInformation(chapterIndex.pageTime);
             getRotation = false;
             checkArrows(chapterIndex, liCount, liLength);
         } else {
-            stopVideo();
+            player.stopVideo();
             $('.content-container').css('display', 'none');
             $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
-            //$('.iframe-interaction').html('<div class ="btn-container"><a class="btn-interaktion" href="' + chapterIndex.pageContent[0].content + '" target="_blank">' + chapterIndex.pageName + '</a></div>');
             $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
                 "onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
             getRotation = true;
@@ -258,7 +252,5 @@ function checkArrows(chapterIndex, liCount, liLength) {
 }
 
 function setInformation(pageInformation) {
-    // var currentTime = startInterval();
-    // console.log(startInterval())
     startInterval2(pageInformation);
 }

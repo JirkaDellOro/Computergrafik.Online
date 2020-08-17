@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
         },
         //videoId: src,
         events: {
-            'onReady': onPlayerReady,
+            'onReady': onPlayerReady
             //'onStateChange': onPlayerStateChange,
         },
     });
@@ -31,6 +31,8 @@ function onPlayerReady(event) {
     // event.target.setVolume(0);
     event.target.playVideo();
 }
+
+
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
@@ -48,54 +50,30 @@ if (event.data == YT.PlayerState.PLAYING && !done) {
 
 function stopVideo() {
     player.stopVideo();
+    clearInterval(checkInt)
 }
 
 function startInterval(information) {
     var timeInformation = information[0].time;
     var i = 0;
-    if(timeInformation != null || timeInformation !== undefined) {
         checkInt = setInterval(function () {
-            if (player.getCurrentTime() !== player.getDuration()) {
+            if (YT.PlayerState.PLAYING) {
                 var currentTime = Math.floor(player.getCurrentTime());
-                if(i <= timeInformation.length - 1 && currentTime === timeInformation[i].timeDuration)
-                {
-                    // $('.information-string').removeClass('active-information');
-                    setHighlight();
-                    $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-                    // $('.infroamtion-string').addClass('active-infos');
-                    i = i+ 1;
+                if(timeInformation[i] !== undefined){
+                    if(i <= timeInformation.length && timeInformation[i].timeDuration <= currentTime )
+                    {
+                        $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
+                        i = i + 1;
+                    }
                 }
-                if(i <= timeInformation.length && timeInformation[i].timeDuration <= currentTime )
-                {
-                    $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
-                    i = i + 1;
-                }
-            };
+            }
         }, 100)
-    }
 }
 
 function setHighlight(){
     $('.information-container').addClass('information-container-highlight');
     $('.information-wrapper').addClass('information-wrapper-highlight');
 
-    setTimeout(function() {
-        $('.information-container').removeClass('information-container-highlight');
-        $('.information-wrapper').removeClass('information-wrapper-highlight');
-    },2000);
-}
-
-function startInterval2(information){
-    var i = 0;
-    var timeInformation = information[0].time;
-    if(information != null || timeInformation != null || timeInformation !== undefined) {
-        checkTime = setInterval(function () {
-            var currentTime = Math.floor(player.getCurrentTime());
-                    if (timeInformation[i] != null && timeInformation[i].timeDuration == currentTime) {
-                            setHighlight()
-                            $('.information-text').append('<p class="information-string">' + timeInformation[currentTime].informationText + '</p>');
-                            i++;
-            }
-        }, 100);
-    }
+    $('.information-container').removeClass('information-container-highlight');
+    $('.information-wrapper').removeClass('information-wrapper-highlight');
 }

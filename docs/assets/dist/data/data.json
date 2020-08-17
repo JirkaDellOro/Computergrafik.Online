@@ -21,10 +21,6 @@
           {
             "timeDuration": "98",
             "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
-          },
-          {
-            "timeDuration": "115",
-            "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
           }
         ]
       }]
@@ -1601,11 +1597,11 @@
         "pageTime": [{
           "time": [{
             "timeDuration": "14",
-            "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
+            "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
           },
             {
               "timeDuration": "23",
-              "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
+              "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
             }
           ]
         }]
@@ -1835,7 +1831,7 @@
         },
         {
           "pageName": "Perspektivische Projektion",
-          "id": "0812",
+          "id": "0811",
           "finished": true,
           "pageContent": [{
             "content": "1d1V0Aximjg",
@@ -1850,7 +1846,7 @@
         },
         {
           "pageName": "Parallelprojektion",
-          "id": "0813",
+          "id": "0812",
           "finished": true,
           "pageContent": [{
             "content": "P-NFrej_DHg",
@@ -1865,7 +1861,7 @@
         },
         {
           "pageName": "( I ) Projektion",
-          "id": "0814",
+          "id": "0813",
           "finished": true,
           "pageContent": [{
             "content": "./assets/dist/interactions/08-Szenenaufbau/8.14_Projektion/index.html",

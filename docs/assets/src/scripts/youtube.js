@@ -30,6 +30,10 @@ function onPlayerReady(event) {
     startInterval();
 }
 
+function onPlayerStateChange(event) {
+    clearInterval(checkInt);
+}
+
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
@@ -49,12 +53,9 @@ function stopVideo() {
 
 function startInterval() {
     player.getDuration();
-    console.log(player.getDuration());
     //checks every 100ms to see if the video has reached 6s
-    checkInt = setInterval(function () {
-        if (player.getCurrentTime() != player.getDuration()) {
-            //console.log(player.getCurrentTime());
-            setInformation(getCurrentTime);
-        };
-    }, 100)
+    while(player.getCurrentTime() !== player.getDuration() && player.state === YT.PlayerState.PLAYING) {
+        //console.log(player.getCurrentTime());
+        setInformation(getCurrentTime);
+    }
 }
