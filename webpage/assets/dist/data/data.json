@@ -21,10 +21,6 @@
           {
             "timeDuration": "98",
             "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
-          },
-          {
-            "timeDuration": "115",
-            "informationText": "- 600 Relais im Rechenwerk & 1600 im Speicher"
           }
         ]
       }]
@@ -221,7 +217,7 @@
           "id": "021",
           "finished": true,
           "pageContent": [{
-            "content": "zvUVPWBaDEo",
+            "content": "8I7exKNijKk",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -348,7 +344,7 @@
           "id": "026",
           "finished": true,
           "pageContent": [{
-            "content": "QT80Q8DohTY",
+            "content": "ucdSaZH6dDI",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -498,7 +494,7 @@
           "id": "0201",
           "finished": true,
           "pageContent": [{
-            "content": "3b9hD_fO4AU",
+            "content": "c64o7AZEoBw",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -566,7 +562,7 @@
           "id": "031",
           "finished": true,
           "pageContent": [{
-            "content": "VWojuxlqMhw",
+            "content": "rWgGIM35R2Q",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -601,7 +597,7 @@
           "id": "033",
           "finished": true,
           "pageContent": [{
-            "content": "hasbHc6ZZ30",
+            "content": "bauH6IMBNMc",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -670,7 +666,7 @@
               },
               {
                 "timeDuration": "35",
-                "informationText": "24 Bit = 3x8 Bit"
+                "informationText": "24 Bit = alle 8 Bit"
               },
               {
                 "timeDuration": "43",
@@ -966,7 +962,7 @@
           "id": "054",
           "finished": true,
           "pageContent": [{
-            "content": "BC3x2ImNIXw",
+            "content": "ht1zL3iX0DU",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -1059,7 +1055,7 @@
           "id": "059",
           "finished": true,
           "pageContent": [{
-            "content": "TYvn52kZiqg",
+            "content": "qkTJVZwX42c",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -1146,7 +1142,7 @@
           "id": "062",
           "finished": true,
           "pageContent": [{
-            "content": "Ln7-g2s9zpw",
+            "content": "MiSUjT5iW98",
             "youtubeClip": true
           }],
           "pageTime": [{
@@ -1235,14 +1231,26 @@
           "id": "067",
           "finished": true,
           "pageContent": [{
-            "content": "EDANPrgWUFg",
+            "content": "i2zcJDtC0-8",
             "youtubeClip": true
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "2",
+              "informationText": "- Verlustbehaftet"
+            },
+              {
+                "timeDuration": "37",
+                "informationText": "- Transformation von RGB zu\nYUV"
+              },
+              {
+                "timeDuration": "50",
+                "informationText": "- Diskrete\nKosinustransformation"
+              },
+              {
+                "timeDuration": "68",
+                "informationText": "- Annährung durch\nmathematische Verläufe"
+              }]
           }]
         },
         {
@@ -1595,17 +1603,17 @@
         "id": "080",
         "finished": true,
         "pageContent": [{
-          "content": "r4OaX2jXyv8",
+          "content": "jcdQnEctLLo",
           "youtubeClip": true
         }],
         "pageTime": [{
           "time": [{
             "timeDuration": "14",
-            "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
+            "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
           },
             {
               "timeDuration": "23",
-              "informationText": "-Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
+              "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
             }
           ]
         }]
@@ -1835,7 +1843,7 @@
         },
         {
           "pageName": "Perspektivische Projektion",
-          "id": "0812",
+          "id": "0811",
           "finished": true,
           "pageContent": [{
             "content": "1d1V0Aximjg",
@@ -1850,7 +1858,7 @@
         },
         {
           "pageName": "Parallelprojektion",
-          "id": "0813",
+          "id": "0812",
           "finished": true,
           "pageContent": [{
             "content": "P-NFrej_DHg",
@@ -1865,7 +1873,7 @@
         },
         {
           "pageName": "( I ) Projektion",
-          "id": "0814",
+          "id": "0813",
           "finished": true,
           "pageContent": [{
             "content": "./assets/dist/interactions/08-Szenenaufbau/8.14_Projektion/index.html",
@@ -1962,13 +1970,13 @@
           "id": "095",
           "finished": true,
           "pageContent": [{
-            "content": "WP8YX2xW7ME",
+            "content": "_Gjno8n41xY",
             "youtubeClip": true
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "3",
+              "informationText": "Clipping dient dazu\nGeometrien außerhalb\ndes sichtbaren Volumens\nwegzuschneiden"
             }]
           }]
         },
@@ -1977,14 +1985,18 @@
           "id": "096",
           "finished": true,
           "pageContent": [{
-            "content": "QQl-6AwleOc",
+            "content": "Fd5p16W5pTM",
             "youtubeClip": true
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "5",
+              "informationText": "Flächen, die vom Betrachter\n nicht wahrgenommen\n werden können,\n werden entfernt"
+            },
+              {
+                "timeDuration": "24",
+                "informationText": "Normalenvektor steht\nsenkrecht auf zugehöriger\n Fläche"
+              }]
           }]
         },
         {
@@ -1992,14 +2004,23 @@
           "id": "097",
           "finished": true,
           "pageContent": [{
-            "content": "r67OyXQ0__4",
+            "content": "1pE1XdCE75k",
             "youtubeClip": true
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "7",
+              "informationText": "Projektionsebene wird gerastert"
+            },
+              {
+                "timeDuration": "11",
+                "informationText": "Meshes im Frustum werden\n auf der gerasterten Ebene\ndargestellt"
+              },
+              {
+                "timeDuration": "15",
+                "informationText": "Rasterelement heißt\nbei der Rasterisierung\nFragment"
+              }
+            ]
           }]
         },
         {
@@ -2022,14 +2043,26 @@
           "id": "099",
           "finished": true,
           "pageContent": [{
-            "content": "TSUov0s_S2c",
+            "content": "k2A9s-TdqS0",
             "youtubeClip": true
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "18",
+              "informationText": "Raytracing\n(dt. Strahlen verfolgen“)"
+            },
+              {
+                "timeDuration": "25",
+                "informationText": "-Aussendung von Strahlen\nvom Betrachter aus"
+              },
+              {
+                "timeDuration": "43",
+                "informationText": "Primärstrahl: Strahl von\nBetrachter auf Pixel"
+              },
+              {
+                "timeDuration": "55",
+                "informationText": "Sekundärstrahl: reflektierte/\ngebrochene Strahlen"
+              }]
           }]
         },
         {
@@ -2302,14 +2335,34 @@
         "id": "110",
         "finished": true,
         "pageContent": [{
-          "content": "A3dWXYRfq38",
+          "content": "W165HUcLpaQ",
           "youtubeClip": true
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+            "timeDuration": "9",
+            "informationText": "Mithilfe von Software\nwerden 3D-Meshes erzeugt."
+          },
+            {
+              "timeDuration": "12",
+              "informationText": "Vielzahl von Anwendungsgebieten"
+            },
+            {
+              "timeDuration": "20",
+              "informationText": "- Filme"
+            },
+            {
+              "timeDuration": "21",
+              "informationText": "- Games"
+            },
+            {
+              "timeDuration": "22",
+              "informationText": "- Produktentwicklung"
+            },
+            {
+              "timeDuration": "23",
+              "informationText": "- Wissenschaft & Technik"
+            }]
         }]
       },
         {
@@ -2768,7 +2821,7 @@
         {
           "pageName": "( I ) Animationstechniken",
           "id": "132",
-          "finished": false,
+          "finished": true,
           "pageContent": [{
             "content": "",
             "youtubeClip": false
