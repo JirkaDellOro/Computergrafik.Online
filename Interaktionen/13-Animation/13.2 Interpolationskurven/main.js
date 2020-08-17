@@ -251,7 +251,7 @@ function setTransitions() {
 
         points = '(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
 
-    
+
     box.style.WebkitTransition =
         box.style.MozTransition =
         box.style.MsTransition =
@@ -305,7 +305,18 @@ $('.testButton').click(function () {
         box.classList.remove(this.getAttribute("id"));
         set = true;
     }
+    startMovement();
 });
+
+function startMovement() {
+    console.log("test");
+    document.getElementById("helper").style.display = "block";
+    document.getElementById("helper").style.animation = "helper 700ms";
+    setTimeout(function () {
+        document.getElementById("helper").style.display = "none";
+        document.getElementById("helper").style.animation = "";
+    }, 700);
+}
 
 setTransitions();
 
