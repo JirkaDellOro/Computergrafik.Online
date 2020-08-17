@@ -40,7 +40,7 @@ namespace Transformations {
             this._initialPos = this._cube.position;
             let material: any = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
             material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
-            this._cube.material = material;
+            this._cube.material = material;p
             this._animationBoxScaling = new BABYLON.Animation("boxAnimationScaling", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationBoxRotation = new BABYLON.Animation("boxRotationScaling", "rotation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
