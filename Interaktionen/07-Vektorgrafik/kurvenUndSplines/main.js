@@ -62,9 +62,6 @@ function getPos(event) {
     };
 }
 
-
-
-//from quirksmode.org. Modified slightly to return obj
 function getOffSet(obj) {
     var curleft = curtop = 0;
     if (obj.offsetParent) {
@@ -80,7 +77,6 @@ function getOffSet(obj) {
         };
     }
 }
-
 
 var drag = false,
     draggingObj,
@@ -124,12 +120,6 @@ function onPress(event) {
             draggingObj = current;
             oldX = event.pageX;
             oldY = event.pageY;
-
-
-            /*let selected = document.querySelector('input[type="radio"]:checked');
-            selected.checked = false;
-            let custom = document.querySelectorAll('#options input[type="radio"]');
-            custom[custom.length - 1].checked = true;*/
 
 
             document.addEventListener('mouseup', onRelease, false);
@@ -262,7 +252,6 @@ function updateDrawing() {
     }
 }
 
-
 function presetChange() {
 
     selected = document.querySelector('input[type="radio"]:checked');
@@ -281,7 +270,5 @@ function presetChange() {
 
 var options = document.getElementById("options");
 options.addEventListener("input", presetChange);
-
-
 
 presetChange()
