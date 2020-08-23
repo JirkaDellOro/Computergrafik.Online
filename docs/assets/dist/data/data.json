@@ -1895,14 +1895,26 @@
         "id": "090",
         "finished": true,
         "pageContent": [{
-          "content": "fggRf59PXEc",
+          "content": "TRqTA8G1rzA",
           "youtubeClip": true
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+            "timeDuration": "10",
+            "informationText": "- Rendern\n(dt. Bildsynthese)"
+          },
+            {
+              "timeDuration": "15",
+              "informationText": "- Berücksichtigung von:\nMeshes\nLichtquellen\nKameras"
+            },
+            {
+              "timeDuration": "29",
+              "informationText": "- Prozess des Renderings\nin der Rendering Pipeline"
+            },
+            {
+              "timeDuration": "34",
+              "informationText": "- Aus einer Szene wird\nein Bild erzeugt"
+            }]
         }]
       },
         {
@@ -1915,9 +1927,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "2",
+              "informationText": "lokales Koordinatensytem =\nObjektkoordinaten"
+            },
+              {
+                "timeDuration": "11",
+                "informationText": "Verschiebung (Translation)\nDrehung (Rotation) Vergrößerung\nbzw. Verkleinerung\n(Skalierung)"
+              },
+              {
+                "timeDuration": "40",
+                "informationText": "Modelltransformation:\nlokales Koordinatensystem\n--> globales Koordinatensystem"
+              }]
           }]
         },
         {
@@ -1930,9 +1950,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "5",
+              "informationText": "Kamera-Transformation\n= (engl.) Viewing\nTransformation"
+            },
+              {
+                "timeDuration": "5",
+                "informationText": "Veränderung der Position\nund Blickrichtung\nder Kamera"
+              }]
           }]
         },
         {
@@ -1945,9 +1969,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "16",
+              "informationText": "Frustum bei perspektivischer\nProjektion =\nPyramidenstumpf"
+            },
+              {
+                "timeDuration": "24",
+                "informationText": "Near Clipping Plane =\nProjektionsebene"
+              },
+              {
+                "timeDuration": "34",
+                "informationText": "Transformation des Frustum in ein Quader -> Clip-Space"
+              }]
           }]
         },
         {
@@ -1977,7 +2009,11 @@
             "time": [{
               "timeDuration": "3",
               "informationText": "Clipping dient dazu\nGeometrien außerhalb\ndes sichtbaren Volumens\nwegzuschneiden"
-            }]
+            },
+              {
+                "timeDuration": "3",
+                "informationText": "Überprüfung ob Meshes im sichtbaren Bereich sind"
+              }]
           }]
         },
         {
@@ -2033,9 +2069,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "14",
+              "informationText": "Verdeckungsberechnung\ndurch z-Buffer-\nAlgorithmus"
+            },
+              {
+                "timeDuration": "19",
+                "informationText": "z-Buff er-Algorithmus\nspeichert für jeden\nPixel z-Wert"
+              },
+              {
+                "timeDuration": "37",
+                "informationText": "Je kleiner der z-Wert\neines Pixels, desto näher\nist er am Betrachter"
+              }]
           }]
         },
         {
@@ -2090,9 +2134,33 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "3",
+              "informationText": "Volumengrafik = transparente\nObjekte"
+            },
+              {
+                "timeDuration": "16",
+                "informationText": "Voxel = Gitterpunkt in\neinem dreidimensionalen\nGitter."
+              },
+              {
+                "timeDuration": "44",
+                "informationText": "vier Render Schritte:"
+              },
+              {
+                "timeDuration": "50",
+                "informationText": "1. Klassifikation"
+              },
+              {
+                "timeDuration": "71",
+                "informationText": "2. Interpolation"
+              },
+              {
+                "timeDuration": "90",
+                "informationText": "3. Shading"
+              },
+              {
+                "timeDuration": "101",
+                "informationText": "4. Composition"
+              }]
           }]
         }
       ]

@@ -390,9 +390,9 @@
         {
           "pageName": "( I ) HSB-Farbsystem",
           "id": "027",
-          "finished": false,
+          "finished": true,
           "pageContent": [{
-            "content": "",
+            "content": "./assets/dist/interactions/02-Farbsysteme/HSB-Farbsystem/hsb-farbsystem.html",
             "youtubeClip": false
           }],
           "pageTime": [{}]
@@ -1083,7 +1083,7 @@
           "id": "0510",
           "finished": true,
           "pageContent": [{
-            "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/0511_I_Rasterwinkelung.html",
+            "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Rasterwinkelung/rasterwinkelung.html",
             "youtubeClip": false
           }],
           "pageTime": [{
@@ -1895,14 +1895,26 @@
         "id": "090",
         "finished": true,
         "pageContent": [{
-          "content": "fggRf59PXEc",
+          "content": "TRqTA8G1rzA",
           "youtubeClip": true
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+            "timeDuration": "10",
+            "informationText": "- Rendern\n(dt. Bildsynthese)"
+          },
+            {
+              "timeDuration": "15",
+              "informationText": "- Berücksichtigung von:\nMeshes\nLichtquellen\nKameras"
+            },
+            {
+              "timeDuration": "29",
+              "informationText": "- Prozess des Renderings\nin der Rendering Pipeline"
+            },
+            {
+              "timeDuration": "34",
+              "informationText": "- Aus einer Szene wird\nein Bild erzeugt"
+            }]
         }]
       },
         {
@@ -1915,9 +1927,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "2",
+              "informationText": "lokales Koordinatensytem =\nObjektkoordinaten"
+            },
+              {
+                "timeDuration": "11",
+                "informationText": "Verschiebung (Translation)\nDrehung (Rotation) Vergrößerung\nbzw. Verkleinerung\n(Skalierung)"
+              },
+              {
+                "timeDuration": "40",
+                "informationText": "Modelltransformation:\nlokales Koordinatensystem\n--> globales Koordinatensystem"
+              }]
           }]
         },
         {
@@ -1930,9 +1950,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "5",
+              "informationText": "Kamera-Transformation\n= (engl.) Viewing\nTransformation"
+            },
+              {
+                "timeDuration": "5",
+                "informationText": "Veränderung der Position\nund Blickrichtung\nder Kamera"
+              }]
           }]
         },
         {
@@ -1945,9 +1969,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "16",
+              "informationText": "Frustum bei perspektivischer\nProjektion =\nPyramidenstumpf"
+            },
+              {
+                "timeDuration": "24",
+                "informationText": "Near Clipping Plane =\nProjektionsebene"
+              },
+              {
+                "timeDuration": "34",
+                "informationText": "Transformation des Frustum in ein Quader -> Clip-Space"
+              }]
           }]
         },
         {
@@ -1977,7 +2009,11 @@
             "time": [{
               "timeDuration": "3",
               "informationText": "Clipping dient dazu\nGeometrien außerhalb\ndes sichtbaren Volumens\nwegzuschneiden"
-            }]
+            },
+              {
+                "timeDuration": "3",
+                "informationText": "Überprüfung ob Meshes im sichtbaren Bereich sind"
+              }]
           }]
         },
         {
@@ -2033,9 +2069,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "14",
+              "informationText": "Verdeckungsberechnung\ndurch z-Buffer-\nAlgorithmus"
+            },
+              {
+                "timeDuration": "19",
+                "informationText": "z-Buff er-Algorithmus\nspeichert für jeden\nPixel z-Wert"
+              },
+              {
+                "timeDuration": "37",
+                "informationText": "Je kleiner der z-Wert\neines Pixels, desto näher\nist er am Betrachter"
+              }]
           }]
         },
         {
@@ -2090,9 +2134,33 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "3",
+              "informationText": "Volumengrafik = transparente\nObjekte"
+            },
+              {
+                "timeDuration": "16",
+                "informationText": "Voxel = Gitterpunkt in\neinem dreidimensionalen\nGitter."
+              },
+              {
+                "timeDuration": "44",
+                "informationText": "vier Render Schritte:"
+              },
+              {
+                "timeDuration": "50",
+                "informationText": "1. Klassifikation"
+              },
+              {
+                "timeDuration": "71",
+                "informationText": "2. Interpolation"
+              },
+              {
+                "timeDuration": "90",
+                "informationText": "3. Shading"
+              },
+              {
+                "timeDuration": "101",
+                "informationText": "4. Composition"
+              }]
           }]
         }
       ]
@@ -2773,9 +2841,13 @@
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+            "timeDuration": "5",
+            "informationText": "lat.: animare - zum Leben erwecken"
+          },
+            {
+              "timeDuration": "10",
+              "informationText": "Sowohl im 2D-Bereich als auch im 3D-Bereich in der Computergrafik verwendet"
+            }]
         }]
       },
         {
@@ -2823,7 +2895,7 @@
           "id": "132",
           "finished": true,
           "pageContent": [{
-            "content": "",
+            "content": "./assets/dist/interactions/13-Animation/13.1 Animationstechniken/index.html",
             "youtubeClip": false
           }],
           "pageTime": [{
@@ -2890,9 +2962,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "5",
+              "informationText": "Animation von hierarchisch aufgebauten Modellen"
+            },
+              {
+                "timeDuration": "17",
+                "informationText": "Vorwärtskinematik: Parent bestimmt die Bewegung des Childs"
+              },
+              {
+                "timeDuration": "33",
+                "informationText": "Rückwärtskinematik: letztes Child bestimmt bewegung des Parents"
+              }]
           }]
         },
         {
@@ -2920,9 +3000,25 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "8",
+              "informationText": "Simulierung von organischen Bewegungen"
+            },
+              {
+                "timeDuration": "10",
+                "informationText": "Rigging"
+              },
+              {
+                "timeDuration": "14",
+                "informationText": "Erstellung eines Rigs aus Bones"
+              },
+              {
+                "timeDuration": "22",
+                "informationText": "Je genauer die Aufteilung der Bones umso genauer die Animation"
+              },
+              {
+                "timeDuration": "35",
+                "informationText": "Aufbau von Parent zu Child"
+              }]
           }]
         },
         {
