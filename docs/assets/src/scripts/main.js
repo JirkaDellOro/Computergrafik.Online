@@ -1,12 +1,10 @@
-import jQuery from "jquery"
-window.$ = jQuery;
-window.jQuery = jQuery;
-var setData;
+var dataSet;
 var getRotation = false;
 var valueNavigation;
 var openInformation = false;
 var index;
 var constructionText = "Diese Seite befindet sich noch in der Entwicklung";
+var section;
 
 $(document).ready(function () {
 
@@ -41,8 +39,6 @@ function readDeviceOrientation() {
                 $('.modual').css('display', 'block');
                 $('.iframe-interaction').css('display', 'none');
             } else {
-                // Portrait
-                //document.getElementById("orientation").innerHTML = "PORTRAIT";
                 $('.modual').css('display', 'none');
                 $('.iframe-interaction').css('display', 'block');
             }
@@ -54,25 +50,25 @@ window.onorientationchange = readDeviceOrientation;
 
 // Build Navigation
 
-var requestURL = './assets/dist/data/data.json';
-var request = new XMLHttpRequest();
+let requestURL = './assets/dist/data/data.json';
+let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
 
 request.onload = function () {
-    var getDataFromJson = request.response;
-    setData = JSON.parse(getDataFromJson);
-    setChapter(setData);
+    let getDataFromJson = request.response;
+    dataSet = JSON.parse(getDataFromJson);
+    setChapter(dataSet);
 };
 
 function setChapter(jsonObj) {
-    var chapter = jsonObj['section'];
-    var addChapter = document.getElementsByClassName('navigation-toggle')[0];
+    let chapter = jsonObj['section'];
+    let addChapter = document.getElementsByClassName('navigation-toggle')[0];
 
-    for (var i = 0; i < chapter.length; i++) {
-        var myChapter = document.createElement('div');
-        var ulList = document.createElement('ul');
+    for (let i = 0; i < chapter.length; i++) {
+        let myChapter = document.createElement('div');
+        let ulList = document.createElement('ul');
         ulList.id = [i];
         myChapter.className = "navigation-status-" + [i] + " navigation-list";
         myChapter.id = [i];
@@ -80,9 +76,9 @@ function setChapter(jsonObj) {
         addChapter.appendChild(ulList);
         ulList.appendChild(myChapter);
 
-        for (var j = 0; j < chapter[i].page.length; j++) {
+        for (let j = 0; j < chapter[i].page.length; j++) {
 
-            var liList = document.createElement('li');
+            let liList = document.createElement('li');
             liList.className = "navigation-infos-" + [i] + " toggleSub";
 
             if (!chapter[i].page[j].finished) {
@@ -91,6 +87,8 @@ function setChapter(jsonObj) {
 
             liList.id = chapter[i].page[j].id;
             liList.textContent = chapter[i].page[j].pageName;
+            liList.tabIndex = i;
+            liList.accessKey = i;
             ulList.appendChild(liList);
         }
     }
@@ -100,8 +98,8 @@ function setChapter(jsonObj) {
 }
 
 function setNaviagtion() {
-    var countNav = $('ul').length;
-    var toggleNav = true;
+    let countNav = $('ul').length;
+    let toggleNav = true;
 
     $('#toggleMenu').click(function () {
         if (toggleNav) {
@@ -117,12 +115,14 @@ function setNaviagtion() {
 
     $('.navigation-list').click(function () {
         valueNavigation = $(this).attr('id');
-        for (var i = 0; i < countNav; i++) {
-            if (valueNavigation == [i]) {
+        for (let i = 0; i < countNav; i++) {
+            if (parseInt(valueNavigation) === i) {
                 $('.navigation-status-' + [i]).addClass('active-navigation');
                 $('.navigation-infos-' + [i]).slideToggle();
-                var strHeadline = $('.navigation-status-' + [i]).text();
+                $('.navigation-infos-' + [i]).tabIndex = i;
+                let strHeadline = $('.navigation-status-' + [i]).text();
                 $(".headline").html(strHeadline);
+
             } else {
                 $('.navigation-status-' + [i]).removeClass('active-navigation');
                 $('.navigation-infos-' + [i]).slideUp();
@@ -130,10 +130,52 @@ function setNaviagtion() {
         }
     });
 
+    document.addEventListener("keydown", event => {
+
+        let activeElement = $('.active-navigation');
+
+        if (event.isComposing || event.keyCode === 83) {
+            let chapter = dataSet['section'];
+            for (let i = 0; i < chapter.length; i++) {
+                for (let j = 0; j < chapter[i].page.length; j++) {
+                    if (index === chapter[i].page[j].id) {
+                        let chapterIndex = chapter[i].page[j + 1];
+                        let liCount = chapter[i].page;
+                        let liLength = liCount.length - 1;
+                        getChapter(chapterIndex, liCount, liLength);
+                        index = chapter[i].page[j + 1];
+                        setHeadline(index.id, index.pageName);
+                    }
+                }
+            }
+            index = index.id;
+        }
+        if(event.isComposing || event.keyCode === 87) {
+            let chapter = dataSet['section'];
+            for (let i = 0; i < chapter.length; i++) {
+                for (let j = 0; j < chapter[i].page.length; j++) {
+                    if (index === chapter[i].page[j].id) {
+                        let chapterIndex = chapter[i].page[j - 1];
+                        let liCount = chapter[i].page;
+                        let liLength = liCount.length - 1;
+                        getChapter(chapterIndex, liCount, liLength);
+                        index = chapter[i].page[j - 1];
+                        setHeadline(index.id, index.pageName);
+                    }
+                }
+            }
+            index = index.id;
+        }
+    });
+
+
+    // document.addEventListener('keydown', event => {
+    //     console.log(event.keyCode);
+    // });
+
     $('.toggleSub').click(function () {
         $('.toggleSub').removeClass('active-infos');
         $(this).addClass('active-infos');
-        console.log($(window).width());
         if ($(window).width() < 760) $('.navigation-toggle').slideToggle();
         var strSubHeadline = $(this).text();
         $(".subheadline").html(strSubHeadline);
@@ -145,8 +187,7 @@ function setNaviagtion() {
 
     $('.toggleSub').click(function () {
         index = $(this).attr('id');
-        console.log(index);
-        var chapter = setData['section'];
+        var chapter = dataSet['section'];
         for (var i = 0; i < chapter.length; i++) {
             for (var j = 0; j < chapter[i].page.length; j++) {
                 if (chapter[i].page[j].id == index) {
@@ -161,78 +202,110 @@ function setNaviagtion() {
 };
 
 $('.next').click(function () {
-    var chapter = setData['section'];
-    for (var i = 0; i < chapter.length; i++) {
-        for (var j = 0; j < chapter[i].page.length; j++) {
+    let chapter = dataSet['section'];
+    for (let i = 0; i < chapter.length; i++) {
+        for (let j = 0; j < chapter[i].page.length; j++) {
             if (index === chapter[i].page[j].id) {
-                var chapterIndex = chapter[i].page[j + 1];
-                var liCount = chapter[i].page;
-                var liLength = liCount.length - 1;
+                let chapterIndex = chapter[i].page[j + 1];
+                let liCount = chapter[i].page;
+                let liLength = liCount.length - 1;
                 getChapter(chapterIndex, liCount, liLength);
                 index = chapter[i].page[j + 1];
                 setHeadline(index.id, index.pageName);
             }
         }
     }
-    index = index.id;
+    index = index.id
 });
 
 $('.prev').click(function () {
-    var chapter = setData['section'];
-    for (var i = 0; i < chapter.length; i++) {
-        for (var j = 0; j < chapter[i].page.length; j++) {
+    let chapter = dataSet['section'];
+    for (let i = 0; i < chapter.length; i++) {
+        for (let j = 0; j < chapter[i].page.length; j++) {
             if (index === chapter[i].page[j].id) {
-                var chapterIndex = chapter[i].page[j - 1];
-                var liCount = chapter[i].page;
-                var liLength = liCount.length - 1;
+                let chapterIndex = chapter[i].page[j - 1];
+                let liCount = chapter[i].page;
+                let liLength = liCount.length - 1;
                 getChapter(chapterIndex, liCount, liLength);
                 index = chapter[i].page[j - 1];
                 setHeadline(index.id, index.pageName);
             }
         }
     }
-    index = index.id;
+    index = index.id
 });
 
-function getChapter(chapterIndex, liCount, liLength) {
-    $('.iframe-interaction').empty();
-    if (chapterIndex.finished == true) {
+function getCurrentPage() {
+    let section = dataSet['section'];
+    for (let i = 0; i < section.length; i++) {
+        for (let j = 0; j < section[i].page.length; j++) {
+            if (index === section[i].page[j].id) {
+                return section[i].page[j - 1];
+            }
+        }
+    }
+}
+
+function filterCurrentPage() {
+    let sections = dataSet['section'];
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].page.filter(
+            function(page) {
+                if(page.id === index) {
+                    return page;
+                }
+            }
+        )
+    }
+}
+
+function getChapter(page, pages, pageLength) {
+    $('.desktop-headline').html(page.pageName);
+    $('.mobile-headline').html(page.pageName);
+    if (page.finished === true) {
         $('.construction-text').css('display', 'none');
-        if (chapterIndex.pageContent[0].youtubeClip == true) {
-            $('.content-container').css('display', 'block');
+        $('.iframe-interaction').css('display', 'none');
+        $('.iframe-interaction').css('display', 'none');
+        $('.content-container').css('display', 'none');
+        $('.youtube-player').css('display', 'none');
+        if (page.pageContent[0].youtubeClip === true) {
+            // $('.content-container').css('padding-bottom', '56.25%');
+            stopVideo();
+            player.loadVideoById(page.pageContent[0].content);
             $('.youtube-player').css('display', 'block');
-            $('.iframe-interaction').css('display', 'none');
+            $('.content-container').css('display', 'block');
+            $('.youtube-player').css('width', '100%');
+            $('.youtube-player').css('height', '100%');
             $('.information-string').remove();
-            player.stopVideo();
-            player.loadVideoById(chapterIndex.pageContent[0].content);
-            setInformation(chapterIndex.pageTime);
+            setInformation(page.pageTime);
             getRotation = false;
-            checkArrows(chapterIndex, liCount, liLength);
+            checkArrows(page, pages, pageLength);
         } else {
-            player.stopVideo();
-            $('.content-container').css('display', 'none');
-            $('.youtube-player').css('display', 'none');
             $('.iframe-interaction').css('display', 'block');
             $('.information-string').remove();
-            $('.iframe-interaction').html("<iframe src='" + chapterIndex.pageContent[0].content + "'" +
-                "onload=\"this.style.height=(this.contentWindow.outerHeight/2.5)+'px';\" ></iframe>")
+            $('.iframe-interaction').html("<iframe class='interaction' src='" + page.pageContent[0].content + "'></iframe>")
+            $('.iframe-interaction').css('height', '100%');
+            $('.interaction').css('height', '100%');
+            stopVideo();
+            setHighlight();
+            $('.information-text').append('<p class="information-string">' + page.pageTime[0].time[0].informationText + '</p>');
             getRotation = true;
-            checkArrows(chapterIndex, liCount, liLength);
+            checkArrows(page, pages, pageLength);
             readDeviceOrientation();
         }
     } else {
+        stopVideo();
         $('.youtube-player').css('display', 'none');
         $('.iframe-interaction').css('display', 'none');
         $('.content-container').css('display', 'block');
         $('.construction-text').css('display', 'block');
         $('.information-string').remove();
-        stopVideo();
     }
-    return index = chapterIndex.id;
+    return index = page.id;
 }
 
 function setHeadline(id, pageName) {
-    var indexNumeration = "#" + id;
+    let indexNumeration = "#" + id;
     $(".subheadline").html(pageName);
     $('.toggleSub').removeClass('active-infos');
     $(indexNumeration).addClass('active-infos');
@@ -252,5 +325,5 @@ function checkArrows(chapterIndex, liCount, liLength) {
 }
 
 function setInformation(pageInformation) {
-    startInterval2(pageInformation);
+    startInterval(pageInformation);
 }

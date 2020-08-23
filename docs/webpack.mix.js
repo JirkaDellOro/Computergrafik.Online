@@ -4,7 +4,7 @@ let fs = require('fs');
 mix .options({
         processCssUrls: false,
     })
-    .sass('assets/src/styles/main.sass', 'assets/dist/css/')
+    //.sass('assets/src/styles/main.sass', 'assets/dist/css/')
     .sourceMaps()
     .setPublicPath('./');
 

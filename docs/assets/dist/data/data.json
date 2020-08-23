@@ -390,9 +390,9 @@
         {
           "pageName": "( I ) HSB-Farbsystem",
           "id": "027",
-          "finished": false,
+          "finished": true,
           "pageContent": [{
-            "content": "",
+            "content": "./assets/dist/interactions/02-Farbsysteme/HSB-Farbsystem/hsb-farbsystem.html",
             "youtubeClip": false
           }],
           "pageTime": [{}]
@@ -1083,7 +1083,7 @@
           "id": "0510",
           "finished": true,
           "pageContent": [{
-            "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/0511_I_Rasterwinkelung.html",
+            "content": "./assets/dist/interactions/05-Aufloesung-Ausgabe/Rasterwinkelung/rasterwinkelung.html",
             "youtubeClip": false
           }],
           "pageTime": [{
@@ -2773,9 +2773,13 @@
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+            "timeDuration": "5",
+            "informationText": "lat.: animare - zum Leben erwecken"
+          },
+            {
+              "timeDuration": "10",
+              "informationText": "Sowohl im 2D-Bereich als auch im 3D-Bereich in der Computergrafik verwendet"
+            }]
         }]
       },
         {
@@ -2890,9 +2894,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "5",
+              "informationText": "Animation von hierarchisch aufgebauten Modellen"
+            },
+              {
+                "timeDuration": "17",
+                "informationText": "Vorwärtskinematik: Parent bestimmt die Bewegung des Childs"
+              },
+              {
+                "timeDuration": "33",
+                "informationText": "Rückwärtskinematik: letztes Child bestimmt bewegung des Parents"
+              }]
           }]
         },
         {
@@ -2920,9 +2932,25 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "8",
+              "informationText": "Simulierung von organischen Bewegungen"
+            },
+              {
+                "timeDuration": "10",
+                "informationText": "Rigging"
+              },
+              {
+                "timeDuration": "14",
+                "informationText": "Erstellung eines Rigs aus Bones"
+              },
+              {
+                "timeDuration": "22",
+                "informationText": "Je genauer die Aufteilung der Bones umso genauer die Animation"
+              },
+              {
+                "timeDuration": "35",
+                "informationText": "Aufbau von Parent zu Child"
+              }]
           }]
         },
         {

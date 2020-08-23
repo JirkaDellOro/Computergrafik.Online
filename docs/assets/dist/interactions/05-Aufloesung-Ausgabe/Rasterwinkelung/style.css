@@ -1,0 +1,36 @@
+#image-container {
+    margin-left: 20%;
+    margin-top: 15vw;
+}
+
+img {
+    position: absolute;
+    width: 60%;
+}
+
+#slider-container {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 61vw;
+}
+
+label {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media screen and (orientation: landscape) {
+    img {
+        width: 20%;
+    }
+    #image-container {
+        margin-left: 40%;
+        margin-top: 5vw;
+    }
+    #slider-container {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 21vw;
+    }
+}

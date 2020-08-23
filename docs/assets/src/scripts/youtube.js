@@ -12,35 +12,36 @@ var checkInt;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '360',
-        width: '640',
+        height: '100%',
+        width: '100%',
         playerVars: {
-            'playsinline': 1
+            'playsinline': 1,
+            'rel': 0
         },
         //videoId: src,
         events: {
-            'onReady': onPlayerReady,
+            'onReady': onPlayerReady
             //'onStateChange': onPlayerStateChange,
         },
     });
 }
 // 4. The API will call this function when the video player is ready.
+//TODO: DOES ONLY WORK WHEN LOADING THE PAGE!
 function onPlayerReady(event) {
+    // event.target.setVolume(0);
     event.target.playVideo();
-    startInterval();
 }
 
-function onPlayerStateChange(event) {
-    clearInterval(checkInt);
-}
+
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-/* 
+
+/*
 var done = false;
 function onPlayerStateChange(event) {
-if (event.data == YT.PlayerState.PLAYING && !done) {	
+if (event.data == YT.PlayerState.PLAYING && !done) {
       setTimeout(stopVideo, 6000);
       done = true;
 }
@@ -49,13 +50,30 @@ if (event.data == YT.PlayerState.PLAYING && !done) {
 
 function stopVideo() {
     player.stopVideo();
+    clearInterval(checkInt)
 }
 
-function startInterval() {
-    player.getDuration();
-    //checks every 100ms to see if the video has reached 6s
-    while(player.getCurrentTime() !== player.getDuration() && player.state === YT.PlayerState.PLAYING) {
-        //console.log(player.getCurrentTime());
-        setInformation(getCurrentTime);
-    }
+function startInterval(information) {
+    var timeInformation = information[0].time;
+    var i = 0;
+    checkInt = setInterval(function () {
+        if (YT.PlayerState.PLAYING) {
+            var currentTime = Math.floor(player.getCurrentTime());
+            if(timeInformation[i] !== undefined){
+                if(i <= timeInformation.length && timeInformation[i].timeDuration <= currentTime )
+                {
+                    $('.information-text').append('<p class="information-string">' + timeInformation[i].informationText + '</p>');
+                    i = i + 1;
+                }
+            }
+        }
+    }, 100)
+}
+
+function setHighlight(){
+    $('.information-container').addClass('information-container-highlight');
+    $('.information-wrapper').addClass('information-wrapper-highlight');
+
+    $('.information-container').removeClass('information-container-highlight');
+    $('.information-wrapper').removeClass('information-wrapper-highlight');
 }
