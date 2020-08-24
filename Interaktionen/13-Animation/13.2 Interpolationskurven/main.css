@@ -125,7 +125,7 @@ figcaption {
   border-left: 1.5px solid;
   position: absolute;
   bottom: 120px;
-  height: 30px;
+  height: 200px;
   width: 0;
   animation-timing-function: linear;
  }
