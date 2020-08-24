@@ -14,23 +14,20 @@ namespace Transformations {
     let transY: number = 0;
     let posY: number = 0;
 
-    let skX: number = 0;
-    let skewedX: number = 0;
-
-    let skY: number = 0;
-    let skewedY: number = 0;
+    let scaleingX: number = 1;
+    let scaleingY: number = 1;
 
     let totation: number = 0;
     let rotated: number = 0;
 
-    let positions: Position = { 0: "translate", 1: "skew", 2: "rotation" };
-    let order: Order = { "translate": 0, "skew": 1, "rotation": 2 };
+    let positions: Position = { 0: "translate", 1: "scale", 2: "rotation" };
+    let order: Order = { "translate": 0, "scale": 1, "rotation": 2 };
 
     let img: HTMLImageElement;
 
     function main(): void {
 
-        img = document.querySelector("img");
+        img = document.querySelectorAll("img")[1];
 
         let inputX: HTMLInputElement = <HTMLInputElement>document.getElementById("translateX");
         inputX.addEventListener("input", translateX);
@@ -38,58 +35,31 @@ namespace Transformations {
         let inputY: HTMLInputElement = <HTMLInputElement>document.getElementById("translateY");
         inputY.addEventListener("input", translateY);
 
-        let skewInpX: HTMLInputElement = <HTMLInputElement>document.getElementById("skewX");
-        skewInpX.addEventListener("input", skewX);
+        let scaleInpX: HTMLInputElement = <HTMLInputElement>document.getElementById("scaleX");
+        scaleInpX.addEventListener("input", scaleX);
 
-        let skewInpY: HTMLInputElement = <HTMLInputElement>document.getElementById("skewY");
-        skewInpY.addEventListener("input", skewY);
+        let scaleInpY: HTMLInputElement = <HTMLInputElement>document.getElementById("scaleY");
+        scaleInpY.addEventListener("input", scaleY);
 
         let rotation: HTMLInputElement = <HTMLInputElement>document.getElementById("rotate");
         rotation.addEventListener("input", rotate);
 
-        let leftArrows: HTMLCollectionOf<HTMLAnchorElement> = <HTMLCollectionOf<HTMLAnchorElement>>document.getElementsByClassName("left");
-        for (let i: number = 0; i < leftArrows.length; i++) {
-            leftArrows[i].addEventListener("click", moveLeft);
+        let reset: HTMLButtonElement = <HTMLButtonElement>document.getElementById("reset");
+        reset.addEventListener("click", clear);
+
+        let arrows: HTMLCollectionOf<HTMLDivElement> = <HTMLCollectionOf<HTMLDivElement>>document.getElementsByClassName("arows");
+        for (let i: number = 0; i < arrows.length; i++) {
+            arrows[i].addEventListener("click", moveControl);
         }
 
-
-        let rightArrows: HTMLCollectionOf<HTMLAnchorElement> = <HTMLCollectionOf<HTMLAnchorElement>>document.getElementsByClassName("right");
-        for (let i: number = 0; i < rightArrows.length; i++) {
-            rightArrows[i].addEventListener("click", moveRight);
-        }
     }
 
     //change order of transformation and the order the HTML elements are displayed
-    function moveLeft(_event: MouseEvent): void {
+    function moveControl(_event: MouseEvent): void {
 
-        let target: HTMLAnchorElement = <HTMLAnchorElement>_event.target;
-        let parent: HTMLDivElement = <HTMLDivElement>target.parentNode;
-        let category: string = parent.getAttribute("id");
-
-        let position: number = order[category];
-        let newPosition: number = order[category] - 1;
-
-        if (newPosition >= 0) {
-            parent.style.order = "" + newPosition;
-
-            let move: string = positions[newPosition];
-            order[category] = newPosition;
-            order[move] = position;
-
-            positions[newPosition] = category;
-            positions[position] = move;
-
-            let moveParent: HTMLDivElement = <HTMLDivElement>document.getElementById(move);
-            moveParent.style.order = "" + position;
-
-            let transform: string = getTransformation();
-            img.style.transform = transform;
-        }
-    }
-
-    function moveRight(_event: MouseEvent): void {
-        let target: HTMLAnchorElement = <HTMLAnchorElement>_event.target;
-        let parent: HTMLDivElement = <HTMLDivElement>target.parentNode;
+        let target: HTMLAnchorElement = <HTMLAnchorElement>_event.currentTarget;
+        let parent: HTMLDivElement = <HTMLDivElement>target.parentNode.parentNode;
+        //right
         let category: string = parent.getAttribute("id");
 
         let position: number = order[category];
@@ -112,6 +82,7 @@ namespace Transformations {
             img.style.transform = transform;
         }
     }
+
     //get order of transformation
     function getTransformation(): string {
 
@@ -123,8 +94,8 @@ namespace Transformations {
                 result += "translate(" + posX + "%," + posY + "%)";
                 break;
 
-            case "skew":
-                result += "skew(" + skewedX + "deg," + skewedY + "deg)";
+            case "scale":
+                result += "scale(" + scaleingX + "," + scaleingY + ")";
                 break;
 
             case "rotation":
@@ -137,8 +108,8 @@ namespace Transformations {
                 result += "translate(" + posX + "%," + posY + "%)";
                 break;
 
-            case "skew":
-                result += "skew(" + skewedX + "deg," + skewedY + "deg)";
+            case "scale":
+                result += "scale(" + scaleingX + "," + scaleingY + ")";
                 break;
 
             case "rotation":
@@ -151,8 +122,8 @@ namespace Transformations {
                 result += "translate(" + posX + "%," + posY + "%)";
                 break;
 
-            case "skew":
-                result += "skew(" + skewedX + "deg," + skewedY + "deg)";
+            case "scale":
+                result += "scale(" + scaleingX + "," + scaleingY + ")";
                 break;
 
             case "rotation":
@@ -160,7 +131,7 @@ namespace Transformations {
                 break;
         }
 
-        result += "rotate(" + rotated + "deg)";
+        //result += "rotate(" + rotated + "deg)";
 
         return result;
     }
@@ -182,18 +153,18 @@ namespace Transformations {
         img.style.transform = transform;
     }
 
-    function skewX(_e: Event): void {
+    function scaleX(_e: Event): void {
 
         let x: number = Number((_e.target as HTMLInputElement).value);
-        skewedX = skX - x;
+        scaleingX = x;
         let transform: string = getTransformation();
         img.style.transform = transform;
     }
 
-    function skewY(_e: Event): void {
+    function scaleY(_e: Event): void {
 
         let y: number = Number((_e.target as HTMLInputElement).value);
-        skewedY = skY + y;
+        scaleingY = y;
         let transform: string = getTransformation();
         img.style.transform = transform;
     }
@@ -205,6 +176,40 @@ namespace Transformations {
         rotated = totation + rot;
         let transform: string = getTransformation();
         img.style.transform = transform;
+    }
+
+    function clear(): void {
+
+        posX = 0;
+        posY = 0;
+        scaleingX = 1;
+        scaleingX = 1;
+        rotated = 0;
+
+        let transform: string = getTransformation();
+        img.style.transform = transform;
+
+        positions = { 0: "translate", 1: "scale", 2: "rotation" };
+        order = { "translate": 0, "scale": 1, "rotation": 2 };
+
+        (<HTMLDivElement>document.getElementById("translate")).style.order = "0";
+        (<HTMLDivElement>document.getElementById("scale")).style.order = "1";
+        (<HTMLDivElement>document.getElementById("rotation")).style.order = "2";
+
+        let inputX: HTMLInputElement = <HTMLInputElement>document.getElementById("translateX");
+        inputX.value = "0";
+
+        let inputY: HTMLInputElement = <HTMLInputElement>document.getElementById("translateY");
+        inputY.value = "0";
+
+        let scaleInpX: HTMLInputElement = <HTMLInputElement>document.getElementById("scaleX");
+        scaleInpX.value = "1";
+
+        let scaleInpY: HTMLInputElement = <HTMLInputElement>document.getElementById("scaleY");
+        scaleInpY.value = "1";
+
+        let rotation: HTMLInputElement = <HTMLInputElement>document.getElementById("rotate");
+        rotation.value = "0";
     }
 
     document.addEventListener("DOMContentLoaded", main);
