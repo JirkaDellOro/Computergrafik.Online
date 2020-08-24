@@ -2656,10 +2656,21 @@
           "youtubeClip": true
         }],
         "pageTime": [{
-          "time": [{
-            "timeDuration": "",
-            "informationText": ""
-          }]
+          "time": [{  "timeDuration": "4",
+            "informationText": "Ziel: Oberfläche eines Objekts realistischer wirken zu lassen"
+          },
+            {
+              "timeDuration": "14",
+              "informationText": "Lösung: 2D-Bild = 2D-Textur"
+            },
+            {
+              "timeDuration": "30",
+              "informationText": "verschiedene Mapping-Verfahren"
+            },
+            {
+              "timeDuration": "35",
+              "informationText": "Mapping = Zuordnung / Abbildung"
+            }]
         }]
       },
         {
@@ -2686,10 +2697,17 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "13",
+              "informationText": "Umwandlung von Objektraum-Koordinaten (x, y, z) in Texturkoordinaten (u, v)"
+            },
+              {
+                "timeDuration": "22",
+                "informationText": "Zuordnung der Koordinaten mit Hilfe geeigneter Werkzeuge"
+              },
+              {
+                "timeDuration": "27",
+                "informationText": "Pixel auf der Textur = Texel"
+              }]
           }]
         },
         {
@@ -2701,10 +2719,17 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "0",
-              "informationText": "Nun kannst du die von Hand abgewickelte Textur der Sphäre bemalen."
-            }]
+              "time": [{  "timeDuration": "10",
+                "informationText": "Texture entsteht durch einfache Abwicklung von Hand"
+              },
+                {
+                  "timeDuration": "14",
+                  "informationText": "Abwicklung = Unwrapping"
+                },
+                {
+                  "timeDuration": "24",
+                  "informationText": "Objekt wird “aufgeschnitten” und anschließend “abgewickelt”"
+                }]
           }]
         },
         {
@@ -2731,10 +2756,24 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "6",
+              "informationText": "Anti-Aliasing-Methode"
+            },
+              {
+                "timeDuration": "16",
+                "informationText": "Entstehung von Verzerrungen und ungewollten Mustern"
+              },
+              {  "timeDuration": "31",
+                "informationText": "Kantenlänge wird bei jedem Schritt halbiert"
+              },
+                {
+                  "timeDuration": "40",
+                  "informationText": "Objekt nahe beim Betrachter: große Textur mit hoher Auflösung"
+                },
+                {
+                  "timeDuration": "46",
+                  "informationText": "Objekt weiter entfernt vom Betrachter: kleine Textur mit niedriger Auflösung"
+                }]
           }]
         },
         {
@@ -2746,10 +2785,24 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "19",
+              "informationText": "Erzeugung von Tiefe ohne Beeinflussung der Geometrie"
+            },
+              {
+                "timeDuration": "25",
+                "informationText": "Veränderung der Normalen der Oberfläche"
+              },
+              {  "timeDuration": "32",
+                "informationText": "Illusion durch Graustufen"
+              },
+                {
+                  "timeDuration": "44",
+                  "informationText": "Beleuchtungseffekt"
+                },
+                {
+                  "timeDuration": "53",
+                  "informationText": "Vorteil: geringe Erhöhung des Speicherplatzes und der Rendering-Zeit"
+                }]
           }]
         },
         {
@@ -2761,10 +2814,24 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "8",
+              "informationText": "Abwandlung des Bump-Mapping"
+            },
+              {
+                "timeDuration": "14",
+                "informationText": "Ziel: größeren Detailreichtum"
+              },
+              {  "timeDuration": "30",
+                "informationText": "Illusion durch Übertragung von RGB-Werten"
+              },
+                {
+                  "timeDuration": "38",
+                  "informationText": "optische Details bleiben erhalten"
+                },
+                {
+                  "timeDuration": "43",
+                  "informationText": "Nachteil: winkelabhängig"
+                }]
           }]
         },
         {
@@ -2776,10 +2843,16 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "13",
+              "informationText": "Vertiefungen und Erhöhungen der Oberfläche des Objektes"
+            },
+              {
+                "timeDuration": "21",
+                "informationText": "Veränderung der Form durch Veränderung der Geometrie des 3D-Objektes"
+              },
+              {  "timeDuration": "28",
+                "informationText": "displacement = “verschieben” bzw. “verdrängen” des Materials"
+              }]
           }]
         },
         {
@@ -2806,10 +2879,19 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "12",
+              "informationText": "Simulation von spiegelnden Objekten"
+            },
+              {
+                "timeDuration": "21",
+                "informationText": "Speichern einer Umgebungstextur (umliegende Objekte und Lichtquellen)"
+              },
+              {  "timeDuration": "40",
+                "informationText": "Sphärisches Environment-Mapping"
+              },
+              {  "timeDuration": "42",
+                "informationText": "Kubisches Environment-Mapping"
+              }]
           }]
         },
         {
@@ -2821,10 +2903,16 @@
             "youtubeClip": true
           }],
           "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+            "time": [{  "timeDuration": "8",
+              "informationText": "Kubisches Environment-Mapping: Abbildung der Umgebung auf einen Kubus"
+            },
+              {
+                "timeDuration": "9",
+                "informationText": "Vorteil: keine Verzerrung"
+              },
+              {  "timeDuration": "14",
+                "informationText": "Verwendung von sechs 2D-Umgebungs-Texturen"
+              }]
           }]
         }
       ]
