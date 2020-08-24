@@ -1,0 +1,35 @@
+body{
+	overscroll-behavior-: contain;
+}
+
+.buttonContainer{
+	position: absolute;
+    left: 50%;
+    transform: translateX(50%);
+    bottom: 1%;
+}
+.container:first-child{
+	margin-bottom: 90%;
+}
+
+#animation_container{
+	position: absolute;
+}
+
+@media screen and (max-width: 800px) {
+	.container:first-child{
+		margin-bottom: 45%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container:first-child{
+		margin-bottom: 30%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.container:first-child{
+		margin-bottom: 10%;
+	}
+}

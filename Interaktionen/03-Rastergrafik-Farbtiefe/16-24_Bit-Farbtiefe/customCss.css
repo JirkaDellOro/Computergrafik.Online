@@ -1,0 +1,15 @@
+body{
+	overscroll-behavior-: contain;
+}
+
+.buttonContainer{
+	position: absolute;
+}
+.container{
+	margin-bottom: 31px;
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
