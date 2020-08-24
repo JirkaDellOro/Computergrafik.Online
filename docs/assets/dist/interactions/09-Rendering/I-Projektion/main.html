@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body {
+        font-size: 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    #options {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    #options div {
+        width: 30%;
+    }
+
+    #result {
+        width: 40%;
+        margin: 30px auto 20px;
+    }
+
+    #result img:last-child {
+        display: none;
+    }
+
+    @media screen and (max-width: 800px) {
+        #result {
+            width: 70%;
+        }
+
+        body {
+        font-size: 15px;
+    }
+    }
+</style>
+
+<body>
+    <div id="result">
+        <img id="2" src="assets/4.png">
+        <img id="4" src="assets/2.png">
+    </div>
+
+    <div id="options">
+        <div><label>
+                <img src="assets/3.png">
+                <input value="2" type="radio" name="radio-group" checked>Perspektivische
+                Projektions-Transformation</label>
+        </div>
+        <div><label>
+                <img src="assets/1.png">
+                <input value="4" type="radio" name="radio-group">Orthografische Projektions-Transformation</label>
+        </div>
+    </div>
+</body>
+
+</html>
