@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Farbtiefenreduktion</title>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="col_1">
+    <div id="image-container" style="width: 100%;">
+
+    </div>
+</div>
+<div id="col_2">
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="bitRadios" id="2-bit-radio" value="option1" checked oninput="updateImage()">
+        <label class="form-check-label" for="2-bit-radio">
+            2 Bit
+        </label>
+        <br>
+        <input class="form-check-input" type="radio" name="bitRadios" id="4-bit-radio" value="option2" oninput="updateImage()">
+        <label class="form-check-label" for="4-bit-radio">
+            4 Bit
+        </label>
+        <br>
+        <input class="form-check-input" type="radio" name="bitRadios" id="8-bit-radio" value="option3" oninput="updateImage()">
+        <label class="form-check-label" for="8-bit-radio">
+            8 Bit
+        </label>
+        <br>
+        <input class="form-check-input" type="radio" name="bitRadios" id="24-bit-radio" value="option5" oninput="updateImage()">
+        <label class="form-check-label" for="24-bit-radio">
+            24 Bit
+        </label>
+        <br>
+        <input class="form-check-input" type="radio" name="bitRadios" id="48-bit-radio" value="option6" oninput="updateImage()">
+        <label class="form-check-label" for="48-bit-radio">
+            48 Bit
+        </label>
+        <div id="data-label"></div>
+    </div>
+</div>
+
+</body>
+</html>
