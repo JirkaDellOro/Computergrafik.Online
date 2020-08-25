@@ -6,9 +6,13 @@ var interpolationskurven;
     let handleInUse;
     let canvas;
     function main() {
+        console.log(window.innerWidth);
+        if (window.innerWidth < 900) {
+            document.getElementById("no-mobile").style.display = "none";
+        }
         canvas = document.getElementById('curve');
         interpolationskurven.crc2 = canvas.getContext('2d');
-        let box = document.getElementById('box'), supportsTouch = ('createTouch' in document);
+        let box = document.getElementById('box');
         let timeVal = 700;
         var supportsBezierRange = (function () {
             var el = document.createElement('div');
@@ -45,18 +49,11 @@ var interpolationskurven;
         function onPress(event) {
             event.preventDefault();
             event.stopPropagation(); //not sure if this is needed
-            var cursorEvent = supportsTouch ? event.touches[0] : event;
+            var cursorEvent = event;
             var mouseCoordinates = getPos(cursorEvent), x = mouseCoordinates.x, y = mouseCoordinates.y;
             //check to see if over any handles
             for (var i = 0; i < handles.length; i++) {
                 var current = handles[i], curLeft = current.left, curRight = current.right, curTop = current.top, curBottom = current.bottom;
-                //20 px padding for chubby fingers
-                if (supportsTouch) {
-                    curLeft -= 20;
-                    curRight += 20;
-                    curTop -= 20;
-                    curBottom += 20;
-                }
                 if (x >= curLeft &&
                     x <= curRight &&
                     y >= curTop &&
@@ -67,14 +64,12 @@ var interpolationskurven;
                     let custom = document.querySelectorAll('#options input[type="radio"]');
                     custom[custom.length - 1].checked = true;
                     document.addEventListener('mouseup', onRelease, false);
-                    document.addEventListener('touchend', touchEnd, false);
                     document.addEventListener('mousemove', onMove, false);
-                    document.addEventListener('touchmove', touchMove, false);
                 }
             }
         }
         function onMove(event) {
-            var cursorEvent = supportsTouch ? event.touches[0] : event;
+            var cursorEvent = event;
             var x = cursorEvent.pageX - getOffSet(canvas).left, y = cursorEvent.pageY - getOffSet(canvas).top;
             if (x > graph.width) {
                 x = graph.width;
@@ -92,25 +87,11 @@ var interpolationskurven;
             handleInUse.y = y;
             updateDrawing();
         }
-        function touchMove(event) {
-            onMove(event);
-            event.preventDefault();
-        }
         function onRelease() {
             document.removeEventListener('mousemove', onMove, false);
-            document.removeEventListener('touchmove', touchMove, false);
             document.removeEventListener('mouseup', onRelease, false);
-            document.removeEventListener('touchend', touchEnd, false);
-        }
-        function touchEnd(event) {
-            onRelease();
-            event.preventDefault();
         }
         canvas.addEventListener('mousedown', onPress, false);
-        canvas.addEventListener('touchstart', function touchPress(event) {
-            onPress(event);
-            event.preventDefault();
-        }, false);
         function updateDrawing() {
             interpolationskurven.crc2.clearRect(0, 0, canvas.width, canvas.height);
             // draw graph

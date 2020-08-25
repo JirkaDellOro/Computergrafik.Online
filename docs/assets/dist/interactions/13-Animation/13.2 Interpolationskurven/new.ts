@@ -6,11 +6,15 @@ namespace interpolationskurven {
 
     function main(): void {
 
+        console.log(window.innerWidth);
+        if(window.innerWidth<900){
+            document.getElementById("no-mobile").style.display="none";
+        }
+
         canvas = <HTMLCanvasElement>document.getElementById('curve');
         crc2 = canvas.getContext('2d');
 
-        let box = document.getElementById('box'),
-            supportsTouch = ('createTouch' in document);
+        let box = document.getElementById('box');
         let timeVal: number = 700;
 
 
@@ -60,7 +64,7 @@ namespace interpolationskurven {
             event.preventDefault();
             event.stopPropagation(); //not sure if this is needed
 
-            var cursorEvent = supportsTouch ? (<TouchEvent>event).touches[0] : <MouseEvent>event;
+            var cursorEvent = <MouseEvent>event;
 
             var mouseCoordinates = getPos(cursorEvent),
                 x = mouseCoordinates.x,
@@ -75,13 +79,7 @@ namespace interpolationskurven {
                     curTop = current.top,
                     curBottom = current.bottom;
 
-                //20 px padding for chubby fingers
-                if (supportsTouch) {
-                    curLeft -= 20;
-                    curRight += 20;
-                    curTop -= 20;
-                    curBottom += 20;
-                }
+              
 
                 if (x >= curLeft &&
                     x <= curRight &&
@@ -101,10 +99,8 @@ namespace interpolationskurven {
 
 
                     document.addEventListener('mouseup', onRelease, false);
-                    document.addEventListener('touchend', touchEnd, false);
 
                     document.addEventListener('mousemove', onMove, false);
-                    document.addEventListener('touchmove', touchMove, false);
 
                 }
             }
@@ -112,7 +108,7 @@ namespace interpolationskurven {
 
         function onMove(event: Event) {
 
-            var cursorEvent = supportsTouch ? (<TouchEvent>event).touches[0] : <MouseEvent>event;
+            var cursorEvent = <MouseEvent>event;
 
             var x = cursorEvent.pageX - getOffSet(canvas).left,
                 y = cursorEvent.pageY - getOffSet(canvas).top;
@@ -136,29 +132,17 @@ namespace interpolationskurven {
             updateDrawing();
         }
 
-        function touchMove(event: TouchEvent) {
-            onMove(event);
-            event.preventDefault();
-        }
+       
 
         function onRelease(): void {
 
             document.removeEventListener('mousemove', onMove, false);
-            document.removeEventListener('touchmove', touchMove, false);
             document.removeEventListener('mouseup', onRelease, false);
-            document.removeEventListener('touchend', touchEnd, false);
         }
 
-        function touchEnd(event: TouchEvent): void {
-            onRelease();
-            event.preventDefault();
-        }
+     
 
         canvas.addEventListener('mousedown', onPress, false);
-        canvas.addEventListener('touchstart', function touchPress(event) {
-            onPress(event);
-            event.preventDefault();
-        }, false);
 
         function updateDrawing() {
 
