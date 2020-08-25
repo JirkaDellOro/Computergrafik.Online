@@ -63,7 +63,7 @@
 
 @media screen and (min-width:1024px) {
     #col_1 {
-        width: 50%;
+        width: 70%;
         height: 100%;
         position: absolute;
         right: 0;
@@ -74,7 +74,7 @@
     }
 
     #col_2 {
-        width: 50%;
+        width: 30%;
         height: 40vh;
         padding-top: 30px;
         position: absolute;
@@ -92,7 +92,7 @@
         position: relative;
         color: #000000;
         text-align: center;
-        padding: 24px 48px;
+        padding: 24px 12.5%;
         background-color: transparent;
         font-size: 16px;
     }

@@ -16,20 +16,7 @@
     </div>
 
     <div id="col_2">
-        <div id="instructions">
-            Wähle nun zwischen dem Original, der amplitudenmoduliert gerasterten Version oder der frequenzmoduliert gerasterten Version und vergrößere das Bild. Außerdem kannst du die Dot-Anzahl verändern.
-        </div>
         <div id="check-container">
-            <div id="check-container1">
-                <div id="slidercontainer2" style="text-align: center">
-                    <label for="rangeIP2">Anzahl Dots</label><br>
-                    <input type="range" class="custom-range" min="1" max="5" id="rangeIP2" step="1" value="1" oninput="updateDotSlider(this)">
-                </div>
-                <div id="slidercontainer1" style="text-align: center">
-                    <label for="rangeIP1">Vergrößerung</label><br>
-                    <input type="range" class="custom-range" min="1" max="10" id="rangeIP1" step="1" value="1" oninput="updateZoomSlider(this)">
-                </div>
-            </div>
 
             <div id="check-container2">
                 <div class="form-check">
@@ -50,7 +37,18 @@
                         Frequenzmoduliert gerastert
                     </label>
                 </div>
-        </div>
+            </div>
+
+            <div id="check-container1">
+                <div id="slidercontainer2" style="text-align: center">
+                    <label for="rangeIP2">Anzahl Dots</label><br>
+                    <input type="range" class="custom-range" min="1" max="5" id="rangeIP2" step="1" value="1" oninput="updateDotSlider(this)" disabled>
+                </div>
+                <div id="slidercontainer1" style="text-align: center">
+                    <label for="rangeIP1">Vergrößerung</label><br>
+                    <input type="range" class="custom-range" min="1" max="10" id="rangeIP1" step="1" value="1" oninput="updateZoomSlider(this)">
+                </div>
+            </div>
         </div>
     </div>
 

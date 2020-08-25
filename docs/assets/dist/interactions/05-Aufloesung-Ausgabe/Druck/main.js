@@ -3,6 +3,7 @@ var rangeValue;
 var currWidth;
 var difference;
 var img;
+var images = [];
 var mode;
 var activeRadioValue;
 var rangeInputDots;
@@ -19,6 +20,14 @@ function main() {
 function zoom() {
     console.log(img.style.backgroundSize = 100 * rangeValue + "%");
 }
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+// @ts-ignore
+preload("img/RobotAM1.png", "img/RobotAM2.png", "img/RobotAM3.png", "img/RobotAM4.png", "img/RobotAM5.png", "img/RobotFM1.png", "img/RobotFM2.png", "img/RobotFM3.png", "img/RobotFM4.png", "img/RobotFM5.png", "img/RobotOG.png");
 function updateZoomSlider(_r) {
     currWidth = img.clientWidth;
     var rangeNewValue = parseFloat(_r.value);
@@ -41,12 +50,15 @@ function updateDotSlider(_r) {
 function updateRadioButtons(_r) {
     if (_r.id == "radio-original") {
         activeRadioValue = "OG";
+        rangeInputDots.disabled = true;
     }
     else if (_r.id == "radio-amplitude") {
         activeRadioValue = "AM";
+        rangeInputDots.disabled = false;
     }
     else if (_r.id == "radio-frequency") {
         activeRadioValue = "FM";
+        rangeInputDots.disabled = false;
     }
     updateImage();
 }
