@@ -2,6 +2,7 @@ let imgContainer: HTMLDivElement;
 let btnIntersect: HTMLButtonElement;
 let btnUnion: HTMLButtonElement;
 let btnDifference: HTMLButtonElement;
+let images = [];
 
 
 window.addEventListener("load", main);
@@ -16,6 +17,20 @@ function main(): void {
     btnUnion.onclick = function() {changeState((btnUnion.id))};
     btnDifference.onclick = function() {changeState((btnDifference.id))};
 }
+
+function preload(): void {
+    for (let i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+// @ts-ignore
+preload (
+    "img/difference.png",
+    "img/intersect.png",
+    "img/union.png",
+)
 
 function load(): void {
     imgContainer.style.backgroundImage = "url('img/union.png')";
