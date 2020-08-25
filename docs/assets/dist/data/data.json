@@ -1206,9 +1206,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "6",
+              "informationText": "- Verlustfrei"
+            },
+              {
+                "timeDuration": "24",
+                "informationText": "- Pixelkombinationen werden im Codebuch vermerkt"
+              }]
           }]
         },
         {
@@ -1221,9 +1225,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "6",
+              "informationText": "- Verlustfrei"
+            },
+              {
+                "timeDuration": "25",
+                "informationText": "- Farben bekommen Bit-Wert"
+              },
+              {
+                "timeDuration": "30",
+                "informationText": "- Häufigste Farbe hat 1 Bit"
+              }]
           }]
         },
         {
@@ -1509,8 +1521,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "0",
-              "informationText": ""
+              "timeDuration": "10",
+              "informationText": "Reihenfolge der Transformation für Verkettung relevant"
             }]
           }]
         },
@@ -1525,7 +1537,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": ""
+              "informationText": "Wähle eine Transformationsart aus und führe diese durch die Schieberegler. Durch die Buttons kannst du auch die Reihenfolge ändern."
             }]
           }]
         },
@@ -1544,7 +1556,7 @@
             },
               {
                 "timeDuration": "9",
-                "informationText": "mit Antialiasing verbesstert, Bild jedoch unschärfer"
+                "informationText": "mit Antialiasing verbessert, Bild jedoch unschärfer"
               }
             ]
           }]
@@ -1574,9 +1586,18 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "11",
+              "informationText": "Bei manchen Bildern Vektorisierung sinnvoll"
+            },
+              {
+                "timeDuration": "18",
+                "informationText": "Tracing wird hierzu oft verwendet"
+              },
+              {
+                "timeDuration": "29",
+                "informationText": "Meist manuelle Anpassung erforderlich"
+              }
+            ]
           }]
         },
         {
@@ -1834,12 +1855,30 @@
             "content": "WBka9I-gJR8",
             "youtubeClip": true
           }],
-          "pageTime": [{
-            "time": [{
-              "timeDuration": "",
-              "informationText": ""
+          "pageTime": [
+            {
+              "time": [
+                {
+                  "timeDuration": "20",
+                  "informationText": "- Projektion in 2D-Bild"
+                },
+                {
+                  "timeDuration": "26",
+                  "informationText": "- Perspektivische Projektion"
+                },
+                {
+                  "timeDuration": "31",
+                  "informationText": "- Parallelprojektion"
+                },
+                {
+                  "timeDuration": "36",
+                  "informationText": "- Viewpoint"
+                },
+                {
+                  "timeDuration": "50",
+                  "informationText": "- Up Vector"
+                }]
             }]
-          }]
         },
         {
           "pageName": "Perspektivische Projektion",
@@ -1851,9 +1890,21 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "7",
+              "informationText": "- der menschlichen Wahrnehmung nahe"
+            },
+              {
+                "timeDuration": "27",
+                "informationText": "- Kamera als Fluchtpunkt"
+              },
+              {
+                "timeDuration": "43",
+                "informationText": "- Szene wird auf Bildebene projiziert"
+              },
+              {
+                "timeDuration": "59",
+                "informationText": "- Near-Plane \n- Far-Plane \n -Frustum: abgeschnittene Pyramide"
+              }]
           }]
         },
         {
@@ -1866,9 +1917,17 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "7",
+              "informationText": "- weniger realistisches Bild"
+            },
+              {
+                "timeDuration": "12",
+                "informationText": "- Objekte werden durch parallele Strahlen projiziert"
+              },
+              {
+                "timeDuration": "16",
+                "informationText": "- Frustum: Quader"
+              }]
           }]
         },
         {
@@ -2314,9 +2373,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "16",
+              "informationText": "- Shader verarbeitet Vertices"
+            },
+              {
+                "timeDuration": "39",
+                "informationText": "- Einfluss auf Geometrie und somit auch Beleuchtung"
+              }]
           }]
         },
         {
@@ -2344,9 +2407,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "16",
+              "informationText": "- Erzeugung neuer Geometrien"
+            },
+              {
+                "timeDuration": "29",
+                "informationText": "- z.B. Schatten und Haare"
+              }]
           }]
         },
         {
@@ -2359,9 +2426,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "13",
+              "informationText": "- Farbberechnung"
+            },
+              {
+                "timeDuration": "28",
+                "informationText": "- Darstellung realistischer Oberflächen- und Materialeigenschaften"
+              }]
           }]
         },
         {
@@ -2374,9 +2445,25 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "11",
+              "informationText": "- nicht-fotorealistisches Rendern"
+            },
+              {
+                "timeDuration": "18",
+                "informationText": "- Comic-Optik"
+              },
+              {
+                "timeDuration": "30",
+                "informationText": "- 3-4 Helligkeitsstufen"
+              },
+              {
+                "timeDuration": "40",
+                "informationText": "- einzelne Farbtöne"
+              },
+              {
+                "timeDuration": "54",
+                "informationText": "- Intervenieren von Polygonen, um Konturen zu erhalten"
+              }]
           }]
         },
         {
@@ -2389,9 +2476,33 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "0",
-              "informationText": ""
-            }]
+              "timeDuration": "7",
+              "informationText": "- Vergleichbar mit Programmiersprache C"
+            },
+              {
+                "timeDuration": "17",
+                "informationText": "- GLSL = OpenGL Shading Language"
+              },
+              {
+                "timeDuration": "27",
+                "informationText": "- Deklaration der Version"
+              },
+              {
+                "timeDuration": "30",
+                "informationText": "- Input- und Output-Variablen"
+              },
+              {
+                "timeDuration": "32",
+                "informationText": "- Main-Funktion"
+              },
+              {
+                "timeDuration": "42",
+                "informationText": "- Verarbeitung eines Vertex-Shaders"
+              },
+              {
+                "timeDuration": "66",
+                "informationText": "- Übergabe an Fragment-Shader"
+              }]
           }]
         }
       ]
@@ -2518,9 +2629,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "11",
+              "informationText": "Extrudieren: aus Flächen, Kanten, etc. neue Kanten und Flächen erstellen"
+            },
+              {
+                "timeDuration": "28",
+                "informationText": "Extrudierte Flächen bleiben mit Ursprungskörper verbunden"
+              }]
           }]
         },
         {
@@ -2533,9 +2648,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "14",
+              "informationText": "Subdivision Surface: Werkzeug, um Objekt runder wirken zu lassen"
+            },
+              {
+                "timeDuration": "32",
+                "informationText": "Rekursionsschritt: Fläche wird in vier kleinere Flächen unterteilt"
+              }]
           }]
         },
         {
@@ -2563,8 +2682,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "28",
+              "informationText": "Rotationskörper: Körper, der durch die Rotation eines Querschnitts/ einer Kurve entsteht"
             }]
           }]
         },
@@ -2578,9 +2697,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "18",
+              "informationText": "- Sculpting Voraussetzung: viele Polygone"
+            },
+              {
+                "timeDuration": "26",
+                "informationText": "- mittels Sculpting-Tools Form verändern"
+              }]
           }]
         },
         {
@@ -2593,9 +2716,13 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "10",
+              "informationText": "für spiegelsymmetrische Objekte"
+            },
+              {
+                "timeDuration": "21",
+                "informationText": "Objekt kann an jeder Achse gespiegelt werden"
+              }]
           }]
         },
         {
@@ -2623,9 +2750,21 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
-            }]
+              "timeDuration": "14",
+              "informationText": "drei Einstellungen:"
+            },
+              {
+                "timeDuration": "17",
+                "informationText": "- Intersect: Bildet die Schnittmenge zweier Objekte"
+              },
+              {
+                "timeDuration": "22",
+                "informationText": "- Union: Bildet die Vereinigung zweier Objekte"
+              },
+              {
+                "timeDuration": "27",
+                "informationText": "- Difference: Ein Objekt wird vom anderen Objekt abgezogen"
+              }]
           }]
         },
         {
@@ -3073,8 +3212,8 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "",
-              "informationText": ""
+              "timeDuration": "0",
+              "informationText": "Wähle eine Kinematik-Methode aus und ziehe dann an den Komponenten des Konstruktes, um die gewählte Methode nachzubilden."
             }]
           }]
         },
