@@ -17,6 +17,21 @@ function main(): void {
     phongCheck.addEventListener("change", this.changeState);
 }
 
+function preload(): void {
+    for (let i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+// @ts-ignore
+preload (
+    "img/flat-shader-bg.png",
+    "img/gouraud-shader-bg.png",
+    "img/phong-shader-bg.png"
+)
+
+
 function load(): void {
     changeState();
 }
