@@ -26,9 +26,9 @@ function preload(): void {
 
 // @ts-ignore
 preload (
-    "img/flat-shader-bg.png",
-    "img/gouraud-shader-bg.png",
-    "img/phong-shader-bg.png"
+    "img/flat-shader-bg.jpg",
+    "img/gouraud-shader-bg.jpg",
+    "img/phong-shader-bg.jpg"
 )
 
 
@@ -38,9 +38,9 @@ function load(): void {
 
 function changeState(): void {
     if (flatCheck.checked == true)
-        imgContainer.style.backgroundImage = "url('img/flat-shader-bg.png')";
+        imgContainer.style.backgroundImage = "url('img/flat-shader-bg.jpg')";
     if (gouraudCheck.checked == true)
-        imgContainer.style.backgroundImage = "url('img/gouraud-shader-bg.png')";
+        imgContainer.style.backgroundImage = "url('img/gouraud-shader-bg.jpg')";
     if (phongCheck.checked == true)
-        imgContainer.style.backgroundImage = "url('img/phong-shader-bg.png')";
+        imgContainer.style.backgroundImage = "url('img/phong-shader-bg.jpg')";
 }
