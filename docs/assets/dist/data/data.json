@@ -263,7 +263,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Über die Regler können die\nZahlenwerte verändert\nwerden. "
+              "informationText": "Wähle keine, eine, zwei oder alle drei Druckfarben für den Bedruckstoff aus und beobachte, welche Lichtfarben geschluckt, und welche zurückgesendet werden."
             }]
           }]
         },
@@ -395,7 +395,13 @@
             "content": "./assets/dist/interactions/02-Farbsysteme/HSB-Farbsystem/hsb-farbsystem.html",
             "youtubeClip": false
           }],
-          "pageTime": [{}]
+          "pageTime": [{
+            "time": [{
+              "timeDuration": "0",
+              "informationText": "Verschiebe den Regler hue(Farbton), um einen Farbton auszuwählen. Lasse dir anschließend die Abstufungen mittels saturation(Sättigung) und brightness(Helligkeit) anzeigen." 
+              }
+            ]
+          }]
         },
         {
           "pageName": "YUV- und YCbCr-Farbsystem",
@@ -2052,7 +2058,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Wähle zwischen perspektivischer\nund orthografi scher Projektion aus\nund betrachte die Änderungen."
+              "informationText": "Wähle zwischen perspektivischer\nund orthografischer Projektion aus\nund betrachte die Änderungen."
             }]
           }]
         },
@@ -2823,7 +2829,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Wähle den Kubus oder die Sphäre\nund anschließend eine Textur aus\nder vordefinierten Liste aus und\nlasse dir den Vergleich von dem\n3D-Objekt ohne und mit Textur\nanzeigen. Betrachte das 3D-Objekt\ndabei von allen Seiten."
+              "informationText": "Wähle den Kubus oder die Sphäre\nund anschließend eine Textur aus\nder vordefinierten Liste aus und\nlasse dir den Vergleich von dem\n3D-Objekt ohne und mit Textur\nanzeigen."
             }]
           }]
         },
@@ -2882,7 +2888,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Wähle den Pinsel und suche dir eine\nbeliebige Farbe aus. Nun kannst du\ndie von Hand abgewickelte Textur\ndes Roboters oder den Roboter\ndirekt bemalen."
+              "informationText": "Male mithilfe der Leinwand eine Textur auf die Kugel und betrachte die Kugel dabei von allen Seiten."
             }]
           }]
         },
@@ -3005,7 +3011,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Hier wird der Unterschied zwischen\ndem Normal-Mapping und dem\nDisplacement-Mapping dargestellt.\nBetrachte die texturierten\n3D-Objekte von allen Seiten."
+              "informationText": "Hier wird der Unterschied zwischen\ndem Normal-Mapping und dem\nDisplacement-Mapping dargestellt."
             }]
           }]
         },
