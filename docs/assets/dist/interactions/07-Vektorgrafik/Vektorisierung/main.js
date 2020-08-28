@@ -1,21 +1,19 @@
-"use strict";
 var CO070_;
 (function (CO070_) {
-    let show;
+    var show;
     function init() {
         show = document.getElementById("10");
         show.style.cssText = "display:block;";
-        let input = document.getElementsByClassName("slider-container")[0];
+        var input = document.getElementsByClassName("slider-container")[0];
         input.addEventListener("input", update);
     }
     function update(_event) {
-        let input = document.getElementsByClassName("slider");
-        let id = "" + (input[0].value) + (input[1].value) + "";
-        let showNew = document.getElementById(id);
+        var input = document.getElementsByClassName("slider");
+        var id = "" + (input[0].value) + (input[1].value) + "";
+        var showNew = document.getElementById(id);
         showNew.style.cssText = "display:block;";
         show.style.cssText = "display:hide;";
         show = showNew;
     }
     window.addEventListener("load", init);
 })(CO070_ || (CO070_ = {}));
-//# sourceMappingURL=main.js.map

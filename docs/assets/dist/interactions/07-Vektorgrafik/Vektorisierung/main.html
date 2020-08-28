@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet" type="text/css">
     <script src='main.js'></script>
     <title></title>
@@ -39,8 +40,11 @@
             </div>
         </div>
         <div class="slider-container">
-            <input type="range" min="1" max="4" value="1" step="1" class="slider">
-            <input type="range" min="0" max="1" value="0" step="1" class="slider">
+            <label for="1">Genauigkeit</label>
+            <input id="1" type="range" min="1" max="4" value="1" step="1" class="slider">
+            <br>
+            <label for="2">Farbschwellenwert</label>
+            <input id="2" type="range" min="0" max="1" value="0" step="1" class="slider">
         </div>
     </div>
 </body>
