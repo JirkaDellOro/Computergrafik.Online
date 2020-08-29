@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JPG</title>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="col_1">
+    <div id="image-container"></div>
+</div>
+<div id="col_2">
+    <div id="slider-container">
+        <div id="datengroesse"></div>
+        <label for="compression-slider">Stärke der Kompression:</label><br>
+        <input type="range" id="compression-slider" min="0" max="7" value="0" oninput="updateSlider(this)">
+    </div>
+</div>
+</body>
+</html>
