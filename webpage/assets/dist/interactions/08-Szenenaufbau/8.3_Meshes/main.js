@@ -14,6 +14,8 @@ var Meshes;
     window.addEventListener("load", main);
     function main() {
         Meshes.canvas = document.getElementById("can");
+        Meshes.canvas.width = window.innerWidth;
+        Meshes.canvas.height = window.innerHeight;
         Meshes.cr2 = Meshes.canvas.getContext("2d");
         let backGround = Meshes.cr2.getImageData(0, 0, Meshes.cr2.canvas.width, Meshes.cr2.canvas.height);
         window.setInterval(update, 20, backGround);

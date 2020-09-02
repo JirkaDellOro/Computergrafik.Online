@@ -1,13 +1,18 @@
+
 #can{
     background-color: rgb(241, 184, 145);
     position: absolute;
+}
+#box{
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .but{
         border: 2ex;
         color: aliceblue;
         /* background-color: rgb(155, 150, 150); */
-        margin-left: 8%;
-        margin-top: 28em;
+        margin-left: 7%;
+        margin-top: 32em;
         padding-left: 10px;
         padding-right: 10px;
         position: relative;
