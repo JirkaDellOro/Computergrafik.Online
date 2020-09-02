@@ -11,11 +11,17 @@ namespace Meshes {
     let clearButton: HTMLButtonElement;
     let lineButton: HTMLButtonElement;
     let edgeButton: HTMLButtonElement;
+    
 
     window.addEventListener("load", main);
 
     function main(): void {
+        
+
         canvas = <HTMLCanvasElement>document.getElementById("can");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
         cr2 = <CanvasRenderingContext2D>canvas.getContext("2d");
 
         let backGround: ImageData = cr2.getImageData(0, 0, cr2.canvas.width, cr2.canvas.height);
