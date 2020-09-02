@@ -20,19 +20,6 @@
     position: relative;
 }
 
-#instructions {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding: 12px 24px;
-    color: #ffffff;
-    font-size: 15px;
-    text-align: center;
-}
-
 #check-container {
     position: absolute;
     margin-left: auto;
@@ -42,14 +29,23 @@
     bottom: 0;
     padding: 12px 24px;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #sliderinput {
     width: 75%;
 }
 
-@media screen and (min-width:800px) {
+.form-check-label {
+    vertical-align: middle;
+    position: relative;
+}
+.form-check-input {
+    vertical-align: middle;
+    position: relative;
+}
+
+@media screen and (orientation: landscape) {
     #col_1 {
         width: 70%;
         height: 100%;
@@ -68,7 +64,12 @@
         position: relative;
         color: #000000;
         text-align: left;
-        padding: 0 48px;
+        padding: 48px 128px;
+        font-size: 26px;
+    }
+
+    .form-check {
+        padding: 4px;
     }
 
     #sliderinput {
@@ -80,5 +81,9 @@
         color: #000000;
         text-align: left;
         padding: 24px 48px;
+    }
+
+    .form-check-label {
+        padding-left: 14px;
     }
 }
