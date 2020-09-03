@@ -6,6 +6,7 @@ namespace Antialising {
     let lines: any = [];
     let image: ImageData;
     let zoom: number = 10;
+    let touch: boolean = false;
 
     function main(): void {
         canvas = document.getElementsByTagName("canvas")[0];
@@ -23,7 +24,18 @@ namespace Antialising {
         container.addEventListener("mousedown", function (_e: MouseEvent): void {
             if ((<HTMLDivElement>_e.target).getAttribute("class") == "points") {
                 target = <HTMLDivElement>_e.target;
+                touch=false;
                 container.addEventListener("mousemove", movePoint);
+
+            }
+        });
+
+        container.addEventListener("touchstart", function (_e: TouchEvent): void {
+            console.log(_e.target);
+            if ((<HTMLDivElement>_e.target).getAttribute("class") == "points") {
+                target = <HTMLDivElement>_e.target;
+                touch=true;
+                container.addEventListener("touchmove", movePoint);
 
             }
         });
@@ -31,6 +43,12 @@ namespace Antialising {
         document.addEventListener("mouseup", function (): void {
             container.removeEventListener("mousemove", movePoint);
         });
+
+        document.addEventListener("touchend", function (): void {
+            container.removeEventListener("touchmove", movePoint);
+        });
+
+        
 
 
         let pointOne: HTMLDivElement = document.createElement("div");
@@ -55,7 +73,7 @@ namespace Antialising {
         lines["pointThree"] = [100 / zoom, 300 / zoom];
 
         if (window.innerWidth < 600) {
-            console.log("test");
+           
             canvas.style.width = "250px";
             canvas.style.height = "200px";
             zoom = 5;
@@ -92,10 +110,18 @@ namespace Antialising {
         });
     }
 
-    function movePoint(_e: MouseEvent): void {
-        let x: number = _e.pageX - container.offsetLeft + (container.offsetWidth / 2);
-        let y: number = _e.pageY - container.offsetTop;
-
+    function movePoint(_e: Event): void {
+       let x:number;
+       let y:number;
+       
+        if(touch){
+            x= (<TouchEvent>_e).changedTouches[0].pageX - container.offsetLeft + (container.offsetWidth / 2);
+            y = (<TouchEvent>_e).changedTouches[0].pageY - container.offsetTop;
+        }else{
+             x= (<MouseEvent>_e).pageX - container.offsetLeft + (container.offsetWidth / 2);
+             y = (<MouseEvent>_e).pageY - container.offsetTop;
+        }
+       
         if (x > (0 + target.offsetWidth / 2) && x < (container.offsetWidth - target.offsetWidth / 2) && y > (0 + target.offsetHeight / 2) && y < (container.offsetHeight - target.offsetHeight / 2)) {
 
             target.style.cssText = "top:" + y + "px;left:" + x + "px";

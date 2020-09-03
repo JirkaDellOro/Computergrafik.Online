@@ -8,6 +8,7 @@ var Antialising;
     let lines = [];
     let image;
     let zoom = 10;
+    let touch = false;
     function main() {
         canvas = document.getElementsByTagName("canvas")[0];
         ctx = canvas.getContext("2d");
@@ -19,11 +20,23 @@ var Antialising;
         container.addEventListener("mousedown", function (_e) {
             if (_e.target.getAttribute("class") == "points") {
                 target = _e.target;
+                touch = false;
                 container.addEventListener("mousemove", movePoint);
+            }
+        });
+        container.addEventListener("touchstart", function (_e) {
+            console.log(_e.target);
+            if (_e.target.getAttribute("class") == "points") {
+                target = _e.target;
+                touch = true;
+                container.addEventListener("touchmove", movePoint);
             }
         });
         document.addEventListener("mouseup", function () {
             container.removeEventListener("mousemove", movePoint);
+        });
+        document.addEventListener("touchend", function () {
+            container.removeEventListener("touchmove", movePoint);
         });
         let pointOne = document.createElement("div");
         pointOne.setAttribute("id", "pointOne");
@@ -41,7 +54,6 @@ var Antialising;
         container.appendChild(pointThree);
         lines["pointThree"] = [100 / zoom, 300 / zoom];
         if (window.innerWidth < 600) {
-            console.log("test");
             canvas.style.width = "250px";
             canvas.style.height = "200px";
             zoom = 5;
@@ -70,8 +82,16 @@ var Antialising;
         });
     }
     function movePoint(_e) {
-        let x = _e.pageX - container.offsetLeft + (container.offsetWidth / 2);
-        let y = _e.pageY - container.offsetTop;
+        let x;
+        let y;
+        if (touch) {
+            x = _e.changedTouches[0].pageX - container.offsetLeft + (container.offsetWidth / 2);
+            y = _e.changedTouches[0].pageY - container.offsetTop;
+        }
+        else {
+            x = _e.pageX - container.offsetLeft + (container.offsetWidth / 2);
+            y = _e.pageY - container.offsetTop;
+        }
         if (x > (0 + target.offsetWidth / 2) && x < (container.offsetWidth - target.offsetWidth / 2) && y > (0 + target.offsetHeight / 2) && y < (container.offsetHeight - target.offsetHeight / 2)) {
             target.style.cssText = "top:" + y + "px;left:" + x + "px";
             switch (target.id) {
