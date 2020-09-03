@@ -23,7 +23,7 @@ h3 {
     display: inline-block;
 }
 
-.arows:hover{
+.arrows:hover{
     color: #00A8FF;
     cursor: pointer;
 }
@@ -45,7 +45,7 @@ span{
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    height: 560px; 
+    height: 500px; 
 }
 
 #img-wrapper{
@@ -99,7 +99,7 @@ div[style="order: 2;"] {
 }
 
 
-.arows{
+.arrows{
     position: absolute;
     right: -45px;
     top: 10px;
@@ -163,7 +163,7 @@ input {
 
   @media screen and (max-width: 600px) {
 
-    .arows{
+    .arrows{
         top: unset;
         bottom: -40px;
     }
@@ -187,7 +187,7 @@ input {
 
     .right, .left{
        transform: rotate(90deg);
-       margin: 0 10px;
+      
     }
 
     h3 {
