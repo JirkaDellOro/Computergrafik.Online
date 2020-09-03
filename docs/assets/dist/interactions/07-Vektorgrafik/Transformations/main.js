@@ -26,7 +26,7 @@ var Transformations;
         rotation.addEventListener("input", rotate);
         let reset = document.getElementById("reset");
         reset.addEventListener("click", clear);
-        let arrows = document.getElementsByClassName("arows");
+        let arrows = document.getElementsByClassName("arrows");
         for (let i = 0; i < arrows.length; i++) {
             arrows[i].addEventListener("click", moveControl);
         }
@@ -34,7 +34,7 @@ var Transformations;
     //change order of transformation and the order the HTML elements are displayed
     function moveControl(_event) {
         let target = _event.currentTarget;
-        let parent = target.parentNode.parentNode;
+        let parent = target.parentNode;
         //right
         let category = parent.getAttribute("id");
         let position = order[category];

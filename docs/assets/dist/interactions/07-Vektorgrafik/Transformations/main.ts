@@ -47,7 +47,7 @@ namespace Transformations {
         let reset: HTMLButtonElement = <HTMLButtonElement>document.getElementById("reset");
         reset.addEventListener("click", clear);
 
-        let arrows: HTMLCollectionOf<HTMLDivElement> = <HTMLCollectionOf<HTMLDivElement>>document.getElementsByClassName("arows");
+        let arrows: HTMLCollectionOf<HTMLDivElement> = <HTMLCollectionOf<HTMLDivElement>>document.getElementsByClassName("arrows");
         for (let i: number = 0; i < arrows.length; i++) {
             arrows[i].addEventListener("click", moveControl);
         }
@@ -58,7 +58,7 @@ namespace Transformations {
     function moveControl(_event: MouseEvent): void {
 
         let target: HTMLAnchorElement = <HTMLAnchorElement>_event.currentTarget;
-        let parent: HTMLDivElement = <HTMLDivElement>target.parentNode.parentNode;
+        let parent: HTMLDivElement = <HTMLDivElement>target.parentNode;
         //right
         let category: string = parent.getAttribute("id");
 
