@@ -162,6 +162,16 @@ input {
   }
 
   @media screen and (max-width: 600px) {
+
+    .arows{
+        top: unset;
+        bottom: -40px;
+    }
+    
+    div[style="order: 2;"] {
+        margin-right: 50px !important;
+    }
+
     #img-wrapper img{
         bottom: CALC(50% - 25px);
         left:CALC(50% - 25px);
