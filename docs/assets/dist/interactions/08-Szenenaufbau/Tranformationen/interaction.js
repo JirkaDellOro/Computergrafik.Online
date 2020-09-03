@@ -17,10 +17,10 @@ var Transformations;
             this._camera.attachControl(this._canvas, false);
             this._camera.setPosition(new BABYLON.Vector3(10, 0, 0));
             this._camera.setTarget(BABYLON.Vector3.Zero());
-            this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 0), this._scene);
+            this._ambientLight = new BABYLON.HemisphericLight("ambientLight", new BABYLON.Vector3(0, 1, 1), this._scene);
             this._cube = BABYLON.MeshBuilder.CreateBox("cube", {}, this._scene);
             var material = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
-            material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
+            material.diffuseTexture = new BABYLON.Texture("./texture2.jpg", this._scene);
             this._cube.material = material;
         };
         Interaction.prototype.doRender = function () {
