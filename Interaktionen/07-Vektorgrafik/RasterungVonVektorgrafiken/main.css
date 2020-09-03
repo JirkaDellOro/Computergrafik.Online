@@ -2,6 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+                               
 }
 
 #container {
@@ -48,12 +55,32 @@ canvas {
     transform: translateX(-50%);
 }
 
-#options button {
-    width: 50px;
+
+button {
+    width: 60px;
+    height: 40px;
+    margin: 10px 0 0;
+	background-color:#00A8FF;
+	border-radius:28px;
+	border:1px solid #00A8FF;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px;
+	text-decoration:none;
 }
 
+button:hover {
+	background-color:rgb(28, 132, 184);
+	border-color:rgb(28, 132, 184);
+}
+
+button:focus {outline:0;}
+
 .active {
-    background-color: #42b983;
+    background-color: rgb(28, 132, 184);
+    border-color:rgb(28, 132, 184);
 }
 
 @media screen and (max-width: 600px) {
