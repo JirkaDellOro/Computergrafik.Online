@@ -11,15 +11,14 @@ namespace interpolationskurven {
             crc2.fillStyle = "#fff";
             crc2.fillRect(this.x, this.y, this.width, this.height);
 
-            // the 0.5 offset is to account for stroke width to make lines sharp
             crc2.strokeStyle = '#333';
-            crc2.lineWidth = 1;
-            crc2.moveTo(this.x + 0.5, this.y - 0.5);
-            crc2.lineTo(this.x + 0.5, this.y - 0.5 +this.height);
+            crc2.lineWidth = 2;
+            crc2.beginPath();
+            crc2.moveTo(this.x + 1.5, this.y - 0.5);
+            crc2.lineTo(this.x + 1.5, this.y - 0.5 +this.height);
             crc2.lineTo(this.width - 1, this.y - 0.5 + this.height);
-            //crc2.strokeRect(this.x + 0.5, this.y - 0.5, this.width - 1, this.height);
             crc2.stroke();
-
+            //crc2.strokeRect(this.x + 0.5, this.y - 0.5, this.width - 1, this.height);
         }
     }
 

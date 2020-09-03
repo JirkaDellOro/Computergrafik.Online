@@ -3,14 +3,14 @@ namespace interpolationskurven {
     export let crc2: CanvasRenderingContext2D;
     let handleInUse: Handle;
     let canvas: HTMLCanvasElement
+    let touch: boolean = false;
 
     function main(): void {
 
         canvas = <HTMLCanvasElement>document.getElementById('curve');
         crc2 = canvas.getContext('2d');
 
-        let box = document.getElementById('box'),
-            supportsTouch = ('createTouch' in document);
+        let box = document.getElementById('box');
         let timeVal: number = 700;
 
 
@@ -56,16 +56,18 @@ namespace interpolationskurven {
         }
 
         function onPress(event: Event) {
+           
 
             event.preventDefault();
             event.stopPropagation(); //not sure if this is needed
 
-            var cursorEvent = supportsTouch ? (<TouchEvent>event).touches[0] : <MouseEvent>event;
-
+            var cursorEvent = <MouseEvent>event;
+            if(touch){
+                cursorEvent = (<TouchEvent>event).touches[0];
+            }
             var mouseCoordinates = getPos(cursorEvent),
                 x = mouseCoordinates.x,
                 y = mouseCoordinates.y;
-
 
             //check to see if over any handles
             for (var i = 0; i < handles.length; i++) {
@@ -75,20 +77,13 @@ namespace interpolationskurven {
                     curTop = current.top,
                     curBottom = current.bottom;
 
-                //20 px padding for chubby fingers
-                if (supportsTouch) {
-                    curLeft -= 20;
-                    curRight += 20;
-                    curTop -= 20;
-                    curBottom += 20;
-                }
+
 
                 if (x >= curLeft &&
                     x <= curRight &&
                     y >= curTop &&
                     y <= curBottom
                 ) {
-
                     handleInUse = current;
 
 
@@ -101,10 +96,10 @@ namespace interpolationskurven {
 
 
                     document.addEventListener('mouseup', onRelease, false);
-                    document.addEventListener('touchend', touchEnd, false);
+                    document.addEventListener('touchend', onRelease, false);
 
                     document.addEventListener('mousemove', onMove, false);
-                    document.addEventListener('touchmove', touchMove, false);
+                    document.addEventListener('touchmove', onMove, false);
 
                 }
             }
@@ -112,7 +107,11 @@ namespace interpolationskurven {
 
         function onMove(event: Event) {
 
-            var cursorEvent = supportsTouch ? (<TouchEvent>event).touches[0] : <MouseEvent>event;
+            var cursorEvent = <MouseEvent>event;
+            if(touch){
+                cursorEvent = (<TouchEvent>event).changedTouches[0];
+            }
+            
 
             var x = cursorEvent.pageX - getOffSet(canvas).left,
                 y = cursorEvent.pageY - getOffSet(canvas).top;
@@ -136,28 +135,26 @@ namespace interpolationskurven {
             updateDrawing();
         }
 
-        function touchMove(event: TouchEvent) {
-            onMove(event);
-            event.preventDefault();
-        }
+
 
         function onRelease(): void {
 
             document.removeEventListener('mousemove', onMove, false);
-            document.removeEventListener('touchmove', touchMove, false);
             document.removeEventListener('mouseup', onRelease, false);
-            document.removeEventListener('touchend', touchEnd, false);
+
+            document.removeEventListener('touchend', onRelease, false);
+            document.removeEventListener('touchmove', onMove, false);
         }
 
-        function touchEnd(event: TouchEvent): void {
-            onRelease();
-            event.preventDefault();
-        }
 
-        canvas.addEventListener('mousedown', onPress, false);
-        canvas.addEventListener('touchstart', function touchPress(event) {
+
+        canvas.addEventListener('mousedown', function(event:Event){
+            touch=false;
             onPress(event);
-            event.preventDefault();
+        } , false);
+        canvas.addEventListener('touchstart', function(event:Event){
+            touch=true;
+            onPress(event)
         }, false);
 
         function updateDrawing() {
@@ -179,17 +176,21 @@ namespace interpolationskurven {
             crc2.stroke();
             crc2.restore();
             // draw anchor point lines
+            
             crc2.strokeStyle = '#f00';
             crc2.beginPath();
             crc2.moveTo(graph.x, graph.y + graph.height);
             crc2.lineTo(cp1.x, cp1.y);
+            crc2.stroke();
+            crc2.beginPath();
             crc2.moveTo(graph.width, graph.y);
             crc2.lineTo(cp2.x, cp2.y);
             crc2.stroke();
-
+         
             for (var i = 0; i < handles.length; i++) {
                 handles[i].draw();
             }
+
         }
 
         function setTransitions() {
@@ -223,7 +224,7 @@ namespace interpolationskurven {
         }
 
         function presetChange() {
-
+           
             let selected = document.querySelector('input[type="radio"]:checked');
 
             let coordinates: string[] = (<HTMLInputElement>selected).value.split(','),
@@ -244,7 +245,7 @@ namespace interpolationskurven {
         let set = true;
 
         let startButton: HTMLInputElement = document.querySelector(".testButton");
-        console.log(startButton);
+        
         startButton.addEventListener("mousedown", setTweenClass)
 
         function setTweenClass(): void {

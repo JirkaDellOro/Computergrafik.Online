@@ -1,11 +1,13 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
  #container {
   max-width: 1200px;
   position: absolute;
-  left: 35%;
+  left: CALC(50% - 200px);
+ 
   display: flex;
   flex-direction: column;
  }
@@ -84,6 +86,7 @@ figcaption {
 .options {
    max-width: 560px;
    align-self: center;
+  margin-top: -50px;
 }
 
 .tween-container{
@@ -130,6 +133,12 @@ figcaption {
   animation-timing-function: linear;
  }
 
+ @media screen and (max-width: 900px) {
+  #container {
+    left: CALC(50% - 160px);
+  }
+
+}
  @keyframes helper {
   0%   { left: 20px;}
   100% {left: CALC(100% - 1.5px);}
