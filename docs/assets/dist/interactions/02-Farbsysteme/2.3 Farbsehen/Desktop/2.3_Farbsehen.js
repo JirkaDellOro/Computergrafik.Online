@@ -1,5 +1,4 @@
 (function (cjs, an) {
-
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
@@ -198,6 +197,7 @@ p._updateVisibility = _updateVisibility;
 		*/
 		
 		$('#cyan').on('click', function(){
+			debugger;
 			checkCyan();
 		});
 		
@@ -259,8 +259,7 @@ p._updateVisibility = _updateVisibility;
 				showMagentaYellow();
 			}
 			else if(cyanToggle == true && magentaToggle == false && yellowToggle == false){
-				cyanToggle = false;		
-				redLine.visible = true;
+				showNone();
 			}
 		}
 		
@@ -283,10 +282,8 @@ p._updateVisibility = _updateVisibility;
 				showMagentaYellow();
 			}
 			else if(magentaToggle == true && cyanToggle == false && yellowToggle == false){
-				magentaToggle = false;
-				greenLine.visible = true;
+				showNone();
 			}	
-			
 			else if (magentaToggle == true && cyanToggle == false && yellowToggle == true){
 				magentaToggle = false;		
 				showYellow();
@@ -324,8 +321,7 @@ p._updateVisibility = _updateVisibility;
 				showCyanYellow();
 			}
 			else if(yellowToggle == true && cyanToggle == false && magentaToggle == false){
-				yellowToggle = false;
-				blueLine.visible = true;
+				showNone();
 			}
 			else if(yellowToggle == true && cyanToggle == true && magentaToggle == false){
 				yellowToggle = false;
@@ -341,7 +337,7 @@ p._updateVisibility = _updateVisibility;
 			}
 		}
 		
-		
+
 		function showCyan(){
 			paper.visible = true;
 			redLine.visible = false;
@@ -366,7 +362,6 @@ p._updateVisibility = _updateVisibility;
 			augeRight.visible = true;
 			augeRight.shape.graphics._fill.style = "#FF00FF";
 		}
-		
 		
 		function showYellow()
 		{
@@ -425,6 +420,17 @@ p._updateVisibility = _updateVisibility;
 			augeLeft.shape.graphics._fill.style = "#00FF00";
 			augeRight.visible = true;
 			augeRight.shape.graphics._fill.style = "#00FF00";
+		}
+		function showNone(){
+			cyanToggle = false;
+			magentaToggle = false;
+			yellowToggle = false;
+			redLine.visible = true;
+			blueLine.visible = true;
+			greenLine.visible = true;
+			paper.visible = false;
+			augeLeft.visible = false;
+			augeRight.visible = false;
 		}
 		/*
 		this.addEventListener("click", clickButton);
