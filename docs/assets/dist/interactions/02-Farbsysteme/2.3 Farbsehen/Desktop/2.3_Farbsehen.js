@@ -197,7 +197,6 @@ p._updateVisibility = _updateVisibility;
 		*/
 		
 		$('#cyan').on('click', function(){
-			debugger;
 			checkCyan();
 		});
 		
