@@ -1629,11 +1629,7 @@
           "time": [{
             "timeDuration": "14",
             "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
-          },
-            {
-              "timeDuration": "23",
-              "informationText": "- Scene : virtueller Raum mit Objekten, Lichtquellen und Kamera"
-            }
+          }
           ]
         }]
       },
@@ -1901,7 +1897,7 @@
               },
               {
                 "timeDuration": "59",
-                "informationText": "- Near-Plane \n- Far-Plane \n -Frustum: abgeschnittene Pyramide"
+                "informationText": "- Near-Plane <br>- Far-Plane <br>- Frustum: abgeschnittene Pyramide"
               }]
           }]
         },
@@ -1961,8 +1957,8 @@
             "informationText": "- Rendern\n(dt. Bildsynthese)"
           },
             {
-              "timeDuration": "15",
-              "informationText": "- Berücksichtigung von:\nMeshes\nLichtquellen\nKameras"
+              "timeDuration": "17",
+              "informationText": "- Berücksichtigung von:\nMeshes,\nLichtquellen und \nKameras"
             },
             {
               "timeDuration": "29",
@@ -2026,15 +2022,19 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "16",
-              "informationText": "Frustum bei perspektivischer\nProjektion =\nPyramidenstumpf"
+              "timeDuration": "20",
+              "informationText": "Frustum bei der perspektivischen\nProjektion: Pyramidenstumpf"
             },
               {
                 "timeDuration": "24",
+                "informationText": "Far Clipping Plane"
+              },
+              {
+                "timeDuration": "26",
                 "informationText": "Near Clipping Plane =\nProjektionsebene"
               },
               {
-                "timeDuration": "34",
+                "timeDuration": "39",
                 "informationText": "Transformation des Frustum in ein Quader -> Clip-Space"
               }]
           }]
@@ -2064,11 +2064,11 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "3",
+              "timeDuration": "9",
               "informationText": "Clipping dient dazu\nGeometrien außerhalb\ndes sichtbaren Volumens\nwegzuschneiden"
             },
               {
-                "timeDuration": "3",
+                "timeDuration": "14",
                 "informationText": "Überprüfung ob Meshes im sichtbaren Bereich sind"
               }]
           }]
@@ -2110,7 +2110,7 @@
                 "informationText": "Meshes im Frustum werden\n auf der gerasterten Ebene\ndargestellt"
               },
               {
-                "timeDuration": "15",
+                "timeDuration": "31",
                 "informationText": "Rasterelement heißt\nbei der Rasterisierung\nFragment"
               }
             ]
@@ -2126,12 +2126,12 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "14",
+              "timeDuration": "17",
               "informationText": "Verdeckungsberechnung\ndurch z-Buffer-\nAlgorithmus"
             },
               {
-                "timeDuration": "19",
-                "informationText": "z-Buff er-Algorithmus\nspeichert für jeden\nPixel z-Wert"
+                "timeDuration": "28",
+                "informationText": "z-Buffer-Algorithmus\nspeichert für jeden \nPixel den z-Wert"
               },
               {
                 "timeDuration": "37",
@@ -2271,7 +2271,7 @@
               "informationText": "- Einfaches Schattierungsverfahren"
             },
               {
-                "timeDuration": "25",
+                "timeDuration": "42",
                 "informationText": "- Facettenartige Darstellung führt zu Mach-Band-Effekt\n"
               },
               {
@@ -2279,11 +2279,7 @@
                 "informationText": "- Anzahl der Polygone erhöhen, um Darstellung zu verbessern\n"
               },
               {
-                "timeDuration": "41",
-                "informationText": "- Frei programmierbar\n"
-              },
-              {
-                "timeDuration": "54",
+                "timeDuration": "56",
                 "informationText": "- Berechnung findet in Shadereinheiten auf Grafikkarten statt\n"
               }]
           }]
@@ -2798,7 +2794,7 @@
           },
             {
               "timeDuration": "14",
-              "informationText": "Lösung: 2D-Bild = 2D-Textur"
+              "informationText": "Lösung:<br> 2D-Bild = 2D-Textur"
             },
             {
               "timeDuration": "30",
@@ -2806,7 +2802,7 @@
             },
             {
               "timeDuration": "35",
-              "informationText": "Mapping = Zuordnung / Abbildung"
+              "informationText": "Mapping = Zuordnung oder Abbildung"
             }]
         }]
       },
@@ -3296,15 +3292,11 @@
               },
               {
                 "timeDuration": "30",
-                "informationText": "- Emitter: stößt Partikel aus"
-              },
-              {
-                "timeDuration": "36",
-                "informationText": "Parameter:"
+                "informationText": "Emitter: stößt Partikel aus"
               },
               {
                 "timeDuration": "37",
-                "informationText": "- Ausstoßgeschwindigkeit, Lebensdauer, Dämpfung, Anzahl der Partikel, Zufälligkeit"
+                "informationText": "Parameter:<br>Ausstoßgeschwindigkeit, Lebensdauer, Dämpfung, Anzahl der Partikel, Zufälligkeit"
               }]
           }]
         },
