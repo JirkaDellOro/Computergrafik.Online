@@ -223,27 +223,15 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "15",
-              "informationText": "Stäbchen: Sehen bei Nacht"
+              "informationText": "Stäbchen: Sehen bei Nacht \n Zapfen: Farbsehen bei Tag"
             },
               {
-                "timeDuration": "15",
-                "informationText": "Zapfen: Farbsehen bei Tag"
-              },
-              {
-                "timeDuration": "15",
+                "timeDuration": "19",
                 "informationText": "Rezeptoren befinden sich an der Retina (Netzhaut) des Auges)"
               },
               {
                 "timeDuration": "33",
-                "informationText": "S-Zapfen: blaues Farbspektrum"
-              },
-              {
-                "timeDuration": "33",
-                "informationText": "M-Zapfen: grünes Farbspektrum"
-              },
-              {
-                "timeDuration": "33",
-                "informationText": "L-Zapfen: rotes Farbspektrum"
+                "informationText": "S-Zapfen: blaues Farbspektrum</p><p class='information-string'> M-Zapfen: grünes Farbspektrum</p><p class='information-string'>L-Zapfen: rotes Farbspektrum"
               },
               {
                 "timeDuration": "60",
@@ -263,7 +251,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Wähle keine, eine, zwei oder alle drei Druckfarben für den Bedruckstoff aus und beobachte, welche Lichtfarben geschluckt, und welche zurückgesendet werden."
+              "informationText": "Wähle keine, eine, zwei oder alle drei Druckfarben für den Bedruckstoff aus und beobachte, welche Lichtfarben geschluckt, <br>und welche zurückgesendet werden."
             }]
           }]
         },
@@ -753,35 +741,35 @@
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "29",
+            "timeDuration": "28",
             "informationText": "- Abdunkeln\n"
           },
             {
-              "timeDuration": "31",
+              "timeDuration": "29",
               "informationText": "- Weiches Licht"
             },
             {
-              "timeDuration": "33",
+              "timeDuration": "30",
               "informationText": "- Hartes Licht"
             },
             {
-              "timeDuration": "35",
+              "timeDuration": "32",
               "informationText": "- Strahlendes Licht"
             },
             {
-              "timeDuration": "37",
+              "timeDuration": "34",
               "informationText": "- Multiplizieren"
             },
             {
-              "timeDuration": "39",
+              "timeDuration": "36",
               "informationText": "- Negativ\nMultiplizieren"
             },
             {
-              "timeDuration": "41",
+              "timeDuration": "38",
               "informationText": "- Dunklere Farbe"
             },
             {
-              "timeDuration": "43",
+              "timeDuration": "40",
               "informationText": "- Hart Mischen\n"
             }
           ]
@@ -797,7 +785,7 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "30",
+              "timeDuration": "11",
               "informationText": "- Abdunkeln: Das\nBild wird\ndunkler"
             },
               {
@@ -879,28 +867,32 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "2",
+              "timeDuration": "4",
               "informationText": "Eingabeauflösung:"
             },
               {
+              "timeDuration": "9",
+              "informationText": "- Auflösung der ursprünglichen Bilddatei"
+              },
+              {
                 "timeDuration": "15",
-                "informationText": "Pixel"
+                "informationText": "- Megapixel"
               },
               {
                 "timeDuration": "18",
-                "informationText": "Höhe x Breite"
+                "informationText": "- Breite x Höhe "
               },
               {
                 "timeDuration": "33",
-                "informationText": "Ausgabeauflösung"
+                "informationText": "Ausgabeauflösung:"
               },
               {
                 "timeDuration": "42",
-                "informationText": "Pixels per Inch"
+                "informationText": "- Pixels per Inch"
               },
               {
                 "timeDuration": "42",
-                "informationText": "im Verhältnis zum Ausgabemedium"
+                "informationText": "- im Verhältnis zum Ausgabemedium"
               }
             ]
           }]
@@ -920,11 +912,11 @@
             },
               {
                 "timeDuration": "11",
-                "informationText": "Bild: <br> 472 x 630 Pixel"
+                "informationText": "Bild: <br> 630 x 472 Pixel"
               },
               {
                 "timeDuration": "16",
-                "informationText": "Bildformat: <br> 4 x 5,33 cm"
+                "informationText": "Bildformat: <br> 5,33 x 4 cm"
               },
               {
                 "timeDuration": "43",
@@ -967,7 +959,7 @@
               },
               {
                 "timeDuration": "40",
-                "informationText": "Auflösung in Dots per Inch"
+                "informationText": "Auflösung in Pixel per Inch"
               }
             ]
           }]
@@ -997,8 +989,16 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "20",
-              "informationText": "Ausgabeeinheit: Dots per Inch Dot: Druckpunkt Rasterung: Verfahren, um Halbtöne zu simulieren"
+              "timeDuration": "6",
+              "informationText": "Ausgabeeinheit:<br>Dots per Inch"
+            },
+            {
+              "timeDuration":"9",
+              "informationText":"Dot: Druckpunkt"
+            },
+            {
+              "timeDuration":"25",
+              "informationText":"Rasterung: Verfahren, um Halbtöne zu simulieren"
             }]
           }]
         },
@@ -1012,16 +1012,19 @@
           }],
           "pageTime": [{
             "time": [{
+              "timeDuration": "14",
+              "informationText": "Rasterungsgrundtypen:"
+            },{
               "timeDuration": "16",
-              "informationText": "Rasterungsgrundtypen: -Amplitudenmodulierte Rasterung: Simuliert Tonwerte durch Größe der Druckpunkte"
+              "informationText": "1. Amplitudenmodulierte Rasterung:<br>Simuliert Tonwerte durch Größe der Druckpunkte"
             },
               {
                 "timeDuration": "19",
-                "informationText": "Frequenzmodulierte Rasterung: Häufigkeit der Druckpunkte wird variiert, Druckpunkte werden nach Zufallsprinzip verteilt"
+                "informationText": "2. Frequenzmodulierte Rasterung:<br>Häufigkeit der Druckpunkte wird variiert, Druckpunkte werden nach Zufallsprinzip verteilt"
               },
               {
                 "timeDuration": "23",
-                "informationText": "Hybridrasterung"
+                "informationText": "3. Hybridrasterung"
               }
             ]
           }]
@@ -1056,14 +1059,14 @@
             },
               {
                 "timeDuration": "26",
-                "informationText": "Druck mit vier Farben: Winkel werden unterschieden nach symmetrischen/unsymmetrischen Druckpunkten"
+                "informationText": "Druck mit vier Farben: Winkel werden unterschieden nach symmetrischen und unsymmetrischen Druckpunkten"
               },
               {
-                "timeDuration": "46",
+                "timeDuration": "47",
                 "informationText": "Symmetrisch: <br>Gelb: 0°<br> Magenta: 15° <br>Cyan: 75° <br>Schwarz: 45°"
               },
               {
-                "timeDuration": "63",
+                "timeDuration": "73",
                 "informationText": "Unsymmetrisch:<br>Gelb: 0°<br>Magenta: 45°<br>Cyan: 165°<br>Schwarz: 105°"
               }
             ]
@@ -1352,11 +1355,11 @@
         }],
         "pageTime": [{
           "time": [{
-            "timeDuration": "3",
+            "timeDuration": "14",
             "informationText": "Aus geometrischen Formen zusammengesetzt"
           },
             {
-              "timeDuration": "15",
+              "timeDuration": "18",
               "informationText": "Einsatz für einfache Formen wie Logos und Schriften"
             }
           ]
@@ -1411,15 +1414,15 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "11",
+              "timeDuration": "13",
               "informationText": "Rastergrafik für komplexe Bilder geeignet"
             },
               {
-                "timeDuration": "16",
+                "timeDuration": "18",
                 "informationText": "Vektorgrafik eher für einfache Bilder geeignet"
               },
               {
-                "timeDuration": "20",
+                "timeDuration": "23",
                 "informationText": "Beliebig skalierbar = immer optimale Auflösung des Ausgabemediums dargestellt"
               }
             ]
@@ -1450,24 +1453,24 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "0",
+              "timeDuration": "6",
               "informationText": "Beziérkurven = parametisch definierte Kurve"
             },
               {
-                "timeDuration": "19",
-                "informationText": "mehrere BK = Splines"
-              },
-              {
                 "timeDuration": "27",
-                "informationText": "1. Grades = nicht gekrümmt"
+                "informationText": "Splines = Mehrere hintereinander gesetzte Kurven"
               },
               {
-                "timeDuration": "30",
-                "informationText": "2. Grades = ein Kontrollpunkt"
+                "timeDuration": "33",
+                "informationText": "1. Grades:<br>nicht gekrümmt"
               },
               {
-                "timeDuration": "35",
-                "informationText": "3. Grades = zwei Kontrollpunkte"
+                "timeDuration": "37",
+                "informationText": "2. Grades:<br>ein Kontrollpunkt"
+              },
+              {
+                "timeDuration": "41",
+                "informationText": "3. Grades:<br>zwei Kontrollpunkte"
               }
             ]
           }]
@@ -1497,7 +1500,7 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "0",
+              "timeDuration": "10",
               "informationText": "Skallierung Rotation und Scherungen bei Vektorgrafiken verlustfrei"
             }]
           }]
@@ -1542,12 +1545,16 @@
           }],
           "pageTime": [{
             "time": [{
-              "timeDuration": "5",
+              "timeDuration": "8",
               "informationText": "Bei Rasterung entsteht Aliaseffekt"
             },
               {
-                "timeDuration": "9",
-                "informationText": "mit Antialiasing verbessert, Bild jedoch unschärfer"
+                "timeDuration": "13",
+                "informationText": "mit Antialiasing verbessert"
+              },
+              {
+                "timeDuration": "20",
+                "informationText": "-> Bild wird jedoch unschärfer"
               }
             ]
           }]
