@@ -3145,15 +3145,15 @@
               },
               {
                 "timeDuration": "31",
-                "informationText": "- Ease-in:"
+                "informationText": "- Ease-in"
               },
               {
                 "timeDuration": "32",
-                "informationText": "- Ease-out:"
+                "informationText": "- Ease-out"
               },
               {
                 "timeDuration": "33",
-                "informationText": "- Ease-in-out:"
+                "informationText": "- Ease-in-out"
               }
             ]
           }]
