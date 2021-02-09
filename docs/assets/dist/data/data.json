@@ -386,7 +386,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Verschiebe den Regler hue(Farbton), um einen Farbton auszuwählen. Lasse dir anschließend die Abstufungen mittels saturation(Sättigung) und brightness(Helligkeit) anzeigen." 
+              "informationText": "Verschiebe den Regler hue(Farbton), um einen Farbton auszuwählen.<br>Lasse dir anschließend die Abstufungen mittels saturation(Sättigung) und brightness(Helligkeit) anzeigen." 
               }
             ]
           }]

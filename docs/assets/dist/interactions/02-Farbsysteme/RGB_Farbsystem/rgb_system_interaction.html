@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='rgb.css'>
 </head>
-<style>
-    *{margin:0;padding:0;background:white;}
-    body{overflow:hidden;}
-    form{
-        position:absolute;
-        bottom:0;
-        left:0;
-        right:0;
-        background:#efefef;
-        padding:1em;
-        text-align:center;
-    }
-</style>
 <body>
+    <canvas></canvas>
 <form>
-    <input id="r" type="range" value="0" min="0" max="255">
-    <input id="g" type="range" value="0" min="0" max="255">
-    <input id="b" type="range" value="0" min="0" max="255">
+    <span><label for="r">Red</label><br><input id="r" name="r" type="range" value="0" min="0" max="255"></span>
+    <span><label for="g">Green</label><br><input id="g" name="g" type="range" value="0" min="0" max="255"></span>
+    <span><label for="b">Blue</label><br><input id="b" name="b" type="range" value="0" min="0" max="255"></span>
 </form>
 </body>
 <script>
-    var canvas = document.createElement('canvas');
+    var canvas = document.querySelector("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
+    canvas.style.width = window.innerWidth;
+    canvas.style.height = window.innerHeight;
     var ctx = canvas.getContext('2d');
+    let screen = false;
+
+    //make it responsive
+    window.addEventListener('resize', resize);
+    function resize(){
+        console.log(window.innerWidth);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.style.width = window.innerWidth;
+        canvas.style.height = window.innerHeight;
+        draw();
+    }
 
     // Pick out the form elements for easy access later
     var r = document.querySelector('#r');
@@ -38,19 +41,40 @@
 
     // Animation function
     function draw(){
+        if(canvas.width <= 600){
+            screen = true;
+        }else{
+            screen = false;
+        }
         // clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         // draw the cube
-        drawCube(
-            window.innerWidth/2,
-            window.innerHeight/2 + 255 ,
-            255,
-            255,
-            255,
-            Number(r.value),
-            Number(g.value),
-            Number(b.value)
-        );
+        if(screen == true){ // if its a small screen
+            drawCube(
+                window.innerWidth/2,
+                window.innerHeight/2 + 170,
+                170,
+                170,
+                170, //length der Zeichnung
+                Number(r.value),
+                Number(g.value),
+                Number(b.value)
+            );
+            document.getElementById("r").setAttribute("max", "170");
+            document.getElementById("g").setAttribute("max", "170");
+            document.getElementById("b").setAttribute("max", "170");
+        }else{
+            drawCube(
+                window.innerWidth/2,
+                window.innerHeight/2 + 255 ,
+                255,
+                255,
+                255,
+                Number(r.value),
+                Number(g.value),
+                Number(b.value)
+            );
+        }
         requestAnimationFrame(draw);
     }
     draw();
@@ -74,7 +98,10 @@
         //draw the current location of the dot
         ctx.beginPath();
         ctx.arc(x - r + b, y - h + r * 0.5 + b * 0.5 - g, 15, 0, 2 * Math.PI);
-        var rgbString = "rgb(" + r.toString() +"," + g.toString() + "," + b.toString() + ")";
+        if(screen == true)
+            var rgbString = "rgb(" + (r * 1.5).toString() +"," + (g * 1.5).toString() + "," + (b * 1.5).toString() + ")";
+        else
+            var rgbString = "rgb(" + r.toString() +"," + g.toString() + "," + b.toString() + ")";
         ctx.strokeStyle = rgbString;
         ctx.stroke();
         ctx.fillStyle = rgbString;
@@ -92,8 +119,7 @@
         //green
         ctx.fillStyle = "#00ff00";
         ctx.fillText("Green(0,1,0)", x - 50, y - wx * 2 - 25);
-
-
     }
+    
 </script>
 </html>
