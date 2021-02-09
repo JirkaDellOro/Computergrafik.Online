@@ -1,0 +1,28 @@
+*{margin:0;padding:0;background:white;}
+canvas{
+    width: inherit;
+    height: 100%;
+}
+body{overflow:hidden;}
+form{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#efefef;
+    padding:1em;
+    text-align:center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-family: "Oswald", "sans-serif";
+}
+span, label{background-color: transparent;}
+@media screen and (max-width: 600px) {
+    /*canvas{
+        width: 100%;
+    } */
+   input{
+       width: 90%;
+   } 
+}
