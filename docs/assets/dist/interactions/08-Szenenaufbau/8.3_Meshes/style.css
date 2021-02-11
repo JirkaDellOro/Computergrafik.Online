@@ -27,3 +27,20 @@
 #edges {
     background-color: rgb(99, 142, 235);
 }
+@media screen and (max-width: 1024px){
+    .but{
+        margin-left: 2%;
+    }
+}
+@media screen and (max-width: 600px){
+    #box{
+        position: relative;
+        top: 70vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .but{
+        margin: 5px;
+        position: relative;
+    }
+}
