@@ -11,7 +11,7 @@ namespace Transformations {
 
         private _ambientLight: BABYLON.HemisphericLight;
         private _cube : BABYLON.Mesh;
-
+        
         constructor(canvasElement: string) {
             // Create canvas and engine.
             this._canvas = document.getElementById(canvasElement) as HTMLCanvasElement;
@@ -155,23 +155,23 @@ namespace Transformations {
     function disableGroups() {
         let transformGroup = document.getElementsByClassName("transform-group");
         for(let i = 0; i < transformGroup.length; i ++) {
-            transformGroup[i].style.display = 'none';
+            (<HTMLDivElement>transformGroup[i]).style.display = 'none';
         }
     }
 
     function displayInputFields() {
         disableGroups();
         let group = this.getAttribute("data-group");
-        document.getElementById(group).style.display = 'block'
+        document.getElementById(group)!.style.display = 'block'
     }
 
     function rotateCube() {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-rotate').value;
-        yAxis = document.getElementById('y-axis-rotate').value;
-        zAxis = document.getElementById('z-axis-rotate').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-rotate'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-rotate'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-rotate'))!.value);
         scene.setRotationX(xAxis/10);
         scene.setRotationY(yAxis/10);
         scene.setRotationZ(zAxis/10);
@@ -181,21 +181,22 @@ namespace Transformations {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-scaling').value;
-        yAxis = document.getElementById('y-axis-scaling').value;
-        zAxis = document.getElementById('z-axis-scaling').value;
-        scene.setScalingX(xAxis/10);
-        scene.setScalingY(yAxis/10);
-        scene.setScalingZ(zAxis/10);
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-scaling'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-scaling'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-scaling'))!.value);
+        scene.setScalingX(xAxis);
+        scene.setScalingY(yAxis);
+        scene.setScalingZ(zAxis);
     }
 
     function translatCube() {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-translation').value;
-        yAxis = document.getElementById('y-axis-translation').value;
-        zAxis = document.getElementById('z-axis-translation').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-translation'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-translation'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-translation'))!.value);
+        console.log(xAxis);
         scene.setPositionX(xAxis/10);
         scene.setPositionY(yAxis/10);
         scene.setPositionZ(zAxis/10);

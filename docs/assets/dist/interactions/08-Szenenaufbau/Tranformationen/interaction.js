@@ -1,3 +1,4 @@
+"use strict";
 ///<reference path="babylon.d.ts" />
 var Transformations;
 (function (Transformations) {
@@ -127,9 +128,9 @@ var Transformations;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-rotate').value;
-        yAxis = document.getElementById('y-axis-rotate').value;
-        zAxis = document.getElementById('z-axis-rotate').value;
+        xAxis = parseInt(document.getElementById('x-axis-rotate').value);
+        yAxis = parseInt(document.getElementById('y-axis-rotate').value);
+        zAxis = parseInt(document.getElementById('z-axis-rotate').value);
         scene.setRotationX(xAxis / 10);
         scene.setRotationY(yAxis / 10);
         scene.setRotationZ(zAxis / 10);
@@ -138,20 +139,21 @@ var Transformations;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-scaling').value;
-        yAxis = document.getElementById('y-axis-scaling').value;
-        zAxis = document.getElementById('z-axis-scaling').value;
-        scene.setScalingX(xAxis / 10);
-        scene.setScalingY(yAxis / 10);
-        scene.setScalingZ(zAxis / 10);
+        xAxis = parseInt(document.getElementById('x-axis-scaling').value);
+        yAxis = parseInt(document.getElementById('y-axis-scaling').value);
+        zAxis = parseInt(document.getElementById('z-axis-scaling').value);
+        scene.setScalingX(xAxis);
+        scene.setScalingY(yAxis);
+        scene.setScalingZ(zAxis);
     }
     function translatCube() {
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-translation').value;
-        yAxis = document.getElementById('y-axis-translation').value;
-        zAxis = document.getElementById('z-axis-translation').value;
+        xAxis = parseInt(document.getElementById('x-axis-translation').value);
+        yAxis = parseInt(document.getElementById('y-axis-translation').value);
+        zAxis = parseInt(document.getElementById('z-axis-translation').value);
+        console.log(xAxis);
         scene.setPositionX(xAxis / 10);
         scene.setPositionY(yAxis / 10);
         scene.setPositionZ(zAxis / 10);
