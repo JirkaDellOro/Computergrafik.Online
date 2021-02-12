@@ -112,10 +112,15 @@
         ctx.beginPath();
         ctx.fillStyle = "#ff0000";
         ctx.font = "25px Arial";
-        ctx.fillText("Red(1,0,0)", x - wx - 40, y - wx * 0.5 + 30);
-        //blue
-        ctx.fillStyle = "#0000ff";
-        ctx.fillText("Blue(0,0,1)", x + wx - 40, y - wx * 0.5 + 30)
+        if(!screen){
+            ctx.fillText("Red(1,0,0)", x - wx - 40, y - wx * 0.5 + 30);
+            ctx.fillStyle = "#0000ff";
+            ctx.fillText("Blue(0,0,1)", x + wx - 40, y - wx * 0.5 + 30)
+        }else{
+            ctx.fillText("Red(1,0,0)", x - wx - 10, y - wx * 0.5 + 30);
+            ctx.fillStyle = "#0000ff";
+            ctx.fillText("Blue(0,0,1)", x + wx - 110, y - wx * 0.5 + 30)
+        }
         //green
         ctx.fillStyle = "#00ff00";
         ctx.fillText("Green(0,1,0)", x - 50, y - wx * 2 - 25);

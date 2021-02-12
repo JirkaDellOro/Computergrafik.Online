@@ -1,5 +1,5 @@
 (function (cjs, an) {
-
+	
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
@@ -105,9 +105,9 @@ p._updateVisibility = _updateVisibility;
 			'position': 'absolute',
 			'top': '250px',
 			'left': '300px',
-			'width': '300px',
-			'height': 'auto',
-			'cursor': 'move'
+			/* 'width': '300px',
+			'height': 'auto', */
+			'cursor': 'move',
 		});
 			
 		/* Toggle Color Mix Mode */
@@ -142,7 +142,6 @@ p._updateVisibility = _updateVisibility;
 		
 		testImage.addEventListener("mousedown", startDrag);
 		testImage.addEventListener("mouseup", stopDrag);
-		
 		function startDrag(e) {
 			// determine event object
 			if (!e) {
@@ -250,8 +249,8 @@ p._updateVisibility = _updateVisibility;
 		//here is where the movement position is determained
 		    var posX = touch.pageX - container.x - drag.w / 2;
 			var posY = touch.pageY - container.x - drag.h / 2;
-		    
-			if( ("0" < posX && posX < "960") && ("0" < posY && posY < "539,95") )
+/* 		    console.log(posX +"   "+ posY);
+ */			if( ("-300" < posX && posX < "300") && ("0" < posY && posY < "700") )
 			{
 				dom.drag.style.left = posX + "px";
 				dom.drag.style.top = posY + "px";
