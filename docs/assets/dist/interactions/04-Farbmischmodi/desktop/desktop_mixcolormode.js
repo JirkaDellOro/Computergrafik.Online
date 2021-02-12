@@ -216,10 +216,10 @@ p._updateVisibility = _updateVisibility;
 		
 		target = null;
 		
-		testImage.addEventListener('touchstart', handleTouchStart, false);
-		testImage.addEventListener('touchmove', handleTouchMove, false);
-		testImage.addEventListener('touchend', handleTouchEnd, false);
-		testImage.addEventListener('touchcancel', handleTouchCancel, false);
+		testImage.addEventListener('touchstart', handleTouchStart);
+		testImage.addEventListener('touchmove', handleTouchMove);
+		testImage.addEventListener('touchend', handleTouchEnd);
+		testImage.addEventListener('touchcancel', handleTouchCancel);
 		
 		function handleTouchStart(e) {
 		    if (e.touches.length == 1) {
