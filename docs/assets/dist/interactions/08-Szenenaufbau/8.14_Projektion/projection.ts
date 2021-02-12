@@ -7,12 +7,17 @@ class Projection {
     private _roboter: any;
     private _camera: BABYLON.ArcRotateCamera;
     private _light: BABYLON.Light;
+    private _radius: number;
 
     constructor(canvasElement: string) {
         // Create canvas and engine.
         this._canvas = document.getElementById(canvasElement) as HTMLCanvasElement;
 
         this._engine = new BABYLON.Engine(this._canvas, true);
+        if(this._canvas.width > 500)
+            this._radius = 4.6;
+        else
+            this._radius = 10;
     }
 
     createScene(): void {
@@ -20,14 +25,8 @@ class Projection {
 
 
         this._scene = new BABYLON.Scene(this._engine);
-        this._camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, 4.6, new BABYLON.Vector3(0, 0, 0), this._scene);
+        this._camera = new BABYLON.ArcRotateCamera("Camera", 0, Math.PI / 2, this._radius, new BABYLON.Vector3(0, 0, 0), this._scene);
         this._camera.attachControl(this._canvas, false);
-
-
-
-
-
-
         // Create a basic light, aiming 0,1,0 - meaning, to the sky.
         this._light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0, 1, 0), this._scene);
         let light = new BABYLON.HemisphericLight("light2", new BABYLON.Vector3(0, -5, 0), this._scene);
@@ -54,21 +53,32 @@ class Projection {
 
         this._camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
 
-        this._camera.orthoLeft = ratio * -1.5;
-        this._camera.orthoRight = ratio * 1.5;
-        this._camera.orthoTop = 1.5;
-        this._camera.orthoBottom = -1.5;
+        if(this._canvas.width > 500){
+            this._camera.orthoLeft = ratio * -1.5;
+            this._camera.orthoRight = ratio * 1.5;
+            this._camera.orthoTop = 1.5;
+            this._camera.orthoBottom = -1.5;
+        }else {
+            this._camera.orthoLeft = ratio * -3.7;
+            this._camera.orthoRight = ratio * 3.7;
+            this._camera.orthoTop = 3.7;
+            this._camera.orthoBottom = -3.7;
+        }
 
     }
     doRender(): void {
         // Run the render loop.
         this._engine.runRenderLoop(() => {
             this._scene.render();
-        });
-
+        });        
         // The canvas/window resize event handler.
         window.addEventListener('resize', () => {
+            if(this._canvas.width > 500)
+                this._camera.radius = 4.6;
+            else
+                this._camera.radius = 10;
             this._engine.resize();
+            this.paralelcamera();
         });
     }
 }
