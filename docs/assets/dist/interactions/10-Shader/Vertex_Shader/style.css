@@ -37,6 +37,7 @@
     font-size: 14px;
     background-color: rgba(36, 36, 36, 0.7);
     padding: 5px 12.5%;
+    margin-bottom: 30px;
     color: #ffffff;
 }
 
@@ -50,17 +51,9 @@
     padding-top: 1px;
     padding-bottom: 1px;
 }
-
-#form-container {
-
-}
-
 .button-container {
     padding-bottom: 12px;
 }
-
-
-
 @media screen and (min-width:1024px) {
     #col_1 {
         width: 70%;
