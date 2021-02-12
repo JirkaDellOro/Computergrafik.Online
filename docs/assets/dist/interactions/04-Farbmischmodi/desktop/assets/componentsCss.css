@@ -1,6 +1,10 @@
 body, html{
   font-family: "Oswald";
 }
+.test{
+  width: 300px;
+  height: auto;
+}
 .button {
   background-color: #ccc;
   border: 2px solid #00CBFF;
@@ -227,4 +231,39 @@ input[type=range]:focus::-moz-range-track {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+@media screen and (max-width: 1024px){
+  .button{font-size: 2vh;}
+}
+@media screen and (max-width: 900px){
+  .button{font-size: 2vh;}
+}
+@media screen and (max-width: 500px){
+  #dom_overlay_container{
+    height: 400px !important;
+  }
+  .test{
+    width: 200px;
+    height: auto;
+  }
+  .button {
+    font-size: 4vh;
+    height: 100px !important;
+  }
+  #multiply{
+    margin: 30px 0;
+    transform-origin: 50px 30px !important;
+  }
+  #softlight{
+    margin: 50px 0;
+    transform-origin: 50px 50px !important;
+  }
+  #darken{
+    margin: 50px 0;
+    transform-origin: 50px 50px !important;
+  }
+  #hardlight{
+    margin: 30px 0;
+    transform-origin: 0 20px !important;
+  }
 }
