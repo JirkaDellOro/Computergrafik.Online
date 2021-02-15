@@ -48,8 +48,7 @@
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-     left: 5%; 
-    right: 0;
+    left: 0; 
     bottom: 0;
     padding: 12px 5%;
     color: #ffffff;
@@ -64,7 +63,11 @@
     }
     
 }
-
+@media screen and (max-width: 370px){
+    #check-container{
+        font-size: 13px;
+    }
+}
 /* @media screen and (min-width:800px) {
     #col_1 {
         width: 50%;
