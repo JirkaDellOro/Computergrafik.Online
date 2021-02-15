@@ -40,7 +40,7 @@ namespace Transformations {
             this._initialPos = this._cube.position;
             let material: any = new BABYLON.StandardMaterial("cubeMaterial", this._scene);
             material.diffuseTexture = new BABYLON.Texture("./texture.jpg", this._scene);
-            this._cube.material = material;p
+            this._cube.material = material;
             this._animationBoxScaling = new BABYLON.Animation("boxAnimationScaling", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
                 BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationBoxRotation = new BABYLON.Animation("boxRotationScaling", "rotation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
@@ -238,7 +238,7 @@ namespace Transformations {
         disableGroups();
         setButtonsToInactive();
         let group = this.getAttribute("data-group");
-        document.getElementById(group).style.display = 'block';
+        document.getElementById(group)!.style.display = 'block';
         this.classList.add('active');
     }
 
@@ -246,9 +246,9 @@ namespace Transformations {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-rotate').value;
-        yAxis = document.getElementById('y-axis-rotate').value;
-        zAxis = document.getElementById('z-axis-rotate').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-rotate'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-rotate'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-rotate'))!.value);
         scene.setRotationX(xAxis/10);
         scene.setRotationY(yAxis/10);
         scene.setRotationZ(zAxis/10);
@@ -258,9 +258,10 @@ namespace Transformations {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-scaling').value;
-        yAxis = document.getElementById('y-axis-scaling').value;
-        zAxis = document.getElementById('z-axis-scaling').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-scaling'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-scaling'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-scaling'))!.value);
+
         console.log(scene.getScaling());
         scene.setScalingX(xAxis/10);
         scene.setScalingY(yAxis/10);
@@ -271,9 +272,9 @@ namespace Transformations {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-translation').value;
-        yAxis = document.getElementById('y-axis-translation').value;
-        zAxis = document.getElementById('z-axis-translation').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-translation'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-translation'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-translation'))!.value);
         scene.setPositionX(xAxis/10);
         scene.setPositionY(yAxis/10);
         scene.setPositionZ(zAxis/10);
@@ -281,17 +282,17 @@ namespace Transformations {
 
     function setKeyFrame(){
         let keyframe : number;
-        let group : string;
-        let x;
+        let group: string = "";
+        let x: number = 0;
         let y;
         let z;
 
         let buttons = document.getElementsByClassName('active');
         for (let i = 0; i < buttons.length; i++) {
-            group = buttons[i].getAttribute('data-group')
+            group = buttons[i].getAttribute('data-group')!;
             console.log(group)
         }
-        let inputs = document.getElementById(group).getElementsByClassName('custom-range');
+        let inputs = document.getElementById(group)!.getElementsByClassName('custom-range');
         console.log(inputs)
         for(let i = 0; i < inputs.length; i++) {
             let input = inputs[i].getAttribute('axis');
@@ -311,9 +312,11 @@ namespace Transformations {
                 }
             }
         }
-        keyframe = document.getElementById('keyframe').value;
+        keyframe = parseInt((<HTMLSelectElement>document.getElementById('keyframe'))!.value);
+        console.log("HALLO" + keyframe);
         if(group === 'translation-group') {
             scene.setKeyFrameTranslation(keyframe, x);
+            console.log("x: " +x)
         }
         if(group === 'scaling-group') {
             scene.setKeyFrame(keyframe, new BABYLON.Vector3(x, y, z));

@@ -1,3 +1,4 @@
+"use strict";
 ///<reference path="babylon.d.ts" />
 var Transformations;
 (function (Transformations) {
@@ -12,6 +13,7 @@ var Transformations;
             var _this = this;
             // Create a basic BJS Scene object.
             this._scene = new BABYLON.Scene(this._engine);
+            this._scene.clearColor = new BABYLON.Color4(0.1, 0.1, 0.2, 1);
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.setPosition(new BABYLON.Vector3(30, 0, 30));

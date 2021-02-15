@@ -21,7 +21,16 @@
             <button type="button" data-group="translation-group" class="btn btn-secondary">Translate</button>
             <button id="set-kf" type="button" class="btn btn-secondary">set</button>
             <button id="start-animation" type="button" class="btn btn-secondary">start</button>
-            <input class="form-control" id="keyframe" type="text" placeholder="keyframe">
+            <!-- <input class="form-control" id="keyframe" type="text" placeholder="keyframe"> -->
+            <select class="form-control" id="keyframe">
+                <optgroup label="Keyframe">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </optgroup>
+            </select>
         </div>
         <div class="input-wrapper">
             <div id="rotate-group" class="transform-group">
@@ -32,7 +41,7 @@
                 <label>z-axis</label>
                 <input id="z-axis-rotate" axis="z" class="custom-range" type="range" value="1" min="1" max="100">
             </div>
-            <div id="scaling-group" class="transform-group">g
+            <div id="scaling-group" class="transform-group">
                 <label>x-axis</label>
                 <input id="x-axis-scaling" axis="x" class="custom-range" type="range" value="15" min="1" max="100">
                 <label>y-axis</label>

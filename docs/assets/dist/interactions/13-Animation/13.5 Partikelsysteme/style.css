@@ -57,7 +57,11 @@ html, body {
 .btn-secondary:active{
     background-color:  #00A8FF;
 }
-
+@media screen and (max-width: 600px){
+    #slidercontainer1 {
+        bottom: 20px;
+    }
+}
 
 
 
