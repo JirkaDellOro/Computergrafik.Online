@@ -1,3 +1,4 @@
+"use strict";
 ///<reference path="babylon.d.ts" />
 var Transformations;
 (function (Transformations) {
@@ -25,7 +26,7 @@ var Transformations;
             this._cube.material = material;
             this._animationBoxScaling = new BABYLON.Animation("boxAnimationScaling", "scaling", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationBoxRotation = new BABYLON.Animation("boxRotationScaling", "rotation", 5, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
-            this._animationBoxTranslation = new BABYLON.Animation("boxAnimationTranslation", "position.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+            this._animationBoxTranslation = new BABYLON.Animation("boxAnimationTranslationX", "position.x", 5, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
             this._animationKeys = [{ frame: 0, value: new BABYLON.Vector3(1, 1, 1) }];
             this._animationKeysRotation = [{ frame: 0, value: new BABYLON.Vector3(0, 0, 0) }];
             this._animationKeysTranslation = [{ frame: 0, value: 0 }];
@@ -189,9 +190,9 @@ var Transformations;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-rotate').value;
-        yAxis = document.getElementById('y-axis-rotate').value;
-        zAxis = document.getElementById('z-axis-rotate').value;
+        xAxis = parseInt(document.getElementById('x-axis-rotate').value);
+        yAxis = parseInt(document.getElementById('y-axis-rotate').value);
+        zAxis = parseInt(document.getElementById('z-axis-rotate').value);
         scene.setRotationX(xAxis / 10);
         scene.setRotationY(yAxis / 10);
         scene.setRotationZ(zAxis / 10);
@@ -200,9 +201,9 @@ var Transformations;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-scaling').value;
-        yAxis = document.getElementById('y-axis-scaling').value;
-        zAxis = document.getElementById('z-axis-scaling').value;
+        xAxis = parseInt(document.getElementById('x-axis-scaling').value);
+        yAxis = parseInt(document.getElementById('y-axis-scaling').value);
+        zAxis = parseInt(document.getElementById('z-axis-scaling').value);
         console.log(scene.getScaling());
         scene.setScalingX(xAxis / 10);
         scene.setScalingY(yAxis / 10);
@@ -212,17 +213,17 @@ var Transformations;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-translation').value;
-        yAxis = document.getElementById('y-axis-translation').value;
-        zAxis = document.getElementById('z-axis-translation').value;
+        xAxis = parseInt(document.getElementById('x-axis-translation').value);
+        yAxis = parseInt(document.getElementById('y-axis-translation').value);
+        zAxis = parseInt(document.getElementById('z-axis-translation').value);
         scene.setPositionX(xAxis / 10);
         scene.setPositionY(yAxis / 10);
         scene.setPositionZ(zAxis / 10);
     }
     function setKeyFrame() {
         var keyframe;
-        var group;
-        var x;
+        var group = "";
+        var x = 0;
         var y;
         var z;
         var buttons = document.getElementsByClassName('active');
@@ -250,9 +251,11 @@ var Transformations;
                 }
             }
         }
-        keyframe = document.getElementById('keyframe').value;
+        keyframe = parseInt(document.getElementById('keyframe').value);
+        console.log("HALLO" + keyframe);
         if (group === 'translation-group') {
             scene.setKeyFrameTranslation(keyframe, x);
+            console.log("x: " + x);
         }
         if (group === 'scaling-group') {
             scene.setKeyFrame(keyframe, new BABYLON.Vector3(x, y, z));

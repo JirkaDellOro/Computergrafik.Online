@@ -59,8 +59,32 @@ html, body {
 .btn.active {
     background-color:  #00A8FF;
 }
+select{
+    text-align: left;
+}
+@media screen and (max-width: 600px){
+    #slidercontainer1{
+        padding-bottom: 20px;
+    }
+   .btn{
+       font-size: 13px;
 
-
+   }
+   .form-control{
+       font-size: 13px;
+   }
+}
+@media screen and (max-width: 370px){
+    .btn{
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 11px;
+    }
+    .form-control{
+        width: 20%;
+        padding: 5px;
+    }
+ }
 
 
 
