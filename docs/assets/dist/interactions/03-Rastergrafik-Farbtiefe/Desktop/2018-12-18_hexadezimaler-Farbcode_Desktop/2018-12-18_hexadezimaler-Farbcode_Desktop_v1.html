@@ -152,7 +152,8 @@ function handleComplete(evt,comp) {
 		var lastW, lastH, lastS=1;		
 		window.addEventListener('resize', resizeCanvas);		
 		resizeCanvas();		
-		function resizeCanvas() {			
+		function resizeCanvas() {	
+			//debugger;		
 			var w = lib.properties.width, h = lib.properties.height;			
 			var iw = window.innerWidth, ih=window.innerHeight;			
 			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
@@ -162,7 +163,17 @@ function handleComplete(evt,comp) {
 				}				
 				else if(!isScale) {					
 					if(iw<w || ih<h)						
-						sRatio = Math.min(xRatio, yRatio);				
+						sRatio = Math.min(xRatio, yRatio);
+					if(iw < 900)
+						sRatio = 0.9;
+					if(iw < 800)						
+						sRatio = 0.8;			
+					if(iw <= 600)
+						sRatio = 0.6;
+					if(iw <= 480)
+						sRatio = 0.5;	
+					if(iw <= 320)
+						sRatio = 0.4;
 				}				
 				else if(scaleType==1) {					
 					sRatio = Math.min(xRatio, yRatio);				
@@ -191,7 +202,7 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:960px; height:720px">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:720px; height:540px">
 		<canvas id="canvas" width="960" height="720" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:960px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>

@@ -1,42 +1,51 @@
 body{
 	overscroll-behavior-y: contain;
 }
-
-.buttonContainerLeft{
-	position: absolute;
-	margin-top: -150px;
-	margin-left: 375px;
+canvas{
+	left: 50%;
+	transform: translate(-50%, 0);
+	/* transform: translate(-50%, -50%); */
 }
-.shemeContainerLeft{
+.Containerbox{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 650px;
 	position: absolute;
-	margin-top: -160px;
-	margin-left: 75px;
+	top: 550px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-
-.shemeContainerRight{
-	position: absolute;
-	margin-top: -177px;
-	margin-left: 525px;
+.Container1, .Container2, .Container3, .Container4{
+	margin-top: 10px;
 }
-
-.buttonContainerRight{
-	position: absolute;
-	margin-top: -150px;
-	margin-left: 825px;
+.Container2, .Container4{
+	order: 1;
 }
-
 .text{
 	font-size: 20px;
 }
-
-.img_sheme_2bit{
-	padding-top: 19px;
+@media screen and (max-width: 900px){
+	.Containerbox{
+		width: 600px;
+	}
 }
-
-.img_sheme_4bit{
-	padding-top: 19px;
+@media screen and (max-width: 600px){
+	.Containerbox{
+		width: fit-content;
+		flex-flow: column;
+		top: 400px;
+	}
+	.Container2, .Container4{
+		order: 0;
+	}
 }
-
-.img_sheme_8bit{
-	padding-top: 18px;
+@media screen and (max-width: 320px){
+	.Containerbox{
+		top: 320px;
+	}
+	img{
+		height: 30px;
+		width: auto;
+	}
 }
