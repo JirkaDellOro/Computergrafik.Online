@@ -80,7 +80,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// text
-	this.instance = new lib.CachedTexturedBitmap_33();
+	/* this.instance = new lib.CachedTexturedBitmap_33();
 	this.instance.parent = this;
 	this.instance.setTransform(863.5,138.15,0.5,0.5);
 
@@ -90,7 +90,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this.instance_2 = new lib.CachedTexturedBitmap_31();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(673.05,138.15,0.5,0.5);
+	this.instance_2.setTransform(673.05,138.15,0.5,0.5); */
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
@@ -328,23 +328,26 @@ p._updateVisibility = _updateVisibility;
 		this.g_circle = this.grüner_Kreis.g_circle;
 		this.r_circle = this.roter_Kreis.r_circle;
 		this.customCSS = this.roter_Kreis.customCSS;
-		$('body').append('<div class="hexContainer">')
+		$('body').append('<div id="content">');
+		$('#content').append('<div class="hexContainer">');
 		$('.hexContainer').append('</div><span id="hex_char">#</span><span id="hex_r_color">ff</span><span id="hex_g_color">ff</span><span id="hex_b_color">ff</span></div>');
 		
-		$('body').append('<div class="sliderContainer">')
-		$('body').append('<div class="rSliderValueContainer">')
-		$('body').append('<div class="gSliderValueContainer">')
-		$('body').append('<div class="bSliderValueContainer">')
-		
-		$('.sliderContainer').append('<input type="range" class="slider" id="r_slider" value="255" min="0" max="255">');
-		$('.rSliderValueContainer').append('<span id="r_slider_value">255</span>');
-		
-		$('.sliderContainer').append('<input type="range" class="slider" id="g_slider" value="255" min="0" max="255">');
-		$('.gSliderValueContainer').append('<span id="g_slider_value">255</span>');
-		
-		$('.sliderContainer').append('<input type="range" class="slider" id="b_slider" value="255" min="0" max="255">');
-		$('.bSliderValueContainer').append('<span id="b_slider_value">255</span>');
-		
+		$('#content').append('<div id="sliderContainer">')
+		$('#sliderContainer').append('<div class="rSliderContainer">')
+		$('#sliderContainer').append('<div class="gSliderContainer">')
+		$('#sliderContainer').append('<div class="bSliderContainer">')
+
+		$('.rSliderContainer').append('<span id="r_slider_value">255</span>');
+		$('.rSliderContainer').append('<input type="range" class="slider" id="r_slider" value="255" min="0" max="255">');
+		$('.rSliderContainer').append('<span id="r_value">R</span>');
+
+		$('.gSliderContainer').append('<span id="g_slider_value">255</span>');
+		$('.gSliderContainer').append('<input type="range" class="slider" id="g_slider" value="255" min="0" max="255">');
+		$('.gSliderContainer').append('<span id="g_value">G</span>');
+
+		$('.bSliderContainer').append('<span id="b_slider_value">255</span>');
+		$('.bSliderContainer').append('<input type="range" class="slider" id="b_slider" value="255" min="0" max="255">');
+		$('.bSliderContainer').append('<span id="b_value">B</span>');
 		
 		var r_id = this.r_circle;
 		var g_id = this.g_circle;
@@ -478,7 +481,7 @@ p.nominalBounds = new cjs.Rectangle(464,360,482.79999999999995,366);
 // library properties:
 lib.properties = {
 	id: '6C66711D337ACE4389B5581A823A3FB4',
-	width: 960,
+	width: 580,
 	height: 720,
 	fps: 24,
 	color: "#FFFFFF",

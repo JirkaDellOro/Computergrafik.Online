@@ -210,21 +210,23 @@ p._updateVisibility = _updateVisibility;
 		this.img_bit_2 = this.Bilder.img_bit_2;
 		this.img_bit_1 = this.Bilder.img_bit_1;
 		this.img_bit_0 = this.Bilder.img_bit_0;
-		$('body').append('<div class="buttonContainerLeft">')
-		$('.buttonContainerLeft').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="radioCheckmark"></span></label></br></br>');
-		$('.buttonContainerLeft').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="radioCheckmark"></span></label></br></br>');
+		$('body').append('<div class="Containerbox">')
+		$('.Containerbox').append('<div class="Container1">')
+		$('.Container1').append('<label class="container"><span class="text">1 Bit</span><input type="radio" class="radioBtn" name="1" value="0"   checked><span class="radioCheckmark"></span></label>');
+		$('.Container1').append('<img src="./images/1bit.png" class="img_sheme_1bit" height="44px" width="280px">');
+
+		$('.Containerbox').append('<div class="Container2">')		
+		$('.Container2').append('<label class="container"><span class="text">2 Bit</span><input type="radio" class="radioBtn" name="1" value="1"><span class="radioCheckmark"></span></label>');
+		$('.Container2').append('<img src="./images/2bit.png" class="img_sheme_2bit" height="44px" width="280px">');
 		
-		$('body').append('<div class="buttonContainerRight">')
-		$('.buttonContainerRight').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="radioCheckmark"></span></label></br></br>');
-		$('.buttonContainerRight').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="radioCheckmark"></span></label>');
-		
-		$('body').append('<div class="shemeContainerLeft">')
-		$('.shemeContainerLeft').append('<img src="./images/1bit.png" class="img_sheme_1bit" height="44px" width="280px"></br></br>');
-		$('.shemeContainerLeft').append('<img src="./images/2bit.png" class="img_sheme_2bit" height="44px" width="280px"></br></br>');
-		
-		$('body').append('<div class="shemeContainerRight">')
-		$('.shemeContainerRight').append('<img src="./images/4bit.png" class="img_sheme_4bit" height="44px" width="280px"></br></br>');
-		$('.shemeContainerRight').append('<img src="./images/8bit.png" class="img_sheme_8bit" height="44px" width="280px">');
+		$('.Containerbox').append('<div class="Container3">')
+		$('.Container3').append('<label class="container"><span class="text">4 Bit</span><input type="radio" class="radioBtn" name="1" value="2"><span class="radioCheckmark"></span></label>');
+		$('.Container3').append('<img src="./images/4bit.png" class="img_sheme_4bit" height="44px" width="280px">');
+
+		$('.Containerbox').append('<div class="Container4">')
+		$('.Container4').append('<label class="container"><span class="text">8 Bit</span><input type="radio" class="radioBtn" name="1" value="3"><span class="radioCheckmark"></span></label>');
+		$('.Container4').append('<img src="./images/8bit.png" class="img_sheme_8bit" height="44px" width="280px">');
+
 		
 		
 		
