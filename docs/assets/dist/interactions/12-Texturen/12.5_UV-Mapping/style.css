@@ -47,7 +47,26 @@ html, body {
     margin-left: 8em;
     color: white;
 }
-
+@media screen and (max-width: 700px){
+    #renderCanvas {
+        height  : 70%;
+        touch-action: none;   
+    }
+    #zeichenpad{
+        position: absolute;
+        bottom: 5%;
+    }
+    body{
+        background-color: #33334C;
+    }
+    #Textüberschrift{
+        margin-left: 0;
+    }
+    .überschrift{
+        text-align: center;
+        margin-left: 0;
+    }
+}
      
     
     

@@ -1,3 +1,4 @@
+"use strict";
 ///<reference path="babylon.d.ts" />
 var UvMapping;
 (function (UvMapping) {
@@ -129,6 +130,10 @@ var UvMapping;
         canvas.addEventListener("mousemove", paint);
         canvas.addEventListener("mouseout", paint);
         canvas.addEventListener("mouseup", paint);
+        canvas.addEventListener("touchstart", paintTouch);
+        canvas.addEventListener("touchmove", paintTouch);
+        canvas.addEventListener("touchend", paintTouch);
+        canvas.addEventListener("touchcancel", paintTouch);
     }
     function draw() {
         // console.log("Start:" + startX, startY);
@@ -142,23 +147,50 @@ var UvMapping;
         crc2.closePath();
     }
     function paint(_event) {
-        var _a, _b, _c, _d;
-        if (((_a = event) === null || _a === void 0 ? void 0 : _a.type) == "mousedown") {
+        if ((event === null || event === void 0 ? void 0 : event.type) == "mousedown") {
             // console.log("mosedown:" + _event.offsetX, _event.offsetY);
             flag = true;
             startX = _event.offsetX;
             startY = _event.offsetY;
         }
-        if (((_b = event) === null || _b === void 0 ? void 0 : _b.type) == "mouseout" || ((_c = event) === null || _c === void 0 ? void 0 : _c.type) == "mouseup") {
+        if ((event === null || event === void 0 ? void 0 : event.type) == "mouseout" || (event === null || event === void 0 ? void 0 : event.type) == "mouseup") {
             flag = false;
             setTimeout(function () { game.changeMaterial(); }, 80);
         }
-        if (((_d = event) === null || _d === void 0 ? void 0 : _d.type) == "mousemove") {
+        if ((event === null || event === void 0 ? void 0 : event.type) == "mousemove") {
             // console.log(flag);
             if (flag) {
                 // console.log("mosemove");
                 moveX = _event.offsetX;
                 moveY = _event.offsetY;
+                draw();
+                game.set(canvas.toDataURL("jpg", 0.01));
+                console.log(canvas.toDataURL());
+                startX = moveX;
+                startY = moveY;
+            }
+        }
+    }
+    function paintTouch(_event) {
+        
+        if ((_event === null || _event === void 0 ? void 0 : _event.type) == "touchstart") {
+            var touches = _event.touches[0];
+            // console.log("mosedown:" + _event.offsetX, _event.offsetY);
+            flag = true;
+            startX = touches.pageX;
+            startY = touches.pageY;
+        }
+        if ((_event === null || _event === void 0 ? void 0 : _event.type) == "touchcancel" || (_event === null || _event === void 0 ? void 0 : _event.type) == "touchend") {
+            flag = false;
+            setTimeout(function () { game.changeMaterial(); }, 80);
+        }
+        if ((_event === null || _event === void 0 ? void 0 : _event.type) == "touchmove") {
+            // console.log(flag);
+            if (flag) {
+                var touches = _event.touches[0];
+                // console.log("mosemove");
+                moveX = touches.pageX;
+                moveY = touches.pageY;
                 draw();
                 game.set(canvas.toDataURL("jpg", 0.01));
                 console.log(canvas.toDataURL());

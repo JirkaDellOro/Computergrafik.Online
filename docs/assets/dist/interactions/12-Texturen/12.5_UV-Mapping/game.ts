@@ -180,7 +180,10 @@ namespace UvMapping {
         canvas.addEventListener("mouseout", paint);
         canvas.addEventListener("mouseup", paint);
 
-
+        canvas.addEventListener("touchstart", paintTouch);
+        canvas.addEventListener("touchmove", paintTouch);
+        canvas.addEventListener("touchend", paintTouch);
+        canvas.addEventListener("touchcancel", paintTouch);
 
     }
     function draw(): void {
@@ -208,11 +211,7 @@ namespace UvMapping {
             flag = false;
 
             setTimeout(function () { game.changeMaterial(); }, 80);
-
-
-
         }
-
         if (event?.type == "mousemove") {
             // console.log(flag);
             if (flag) {
@@ -229,6 +228,36 @@ namespace UvMapping {
             }
         }
     }
+    function paintTouch(_event: TouchEvent): void {
+        if (_event?.type == "touchstart") {
+            let touches = _event.touches[0];
+            // console.log("mosedown:" + _event.offsetX, _event.offsetY);
+            flag = true;
+            startX = touches.pageX;
+            startY = touches.pageY;
 
+        }
+        if (_event?.type == "touchcancel" || _event?.type == "touchend") {
+            flag = false;
+
+            setTimeout(function () { game.changeMaterial(); }, 80);
+        }
+        if (_event?.type == "touchmove") {
+            // console.log(flag);
+            if (flag) {
+                let touches = _event.touches[0]
+                // console.log("mosemove");
+                moveX = touches.pageX;
+                moveY = touches.pageY;
+
+                draw();
+
+                game.set(canvas.toDataURL("jpg", 0.01));
+                console.log(canvas.toDataURL());
+                startX = moveX;
+                startY = moveY;
+            }
+        }
+    }
 
 }
