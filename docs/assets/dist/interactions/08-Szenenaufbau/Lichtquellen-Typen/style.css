@@ -58,6 +58,11 @@ html, body {
 .btn-secondary:active{
     background-color:  #00A8FF;
 }
+@media screen and (max-width: 600px){
+    .btn{
+        font-size: 13px;
+    }
+}
 
 
 
