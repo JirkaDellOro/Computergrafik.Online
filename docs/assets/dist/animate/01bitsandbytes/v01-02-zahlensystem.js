@@ -1284,7 +1284,7 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 	this.text_1.lineHeight = 76;
 	this.text_1.lineWidth = 714;
 	this.text_1.parent = this;
-	this.text_1.setTransform(192.0666,160.85,0.4686,0.4686);
+	this.text_1.setTransform(192.0666,170.85,0.4686,0.4686);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_1},{t:this.instance}]}).wait(1));
 
@@ -1294,7 +1294,7 @@ p.nominalBounds = new cjs.Rectangle(-15.5,-134.5,157.7,343.5);
 	this.text_2.lineHeight = 76;
 	this.text_2.lineWidth = 716;
 	this.text_2.parent = this;
-	this.text_2.setTransform(191.5741,0.95,0.4686,0.4686);
+	this.text_2.setTransform(191.5741,20,0.4686,0.4686);
 
 	this.timeline.addTween(cjs.Tween.get(this.text_2).wait(1));
 
