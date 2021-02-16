@@ -29,7 +29,7 @@ namespace UvMapping {
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.wheelPrecision = 100;
-            this._camera.setPosition(new BABYLON.Vector3(0, 0, 10));
+            this._camera.setPosition(new BABYLON.Vector3(0, 0, -10));
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
             //this._roboter = BABYLON.MeshBuilder.CreateBox("box", {}, this._scene);
@@ -110,7 +110,7 @@ namespace UvMapping {
             this._spotLight.position.z = _posZ;
         }
         setPosLightBulb(_posX:number, _posY:number, _posZ:number) {
-            this._scene.getMeshByName("Birne").position = new BABYLON.Vector3(_posX, _posY, _posZ);
+            this._scene.getMeshByName("Birne")!.position = new BABYLON.Vector3(_posX, _posY, _posZ);
         }
     }
     let inputAmbientLight: HTMLInputElement;
@@ -208,35 +208,35 @@ namespace UvMapping {
 
     function adaptPointLight() {
         let pointLight : number;
-        pointLight = document.getElementById('point-light').value;
-        scene._scene.getLightByName("pointLight").intensity = pointLight/50;
+        pointLight = parseInt((<HTMLInputElement>document.getElementById('point-light'))!.value);
+        scene._scene.getLightByName("pointLight")!.intensity = pointLight/50;
     }
 
     function adaptAmbientLight(){
         let ambientInput : number;
-        ambientInput = document.getElementById('ambient-light').value;
-        scene._scene.getLightByName("ambientLight").intensity = ambientInput/50;
+        ambientInput = parseInt((<HTMLInputElement>document.getElementById('ambient-light'))!.value);
+        scene._scene.getLightByName("ambientLight")!.intensity = ambientInput/50;
     }
 
     function adaptDirectionalLight() {
         let directionalInput : number;
-        directionalInput = document.getElementById('directional-light').value;
-        scene._scene.getLightByName("directionalLight").intensity = directionalInput/50;
+        directionalInput = parseInt((<HTMLInputElement>document.getElementById('directional-light'))!.value);
+        scene._scene.getLightByName("directionalLight")!.intensity = directionalInput/50;
     }
 
     function adaptSpotLight() {
         let directionalInput : number;
-        directionalInput = document.getElementById('spot-light').value;
-        scene._scene.getLightByName("spotLight").intensity = directionalInput/50;
+        directionalInput = parseInt((<HTMLInputElement>document.getElementById('spot-light'))!.value);
+        scene._scene.getLightByName("spotLight")!.intensity = directionalInput/50;
     }
 
     function adaptAmbientLightDirection() {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-ambient-light').value;
-        yAxis = document.getElementById('y-axis-ambient-light').value;
-        zAxis = document.getElementById('z-axis-ambient-light').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-ambient-light'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-ambient-light'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-ambient-light'))!.value);
         scene.setPosXAmbientLight(xAxis/10);
         scene.setPosYAmbientLight(yAxis/10);
         scene.setPosZAmbientLight(zAxis/10)
@@ -247,9 +247,10 @@ namespace UvMapping {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-point-light').value;
-        yAxis = document.getElementById('y-axis-point-light').value;
-        zAxis = document.getElementById('z-axis-point-light').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-point-light'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-point-light'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-point-light'))!.value);
+
         scene.setPosXPointLight(xAxis/10);
         scene.setPosYPointLight(yAxis/10);
         scene.setPosZPointLight(zAxis/10)
@@ -260,9 +261,9 @@ namespace UvMapping {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-directional-light').value;
-        yAxis = document.getElementById('y-axis-directional-light').value;
-        zAxis = document.getElementById('z-axis-directional-light').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-directional-light'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-directional-light'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-directional-light'))!.value);
         scene.setDirXDirectionalLight(xAxis/10);
         scene.setDirYDirectionalLight(yAxis/10);
         scene.setDirZDirectionalLight(zAxis/10)
@@ -272,9 +273,9 @@ namespace UvMapping {
         let xAxis : number;
         let yAxis : number;
         let zAxis : number;
-        xAxis = document.getElementById('x-axis-spot-light').value;
-        yAxis = document.getElementById('y-axis-spot-light').value;
-        zAxis = document.getElementById('z-axis-spot-light').value;
+        xAxis = parseInt((<HTMLInputElement>document.getElementById('x-axis-spot-light'))!.value);
+        yAxis = parseInt((<HTMLInputElement>document.getElementById('y-axis-spot-light'))!.value);
+        zAxis = parseInt((<HTMLInputElement>document.getElementById('z-axis-spot-light'))!.value);
         scene.setPosXSpotLight(xAxis/10);
         scene.setPosYSpotLight(yAxis/10);
         scene.setPosZSpotLight(zAxis/10);
@@ -283,7 +284,7 @@ namespace UvMapping {
     function displayInputFields(){
         disableGroups();
         let group = this.getAttribute("data-group");
-        document.getElementById(group).style.display = 'block'
+        document.getElementById(group)!.style.display = 'block'
     }
 
     function disableGroups(){

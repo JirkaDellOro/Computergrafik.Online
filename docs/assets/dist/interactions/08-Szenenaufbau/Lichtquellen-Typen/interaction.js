@@ -1,3 +1,4 @@
+"use strict";
 ///<reference path="babylon.d.ts" />
 var UvMapping;
 (function (UvMapping) {
@@ -14,7 +15,7 @@ var UvMapping;
             // Create and position a arc rotate camera.
             this._camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 0, new BABYLON.Vector3(0, 0, 0), this._scene);
             this._camera.wheelPrecision = 100;
-            this._camera.setPosition(new BABYLON.Vector3(0, 0, 10));
+            this._camera.setPosition(new BABYLON.Vector3(0, 0, -10));
             this._camera.attachControl(this._canvas, false);
             this._camera.setTarget(BABYLON.Vector3.Zero());
             //this._roboter = BABYLON.MeshBuilder.CreateBox("box", {}, this._scene);
@@ -164,31 +165,31 @@ var UvMapping;
     }
     function adaptPointLight() {
         var pointLight;
-        pointLight = document.getElementById('point-light').value;
+        pointLight = parseInt(document.getElementById('point-light').value);
         scene._scene.getLightByName("pointLight").intensity = pointLight / 50;
     }
     function adaptAmbientLight() {
         var ambientInput;
-        ambientInput = document.getElementById('ambient-light').value;
+        ambientInput = parseInt(document.getElementById('ambient-light').value);
         scene._scene.getLightByName("ambientLight").intensity = ambientInput / 50;
     }
     function adaptDirectionalLight() {
         var directionalInput;
-        directionalInput = document.getElementById('directional-light').value;
+        directionalInput = parseInt(document.getElementById('directional-light').value);
         scene._scene.getLightByName("directionalLight").intensity = directionalInput / 50;
     }
     function adaptSpotLight() {
         var directionalInput;
-        directionalInput = document.getElementById('spot-light').value;
+        directionalInput = parseInt(document.getElementById('spot-light').value);
         scene._scene.getLightByName("spotLight").intensity = directionalInput / 50;
     }
     function adaptAmbientLightDirection() {
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-ambient-light').value;
-        yAxis = document.getElementById('y-axis-ambient-light').value;
-        zAxis = document.getElementById('z-axis-ambient-light').value;
+        xAxis = parseInt(document.getElementById('x-axis-ambient-light').value);
+        yAxis = parseInt(document.getElementById('y-axis-ambient-light').value);
+        zAxis = parseInt(document.getElementById('z-axis-ambient-light').value);
         scene.setPosXAmbientLight(xAxis / 10);
         scene.setPosYAmbientLight(yAxis / 10);
         scene.setPosZAmbientLight(zAxis / 10);
@@ -198,9 +199,9 @@ var UvMapping;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-point-light').value;
-        yAxis = document.getElementById('y-axis-point-light').value;
-        zAxis = document.getElementById('z-axis-point-light').value;
+        xAxis = parseInt(document.getElementById('x-axis-point-light').value);
+        yAxis = parseInt(document.getElementById('y-axis-point-light').value);
+        zAxis = parseInt(document.getElementById('z-axis-point-light').value);
         scene.setPosXPointLight(xAxis / 10);
         scene.setPosYPointLight(yAxis / 10);
         scene.setPosZPointLight(zAxis / 10);
@@ -210,9 +211,9 @@ var UvMapping;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-directional-light').value;
-        yAxis = document.getElementById('y-axis-directional-light').value;
-        zAxis = document.getElementById('z-axis-directional-light').value;
+        xAxis = parseInt(document.getElementById('x-axis-directional-light').value);
+        yAxis = parseInt(document.getElementById('y-axis-directional-light').value);
+        zAxis = parseInt(document.getElementById('z-axis-directional-light').value);
         scene.setDirXDirectionalLight(xAxis / 10);
         scene.setDirYDirectionalLight(yAxis / 10);
         scene.setDirZDirectionalLight(zAxis / 10);
@@ -221,9 +222,9 @@ var UvMapping;
         var xAxis;
         var yAxis;
         var zAxis;
-        xAxis = document.getElementById('x-axis-spot-light').value;
-        yAxis = document.getElementById('y-axis-spot-light').value;
-        zAxis = document.getElementById('z-axis-spot-light').value;
+        xAxis = parseInt(document.getElementById('x-axis-spot-light').value);
+        yAxis = parseInt(document.getElementById('y-axis-spot-light').value);
+        zAxis = parseInt(document.getElementById('z-axis-spot-light').value);
         scene.setPosXSpotLight(xAxis / 10);
         scene.setPosYSpotLight(yAxis / 10);
         scene.setPosZSpotLight(zAxis / 10);
