@@ -169,10 +169,8 @@ namespace UvMapping {
         setTimeout(function () { game.changeMaterial(); }, 0);
         console.log(canvas.toDataURL("png", 0.7));
 
-
-
         dataUrl = canvas.toDataURL();
-        // console.log(crc2);
+
         button = <HTMLButtonElement>document.getElementById("clear");
         button.addEventListener("click", main);
         canvas.addEventListener("mousedown", paint);
@@ -187,8 +185,8 @@ namespace UvMapping {
 
     }
     function draw(): void {
-        // console.log("Start:" + startX, startY);
-        // console.log("Move:" + moveX, moveY);
+        //console.log("Start:" + startX, startY);
+        //console.log("Move:" + moveX, moveY);
         crc2.beginPath();
         crc2.moveTo(startX, startY);
         crc2.lineTo(moveX, moveY);
@@ -229,13 +227,13 @@ namespace UvMapping {
         }
     }
     function paintTouch(_event: TouchEvent): void {
+        let dim = document.getElementById("canvas1")!.getBoundingClientRect();
         if (_event?.type == "touchstart") {
-            let touches = _event.touches[0];
-            // console.log("mosedown:" + _event.offsetX, _event.offsetY);
             flag = true;
-            startX = touches.pageX;
-            startY = touches.pageY;
 
+            let touches = _event.touches[0];
+            startX = touches.clientX - dim.left;
+            startY = touches.clientY - dim.top;
         }
         if (_event?.type == "touchcancel" || _event?.type == "touchend") {
             flag = false;
@@ -246,9 +244,8 @@ namespace UvMapping {
             // console.log(flag);
             if (flag) {
                 let touches = _event.touches[0]
-                // console.log("mosemove");
-                moveX = touches.pageX;
-                moveY = touches.pageY;
+                moveX = touches.clientX - dim.left;
+                moveY = touches.clientY - dim.top;
 
                 draw();
 

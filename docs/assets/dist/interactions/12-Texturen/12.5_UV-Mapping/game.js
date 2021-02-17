@@ -136,8 +136,8 @@ var UvMapping;
         canvas.addEventListener("touchcancel", paintTouch);
     }
     function draw() {
-        // console.log("Start:" + startX, startY);
-        // console.log("Move:" + moveX, moveY);
+        //console.log("Start:" + startX, startY);
+        //console.log("Move:" + moveX, moveY);
         crc2.beginPath();
         crc2.moveTo(startX, startY);
         crc2.lineTo(moveX, moveY);
@@ -152,6 +152,7 @@ var UvMapping;
             flag = true;
             startX = _event.offsetX;
             startY = _event.offsetY;
+            console.log(startX + "..." + startY);
         }
         if ((event === null || event === void 0 ? void 0 : event.type) == "mouseout" || (event === null || event === void 0 ? void 0 : event.type) == "mouseup") {
             flag = false;
@@ -172,13 +173,14 @@ var UvMapping;
         }
     }
     function paintTouch(_event) {
-        
+        var dim = document.getElementById("canvas1").getBoundingClientRect();
         if ((_event === null || _event === void 0 ? void 0 : _event.type) == "touchstart") {
             var touches = _event.touches[0];
             // console.log("mosedown:" + _event.offsetX, _event.offsetY);
             flag = true;
-            startX = touches.pageX;
-            startY = touches.pageY;
+            startX = touches.clientX - dim.left;
+            startY = touches.clientY - dim.top;
+            console.log(startX + "..." + startY);
         }
         if ((_event === null || _event === void 0 ? void 0 : _event.type) == "touchcancel" || (_event === null || _event === void 0 ? void 0 : _event.type) == "touchend") {
             flag = false;
@@ -189,8 +191,8 @@ var UvMapping;
             if (flag) {
                 var touches = _event.touches[0];
                 // console.log("mosemove");
-                moveX = touches.pageX;
-                moveY = touches.pageY;
+                moveX = touches.clientX - dim.left;
+                moveY = touches.clientY - dim.top;
                 draw();
                 game.set(canvas.toDataURL("jpg", 0.01));
                 console.log(canvas.toDataURL());
