@@ -1672,7 +1672,7 @@
           "pageTime": [{
             "time": [{
               "timeDuration": "0",
-              "informationText": "Füge mit klicken neue Eckpunkte hinzu und verschiebe Sie indem du die Maustaste gedrückt hälst. Wenn du die die Eckpunkte verbinden willst, gehe dafür auf den Button „Connect Verts“ und drücke immer auf 2 verschiedene Eckpunkte die du verbinden möchtest. Willst du nun wieder die Eckpunkte verschieben dann geh in den Baumodus in dem du auf „Add/Move Verts“ klickst."
+              "informationText": "Füge mit klicken neue Eckpunkte hinzu und verschiebe Sie, indem du die Maustaste gedrückt hältst. Wenn du die die Eckpunkte verbinden willst, gehe dafür auf den Button „Connect Verts“ und drücke immer auf 2 verschiedene Eckpunkte die du verbinden möchtest. Willst du nun wieder die Eckpunkte verschieben dann geh in den Baumodus in dem du auf „Add/Move Verts“ klickst."
             }]
           }]
         },

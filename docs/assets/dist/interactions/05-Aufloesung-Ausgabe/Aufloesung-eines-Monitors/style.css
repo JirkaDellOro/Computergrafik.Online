@@ -115,3 +115,8 @@
         min-height: 100vh;
     }
 }
+@media screen and (max-width:600px) {
+    #check-container{
+        bottom: 5%;
+    }
+}
