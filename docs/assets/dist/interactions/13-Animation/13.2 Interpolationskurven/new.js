@@ -1,37 +1,36 @@
 "use strict";
 /* */
 var interpolationskurven;
-/* */
 (function (interpolationskurven) {
-    let handleInUse;
-    let canvas;
-    let touch = false;
+    var handleInUse;
+    var canvas;
+    var touch = false;
     function main() {
         canvas = document.getElementById('curve');
         interpolationskurven.crc2 = canvas.getContext('2d');
-        let box = document.getElementById('box');
-        let timeVal = 700;
+        var box = document.getElementById('box');
+        var timeVal = 700;
         var supportsBezierRange = (function () {
             var el = document.createElement('div');
             el.style.webkitTransitionTimingFunction = 'cubic-bezier(1,0,0,1.1)';
             return !!el.style.webkitTransitionTimingFunction.length;
         })();
-        let handles = [
+        var handles = [
             new interpolationskurven.Handle(50, 180),
             new interpolationskurven.Handle(150, 180)
         ];
-        let graph = new interpolationskurven.Graph();
+        var graph = new interpolationskurven.Graph();
         function getPos(event) {
-            let mouseX = event.pageX - getOffSet(event.target).left;
-            let mouseY = event.pageY - getOffSet(event.target).top;
+            var mouseX = event.pageX - getOffSet(event.target).left;
+            var mouseY = event.pageY - getOffSet(event.target).top;
             return {
                 x: mouseX,
                 y: mouseY
             };
         }
         function getOffSet(obj) {
-            let curleft = 0;
-            let curtop = 0;
+            var curleft = 0;
+            var curtop = 0;
             if (obj.offsetParent) {
                 do {
                     curleft += obj.offsetLeft;
@@ -59,9 +58,9 @@ var interpolationskurven;
                     y >= curTop &&
                     y <= curBottom) {
                     handleInUse = current;
-                    let selected = document.querySelector('input[type="radio"]:checked');
+                    var selected = document.querySelector('input[type="radio"]:checked');
                     selected.checked = false;
-                    let custom = document.querySelectorAll('#options input[type="radio"]');
+                    var custom = document.querySelectorAll('#options input[type="radio"]');
                     custom[custom.length - 1].checked = true;
                     document.addEventListener('mouseup', onRelease, false);
                     document.addEventListener('touchend', onRelease, false);
@@ -137,13 +136,13 @@ var interpolationskurven;
             }
         }
         function setTransitions() {
-            let cp1 = handles[0], cp2 = handles[1];
-            let x1 = (cp1.x / graph.width).toFixed(3), y1 = ((graph.height + graph.y - cp1.y) / graph.height).toFixed(3), x2 = (cp2.x / canvas.width).toFixed(3), y2 = ((graph.height + graph.y - cp2.y) / graph.height).toFixed(3), points = '(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
+            var cp1 = handles[0], cp2 = handles[1];
+            var x1 = (cp1.x / graph.width).toFixed(3), y1 = ((graph.height + graph.y - cp1.y) / graph.height).toFixed(3), x2 = (cp2.x / canvas.width).toFixed(3), y2 = ((graph.height + graph.y - cp2.y) / graph.height).toFixed(3), points = '(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
             box.style.webkitTransition =
                 box.style.transition =
                     'all ' + timeVal + 'ms cubic-bezier' + points;
             if (!supportsBezierRange) {
-                let wy1, wy2;
+                var wy1 = void 0, wy2 = void 0;
                 if (Number(y1) > 1)
                     wy1 = 1;
                 if (Number(y1) < 0)
@@ -156,8 +155,8 @@ var interpolationskurven;
             }
         }
         function presetChange() {
-            let selected = document.querySelector('input[type="radio"]:checked');
-            let coordinates = selected.value.split(','), cp1 = handles[0], cp2 = handles[1];
+            var selected = document.querySelector('input[type="radio"]:checked');
+            var coordinates = selected.value.split(','), cp1 = handles[0], cp2 = handles[1];
             cp1.x = Number(coordinates[0]) * graph.width;
             cp1.y = graph.y + graph.height - (Number(coordinates[1]) * graph.height);
             cp2.x = Number(coordinates[2]) * graph.width;
@@ -166,12 +165,12 @@ var interpolationskurven;
         }
         var options = document.getElementById("options");
         options.addEventListener("input", presetChange);
-        let set = true;
-        let startButton = document.querySelector(".testButton");
+        var set = true;
+        var startButton = document.querySelector(".testButton");
         startButton.addEventListener("mousedown", setTweenClass);
         function setTweenClass() {
             setTransitions();
-            let box = document.querySelector("#box");
+            var box = document.querySelector("#box");
             if (set) {
                 box.classList.add("tween");
                 set = false;
@@ -195,4 +194,3 @@ var interpolationskurven;
     }
     window.addEventListener("load", main);
 })(interpolationskurven || (interpolationskurven = {}));
-//# sourceMappingURL=new.js.map
