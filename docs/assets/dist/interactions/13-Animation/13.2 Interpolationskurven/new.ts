@@ -8,7 +8,7 @@ namespace interpolationskurven {
     function main(): void {
 
         canvas = <HTMLCanvasElement>document.getElementById('curve');
-        crc2 = canvas.getContext('2d');
+        crc2 = <CanvasRenderingContext2D>canvas.getContext('2d');
 
         let box = document.getElementById('box');
         let timeVal: number = 700;
@@ -264,11 +264,11 @@ namespace interpolationskurven {
 
         function startMovement() {
 
-            document.getElementById("helper").style.display = "block";
-            document.getElementById("helper").style.animation = "helper 700ms";
+            document.getElementById("helper")!.style.display = "block";
+            document.getElementById("helper")!.style.animation = "helper 700ms";
             setTimeout(function () {
-                document.getElementById("helper").style.display = "none";
-                document.getElementById("helper").style.animation = "";
+                document.getElementById("helper")!.style.display = "none";
+                document.getElementById("helper")!.style.animation = "";
             }, 700);
         }
 

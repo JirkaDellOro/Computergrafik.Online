@@ -3,11 +3,10 @@ body{
   margin: 0;
 }
 
- #container {
+#container {
   max-width: 1200px;
   position: absolute;
   left: CALC(50% - 200px);
- 
   display: flex;
   flex-direction: column;
  }
@@ -93,16 +92,16 @@ figcaption {
   margin-bottom: 30px;
 }
  
- label {
-   display: block;
-   margin-bottom: 10px;
- }
- label .text {
-   display: inline-block;
-   width: 60px;
- }
- 
- #box {
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+label .text {
+  display: inline-block;
+  width: 60px;
+}
+
+#box {
   width: 100px;
   height: 100px;
   background-color: #00A8FF;
@@ -117,13 +116,13 @@ figcaption {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
- }
+}
 
- #box.tween {
-   left: calc(100% - 100px);
- }
+#box.tween {
+  left: calc(100% - 100px);
+}
 
- #helper{
+#helper{
   display: none;
   border-left: 1.5px solid;
   position: absolute;
@@ -131,11 +130,22 @@ figcaption {
   height: 200px;
   width: 0;
   animation-timing-function: linear;
- }
+}
 
  @media screen and (max-width: 900px) {
+  label{
+    padding: 5px;
+    font-size: 14px;
+  }
   #container {
-    left: CALC(50% - 160px);
+    position: unset;
+  }
+  #box{
+    height: 70px;
+    width: 70px;
+  }
+  .tween-container{
+    margin-bottom: 10px;
   }
 
 }
