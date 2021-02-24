@@ -227,6 +227,7 @@ namespace UvMapping {
         }
     }
     function paintTouch(_event: TouchEvent): void {
+        _event.preventDefault();
         let dim = document.getElementById("canvas1")!.getBoundingClientRect();
         if (_event?.type == "touchstart") {
             flag = true;
