@@ -1,14 +1,14 @@
 "use strict";
 var Antialising;
 (function (Antialising) {
-    let canvas;
-    let ctx;
-    let container;
-    let target;
-    let lines = [];
-    let image;
-    let zoom = 10;
-    let touch = false;
+    var canvas;
+    var ctx;
+    var container;
+    var target;
+    var lines = [];
+    var image;
+    var zoom = 10;
+    var touch = false;
     function main() {
         canvas = document.getElementsByTagName("canvas")[0];
         ctx = canvas.getContext("2d");
@@ -25,6 +25,7 @@ var Antialising;
             }
         });
         container.addEventListener("touchstart", function (_e) {
+            _e.preventDefault();
             console.log(_e.target);
             if (_e.target.getAttribute("class") == "points") {
                 target = _e.target;
@@ -38,17 +39,17 @@ var Antialising;
         document.addEventListener("touchend", function () {
             container.removeEventListener("touchmove", movePoint);
         });
-        let pointOne = document.createElement("div");
+        var pointOne = document.createElement("div");
         pointOne.setAttribute("id", "pointOne");
         pointOne.setAttribute("class", "points");
         container.appendChild(pointOne);
         lines["pointOne"] = [100 / zoom, 100 / zoom];
-        let pointTwo = document.createElement("div");
+        var pointTwo = document.createElement("div");
         pointTwo.setAttribute("id", "pointTwo");
         pointTwo.setAttribute("class", "points");
         container.appendChild(pointTwo);
         lines["pointTwo"] = [400 / zoom, 300 / zoom];
-        let pointThree = document.createElement("div");
+        var pointThree = document.createElement("div");
         pointThree.setAttribute("id", "pointThree");
         pointThree.setAttribute("class", "points");
         container.appendChild(pointThree);
@@ -64,8 +65,8 @@ var Antialising;
         canvas.style.imageRendering = "pixelated";
         ctx.filter = "none";
         draw();
-        let on = document.getElementById("on");
-        let off = document.getElementById("off");
+        var on = document.getElementById("on");
+        var off = document.getElementById("off");
         off.addEventListener("click", function () {
             //canvas.style.imageRendering = "pixelated";
             this.className = "active";
@@ -82,8 +83,9 @@ var Antialising;
         });
     }
     function movePoint(_e) {
-        let x;
-        let y;
+        _e.preventDefault();
+        var x;
+        var y;
         if (touch) {
             x = _e.changedTouches[0].pageX - container.offsetLeft + (container.offsetWidth / 2);
             y = _e.changedTouches[0].pageY - container.offsetTop;
@@ -122,4 +124,3 @@ var Antialising;
     }
     window.addEventListener("load", main);
 })(Antialising || (Antialising = {}));
-//# sourceMappingURL=Main.js.map

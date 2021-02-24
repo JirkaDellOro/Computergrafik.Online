@@ -10,7 +10,7 @@ namespace Antialising {
 
     function main(): void {
         canvas = document.getElementsByTagName("canvas")[0];
-        ctx = canvas.getContext("2d");
+        ctx = <CanvasRenderingContext2D>canvas.getContext("2d");
 
         canvas.style.width = "500px";
         canvas.style.height = "400px";
@@ -31,6 +31,7 @@ namespace Antialising {
         });
 
         container.addEventListener("touchstart", function (_e: TouchEvent): void {
+            _e.preventDefault();
             console.log(_e.target);
             if ((<HTMLDivElement>_e.target).getAttribute("class") == "points") {
                 target = <HTMLDivElement>_e.target;
@@ -111,6 +112,7 @@ namespace Antialising {
     }
 
     function movePoint(_e: Event): void {
+        _e.preventDefault();
        let x:number;
        let y:number;
        
