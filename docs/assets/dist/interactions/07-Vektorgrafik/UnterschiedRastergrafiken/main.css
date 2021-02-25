@@ -10,7 +10,7 @@ body{
 }
 .images{
   position: relative;
-  height: 150px;
+  height: 200px;
   margin: 0 auto 10px;
   display: flex;
   justify-content: space-evenly;
@@ -20,7 +20,7 @@ body{
 .img{
   position: relative;
   height: 100%;
-  width: 150px;
+  width: 240px; 
 }
 
 img{
@@ -36,8 +36,8 @@ img{
 }
 
 .img-hover-zoom {
-  height:150px;
-  width: 150px;
+  height:200px;
+  width:200px;
   overflow: hidden; /* Removing this will break the effects */
   border-radius: 100%;
   border: 5px solid #3d3a3a;
@@ -84,7 +84,20 @@ input::-moz-range-thumb {
   background: #00A8FF;
   cursor: pointer;
 }
-
+@media screen and (max-width: 1024px){
+  .images{
+    height: 150px;
+  }
+  .img{
+    position: relative;
+    height: 100%;
+    width: 150px; 
+  }
+  .img-hover-zoom {
+    height:150px;
+    width:150px;
+  }
+}
   
 @media screen and (max-width: 600px) {
   .img-hover-zoom {
