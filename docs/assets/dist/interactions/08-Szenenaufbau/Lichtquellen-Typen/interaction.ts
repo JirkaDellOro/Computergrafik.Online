@@ -51,8 +51,7 @@ namespace UvMapping {
             this._pointLight.position = new BABYLON.Vector3(0, 5, 0);
             this._directionalLight = new BABYLON.DirectionalLight("directionalLight", new BABYLON.Vector3(0,0,0), this._scene);
             this._directionalLight.position = new BABYLON.Vector3(10,10,0);
-            this._spotLight = new BABYLON.SpotLight("spotLight", new BABYLON.Vector3(0, 10, 0),
-                new BABYLON.Vector3(0, -1, 0), Math.PI , 2, this._scene);
+            this._spotLight = new BABYLON.SpotLight("spotLight", new BABYLON.Vector3(0, 10, 0), new BABYLON.Vector3(0, -1, 0), Math.PI , 2, this._scene);
             this._spotLight.position = new BABYLON.Vector3(0,10,0);
             // Create a built-in "box" shape with the default parameters.
             this._ambientLight.intensity = 0;
@@ -187,14 +186,15 @@ namespace UvMapping {
         inputMoveSpotLightZAxis = <HTMLInputElement>document.getElementById("z-axis-spot-light");
         inputMoveSpotLightZAxis.addEventListener("input", adaptSpotLightPosition);
 
-
+        document.getElementById("renderCanvas")?.addEventListener("touchstart", preventDefault);
+        document.getElementById("renderCanvas")?.addEventListener("touchmove", preventDefault);
         disableGroups();
         lightButtons = document.querySelectorAll(".btn");
         for(let i = 0; i < lightButtons.length; i++) {
             lightButtons[i].addEventListener('click', displayInputFields)
         }
     }
-
+    
     window.addEventListener('DOMContentLoaded', handleLoad);
     let scene: Interaction;
     function handleLoad(): void {
@@ -292,5 +292,9 @@ namespace UvMapping {
         for(let i = 0; i < lightGroup.length; i ++) {
             lightGroup[i].style.display = 'none';
         }
+    }
+
+    function preventDefault(_event: TouchEvent): void{
+        _event.preventDefault();
     }
 }

@@ -113,6 +113,7 @@ var UvMapping;
     var inputMoveSpotLightZAxis;
     var lightButtons;
     function main() {
+        var _a, _b;
         //Add event listeners for changing light intensity;
         inputDirectionalLight = document.getElementById("directional-light");
         inputDirectionalLight.addEventListener("input", adaptDirectionalLight);
@@ -147,6 +148,8 @@ var UvMapping;
         inputMoveSpotLightYAxis.addEventListener("input", adaptSpotLightPosition);
         inputMoveSpotLightZAxis = document.getElementById("z-axis-spot-light");
         inputMoveSpotLightZAxis.addEventListener("input", adaptSpotLightPosition);
+        (_a = document.getElementById("renderCanvas")) === null || _a === void 0 ? void 0 : _a.addEventListener("touchstart", preventDefault);
+        (_b = document.getElementById("renderCanvas")) === null || _b === void 0 ? void 0 : _b.addEventListener("touchmove", preventDefault);
         disableGroups();
         lightButtons = document.querySelectorAll(".btn");
         for (var i = 0; i < lightButtons.length; i++) {
@@ -239,5 +242,8 @@ var UvMapping;
         for (var i = 0; i < lightGroup.length; i++) {
             lightGroup[i].style.display = 'none';
         }
+    }
+    function preventDefault(_event) {
+        _event.preventDefault();
     }
 })(UvMapping || (UvMapping = {}));
