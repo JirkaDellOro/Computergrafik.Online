@@ -39,6 +39,7 @@
     margin-bottom: 10px;
     font-size: 18px;
 }
+
 @media screen and (orientation: landscape) {
     #col_1 {
         width: 70%;
@@ -81,8 +82,14 @@
         margin-bottom: 20px;
     }
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:1024px) and (min-width: 750px){
     #datengroesse{
-        font-size: 20px;
+        font-size: 19px;
+    }
+    label{
+        font-size: 22px;
+    }
+    #compression-slider{
+        width: 170px;
     }
 }
